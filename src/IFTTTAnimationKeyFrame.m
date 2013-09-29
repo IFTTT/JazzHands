@@ -21,7 +21,7 @@
     return self;
 }
 
-- (id)initWithTime:(NSInteger)time andAlpha:(float)alpha
+- (id)initWithTime:(NSInteger)time andAlpha:(CGFloat)alpha
 {
     self = [self initWithTime:time];
     

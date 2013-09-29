@@ -9,7 +9,7 @@
 @interface IFTTTAnimationFrame : NSObject
 
 @property (nonatomic) CGRect frame;
-@property (nonatomic) float alpha;
+@property (nonatomic) CGFloat alpha;
 @property (nonatomic) BOOL hidden;
 
 @end

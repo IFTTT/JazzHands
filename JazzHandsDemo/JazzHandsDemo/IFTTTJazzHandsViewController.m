@@ -101,7 +101,7 @@
 
 - (void)configureAnimation
 {
-    float dy = 240;
+    CGFloat dy = 240;
 
     // first, let's animate the wordmark
     IFTTTFrameAnimation *wordmarkFrameAnimation = [IFTTTFrameAnimation new];
@@ -129,7 +129,7 @@
     unicornFrameAnimation.view = self.unicorn;
     [self.animator addAnimation:unicornFrameAnimation];
     
-    float ds = 50;
+    CGFloat ds = 50;
 
     // move down and to the right, and shrink between pages 2 and 3
     [unicornFrameAnimation addKeyFrame:[[IFTTTAnimationKeyFrame alloc] initWithTime:timeForPage(2) andFrame:self.unicorn.frame]];

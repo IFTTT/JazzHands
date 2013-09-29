@@ -10,7 +10,7 @@
 
 @interface IFTTTAnimationKeyFrame : IFTTTAnimationFrame
 
-- (id)initWithTime:(NSInteger)time andAlpha:(float)alpha;
+- (id)initWithTime:(NSInteger)time andAlpha:(CGFloat)alpha;
 - (id)initWithTime:(NSInteger)time andFrame:(CGRect)frame;
 - (id)initWithTime:(NSInteger)time andHidden:(BOOL)hidden;
 

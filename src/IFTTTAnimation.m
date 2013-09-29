@@ -95,16 +95,16 @@
     return startKeyFrame;
 }
 
-- (float)tweenValueForStartTime:(NSInteger)startTime
-                        endTime:(NSInteger)endTime
-                     startValue:(float)startValue
-                       endValue:(float)endValue
-                         atTime:(float)time
+- (CGFloat)tweenValueForStartTime:(NSInteger)startTime
+                          endTime:(NSInteger)endTime
+                       startValue:(CGFloat)startValue
+                         endValue:(CGFloat)endValue
+                           atTime:(CGFloat)time
 {
-    float dt = (endTime - startTime);
-    float timePassed = (time - startTime);
-    float dv = (endValue - startValue);
-    float vv = dv / dt;
+    CGFloat dt = (endTime - startTime);
+    CGFloat timePassed = (time - startTime);
+    CGFloat dv = (endValue - startValue);
+    CGFloat vv = dv / dt;
     return (timePassed * vv) + startValue;
 }
 
