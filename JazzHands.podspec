@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
-  s.name      = 'Jazz Hands'
+  s.name      = 'JazzHands'
   s.version   = '0.0.1'
   s.summary   = 'Simple keyframe animations for scrolling intros.'
   s.homepage  = 'https://github.com/IFTTT/JazzHands'
   s.author    = { 'Devin Foley' => 'devin@ifttt.com' }
-  s.source    = { :git => 'https://github.com/IFTTT/JazzHands.git' }
+  s.source    = { :git => 'https://github.com/IFTTT/JazzHands.git', :tag => '0.0.1' }
   s.license   = {
     :type => 'MIT',
     :file => 'LICENSE'
