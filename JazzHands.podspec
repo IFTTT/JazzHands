@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
     :type => 'MIT',
     :file => 'LICENSE'
   }
-  s.source_files = 'src'
+  s.source_files = 'src/*.{h,m}'
   s.description = 'Jazz Hands is an keyframe animation framework by IFTTT. Move UIViews around the screen based on UIScrollView input, KVO, or anything really.'
   s.platform = :ios, '5.0'
   s.requires_arc = true
