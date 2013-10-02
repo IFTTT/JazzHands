@@ -115,7 +115,7 @@ Or, maybe you want to animate some views based upon the position of another view
 
 ### Gestures
 
-Jazz Hands is flexible enough that it can accept timer input from many different types sources, and this includes UIGestureRecognizers.
+Jazz Hands is flexible enough that it can accept timer input from many different types of sources, and this includes UIGestureRecognizers.
 
 ``` 
 - (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer {
