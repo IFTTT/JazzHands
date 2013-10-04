@@ -81,7 +81,7 @@ Currently, Jazz Hands supports three types of animations:
 Say you want to perform some animations based on a UITableView's scroll offset, but you don't want to be the delegate for that table? ReactiveCocoa is perfect for that.
 
 ```
-[RACAble(self.tableView.contentOffset) subscribeNext:^(NSValue *value) {
+[RACObserve(self.tableView, contentOffset) subscribeNext:^(NSValue *value) {
   NSInteger y = floor(self.tableView.contentOffset.y);
   [self.animator animate:y];
 }];
