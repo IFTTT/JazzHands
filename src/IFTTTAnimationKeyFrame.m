@@ -54,4 +54,15 @@
     return self;
 }
 
+- (id)initWithTime:(NSInteger)time andColor:(UIColor*)color
+{
+    self = [self initWithTime:time];
+    
+    if (self) {
+        self.color = color;
+    }
+    
+    return self;
+}
+
 @end

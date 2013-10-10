@@ -32,7 +32,7 @@
 
 - (id)initWithView:(UIView *)view
 {
-    self = [IFTTTAnimation new];
+    self = [self.class new];
     self.view = view;
     return self;
 }
