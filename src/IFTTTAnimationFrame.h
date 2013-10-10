@@ -11,5 +11,6 @@
 @property (nonatomic) CGRect frame;
 @property (nonatomic) CGFloat alpha;
 @property (nonatomic) BOOL hidden;
+@property (nonatomic) UIColor * color;
 
 @end
