@@ -43,6 +43,13 @@
     return self;
 }
 
+- (void)addKeyFrames:(NSArray *)keyFrames
+{
+    for (IFTTTAnimationKeyFrame *keyFrame in keyFrames) {
+        [self addKeyFrame:keyFrame];
+    }
+}
+
 - (void)addKeyFrame:(IFTTTAnimationKeyFrame *)keyFrame
 {
     if (self.keyFrames.count == 0) {

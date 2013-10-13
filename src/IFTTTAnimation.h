@@ -18,6 +18,8 @@
 - (id)initWithView:(UIView *)view;
 
 - (void)animate:(NSInteger)time;
+
+- (void)addKeyFrames:(NSArray *)keyFrames;
 - (void)addKeyFrame:(IFTTTAnimationKeyFrame *)keyFrame;
 
 - (IFTTTAnimationFrame *)animationFrameForTime:(NSInteger)time;

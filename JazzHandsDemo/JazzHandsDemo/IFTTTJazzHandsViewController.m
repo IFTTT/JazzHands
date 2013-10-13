@@ -10,7 +10,7 @@
 
 #define NUMBER_OF_PAGES 4
 
-#define timeForPage(page) (self.view.frame.size.width * (page - 1))
+#define timeForPage(page) (NSInteger)(self.view.frame.size.width * (page - 1))
 #define xForPage(page) timeForPage(page)
 
 @interface IFTTTJazzHandsViewController ()
