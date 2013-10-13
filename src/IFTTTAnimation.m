@@ -17,6 +17,12 @@
 
 @implementation IFTTTAnimation
 
++ (instancetype)animationWithView:(UIView *)view
+{
+    IFTTTAnimation *animation = [[[self class] alloc] initWithView:view];
+    return animation;
+}
+
 - (id)init
 {
     self = [super init];

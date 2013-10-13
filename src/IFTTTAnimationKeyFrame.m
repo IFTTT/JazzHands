@@ -10,6 +10,34 @@
 
 @implementation IFTTTAnimationKeyFrame
 
++ (instancetype)keyFrameWithTime:(NSInteger)time andAlpha:(CGFloat)alpha
+{
+    IFTTTAnimationKeyFrame *keyFrame = [[[self class] alloc] initWithTime: time
+                                                                 andAlpha: alpha];
+    return keyFrame;
+}
+
++ (instancetype)keyFrameWithTime:(NSInteger)time andFrame:(CGRect)frame
+{
+    IFTTTAnimationKeyFrame *keyFrame = [[[self class] alloc] initWithTime: time
+                                                                 andFrame: frame];
+    return keyFrame;
+}
+
++ (instancetype)keyFrameWithTime:(NSInteger)time andHidden:(BOOL)hidden
+{
+    IFTTTAnimationKeyFrame *keyFrame = [[[self class] alloc] initWithTime: time
+                                                                andHidden: hidden];
+    return keyFrame;
+}
+
++ (instancetype)keyFrameWithTime:(NSInteger)time andColor:(UIColor*)color
+{
+    IFTTTAnimationKeyFrame *keyFrame = [[[self class] alloc] initWithTime: time
+                                                                 andColor: color];
+    return keyFrame;
+}
+
 - (id)initWithTime:(NSInteger)time
 {
     self = [super init];
