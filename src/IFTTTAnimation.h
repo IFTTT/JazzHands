@@ -13,6 +13,8 @@
 @property (strong, nonatomic) UIView *view;
 @property (strong, nonatomic) NSMutableArray *keyFrames;
 
++ (instancetype)animationWithView:(UIView *)view;
+
 - (id)initWithView:(UIView *)view;
 
 - (void)animate:(NSInteger)time;
