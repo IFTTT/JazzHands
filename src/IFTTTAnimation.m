@@ -17,6 +17,12 @@
 
 @implementation IFTTTAnimation
 
++ (instancetype)animationWithView:(UIView *)view
+{
+    IFTTTAnimation *animation = [[[self class] alloc] initWithView:view];
+    return animation;
+}
+
 - (id)init
 {
     self = [super init];
@@ -35,6 +41,13 @@
     self = [self.class new];
     self.view = view;
     return self;
+}
+
+- (void)addKeyFrames:(NSArray *)keyFrames
+{
+    for (IFTTTAnimationKeyFrame *keyFrame in keyFrames) {
+        [self addKeyFrame:keyFrame];
+    }
 }
 
 - (void)addKeyFrame:(IFTTTAnimationKeyFrame *)keyFrame
