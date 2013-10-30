@@ -15,7 +15,7 @@
     if (self.keyFrames.count <= 1) return;
     
     IFTTTAnimationFrame *animationFrame = [self animationFrameForTime:time];
-    self.view.frame = self.view.bounds = animationFrame.frame;
+    self.view.frame = animationFrame.frame;
 }
 
 - (IFTTTAnimationFrame *)frameForTime:(NSInteger)time
