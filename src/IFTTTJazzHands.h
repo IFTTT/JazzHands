@@ -13,3 +13,4 @@
 #import "IFTTTFrameAnimation.h"
 #import "IFTTTHideAnimation.h"
 #import "IFTTTColorAnimation.h"
+#import "IFTTTTransformAnimation.h"
