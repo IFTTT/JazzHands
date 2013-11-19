@@ -1,0 +1,5 @@
+platform :ios, '6.0'
+
+xcodeproj 'JazzHandsDemo'
+
+pod 'JazzHands', :path => '../'

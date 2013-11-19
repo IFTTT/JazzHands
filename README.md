@@ -1,4 +1,6 @@
-#Jazz Hands
+# Jazz Hands
+
+[![Build Status](https://travis-ci.org/ifttt/JazzHands.png?branch=master)](https://travis-ci.org/ifttt/JazzHands)
 
 Jazz Hands is a simple, keyframe based animation framework for UIKit.
 Animations can be controlled via gestures, scroll views, kvo, or ReactiveCocoa.
@@ -19,16 +21,16 @@ It's recommended that you install from CocoaPods, but you may alternatively just
 
 First, add JazzHands to your UIViewController.
 
-```
+```objc
 import "IFTTTJazzHands.h"
 ```
 
 Now, create an Animator to manage all of the animations in this UIViewController.
 
-```
+```objc
 @property (nonatomic, strong) IFTTTAnimator *animator;
 
-...
+// later...
 
 self.animator = [IFTTTAnimator new];
 ```
@@ -37,27 +39,27 @@ Create an animation for a view that you want to animate. There are multiple
 types of animation that can be applied to a view. For this example, we'll use 
 IFTTTFrameAnimation, which moves and sizes a view.
 
-```
+```objc
 IFTTTFrameAnimation *frameAnimation = [IFTTTFrameAnimation new];
 frameAnimation.view = viewThatYouWantToAnimate;
 ```
 
 Register the animation with the animator.
 
-```
+```objc
 [self.animator addAnimation:frameAnimation];
 ```
 
 Add some keyframes to the animation. Let's move this view 140 pixels left, and double the size, between times 30 and 60.
 
-```
+```objc
 [frameAnimation addKeyFrame:[[IFTTTAnimationKeyFrame alloc] initWithTime:30 andFrame:CGRectMake(10, 10, 100, 100)]];
 [frameAnimation addKeyFrame:[[IFTTTAnimationKeyFrame alloc] initWithTime:60 andFrame:CGRectMake(150, 10, 200, 200)]];
 ```
 
 Now, to animate the view, tell the animator what time it is. For example, to tie this animation to a UIScrollView, notify the animator of time in the scroller's delegate method.
 
-```
+```objc
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
   [self.animator animate:scrollView.contentOffset.x];
@@ -80,7 +82,7 @@ Currently, Jazz Hands supports three types of animations:
 
 Say you want to perform some animations based on a UITableView's scroll offset, but you don't want to be the delegate for that table? ReactiveCocoa is perfect for that.
 
-```
+```objc
 [RACObserve(self.tableView, contentOffset) subscribeNext:^(NSValue *value) {
   NSInteger y = floor(self.tableView.contentOffset.y);
   [self.animator animate:y];
@@ -91,7 +93,7 @@ Say you want to perform some animations based on a UITableView's scroll offset, 
 
 Or, maybe you want to animate some views based upon the position of another view? Jazz Hands works well with KVO.
 
-```
+```objc
 - (void)viewDidLoad
 {
   [self.viewToMirror addObserver:self 
@@ -117,7 +119,7 @@ Or, maybe you want to animate some views based upon the position of another view
 
 Jazz Hands is flexible enough that it can accept timer input from many different types of sources, and this includes UIGestureRecognizers.
 
-``` 
+```objc
 - (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer {
   [self.animator animate:[recognizer locationOfTouch:0 inView:self.view]];
 }

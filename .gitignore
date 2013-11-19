@@ -5,9 +5,7 @@ DerivedData
 
 .sass-cache
 
-IFTTT*.ipa
-IFTTT*.app.dSYM.zip
-IFTTT_Development.mobileprovision
-
 .DS_Store
-xcshareddata
+Pods
+Podfile.lock
+*.xcworkspace

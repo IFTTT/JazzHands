@@ -1,0 +1,3 @@
+language: objective-c
+before_script: script/before_ci
+script: script/ci
