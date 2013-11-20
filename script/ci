@@ -4,4 +4,4 @@ set -e
 
 cd JazzHandsDemo
 pod install
-xctool -workspace JazzHandsDemo.xcworkspace -scheme JazzHandsDemo -sdk iphonesimulator build ONLY_ACTIVE_ARCH=NO
+xctool -workspace JazzHandsDemo.xcworkspace -scheme JazzHandsDemo -sdk iphonesimulator build analyze ONLY_ACTIVE_ARCH=NO
