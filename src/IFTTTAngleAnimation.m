@@ -1,5 +1,5 @@
 //
-//  IFTTTRotationAnimation.m
+//  IFTTTAngleAnimation.m
 //  JazzHands
 //
 //  Created by Vahur Roosimaa on 12/7/13.
