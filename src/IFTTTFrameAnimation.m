@@ -15,6 +15,7 @@
     if (self.keyFrames.count <= 1) return;
     
     IFTTTAnimationFrame *animationFrame = [self animationFrameForTime:time];
+    self.view.transform = CGAffineTransformMakeRotation(0);
     self.view.frame = animationFrame.frame;
 }
 

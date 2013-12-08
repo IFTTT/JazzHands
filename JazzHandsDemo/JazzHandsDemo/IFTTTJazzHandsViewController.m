@@ -7,7 +7,7 @@
 //
 
 #import "IFTTTJazzHandsViewController.h"
-#import "IFTTTRotationAnimation.h"
+#import "IFTTTAngleAnimation.h"
 
 #define NUMBER_OF_PAGES 4
 
@@ -124,6 +124,16 @@
             // move back to initial position on page 4 for parallax effect
             timeForPage(4), CGRectOffset(self.wordmark.frame, 0, dy)
     ]];
+
+
+    IFTTTAngleAnimation *wordmarkRotationAnimation = [IFTTTAngleAnimation animationWithView:self.wordmark];
+    [self.animator addAnimation:wordmarkRotationAnimation];
+    // Rotate a full circle from page 2 to 3
+    [wordmarkRotationAnimation addKeyFrames:[IFTTTAnimationKeyFrame keyFramesWithTimesAndAngles:
+            2,
+            timeForPage(2), 0.0f, // Important to use 0f and not just 0, will be cast via double later
+            timeForPage(3), 2 * M_PI]];
+
 
     // now, we animate the unicorn
     IFTTTFrameAnimation *unicornFrameAnimation = [IFTTTFrameAnimation animationWithView:self.unicorn];
