@@ -15,8 +15,16 @@
     if (self.keyFrames.count <= 1) return;
     
     IFTTTAnimationFrame *animationFrame = [self animationFrameForTime:time];
+
+    // Store the current transform
+    CGAffineTransform tempTransform = self.view.transform;
+
+    // Reset rotation to 0 to avoid warping
     self.view.transform = CGAffineTransformMakeRotation(0);
     self.view.frame = animationFrame.frame;
+
+    // Return to original transform
+    self.view.transform = tempTransform;
 }
 
 - (IFTTTAnimationFrame *)frameForTime:(NSInteger)time
