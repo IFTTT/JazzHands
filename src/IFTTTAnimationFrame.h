@@ -12,5 +12,6 @@
 @property (nonatomic) CGFloat alpha;
 @property (nonatomic) BOOL hidden;
 @property (nonatomic) UIColor * color;
+@property (nonatomic) CGAffineTransform transform;
 
 @end

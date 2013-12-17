@@ -118,6 +118,32 @@
     }
 }
 
++ (NSArray *)keyFramesWithTimesAndTransforms:(NSInteger)pairCount,...{
+    va_list argumentList;
+    NSInteger time;
+    CGAffineTransform transform;
+    if (pairCount > 0) {
+        NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:pairCount];
+
+        va_start(argumentList, pairCount);
+
+        for (int i=0; i<pairCount; i++) {
+            time = va_arg(argumentList, NSInteger);
+            transform = va_arg(argumentList, CGAffineTransform);
+            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime: time
+                                                                           andTransform: transform];
+            [keyFrames addObject:keyFrame];
+        }
+
+        va_end(argumentList);
+
+        return [NSArray arrayWithArray:keyFrames];
+    }
+    else {
+        return nil;
+    }
+}
+
 + (instancetype)keyFrameWithTime:(NSInteger)time andAlpha:(CGFloat)alpha
 {
     IFTTTAnimationKeyFrame *keyFrame = [[[self class] alloc] initWithTime: time
@@ -143,6 +169,12 @@
 {
     IFTTTAnimationKeyFrame *keyFrame = [[[self class] alloc] initWithTime: time
                                                                  andColor: color];
+    return keyFrame;
+}
+
++ (instancetype)keyFrameWithTime:(NSInteger)time andTransform:(CGAffineTransform)transform {
+    IFTTTAnimationKeyFrame *keyFrame = [[[self class] alloc] initWithTime: time
+                                                             andTransform: transform];
     return keyFrame;
 }
 
@@ -198,6 +230,17 @@
         self.color = color;
     }
     
+    return self;
+}
+
+- (id)initWithTime:(NSInteger)time andTransform:(CGAffineTransform)transform
+{
+    self = [self initWithTime:time];
+
+    if (self) {
+        self.transform = transform;
+    }
+
     return self;
 }
 
