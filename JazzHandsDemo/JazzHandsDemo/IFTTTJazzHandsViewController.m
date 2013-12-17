@@ -7,7 +7,6 @@
 //
 
 #import "IFTTTJazzHandsViewController.h"
-#import "IFTTTAngleAnimation.h"
 
 #define NUMBER_OF_PAGES 4
 
