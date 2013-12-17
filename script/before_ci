@@ -2,4 +2,4 @@
 
 set -e
 
-gem install cocoapods
+gem install -N --no-rdoc --no-update-sources cocoapods
