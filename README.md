@@ -70,11 +70,12 @@ This will produce an effect where the view will be at 10,10 and sized 100x100 fo
 
 ##Animation Types
 
-Currently, Jazz Hands supports three types of animations:
+Jazz Hands supports several types of animations:
 
 + **IFTTTFrameAnimation** moves and sizes views.
 + **IFTTTAlphaAnimation** creates fade effects.
 + **IFTTTHideAnimation** hides and shows views.
++ **IFTTTAngleAnimation** for rotation effects.
 
 ##More Examples
 
@@ -117,7 +118,7 @@ Or, maybe you want to animate some views based upon the position of another view
 
 ### Gestures
 
-Jazz Hands is flexible enough that it can accept timer input from many different types of sources, and this includes UIGestureRecognizers.
+Jazz Hands is flexible enough that it can accept timer input from many different types of sources, including `UIGestureRecognizer`.
 
 ```objc
 - (IBAction)handlePan:(UIPanGestureRecognizer *)recognizer {
