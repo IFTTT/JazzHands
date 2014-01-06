@@ -2,14 +2,11 @@
 
 set -e
 
-cd JazzHandsDemo
-pod install
-
-xctool \
--workspace JazzHandsDemo.xcworkspace \
+xcodebuild \
+-workspace JazzHandsDemo/JazzHandsDemo.xcworkspace \
 -scheme JazzHandsDemo \
 -sdk iphonesimulator \
-build \
+clean build \
 ONLY_ACTIVE_ARCH=NO \
 RUN_CLANG_STATIC_ANALYZER=YES \
-CLANG_STATIC_ANALYZER_MODE=deep
+CLANG_STATIC_ANALYZER_MODE=deep | xcpretty -c
