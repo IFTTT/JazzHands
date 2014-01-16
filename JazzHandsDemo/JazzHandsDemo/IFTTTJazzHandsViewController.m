@@ -107,33 +107,22 @@
     IFTTTFrameAnimation *wordmarkFrameAnimation = [IFTTTFrameAnimation animationWithView:self.wordmark];
     [self.animator addAnimation:wordmarkFrameAnimation];
 
-    [wordmarkFrameAnimation addKeyFrames:[IFTTTAnimationKeyFrame keyFramesWithTimesAndFrames:
-            // number of keyframes to add
-            4,
-
-            // move 200 pixels to the right for parallax effect
-            timeForPage(1), CGRectOffset(self.wordmark.frame, 200, 0),
-
-            // move to initial frame on page 2 for parallax effect
-            timeForPage(2), self.wordmark.frame,
-
-            // move down and to the right between pages 2 and 3
-            timeForPage(3), CGRectOffset(self.wordmark.frame, self.view.frame.size.width, dy),
-
-            // move back to initial position on page 4 for parallax effect
-            timeForPage(4), CGRectOffset(self.wordmark.frame, 0, dy)
+    [wordmarkFrameAnimation addKeyFrames:@[
+        [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(1) andFrame:CGRectOffset(self.wordmark.frame, 200, 0)],
+        [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(2) andFrame:self.wordmark.frame],
+        [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(3) andFrame:CGRectOffset(self.wordmark.frame, self.view.frame.size.width, dy)],
+        [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(4) andFrame:CGRectOffset(self.wordmark.frame, 0, dy)],
     ]];
 
 
     IFTTTAngleAnimation *wordmarkRotationAnimation = [IFTTTAngleAnimation animationWithView:self.wordmark];
     [self.animator addAnimation:wordmarkRotationAnimation];
     // Rotate a full circle from page 2 to 3
-    [wordmarkRotationAnimation addKeyFrames:[IFTTTAnimationKeyFrame keyFramesWithTimesAndAngles:
-            2,
-            timeForPage(2), 0.0f, // Important to use 0f and not just 0, will be cast via double later
-            timeForPage(3), 2 * M_PI]];
-
-
+    [wordmarkRotationAnimation addKeyFrames:@[
+        [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(2) andAngle:0.0f],
+        [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(3) andAngle:(CGFloat)(2 * M_PI)],
+    ]];
+    
     // now, we animate the unicorn
     IFTTTFrameAnimation *unicornFrameAnimation = [IFTTTFrameAnimation animationWithView:self.unicorn];
     [self.animator addAnimation:unicornFrameAnimation];
