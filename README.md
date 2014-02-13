@@ -130,4 +130,4 @@ Jazz Hands is flexible enough that it can accept timer input from many different
 
 An animator can only handle one animation per type per view. If you want multiple animations of the same type on a view, use keyframes.
 
-Copyright 2013 IFTTT Inc
+Copyright 2014 IFTTT Inc
