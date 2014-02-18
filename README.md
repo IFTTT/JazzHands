@@ -11,7 +11,13 @@ Jazz Hands is used extensively in [IFTTT for iPhone](https://ifttt.com/mobile), 
 
 ##Demo App
 
-Run JazzHandsDemo/JazzHandsDemo.xcodeproj to see a simple demonstration of moving, resizing, fading, and hiding views in a scrolling app intro.
+Check out the demo app to see a simple demonstration of moving, resizing, fading, and hiding views in a scrolling app intro.
+
+```bash
+cd JazzHandsDemo
+pod install
+open JazzHandsDemo.xcworkspace
+```
 
 ##Installation
 
