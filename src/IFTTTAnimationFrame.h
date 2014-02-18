@@ -13,5 +13,6 @@
 @property (nonatomic) BOOL hidden;
 @property (nonatomic) UIColor * color;
 @property (nonatomic) CGFloat angle;
+@property (nonatomic) CGFloat scale;
 
 @end

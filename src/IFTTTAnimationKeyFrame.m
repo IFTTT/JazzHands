@@ -144,6 +144,31 @@
     }
 }
 
++ (NSArray *)keyFramesWithTimesAndScales:(NSInteger)pairCount, ... {
+    va_list argumentList;
+    NSInteger time;
+    CGFloat scale;
+    if (pairCount > 0) {
+        NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:pairCount];
+
+        va_start(argumentList, pairCount);
+
+        for (int i=0; i<pairCount; i++) {
+            time = va_arg(argumentList, NSInteger);
+            scale = va_arg(argumentList, double);
+            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime: time
+                                                                               andScale: scale];
+            [keyFrames addObject:keyFrame];
+        }
+
+        va_end(argumentList);
+
+        return [NSArray arrayWithArray:keyFrames];
+    }
+    else {
+        return nil;
+    }
+}
 
 + (instancetype)keyFrameWithTime:(NSInteger)time andAlpha:(CGFloat)alpha
 {
@@ -178,6 +203,14 @@
     IFTTTAnimationKeyFrame *keyFrame = [[[self class] alloc] initWithTime:time
                                                               andAngle:angle];
     
+    return keyFrame;
+}
+
++ (instancetype)keyFrameWithTime:(NSInteger)time andScale:(CGFloat)scale
+{
+    IFTTTAnimationKeyFrame *keyFrame = [[[self class] alloc] initWithTime:time
+                                                                 andScale:scale];
+
     return keyFrame;
 }
 
@@ -242,6 +275,16 @@
 
     if (self) {
         self.angle = angle;
+    }
+
+    return self;
+}
+
+- (id)initWithTime:(NSInteger)time andScale:(CGFloat)scale {
+    self = [self initWithTime:time];
+
+    if (self) {
+        self.scale = scale;
     }
 
     return self;
