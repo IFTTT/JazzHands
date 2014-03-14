@@ -11,6 +11,6 @@
 @interface IFTTTAnimatedScrollViewController : UIViewController <UIScrollViewDelegate>
 
 @property (nonatomic, strong) IFTTTAnimator *animator;
-@property (strong, nonatomic) UIScrollView *scrollView;
+@property (nonatomic, strong) UIScrollView *scrollView;
 
 @end

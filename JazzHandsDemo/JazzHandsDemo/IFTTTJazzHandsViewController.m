@@ -22,9 +22,6 @@
 @end
 
 @implementation IFTTTJazzHandsViewController
-{
-
-}
 
 - (id)init
 {
