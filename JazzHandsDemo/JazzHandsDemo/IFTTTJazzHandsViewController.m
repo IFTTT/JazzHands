@@ -11,13 +11,13 @@
 #define NUMBER_OF_PAGES 4
 
 #define timeForPage(page) (NSInteger)(self.view.frame.size.width * (page - 1))
-#define xForPage(page) timeForPage(page)
 
 @interface IFTTTJazzHandsViewController ()
 
 @property (strong, nonatomic) UIImageView *wordmark;
 @property (strong, nonatomic) UIImageView *unicorn;
 @property (strong, nonatomic) UILabel *lastLabel;
+@property (strong, nonatomic) UILabel *firstLabel;
 
 @end
 
@@ -66,31 +66,31 @@
     );
     [self.scrollView addSubview:self.wordmark];
     
-    UILabel *firstPageText = [[UILabel alloc] init];
-    firstPageText.text = @"Introducing Jazz Hands";
-    [firstPageText sizeToFit];
-    firstPageText.center = self.view.center;
-    [self.scrollView addSubview:firstPageText];
+    self.firstLabel = [[UILabel alloc] init];
+    self.firstLabel.text = @"Introducing Jazz Hands";
+    [self.firstLabel sizeToFit];
+    self.firstLabel.center = self.view.center;
+    [self.scrollView addSubview:self.firstLabel];
     
     UILabel *secondPageText = [[UILabel alloc] init];
     secondPageText.text = @"Brought to you by IFTTT";
     [secondPageText sizeToFit];
     secondPageText.center = self.view.center;
-    secondPageText.frame = CGRectOffset(secondPageText.frame, xForPage(2), 180);
+    secondPageText.frame = CGRectOffset(secondPageText.frame, timeForPage(2), 180);
     [self.scrollView addSubview:secondPageText];
     
     UILabel *thirdPageText = [[UILabel alloc] init];
     thirdPageText.text = @"Simple keyframe animations";
     [thirdPageText sizeToFit];
     thirdPageText.center = self.view.center;
-    thirdPageText.frame = CGRectOffset(thirdPageText.frame, xForPage(3), -100);
+    thirdPageText.frame = CGRectOffset(thirdPageText.frame, timeForPage(3), -100);
     [self.scrollView addSubview:thirdPageText];
     
     UILabel *fourthPageText = [[UILabel alloc] init];
     fourthPageText.text = @"Optimized for scrolling intros";
     [fourthPageText sizeToFit];
     fourthPageText.center = self.view.center;
-    fourthPageText.frame = CGRectOffset(fourthPageText.frame, xForPage(4), 0);
+    fourthPageText.frame = CGRectOffset(fourthPageText.frame, timeForPage(4), 0);
     [self.scrollView addSubview:fourthPageText];
     
     self.lastLabel = fourthPageText;
@@ -99,8 +99,25 @@
 - (void)configureAnimation
 {
     CGFloat dy = 240;
+    
+    // apply a 3D zoom animation to the first label
+    IFTTTTransform3DAnimation * labelTransform = [IFTTTTransform3DAnimation animationWithView:self.firstLabel];
+    IFTTTTransform3D *tt1 = [IFTTTTransform3D transformWithM34:0.03f];
+    IFTTTTransform3D *tt2 = [IFTTTTransform3D transformWithM34:0.3f];
+    tt2.rotate = (IFTTTTransform3DRotate){ -(CGFloat)(M_PI), 1, 0, 0 };
+    tt2.translate = (IFTTTTransform3DTranslate){ 0, 0, 50 };
+    tt2.scale = (IFTTTTransform3DScale){ 1.f, 2.f, 1.f };
+    [labelTransform addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(0)
+                                                                andAlpha:1.0f]];
+    [labelTransform addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(1)
+                                                          andTransform3D:tt1]];
+    [labelTransform addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(1.5)
+                                                          andTransform3D:tt2]];
+    [labelTransform addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(1.5) + 1
+                                                                andAlpha:0.0f]];
+    [self.animator addAnimation:labelTransform];
 
-    // first, let's animate the wordmark
+    // let's animate the wordmark
     IFTTTFrameAnimation *wordmarkFrameAnimation = [IFTTTFrameAnimation animationWithView:self.wordmark];
     [self.animator addAnimation:wordmarkFrameAnimation];
 
@@ -110,7 +127,6 @@
         [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(3) andFrame:CGRectOffset(self.wordmark.frame, self.view.frame.size.width, dy)],
         [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(4) andFrame:CGRectOffset(self.wordmark.frame, 0, dy)],
     ]];
-
 
     IFTTTAngleAnimation *wordmarkRotationAnimation = [IFTTTAngleAnimation animationWithView:self.wordmark];
     [self.animator addAnimation:wordmarkRotationAnimation];
@@ -129,7 +145,7 @@
     // move down and to the right, and shrink between pages 2 and 3
     [unicornFrameAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(2) andFrame:self.unicorn.frame]];
     [unicornFrameAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(3)
-                                                                           andFrame:CGRectOffset(CGRectInset(self.unicorn.frame, ds, ds), xForPage(2), dy)]];
+                                                                           andFrame:CGRectOffset(CGRectInset(self.unicorn.frame, ds, ds), timeForPage(2), dy)]];
     // fade the unicorn in on page 2 and out on page 4
     IFTTTAlphaAnimation *unicornAlphaAnimation = [IFTTTAlphaAnimation animationWithView:self.unicorn];
     [self.animator addAnimation:unicornAlphaAnimation];

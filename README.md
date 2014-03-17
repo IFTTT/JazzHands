@@ -2,8 +2,8 @@
 
 [![Build Status](https://travis-ci.org/IFTTT/JazzHands.png?branch=master)](https://travis-ci.org/IFTTT/JazzHands)
 
-Jazz Hands is a simple, keyframe based animation framework for UIKit.
-Animations can be controlled via gestures, scroll views, kvo, or ReactiveCocoa.
+Jazz Hands is a simple keyframe-based animation framework for UIKit.
+Animations can be controlled via gestures, scroll views, KVO, or ReactiveCocoa.
 
 Jazz Hands is used extensively in [IFTTT for iPhone](https://ifttt.com/mobile), most famously in the app intro:
 
@@ -82,6 +82,7 @@ Jazz Hands supports several types of animations:
 + **IFTTTAlphaAnimation** creates fade effects.
 + **IFTTTHideAnimation** hides and shows views.
 + **IFTTTAngleAnimation** for rotation effects.
++ **IFTTTTransform3DAnimation** for 3D transforms.
 
 ##More Examples
 

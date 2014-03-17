@@ -11,15 +11,13 @@
 
 + (instancetype)transformWithM34:(CGFloat)m34
 {
-    IFTTTTransform3D * transform = [[[self class] alloc] initWithM34:m34];
+    IFTTTTransform3D * transform = [[self alloc] initWithM34:m34];
     return transform;
 }
 
 - (id)init
 {
-    self = [super init];
-    
-    if (self) {
+    if ((self = [super init])) {
         self.scale = (IFTTTTransform3DScale){ 1.f, 1.f, 1.f };;
     }
     
@@ -28,9 +26,7 @@
 
 - (id)initWithM34:(CGFloat)m34
 {
-    self = [self init];
-    
-    if (self) {
+    if ((self = [self init])) {
         self.m34 = m34;
     }
     
@@ -56,14 +52,15 @@
                                     animationFrame.transform.rotate.x,
                                     animationFrame.transform.rotate.y,
                                     animationFrame.transform.rotate.z);    
-    transform = CATransform3DScale( transform,
-                                    animationFrame.transform.scale.sx,
-                                    animationFrame.transform.scale.sy,
-                                    animationFrame.transform.scale.sz);
+    transform = CATransform3DScale(transform,
+                                   animationFrame.transform.scale.sx,
+                                   animationFrame.transform.scale.sy,
+                                   animationFrame.transform.scale.sz);
     transform = CATransform3DTranslate(transform,
-                                    animationFrame.transform.translate.tx,
-                                    animationFrame.transform.translate.ty,
-                                    animationFrame.transform.translate.tz);
+                                       animationFrame.transform.translate.tx,
+                                       animationFrame.transform.translate.ty,
+                                       animationFrame.transform.translate.tz);
+    
     self.view.layer.transform = transform;
 }
 
@@ -73,7 +70,6 @@
 {
     IFTTTAnimationFrame * animationFrame = [IFTTTAnimationFrame new];
     animationFrame.transform = [IFTTTTransform3D new];
-
     animationFrame.transform.m34 = startKeyFrame.transform.m34;
     
     IFTTTTransform3DTranslate translate;
@@ -124,20 +120,20 @@
     IFTTTTransform3DScale scale;
     
     scale.sx = [self tweenValueForStartTime:startKeyFrame.time
-                                        endTime:endKeyFrame.time
-                                     startValue:startKeyFrame.transform.scale.sx
-                                       endValue:endKeyFrame.transform.scale.sx
-                                         atTime:time];
+                                    endTime:endKeyFrame.time
+                                 startValue:startKeyFrame.transform.scale.sx
+                                   endValue:endKeyFrame.transform.scale.sx
+                                     atTime:time];
     scale.sy = [self tweenValueForStartTime:startKeyFrame.time
-                                        endTime:endKeyFrame.time
-                                     startValue:startKeyFrame.transform.scale.sy
-                                       endValue:endKeyFrame.transform.scale.sy
-                                         atTime:time];
+                                    endTime:endKeyFrame.time
+                                 startValue:startKeyFrame.transform.scale.sy
+                                   endValue:endKeyFrame.transform.scale.sy
+                                     atTime:time];
     scale.sz = [self tweenValueForStartTime:startKeyFrame.time
-                                        endTime:endKeyFrame.time
-                                     startValue:startKeyFrame.transform.scale.sz
-                                       endValue:endKeyFrame.transform.scale.sz
-                                         atTime:time];
+                                    endTime:endKeyFrame.time
+                                 startValue:startKeyFrame.transform.scale.sz
+                                   endValue:endKeyFrame.transform.scale.sz
+                                     atTime:time];
     
     animationFrame.transform.scale = scale;
 

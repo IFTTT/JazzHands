@@ -10,11 +10,11 @@
 
 @interface IFTTTAnimationFrame : NSObject
 
-@property (nonatomic) CGRect frame;
-@property (nonatomic) CGFloat alpha;
-@property (nonatomic) BOOL hidden;
-@property (nonatomic, retain) UIColor * color;
-@property (nonatomic) CGFloat angle;
-@property (nonatomic, retain) IFTTTTransform3D * transform;
+@property (nonatomic, assign) CGRect frame;
+@property (nonatomic, assign) CGFloat alpha;
+@property (nonatomic, assign) BOOL hidden;
+@property (nonatomic, copy) UIColor *color;
+@property (nonatomic, assign) CGFloat angle;
+@property (nonatomic, strong) IFTTTTransform3D *transform;
 
 @end
