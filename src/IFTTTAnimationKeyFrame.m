@@ -23,8 +23,8 @@
         for (int i=0; i<pairCount; i++) {
             time = va_arg(argumentList, NSInteger);
             alpha = va_arg(argumentList, double);   // use double to suppress a va_arg conversion warning
-            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime: time
-                                                                               andAlpha: alpha];
+            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime:time
+                                                                               andAlpha:alpha];
             [keyFrames addObject:keyFrame];
         }
         
@@ -50,8 +50,8 @@
         for (int i=0; i<pairCount; i++) {
             time = va_arg(argumentList, NSInteger);
             frame = va_arg(argumentList, CGRect);
-            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime: time
-                                                                               andFrame: frame];
+            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime:time
+                                                                               andFrame:frame];
             [keyFrames addObject:keyFrame];
         }
         
@@ -77,8 +77,8 @@
         for (int i=0; i<pairCount; i++) {
             time = va_arg(argumentList, NSInteger);
             hidden = va_arg(argumentList, int); // use int to suppress a va_arg conversion warning
-            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime: time
-                                                                              andHidden: hidden];
+            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime:time
+                                                                              andHidden:hidden];
             [keyFrames addObject:keyFrame];
         }
         
@@ -104,8 +104,8 @@
         for (int i=0; i<pairCount; i++) {
             time = va_arg(argumentList, NSInteger);
             color = va_arg(argumentList, id);
-            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime: time
-                                                                               andColor: color];
+            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime:time
+                                                                               andColor:color];
             [keyFrames addObject:keyFrame];
         }
         
@@ -130,8 +130,8 @@
         for (int i=0; i<pairCount; i++) {
             time = va_arg(argumentList, NSInteger);
             angle = va_arg(argumentList, double);
-            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime: time
-                                                                               andAngle: angle];
+            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime:time
+                                                                               andAngle:angle];
             [keyFrames addObject:keyFrame];
         }
         
@@ -156,8 +156,8 @@
         for (int i=0; i<pairCount; i++) {
             time = va_arg(argumentList, NSInteger);
             transform = va_arg(argumentList, id);
-            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime: time
-                                                                         andTransform3D: transform];
+            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime:time
+                                                                         andTransform3D:transform];
             [keyFrames addObject:keyFrame];
         }
         
@@ -196,52 +196,52 @@
 
 + (instancetype)keyFrameWithTime:(NSInteger)time andAlpha:(CGFloat)alpha
 {
-    IFTTTAnimationKeyFrame *keyFrame = [[[self class] alloc] initWithTime: time
-                                                                 andAlpha: alpha];
+    IFTTTAnimationKeyFrame *keyFrame = [[self alloc] initWithTime:time
+                                                         andAlpha:alpha];
     return keyFrame;
 }
 
 + (instancetype)keyFrameWithTime:(NSInteger)time andFrame:(CGRect)frame
 {
-    IFTTTAnimationKeyFrame *keyFrame = [[[self class] alloc] initWithTime: time
-                                                                 andFrame: frame];
+    IFTTTAnimationKeyFrame *keyFrame = [[self alloc] initWithTime:time
+                                                         andFrame:frame];
     return keyFrame;
 }
 
 + (instancetype)keyFrameWithTime:(NSInteger)time andHidden:(BOOL)hidden
 {
-    IFTTTAnimationKeyFrame *keyFrame = [[[self class] alloc] initWithTime: time
-                                                                andHidden: hidden];
+    IFTTTAnimationKeyFrame *keyFrame = [[self alloc] initWithTime:time
+                                                        andHidden:hidden];
     return keyFrame;
 }
 
 + (instancetype)keyFrameWithTime:(NSInteger)time andColor:(UIColor*)color
 {
-    IFTTTAnimationKeyFrame *keyFrame = [[[self class] alloc] initWithTime: time
-                                                                 andColor: color];
+    IFTTTAnimationKeyFrame *keyFrame = [[self alloc] initWithTime:time
+                                                         andColor:color];
     return keyFrame;
 }
 
 + (instancetype)keyFrameWithTime:(NSInteger)time andAngle:(CGFloat)angle
 {
-    IFTTTAnimationKeyFrame *keyFrame = [[[self class] alloc] initWithTime: time
-                                                                 andAngle: angle];
+    IFTTTAnimationKeyFrame *keyFrame = [[self alloc] initWithTime:time
+                                                         andAngle:angle];
     
     return keyFrame;
 }
 
 + (instancetype)keyFrameWithTime:(NSInteger)time andTransform3D:(IFTTTTransform3D *)transform
 {
-    IFTTTAnimationKeyFrame *keyFrame = [[[self class] alloc] initWithTime: time
-                                                           andTransform3D: transform];
-    
+    IFTTTAnimationKeyFrame *keyFrame = [[self alloc] initWithTime:time
+                                                   andTransform3D:transform];
+
     return keyFrame;
 }
 
 + (instancetype)keyFrameWithTime:(NSInteger)time andScale:(CGFloat)scale
 {
-    IFTTTAnimationKeyFrame *keyFrame = [[[self class] alloc] initWithTime:time
-                                                                 andScale:scale];
+    IFTTTAnimationKeyFrame *keyFrame = [[self alloc] initWithTime:time
+                                                         andScale:scale];
 
     return keyFrame;
 }
