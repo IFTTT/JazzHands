@@ -12,9 +12,7 @@
 
 - (id)init
 {
-    self = [super init];
-    
-    if (self) {
+    if ((self = [super init])) {
         self.animator = [IFTTTAnimator new];
         self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
         self.scrollView.delegate = self;

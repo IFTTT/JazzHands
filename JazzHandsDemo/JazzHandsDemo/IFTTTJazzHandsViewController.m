@@ -25,9 +25,7 @@
 
 - (id)init
 {
-    self = [super init];
-    
-    if (self) {
+    if ((self = [super init])) {
         self.scrollView.contentSize = CGSizeMake(
             NUMBER_OF_PAGES * self.view.frame.size.width,
             self.view.frame.size.height
