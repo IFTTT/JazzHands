@@ -8,6 +8,6 @@
 
 #import "IFTTTJazzHands.h"
 
-@interface IFTTTJazzHandsViewController : IFTTTAnimatedScrollViewController
+@interface IFTTTJazzHandsViewController : IFTTTAnimatedScrollViewController <IFTTTAnimatedScrollViewControllerDelegate>
 
 @end

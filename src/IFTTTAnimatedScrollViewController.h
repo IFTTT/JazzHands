@@ -23,8 +23,18 @@
 
 @optional
 
+/**
+ *  The user has scrolled to the last page of the scrollview.
+ *
+ *  @param animatedScrollViewController the scroll view controller that's been scrolled
+ */
 - (void)animatedScrollViewControllerDidScrollToEnd:(IFTTTAnimatedScrollViewController *)animatedScrollViewController;
 
+/**
+ *  The user has released the scrollview (ended dragging) at the last page of the scrollview.
+ *
+ *  @param animatedScrollViewController the scroll view controller that's been scrolled
+ */
 - (void)animatedScrollViewControllerDidEndDraggingAtEnd:(IFTTTAnimatedScrollViewController *)animatedScrollViewController;
 
 @end

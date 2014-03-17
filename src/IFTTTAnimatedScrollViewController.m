@@ -8,9 +8,14 @@
 
 #import "IFTTTAnimatedScrollViewController.h"
 
-@interface IFTTTAnimatedScrollViewController () {
-    BOOL _isAtEnd;
+static inline CGFloat IFTTTMaxContentOffsetXForScrollView(UIScrollView *scrollView)
+{
+    return scrollView.contentSize.width + scrollView.contentInset.right - CGRectGetWidth(scrollView.bounds);
 }
+
+@interface IFTTTAnimatedScrollViewController ()
+
+@property (nonatomic, assign) BOOL isAtEnd;
 
 @end
 
@@ -19,57 +24,36 @@
 - (id)init
 {
     if ((self = [super init])) {
+        _isAtEnd = NO;
         self.animator = [IFTTTAnimator new];
-        self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-        self.scrollView.delegate = self;
-        [self.view addSubview:self.scrollView];
     }
     
     return self;
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     self.scrollView.delegate = self;
     [self.view addSubview:self.scrollView];
 }
 
-- (CGFloat)maxContentOffsetXForScrollView:(UIScrollView *)scrollView {
-    return scrollView.contentSize.width + scrollView.contentInset.right - scrollView.bounds.size.width;
-}
-
-- (void)updateValueOfAtEndWithScrollView:(UIScrollView *)scrollView {
-    _isAtEnd = scrollView.contentOffset.x >= [self maxContentOffsetXForScrollView:scrollView] ? YES : NO;
-}
-
 - (void)scrollViewDidScroll:(UIScrollView *)aScrollView
 {
     [self.animator animate:aScrollView.contentOffset.x];
+    
+    self.isAtEnd = (aScrollView.contentOffset.x >= IFTTTMaxContentOffsetXForScrollView(aScrollView));
 
-    [self updateValueOfAtEndWithScrollView:aScrollView];
-
-    if (_isAtEnd) {
-        [self notifyDidScrollToEnd];
+    if (self.isAtEnd && [self.delegate respondsToSelector:@selector(animatedScrollViewControllerDidScrollToEnd:)]) {
+        [self.delegate animatedScrollViewControllerDidScrollToEnd:self];
     }
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    if (_isAtEnd) {
-        [self notifyDidEndDraggingAtEnd];
-    }
-}
-
-- (void)notifyDidScrollToEnd
-{
-    if ([self.delegate respondsToSelector:@selector(animatedScrollViewControllerDidScrollToEnd:)]) {
-        [self.delegate animatedScrollViewControllerDidScrollToEnd:self];
-    }
-}
-
-- (void)notifyDidEndDraggingAtEnd
-{
-    if ([self.delegate respondsToSelector:@selector(animatedScrollViewControllerDidEndDraggingAtEnd:)]) {
+    if (self.isAtEnd && [self.delegate respondsToSelector:@selector(animatedScrollViewControllerDidEndDraggingAtEnd:)]) {
         [self.delegate animatedScrollViewControllerDidEndDraggingAtEnd:self];
     }
 }

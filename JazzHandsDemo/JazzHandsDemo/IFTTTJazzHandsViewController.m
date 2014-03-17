@@ -26,19 +26,26 @@
 - (id)init
 {
     if ((self = [super init])) {
-        self.scrollView.contentSize = CGSizeMake(
-            NUMBER_OF_PAGES * self.view.frame.size.width,
-            self.view.frame.size.height
-        );
-        
-        self.scrollView.pagingEnabled = YES;
-        self.scrollView.showsHorizontalScrollIndicator = NO;
-        
-        [self placeViews];
-        [self configureAnimation];
+
     }
     
     return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+        
+    self.scrollView.contentSize = CGSizeMake(NUMBER_OF_PAGES * CGRectGetWidth(self.view.frame),
+                                             CGRectGetHeight(self.view.frame));
+    
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.showsHorizontalScrollIndicator = NO;
+    
+    [self placeViews];
+    [self configureAnimation];
+    
+    self.delegate = self;
 }
 
 - (void)placeViews
@@ -158,6 +165,18 @@
     [labelAlphaAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(4) andAlpha:1.0f]];
     [labelAlphaAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(4.35f) andAlpha:0.0f]];
     [self.animator addAnimation:labelAlphaAnimation];
+}
+
+#pragma mark - IFTTTAnimatedScrollViewControllerDelegate
+
+- (void)animatedScrollViewControllerDidScrollToEnd:(IFTTTAnimatedScrollViewController *)animatedScrollViewController
+{
+    NSLog(@"Scrolled to end of scrollview!");
+}
+
+- (void)animatedScrollViewControllerDidEndDraggingAtEnd:(IFTTTAnimatedScrollViewController *)animatedScrollViewController
+{
+    NSLog(@"Ended dragging at end of scrollview!");
 }
 
 @end
