@@ -18,5 +18,6 @@
 #import "IFTTTColorAnimation.h"
 #import "IFTTTAngleAnimation.h"
 #import "IFTTTTransform3DAnimation.h"
+#import "IFTTTScaleAnimation.h"
 
 #endif
