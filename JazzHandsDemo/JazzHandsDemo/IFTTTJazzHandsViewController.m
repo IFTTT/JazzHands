@@ -139,8 +139,11 @@
     [unicornAlphaAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(3) andAlpha:1.0f]];
     [unicornAlphaAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(4) andAlpha:0.0f]];
     
-    IFTTTHideAnimation *labelHideAnimation = [IFTTTHideAnimation animationWithView:self.lastLabel hideAt:timeForPage(4)];
-    [self.animator addAnimation:labelHideAnimation];
+    // Fade out the label by dragging on the last page
+    IFTTTAlphaAnimation *labelAlphaAnimation = [IFTTTAlphaAnimation animationWithView:self.lastLabel];
+    [labelAlphaAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(4) andAlpha:1.0f]];
+    [labelAlphaAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(4.35f) andAlpha:0.0f]];
+    [self.animator addAnimation:labelAlphaAnimation];
 }
 
 @end
