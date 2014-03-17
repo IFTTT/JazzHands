@@ -19,7 +19,7 @@
         NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:pairCount];
         
         va_start(argumentList, pairCount);
-
+        
         for (int i=0; i<pairCount; i++) {
             time = va_arg(argumentList, NSInteger);
             alpha = va_arg(argumentList, double);   // use double to suppress a va_arg conversion warning
@@ -27,9 +27,9 @@
                                                                                andAlpha: alpha];
             [keyFrames addObject:keyFrame];
         }
-
+        
         va_end(argumentList);
-
+        
         return [NSArray arrayWithArray:keyFrames];
     }
     else {
@@ -124,9 +124,9 @@
     CGFloat angle;
     if (pairCount > 0) {
         NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:pairCount];
-
+        
         va_start(argumentList, pairCount);
-
+        
         for (int i=0; i<pairCount; i++) {
             time = va_arg(argumentList, NSInteger);
             angle = va_arg(argumentList, double);
@@ -134,9 +134,9 @@
                                                                                andAngle: angle];
             [keyFrames addObject:keyFrame];
         }
-
+        
         va_end(argumentList);
-
+        
         return [NSArray arrayWithArray:keyFrames];
     }
     else {
@@ -144,6 +144,31 @@
     }
 }
 
++ (NSArray *)keyFramesWithTimesAndTransform3D:(NSInteger)pairCount, ...{
+    va_list argumentList;
+    NSInteger time;
+    IFTTTTransform3D * transform;
+    if (pairCount > 0) {
+        NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:pairCount];
+        
+        va_start(argumentList, pairCount);
+        
+        for (int i=0; i<pairCount; i++) {
+            time = va_arg(argumentList, NSInteger);
+            transform = va_arg(argumentList, id);
+            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime: time
+                                                                         andTransform3D: transform];
+            [keyFrames addObject:keyFrame];
+        }
+        
+        va_end(argumentList);
+        
+        return [NSArray arrayWithArray:keyFrames];
+    }
+    else {
+        return nil;
+    }
+}
 
 + (instancetype)keyFrameWithTime:(NSInteger)time andAlpha:(CGFloat)alpha
 {
@@ -175,8 +200,16 @@
 
 + (instancetype)keyFrameWithTime:(NSInteger)time andAngle:(CGFloat)angle
 {
-    IFTTTAnimationKeyFrame *keyFrame = [[[self class] alloc] initWithTime:time
-                                                              andAngle:angle];
+    IFTTTAnimationKeyFrame *keyFrame = [[[self class] alloc] initWithTime: time
+                                                                 andAngle: angle];
+    
+    return keyFrame;
+}
+
++ (instancetype)keyFrameWithTime:(NSInteger)time andTransform3D:(IFTTTTransform3D *)transform
+{
+    IFTTTAnimationKeyFrame *keyFrame = [[[self class] alloc] initWithTime: time
+                                                           andTransform3D: transform];
     
     return keyFrame;
 }
@@ -210,7 +243,7 @@
     if (self) {
         self.frame = frame;
     }
-
+    
     return self;
 }
 
@@ -221,7 +254,7 @@
     if (self) {
         self.hidden = hidden;
     }
-
+    
     return self;
 }
 
@@ -239,11 +272,22 @@
 - (id)initWithTime:(NSInteger)time andAngle:(CGFloat)angle
 {
     self = [self initWithTime:time];
-
+    
     if (self) {
         self.angle = angle;
     }
+    
+    return self;
+}
 
+- (id)initWithTime:(NSInteger)time andTransform3D:(IFTTTTransform3D *)transform
+{
+    self = [self initWithTime:time];
+    
+    if (self) {
+        self.transform = transform;
+    }
+    
     return self;
 }
 
