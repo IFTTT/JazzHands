@@ -5,7 +5,7 @@
 Jazz Hands is a simple keyframe-based animation framework for UIKit.
 Animations can be controlled via gestures, scroll views, KVO, or ReactiveCocoa.
 
-Jazz Hands is used extensively in [IFTTT for iPhone](https://ifttt.com/mobile), most famously in the app intro:
+Jazz Hands is used extensively in [IFTTT for iPhone and iPad](https://ifttt.com/mobile), most famously in the app intro:
 
 ![ScreenShot](https://raw.github.com/IFTTT/JazzHands/screenshots/screenshots/intro.gif)
 
