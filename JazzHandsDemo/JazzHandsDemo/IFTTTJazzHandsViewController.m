@@ -133,9 +133,9 @@
         [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(4) andFrame:CGRectOffset(self.wordmark.frame, 0, dy)],
     ]];
 
+    // Rotate a full circle from page 2 to 3
     IFTTTAngleAnimation *wordmarkRotationAnimation = [IFTTTAngleAnimation animationWithView:self.wordmark];
     [self.animator addAnimation:wordmarkRotationAnimation];
-    // Rotate a full circle from page 2 to 3
     [wordmarkRotationAnimation addKeyFrames:@[
         [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(2) andAngle:0.0f],
         [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(3) andAngle:(CGFloat)(2 * M_PI)],
