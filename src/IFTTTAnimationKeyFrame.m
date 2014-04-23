@@ -16,13 +16,13 @@
     NSInteger time;
     CGFloat alpha;
     if (pairCount > 0) {
-        NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:pairCount];
+        NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:(NSUInteger)pairCount];
         
         va_start(argumentList, pairCount);
         
         for (int i=0; i<pairCount; i++) {
             time = va_arg(argumentList, NSInteger);
-            alpha = va_arg(argumentList, double);   // use double to suppress a va_arg conversion warning
+            alpha = (CGFloat)va_arg(argumentList, double);   // use double to suppress a va_arg conversion warning
             IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime:time
                                                                                andAlpha:alpha];
             [keyFrames addObject:keyFrame];
@@ -43,7 +43,7 @@
     NSInteger time;
     CGRect frame;
     if (pairCount > 0) {
-        NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:pairCount];
+        NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:(NSUInteger)pairCount];
         
         va_start(argumentList, pairCount);
         
@@ -70,13 +70,13 @@
     NSInteger time;
     BOOL hidden;
     if (pairCount > 0) {
-        NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:pairCount];
+        NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:(NSUInteger)pairCount];
         
         va_start(argumentList, pairCount);
         
         for (int i=0; i<pairCount; i++) {
             time = va_arg(argumentList, NSInteger);
-            hidden = va_arg(argumentList, int); // use int to suppress a va_arg conversion warning
+            hidden = (BOOL)va_arg(argumentList, int); // use int to suppress a va_arg conversion warning
             IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime:time
                                                                               andHidden:hidden];
             [keyFrames addObject:keyFrame];
@@ -97,7 +97,7 @@
     NSInteger time;
     UIColor *color;
     if (pairCount > 0) {
-        NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:pairCount];
+        NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:(NSUInteger)pairCount];
         
         va_start(argumentList, pairCount);
         
@@ -123,13 +123,13 @@
     NSInteger time;
     CGFloat angle;
     if (pairCount > 0) {
-        NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:pairCount];
+        NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:(NSUInteger)pairCount];
         
         va_start(argumentList, pairCount);
         
         for (int i=0; i<pairCount; i++) {
             time = va_arg(argumentList, NSInteger);
-            angle = va_arg(argumentList, double);
+            angle = (CGFloat)va_arg(argumentList, double);
             IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime:time
                                                                                andAngle:angle];
             [keyFrames addObject:keyFrame];
@@ -149,7 +149,7 @@
     NSInteger time;
     IFTTTTransform3D * transform;
     if (pairCount > 0) {
-        NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:pairCount];
+        NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:(NSUInteger)pairCount];
         
         va_start(argumentList, pairCount);
         
@@ -174,13 +174,13 @@
     NSInteger time;
     CGFloat scale;
     if (pairCount > 0) {
-        NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:pairCount];
+        NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:(NSUInteger)pairCount];
 
         va_start(argumentList, pairCount);
 
         for (int i=0; i<pairCount; i++) {
             time = va_arg(argumentList, NSInteger);
-            scale = va_arg(argumentList, double);
+            scale = (CGFloat)va_arg(argumentList, double);
             IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime: time
                                                                                andScale: scale];
             [keyFrames addObject:keyFrame];
