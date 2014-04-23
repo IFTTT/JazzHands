@@ -42,19 +42,23 @@ static inline CGFloat IFTTTMaxContentOffsetXForScrollView(UIScrollView *scrollVi
 
 - (void)scrollViewDidScroll:(UIScrollView *)aScrollView
 {
-    [self.animator animate:aScrollView.contentOffset.x];
+    [self.animator animate:(NSInteger)aScrollView.contentOffset.x];
     
     self.isAtEnd = (aScrollView.contentOffset.x >= IFTTTMaxContentOffsetXForScrollView(aScrollView));
+    
+    id delegate = self.delegate;
 
-    if (self.isAtEnd && [self.delegate respondsToSelector:@selector(animatedScrollViewControllerDidScrollToEnd:)]) {
-        [self.delegate animatedScrollViewControllerDidScrollToEnd:self];
+    if (self.isAtEnd && [delegate respondsToSelector:@selector(animatedScrollViewControllerDidScrollToEnd:)]) {
+        [delegate animatedScrollViewControllerDidScrollToEnd:self];
     }
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    if (self.isAtEnd && [self.delegate respondsToSelector:@selector(animatedScrollViewControllerDidEndDraggingAtEnd:)]) {
-        [self.delegate animatedScrollViewControllerDidEndDraggingAtEnd:self];
+    id delegate = self.delegate;
+    
+    if (self.isAtEnd && [delegate respondsToSelector:@selector(animatedScrollViewControllerDidEndDraggingAtEnd:)]) {
+        [delegate animatedScrollViewControllerDidEndDraggingAtEnd:self];
     }
 }
 
