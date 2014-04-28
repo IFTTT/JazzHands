@@ -71,15 +71,17 @@
     
     self.timeline = [NSMutableArray new];
     for (NSUInteger i = 0; i < self.keyFrames.count - 1; i++) {
-        IFTTTAnimationKeyFrame *currentKeyFrame = [self.keyFrames objectAtIndex:i];
-        IFTTTAnimationKeyFrame *nextKeyFrame = [self.keyFrames objectAtIndex:i+1];
+        IFTTTAnimationKeyFrame *currentKeyFrame = self.keyFrames[i];
+        IFTTTAnimationKeyFrame *nextKeyFrame = self.keyFrames[i+1];
         
-        for (NSInteger j = currentKeyFrame.time; j <= nextKeyFrame.time; j++) {
-            [self.timeline addObject:[self frameForTime:j startKeyFrame:currentKeyFrame endKeyFrame:nextKeyFrame]];
+        for (NSInteger j = currentKeyFrame.time + (i == 0 ? 0 : 1); j <= nextKeyFrame.time; j++) {
+            [self.timeline addObject:[self frameForTime:j
+                                          startKeyFrame:currentKeyFrame
+                                            endKeyFrame:nextKeyFrame]];
         }
     }
     
-    self.startTime = ((IFTTTAnimationKeyFrame *)[self.keyFrames objectAtIndex:0]).time;
+    self.startTime = ((IFTTTAnimationKeyFrame *)self.keyFrames[0]).time;
 }
 
 - (IFTTTAnimationFrame *)animationFrameForTime:(NSInteger)time
