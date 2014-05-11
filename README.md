@@ -56,7 +56,7 @@ Register the animation with the animator.
 [self.animator addAnimation:frameAnimation];
 ```
 
-Add some keyframes to the animation. Let's move this view 140 pixels left, and double the size, between times 30 and 60.
+Add some keyframes to the animation. Let's move this view 140 points left, and double the size, between times 30 and 60.
 
 ```objc
 [frameAnimation addKeyFrame:[[IFTTTAnimationKeyFrame alloc] initWithTime:30 andFrame:CGRectMake(10, 10, 100, 100)]];
