@@ -68,6 +68,7 @@ Now, to animate the view, tell the animator what time it is. For example, to tie
 ```objc
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+  [super scrollViewDidScroll:scrollView];
   [self.animator animate:scrollView.contentOffset.x];
 }
 ```
