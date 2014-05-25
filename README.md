@@ -25,7 +25,7 @@ It's recommended that you install from CocoaPods, but you may alternatively just
 
 ##Quick Start
 
-First, add JazzHands to your UIViewController.
+First, add JazzHands to your UIViewController. If you created your UIViewController with a XIB or Storyboard, make sure Autolayout is off for this file.
 
 ```objc
 import "IFTTTJazzHands.h"
@@ -42,7 +42,7 @@ self.animator = [IFTTTAnimator new];
 ```
 
 Create an animation for a view that you want to animate. There are multiple
-types of animation that can be applied to a view. For this example, we'll use 
+types of animation that can be applied to a view. For this example, we'll use
 IFTTTFrameAnimation, which moves and sizes a view.
 
 ```objc
@@ -106,15 +106,15 @@ Or, maybe you want to animate some views based upon the position of another view
 ```objc
 - (void)viewDidLoad
 {
-  [self.viewToMirror addObserver:self 
-                      forKeyPath:@"frame" 
-                         options:NSKeyValueObservingOptionInitial 
+  [self.viewToMirror addObserver:self
+                      forKeyPath:@"frame"
+                         options:NSKeyValueObservingOptionInitial
                          context:nil];
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath 
-                      ofObject:(id)object 
-                        change:(NSDictionary *)change 
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
                        context:(void *)context {
 
   if ([keyPath isEqualToString:@"frame"]) {
