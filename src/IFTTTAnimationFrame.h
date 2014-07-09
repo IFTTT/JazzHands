@@ -17,5 +17,6 @@
 @property (nonatomic, assign) CGFloat angle;
 @property (nonatomic, strong) IFTTTTransform3D *transform;
 @property (nonatomic, assign) CGFloat scale;
+@property (nonatomic, assign) CGFloat constraints;
 
 @end

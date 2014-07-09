@@ -246,6 +246,13 @@
     return keyFrame;
 }
 
++ (instancetype)keyFrameWithTime:(NSInteger)time andConstraints:(CGFloat)constraints {
+    IFTTTAnimationKeyFrame *keyFrame = [[self alloc] initWithTime:time
+                                                   andConstraints:constraints];
+    
+    return keyFrame;
+}
+
 - (id)initWithTime:(NSInteger)time
 {
     self = [super init];
@@ -330,6 +337,16 @@
         self.scale = scale;
     }
 
+    return self;
+}
+
+- (id)initWithTime:(NSInteger)time andConstraints:(CGFloat)constraints {
+    self = [self initWithTime:time];
+    
+    if (self) {
+        self.constraints = constraints;
+    }
+    
     return self;
 }
 

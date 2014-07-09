@@ -33,6 +33,7 @@
 + (instancetype)keyFrameWithTime:(NSInteger)time andAngle:(CGFloat)angle;
 + (instancetype)keyFrameWithTime:(NSInteger)time andTransform3D:(IFTTTTransform3D *)transform;
 + (instancetype)keyFrameWithTime:(NSInteger)time andScale:(CGFloat)scale;
++ (instancetype)keyFrameWithTime:(NSInteger)time andConstraints:(CGFloat)constraints;
 
 - (id)initWithTime:(NSInteger)time andAlpha:(CGFloat)alpha;
 - (id)initWithTime:(NSInteger)time andFrame:(CGRect)frame;
@@ -41,6 +42,7 @@
 - (id)initWithTime:(NSInteger)time andAngle:(CGFloat)angle;
 - (id)initWithTime:(NSInteger)time andTransform3D:(IFTTTTransform3D *)transform;
 - (id)initWithTime:(NSInteger)time andScale:(CGFloat)scale;
+- (id)initWithTime:(NSInteger)time andConstraints:(CGFloat)constraints;
 
 @property (assign, nonatomic) NSInteger time;
 

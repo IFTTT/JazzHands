@@ -11,6 +11,7 @@
 @interface IFTTTAnimation : NSObject
 
 @property (strong, nonatomic) UIView *view;
+@property (strong, nonatomic) NSLayoutConstraint *constraint;
 @property (strong, nonatomic) NSMutableArray *keyFrames;
 
 + (instancetype)animationWithView:(UIView *)view;

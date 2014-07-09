@@ -19,5 +19,6 @@
 #import "IFTTTAngleAnimation.h"
 #import "IFTTTTransform3DAnimation.h"
 #import "IFTTTScaleAnimation.h"
+#import "IFTTTConstraintsAnimation.h"
 
 #endif
