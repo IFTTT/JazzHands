@@ -85,6 +85,7 @@ Jazz Hands supports several types of animations:
 + **IFTTTAngleAnimation** for rotation effects.
 + **IFTTTTransform3DAnimation** for 3D transforms.
 + **IFTTTScaleAnimation** to scale view sizes.
++ **IFTTTConstraintsAnimation** animates AutoLayout constraint constants.
 
 ##More Examples
 

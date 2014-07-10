@@ -19,15 +19,12 @@
 
 + (instancetype)animationWithView:(UIView *)view
 {
-    IFTTTAnimation *animation = [[[self class] alloc] initWithView:view];
-    return animation;
+    return [[self alloc] initWithView:view];
 }
 
 - (id)init
 {
-    self = [super init];
-    
-    if (self) {
+    if ((self = [super init])) {
         self.keyFrames = [NSMutableArray new];
         self.timeline = [NSMutableArray new];
         self.startTime = 0;
@@ -38,8 +35,10 @@
 
 - (id)initWithView:(UIView *)view
 {
-    self = [self.class new];
-    self.view = view;
+    if ((self = [self init])) {
+        self.view = view;
+    }
+    
     return self;
 }
 
