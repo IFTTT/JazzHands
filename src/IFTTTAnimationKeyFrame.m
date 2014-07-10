@@ -194,6 +194,31 @@
     }
 }
 
++ (NSArray *)keyFramesWithTimesAndConstraint:(NSInteger)pairCount, ... {
+    va_list argumentList;
+    NSInteger time;
+    CGFloat constraint;
+    if (pairCount > 0) {
+        NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:(NSUInteger)pairCount];
+        
+        va_start(argumentList, pairCount);
+        
+        for (int i=0; i<pairCount; i++) {
+            time = va_arg(argumentList, NSInteger);
+            constraint = (CGFloat)va_arg(argumentList, double);
+            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime:time
+                                                                          andConstraint:constraint];
+            [keyFrames addObject:keyFrame];
+        }
+        
+        va_end(argumentList);
+        
+        return [NSArray arrayWithArray:keyFrames];
+    } else {
+        return nil;
+    }
+}
+
 + (instancetype)keyFrameWithTime:(NSInteger)time andAlpha:(CGFloat)alpha
 {
     IFTTTAnimationKeyFrame *keyFrame = [[self alloc] initWithTime:time
@@ -246,9 +271,9 @@
     return keyFrame;
 }
 
-+ (instancetype)keyFrameWithTime:(NSInteger)time andConstraints:(CGFloat)constraints {
++ (instancetype)keyFrameWithTime:(NSInteger)time andConstraint:(CGFloat)constraint {
     IFTTTAnimationKeyFrame *keyFrame = [[self alloc] initWithTime:time
-                                                   andConstraints:constraints];
+                                                   andConstraint:constraint];
     
     return keyFrame;
 }
@@ -340,11 +365,11 @@
     return self;
 }
 
-- (id)initWithTime:(NSInteger)time andConstraints:(CGFloat)constraints {
+- (id)initWithTime:(NSInteger)time andConstraint:(CGFloat)constraint {
     self = [self initWithTime:time];
     
     if (self) {
-        self.constraints = constraints;
+        self.constraint = constraint;
     }
     
     return self;

@@ -1,9 +1,8 @@
 //
-//  IFTTTFrameAnimation.m
+//  IFTTTFrameAnimation.h
 //  JazzHands
 //
-//  Created by Devin Foley on 9/27/13.
-//  Copyright (c) 2013 IFTTT Inc. All rights reserved.
+//  Created by willsbor Kang on 7/9/14.
 //
 
 #import "IFTTTConstraintsAnimation.h"
@@ -16,7 +15,7 @@
     
     IFTTTAnimationFrame *animationFrame = [self animationFrameForTime:time];
 
-    self.constraint.constant = animationFrame.constraints;
+    self.constraint.constant = animationFrame.constraint;
     
     [self.view setNeedsLayout];
 }
@@ -26,10 +25,10 @@
                           endKeyFrame:(IFTTTAnimationKeyFrame *)endKeyFrame
 {
     IFTTTAnimationFrame *animationFrame = [IFTTTAnimationFrame new];
-    animationFrame.constraints = [self tweenValueForStartTime:startKeyFrame.time
+    animationFrame.constraint = [self tweenValueForStartTime:startKeyFrame.time
                                                 endTime:endKeyFrame.time
-                                             startValue:startKeyFrame.constraints
-                                               endValue:endKeyFrame.constraints atTime:time];
+                                             startValue:startKeyFrame.constraint
+                                               endValue:endKeyFrame.constraint atTime:time];
     
     return animationFrame;
 }
