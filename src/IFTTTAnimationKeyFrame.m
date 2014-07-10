@@ -273,7 +273,7 @@
 
 + (instancetype)keyFrameWithTime:(NSInteger)time andConstraint:(CGFloat)constraint {
     IFTTTAnimationKeyFrame *keyFrame = [[self alloc] initWithTime:time
-                                                   andConstraint:constraint];
+                                                    andConstraint:constraint];
     
     return keyFrame;
 }
@@ -369,7 +369,7 @@
     self = [self initWithTime:time];
     
     if (self) {
-        self.constraint = constraint;
+        self.constraintConstant = constraint;
     }
     
     return self;

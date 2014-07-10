@@ -15,7 +15,7 @@
     
     IFTTTAnimationFrame *animationFrame = [self animationFrameForTime:time];
 
-    self.constraint.constant = animationFrame.constraint;
+    self.constraint.constant = animationFrame.constraintConstant;
     
     [self.view setNeedsLayout];
 }
@@ -25,10 +25,11 @@
                           endKeyFrame:(IFTTTAnimationKeyFrame *)endKeyFrame
 {
     IFTTTAnimationFrame *animationFrame = [IFTTTAnimationFrame new];
-    animationFrame.constraint = [self tweenValueForStartTime:startKeyFrame.time
-                                                endTime:endKeyFrame.time
-                                             startValue:startKeyFrame.constraint
-                                               endValue:endKeyFrame.constraint atTime:time];
+    animationFrame.constraintConstant = [self tweenValueForStartTime:startKeyFrame.time
+                                                             endTime:endKeyFrame.time
+                                                          startValue:startKeyFrame.constraintConstant
+                                                            endValue:endKeyFrame.constraintConstant
+                                                              atTime:time];
     
     return animationFrame;
 }
