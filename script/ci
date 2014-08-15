@@ -1,12 +1,11 @@
 #!/bin/sh
 
-set -e
+export LC_CTYPE=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 xcodebuild \
 -workspace JazzHandsDemo/JazzHandsDemo.xcworkspace \
 -scheme JazzHandsDemo \
 -sdk iphonesimulator \
-clean build \
-ONLY_ACTIVE_ARCH=NO \
-RUN_CLANG_STATIC_ANALYZER=YES \
-CLANG_STATIC_ANALYZER_MODE=deep | xcpretty -c
+clean analyze \
+ONLY_ACTIVE_ARCH=NO | xcpretty -c

@@ -7,5 +7,4 @@ DerivedData
 
 .DS_Store
 Pods
-Podfile.lock
 *.xcworkspace

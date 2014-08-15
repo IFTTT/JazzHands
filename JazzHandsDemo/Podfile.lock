@@ -1,0 +1,14 @@
+PODS:
+  - JazzHands (0.1.0)
+
+DEPENDENCIES:
+  - JazzHands (from `../`)
+
+EXTERNAL SOURCES:
+  JazzHands:
+    :path: ../
+
+SPEC CHECKSUMS:
+  JazzHands: 53d56f514352f6f8da930b302d9affd1a87e023d
+
+COCOAPODS: 0.33.1

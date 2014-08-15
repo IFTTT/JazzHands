@@ -1,3 +1,4 @@
 language: objective-c
-before_script: script/before_ci
+cache: cocoapods
+podfile: JazzHandsDemo/Podfile
 script: script/ci
