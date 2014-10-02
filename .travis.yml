@@ -1,4 +1,5 @@
 language: objective-c
+before_install: gem install cocoapods -N
 cache: cocoapods
 podfile: JazzHandsDemo/Podfile
 script: script/ci

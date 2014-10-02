@@ -6,8 +6,7 @@
 //  Copyright (c) 2013 IFTTT Inc. All rights reserved.
 //
 
-#ifndef __IFTTT_JAZZHANDS__
-#define __IFTTT_JAZZHANDS__
+#pragma once
 
 #import "IFTTTAnimatedScrollViewController.h"
 
@@ -20,5 +19,3 @@
 #import "IFTTTTransform3DAnimation.h"
 #import "IFTTTScaleAnimation.h"
 #import "IFTTTConstraintsAnimation.h"
-
-#endif
