@@ -53,7 +53,8 @@
 		03063F1B17F5FC61007D7A97 /* IFTTTJazzHandsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTJazzHandsViewController.h; sourceTree = "<group>"; };
 		03063F1D17F5FC61007D7A97 /* IFTTTJazzHandsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTJazzHandsViewController.m; sourceTree = "<group>"; };
 		1F9210F48DEE499B8EC479E2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F134F59855F643BAB12B59DA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		6D050C2F6889563E59C28169 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		77552966B8356BBAE72A4F20 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +89,7 @@
 				03063EED17F5FAAD007D7A97 /* JazzHandsDemoTests */,
 				03063ECD17F5FAAD007D7A97 /* Frameworks */,
 				03063ECC17F5FAAD007D7A97 /* Products */,
-				F134F59855F643BAB12B59DA /* Pods.xcconfig */,
+				9B73BEF552A36EB5AC60FB9E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +154,15 @@
 				03063EF017F5FAAD007D7A97 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9B73BEF552A36EB5AC60FB9E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77552966B8356BBAE72A4F20 /* Pods.debug.xcconfig */,
+				6D050C2F6889563E59C28169 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,7 +286,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -402,7 +412,7 @@
 		};
 		03063EF817F5FAAD007D7A97 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F134F59855F643BAB12B59DA /* Pods.xcconfig */;
+			baseConfigurationReference = 77552966B8356BBAE72A4F20 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -451,7 +461,7 @@
 		};
 		03063EF917F5FAAD007D7A97 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F134F59855F643BAB12B59DA /* Pods.xcconfig */;
+			baseConfigurationReference = 6D050C2F6889563E59C28169 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

@@ -1,5 +1,5 @@
 language: objective-c
-before_install: gem install cocoapods -N
+before_install: gem install cocoapods xcpretty -N
 cache: cocoapods
 podfile: JazzHandsDemo/Podfile
 script: script/ci
