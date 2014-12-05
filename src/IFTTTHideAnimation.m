@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 IFTTT Inc. All rights reserved.
 //
 
-#import "IFTTTHideAnimation.h"
+#import "IFTTTJazzHands.h"
 
 @implementation IFTTTHideAnimation
 

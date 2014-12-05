@@ -5,7 +5,7 @@
 //  Created by willsbor Kang on 7/9/14.
 //
 
-#import "IFTTTConstraintsAnimation.h"
+#import "IFTTTJazzHands.h"
 
 @implementation IFTTTConstraintsAnimation
 

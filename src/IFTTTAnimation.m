@@ -7,6 +7,8 @@
 //
 
 #import "IFTTTAnimation.h"
+#import "IFTTTAnimationKeyFrame.h"
+#import "IFTTTAnimationFrame.h"
 
 @interface IFTTTAnimation ()
 

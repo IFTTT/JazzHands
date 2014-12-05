@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 IFTTT Inc. All rights reserved.
 //
 
-#import "IFTTTAnimatedScrollViewController.h"
+#import "IFTTTJazzHands.h"
 
 static inline CGFloat IFTTTMaxContentOffsetXForScrollView(UIScrollView *scrollView)
 {

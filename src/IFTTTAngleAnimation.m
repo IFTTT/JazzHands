@@ -5,7 +5,7 @@
 //  Created by Vahur Roosimaa on 12/7/13.
 //
 
-#import "IFTTTAngleAnimation.h"
+#import "IFTTTJazzHands.h"
 
 @implementation IFTTTAngleAnimation
 

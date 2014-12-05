@@ -5,7 +5,7 @@
 //  Created by QFish on 3/3/14.
 //
 
-#import "IFTTTTransform3DAnimation.h"
+#import "IFTTTJazzHands.h"
 
 @implementation IFTTTTransform3D
 

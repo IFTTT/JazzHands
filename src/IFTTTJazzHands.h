@@ -8,10 +8,16 @@
 
 #pragma once
 
+@import Foundation;
+@import UIKit;
+
+#import "IFTTTAnimation.h"
+#import "IFTTTAnimationKeyFrame.h"
+#import "IFTTTAnimator.h"
+
 #import "IFTTTAnimatedScrollViewController.h"
 
 #import "IFTTTAlphaAnimation.h"
-#import "IFTTTAnimator.h"
 #import "IFTTTFrameAnimation.h"
 #import "IFTTTHideAnimation.h"
 #import "IFTTTColorAnimation.h"
