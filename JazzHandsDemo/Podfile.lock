@@ -1,14 +1,14 @@
 PODS:
-  - JazzHands (0.1.0)
+  - JazzHands (0.1.1)
 
 DEPENDENCIES:
-  - JazzHands (from `../`)
+  - JazzHands (from `../JazzHands.podspec`)
 
 EXTERNAL SOURCES:
   JazzHands:
-    :path: ../
+    :path: ../JazzHands.podspec
 
 SPEC CHECKSUMS:
-  JazzHands: 87119a241bf0b72525e0bc4df5de168bc94c71e5
+  JazzHands: 73d653cf4e003e9cdb52670f60af2c8726786f6e
 
 COCOAPODS: 0.35.0

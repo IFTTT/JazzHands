@@ -4,4 +4,4 @@ platform :ios, '7.0'
 
 xcodeproj 'JazzHandsDemo'
 
-pod 'JazzHands', :path => '../'
+pod 'JazzHands', :path => '../JazzHands.podspec'
