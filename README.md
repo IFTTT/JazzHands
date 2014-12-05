@@ -28,7 +28,7 @@ It's recommended that you install from CocoaPods, but you may alternatively just
 First, add JazzHands to your UIViewController. If you created your UIViewController with a XIB or Storyboard, make sure Autolayout is off for this file.
 
 ```objc
-import "IFTTTJazzHands.h"
+import <IFTTTJazzHands.h>
 ```
 
 Now, create an Animator to manage all of the animations in this UIViewController.
