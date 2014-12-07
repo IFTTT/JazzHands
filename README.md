@@ -1,6 +1,6 @@
 # Jazz Hands
 
-[![Build Status](https://travis-ci.org/IFTTT/JazzHands.png?branch=master)](https://travis-ci.org/IFTTT/JazzHands)
+[![Build Status](https://travis-ci.org/IFTTT/JazzHands.svg?branch=master)](https://travis-ci.org/IFTTT/JazzHands)
 
 Jazz Hands is a simple keyframe-based animation framework for UIKit.
 Animations can be controlled via gestures, scroll views, KVO, or ReactiveCocoa.
