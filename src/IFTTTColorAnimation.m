@@ -31,7 +31,7 @@
     IFTTTAnimationFrame *animationFrame = [IFTTTAnimationFrame new];
     
     CGFloat startRed, startBlue, startGreen, startAlpha;
-    CGFloat endRed, endBlue, endGreen, endAlpha;
+    CGFloat endRed = 0, endBlue = 0, endGreen = 0, endAlpha = 0;
     
     if ([self iftttGetRed:&startRed green:&startGreen blue:&startBlue alpha:&startAlpha fromColor:startKeyFrame.color] &&
         [self iftttGetRed:&endRed green:&endGreen blue:&endBlue alpha:&endAlpha fromColor:endKeyFrame.color]) {
