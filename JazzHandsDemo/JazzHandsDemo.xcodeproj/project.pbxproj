@@ -17,10 +17,11 @@
 		03063EE817F5FAAD007D7A97 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03063EE717F5FAAD007D7A97 /* XCTest.framework */; };
 		03063EE917F5FAAD007D7A97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03063ECE17F5FAAD007D7A97 /* Foundation.framework */; };
 		03063EEA17F5FAAD007D7A97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03063ED217F5FAAD007D7A97 /* UIKit.framework */; };
-		03063EF217F5FAAD007D7A97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03063EF017F5FAAD007D7A97 /* InfoPlist.strings */; };
-		03063EF417F5FAAD007D7A97 /* JazzHandsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03063EF317F5FAAD007D7A97 /* JazzHandsDemoTests.m */; };
 		03063F1F17F5FC61007D7A97 /* IFTTTJazzHandsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03063F1D17F5FC61007D7A97 /* IFTTTJazzHandsViewController.m */; };
-		97866F20AF9B48679E9D71F2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F9210F48DEE499B8EC479E2 /* libPods.a */; };
+		445B9E227A691EC342AEEDE2 /* libPods-JazzHandsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1EAF4CD1F4A61D2DBBB695 /* libPods-JazzHandsDemo.a */; };
+		8A7331363E195DEE4B479A7E /* libPods-JazzHandsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9147A8A9689CEBCB4A91E3C /* libPods-JazzHandsTests.a */; };
+		E973270D1A58922500AD6E55 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E97327091A58922500AD6E55 /* InfoPlist.strings */; };
+		E973270F1A58922500AD6E55 /* JazzHandsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E973270C1A58922500AD6E55 /* JazzHandsTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,16 +46,21 @@
 		03063EDD17F5FAAD007D7A97 /* IFTTTJazzHandsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFTTTJazzHandsAppDelegate.h; sourceTree = "<group>"; };
 		03063EDE17F5FAAD007D7A97 /* IFTTTJazzHandsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IFTTTJazzHandsAppDelegate.m; sourceTree = "<group>"; };
 		03063EE017F5FAAD007D7A97 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		03063EE617F5FAAD007D7A97 /* JazzHandsDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JazzHandsDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03063EE617F5FAAD007D7A97 /* JazzHandsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JazzHandsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03063EE717F5FAAD007D7A97 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		03063EEF17F5FAAD007D7A97 /* JazzHandsDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JazzHandsDemoTests-Info.plist"; sourceTree = "<group>"; };
-		03063EF117F5FAAD007D7A97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		03063EF317F5FAAD007D7A97 /* JazzHandsDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JazzHandsDemoTests.m; sourceTree = "<group>"; };
 		03063F1B17F5FC61007D7A97 /* IFTTTJazzHandsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFTTTJazzHandsViewController.h; sourceTree = "<group>"; };
 		03063F1D17F5FC61007D7A97 /* IFTTTJazzHandsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTJazzHandsViewController.m; sourceTree = "<group>"; };
-		1F9210F48DEE499B8EC479E2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D739113013588B4840E6285 /* Pods-JazzHandsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazzHandsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JazzHandsTests/Pods-JazzHandsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		45B9FCE6E3104AA817948180 /* Pods-JazzHandsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazzHandsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JazzHandsDemo/Pods-JazzHandsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		6D050C2F6889563E59C28169 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		77552966B8356BBAE72A4F20 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7CFD5D71B92DB9D0FBF83A2E /* Pods-JazzHandsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazzHandsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-JazzHandsDemo/Pods-JazzHandsDemo.release.xcconfig"; sourceTree = "<group>"; };
+		BB1EAF4CD1F4A61D2DBBB695 /* libPods-JazzHandsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JazzHandsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9147A8A9689CEBCB4A91E3C /* libPods-JazzHandsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JazzHandsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E973270A1A58922500AD6E55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E973270B1A58922500AD6E55 /* JazzHandsTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "JazzHandsTests-Info.plist"; sourceTree = "<group>"; };
+		E973270C1A58922500AD6E55 /* JazzHandsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JazzHandsTests.m; sourceTree = "<group>"; };
+		F06E890A963B4A1A460670D4 /* Pods-JazzHandsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazzHandsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JazzHandsTests/Pods-JazzHandsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +71,7 @@
 				03063ED117F5FAAD007D7A97 /* CoreGraphics.framework in Frameworks */,
 				03063ED317F5FAAD007D7A97 /* UIKit.framework in Frameworks */,
 				03063ECF17F5FAAD007D7A97 /* Foundation.framework in Frameworks */,
-				97866F20AF9B48679E9D71F2 /* libPods.a in Frameworks */,
+				445B9E227A691EC342AEEDE2 /* libPods-JazzHandsDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +82,7 @@
 				03063EE817F5FAAD007D7A97 /* XCTest.framework in Frameworks */,
 				03063EEA17F5FAAD007D7A97 /* UIKit.framework in Frameworks */,
 				03063EE917F5FAAD007D7A97 /* Foundation.framework in Frameworks */,
+				8A7331363E195DEE4B479A7E /* libPods-JazzHandsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				03063ED417F5FAAD007D7A97 /* JazzHandsDemo */,
-				03063EED17F5FAAD007D7A97 /* JazzHandsDemoTests */,
+				E97327081A58922500AD6E55 /* JazzHandsTests */,
 				03063ECD17F5FAAD007D7A97 /* Frameworks */,
 				03063ECC17F5FAAD007D7A97 /* Products */,
 				9B73BEF552A36EB5AC60FB9E /* Pods */,
@@ -97,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				03063ECB17F5FAAD007D7A97 /* JazzHandsDemo.app */,
-				03063EE617F5FAAD007D7A97 /* JazzHandsDemoTests.xctest */,
+				03063EE617F5FAAD007D7A97 /* JazzHandsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,7 +116,8 @@
 				03063ED017F5FAAD007D7A97 /* CoreGraphics.framework */,
 				03063ED217F5FAAD007D7A97 /* UIKit.framework */,
 				03063EE717F5FAAD007D7A97 /* XCTest.framework */,
-				1F9210F48DEE499B8EC479E2 /* libPods.a */,
+				BB1EAF4CD1F4A61D2DBBB695 /* libPods-JazzHandsDemo.a */,
+				C9147A8A9689CEBCB4A91E3C /* libPods-JazzHandsTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -138,31 +146,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		03063EED17F5FAAD007D7A97 /* JazzHandsDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				03063EF317F5FAAD007D7A97 /* JazzHandsDemoTests.m */,
-				03063EEE17F5FAAD007D7A97 /* Supporting Files */,
-			);
-			path = JazzHandsDemoTests;
-			sourceTree = "<group>";
-		};
-		03063EEE17F5FAAD007D7A97 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				03063EEF17F5FAAD007D7A97 /* JazzHandsDemoTests-Info.plist */,
-				03063EF017F5FAAD007D7A97 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		9B73BEF552A36EB5AC60FB9E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				77552966B8356BBAE72A4F20 /* Pods.debug.xcconfig */,
 				6D050C2F6889563E59C28169 /* Pods.release.xcconfig */,
+				0D739113013588B4840E6285 /* Pods-JazzHandsTests.debug.xcconfig */,
+				F06E890A963B4A1A460670D4 /* Pods-JazzHandsTests.release.xcconfig */,
+				45B9FCE6E3104AA817948180 /* Pods-JazzHandsDemo.debug.xcconfig */,
+				7CFD5D71B92DB9D0FBF83A2E /* Pods-JazzHandsDemo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E97327081A58922500AD6E55 /* JazzHandsTests */ = {
+			isa = PBXGroup;
+			children = (
+				E973270C1A58922500AD6E55 /* JazzHandsTests.m */,
+				E97327091A58922500AD6E55 /* InfoPlist.strings */,
+				E973270B1A58922500AD6E55 /* JazzHandsTests-Info.plist */,
+			);
+			path = JazzHandsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,22 +191,24 @@
 			productReference = 03063ECB17F5FAAD007D7A97 /* JazzHandsDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		03063EE517F5FAAD007D7A97 /* JazzHandsDemoTests */ = {
+		03063EE517F5FAAD007D7A97 /* JazzHandsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 03063EFA17F5FAAD007D7A97 /* Build configuration list for PBXNativeTarget "JazzHandsDemoTests" */;
+			buildConfigurationList = 03063EFA17F5FAAD007D7A97 /* Build configuration list for PBXNativeTarget "JazzHandsTests" */;
 			buildPhases = (
+				F2C22B261B9CB7C052518749 /* Check Pods Manifest.lock */,
 				03063EE217F5FAAD007D7A97 /* Sources */,
 				03063EE317F5FAAD007D7A97 /* Frameworks */,
 				03063EE417F5FAAD007D7A97 /* Resources */,
+				FD96E5672CCFA6689755A530 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				03063EEC17F5FAAD007D7A97 /* PBXTargetDependency */,
 			);
-			name = JazzHandsDemoTests;
+			name = JazzHandsTests;
 			productName = JazzHandsDemoTests;
-			productReference = 03063EE617F5FAAD007D7A97 /* JazzHandsDemoTests.xctest */;
+			productReference = 03063EE617F5FAAD007D7A97 /* JazzHandsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -233,7 +239,7 @@
 			projectRoot = "";
 			targets = (
 				03063ECA17F5FAAD007D7A97 /* JazzHandsDemo */,
-				03063EE517F5FAAD007D7A97 /* JazzHandsDemoTests */,
+				03063EE517F5FAAD007D7A97 /* JazzHandsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -252,7 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03063EF217F5FAAD007D7A97 /* InfoPlist.strings in Resources */,
+				E973270D1A58922500AD6E55 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +266,21 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		32890CD647DF4D6C8EC92A98 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F2C22B261B9CB7C052518749 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -286,7 +307,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JazzHandsDemo/Pods-JazzHandsDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD96E5672CCFA6689755A530 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JazzHandsTests/Pods-JazzHandsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -306,7 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03063EF417F5FAAD007D7A97 /* JazzHandsDemoTests.m in Sources */,
+				E973270F1A58922500AD6E55 /* JazzHandsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,10 +365,10 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		03063EF017F5FAAD007D7A97 /* InfoPlist.strings */ = {
+		E97327091A58922500AD6E55 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				03063EF117F5FAAD007D7A97 /* en */,
+				E973270A1A58922500AD6E55 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -412,7 +448,7 @@
 		};
 		03063EF817F5FAAD007D7A97 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77552966B8356BBAE72A4F20 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 45B9FCE6E3104AA817948180 /* Pods-JazzHandsDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -461,7 +497,7 @@
 		};
 		03063EF917F5FAAD007D7A97 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D050C2F6889563E59C28169 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 7CFD5D71B92DB9D0FBF83A2E /* Pods-JazzHandsDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -510,6 +546,7 @@
 		};
 		03063EFB17F5FAAD007D7A97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D739113013588B4840E6285 /* Pods-JazzHandsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JazzHandsDemo.app/JazzHandsDemo";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -522,8 +559,9 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					"FB_REFERENCE_IMAGE_DIR=\\\"$(SOURCE_ROOT)/JazzHandsTests/ReferenceImages/\\\"",
 				);
-				INFOPLIST_FILE = "JazzHandsDemoTests/JazzHandsDemoTests-Info.plist";
+				INFOPLIST_FILE = "JazzHandsTests/JazzHandsTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -532,6 +570,7 @@
 		};
 		03063EFC17F5FAAD007D7A97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F06E890A963B4A1A460670D4 /* Pods-JazzHandsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JazzHandsDemo.app/JazzHandsDemo";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -541,7 +580,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JazzHandsDemo/JazzHandsDemo-Prefix.pch";
-				INFOPLIST_FILE = "JazzHandsDemoTests/JazzHandsDemoTests-Info.plist";
+				INFOPLIST_FILE = "JazzHandsTests/JazzHandsTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -569,7 +608,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		03063EFA17F5FAAD007D7A97 /* Build configuration list for PBXNativeTarget "JazzHandsDemoTests" */ = {
+		03063EFA17F5FAAD007D7A97 /* Build configuration list for PBXNativeTarget "JazzHandsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				03063EFB17F5FAAD007D7A97 /* Debug */,

@@ -41,6 +41,8 @@
     
     self.scrollView.pagingEnabled = YES;
     self.scrollView.showsHorizontalScrollIndicator = NO;
+    self.scrollView.accessibilityLabel = @"JazzHands";
+    self.scrollView.accessibilityIdentifier = @"JazzHands";
     
     [self placeViews];
     [self configureAnimation];

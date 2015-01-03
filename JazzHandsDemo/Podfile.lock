@@ -1,14 +1,22 @@
 PODS:
+  - FBSnapshotTestCase (1.4)
   - JazzHands (0.1.1)
+  - KIF (3.1.0):
+    - KIF/XCTest (= 3.1.0)
+  - KIF/XCTest (3.1.0)
 
 DEPENDENCIES:
+  - FBSnapshotTestCase
   - JazzHands (from `../JazzHands.podspec`)
+  - KIF
 
 EXTERNAL SOURCES:
   JazzHands:
     :path: ../JazzHands.podspec
 
 SPEC CHECKSUMS:
+  FBSnapshotTestCase: f9f225b5ba11c8d8c09075590490df16314e4d62
   JazzHands: 73d653cf4e003e9cdb52670f60af2c8726786f6e
+  KIF: de7c7f4aea08179c65d963a3c5ec438ee6408e8c
 
 COCOAPODS: 0.35.0

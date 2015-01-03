@@ -4,4 +4,16 @@ platform :ios, '7.0'
 
 xcodeproj 'JazzHandsDemo'
 
-pod 'JazzHands', :path => '../JazzHands.podspec'
+def install_pods
+    pod 'JazzHands', :path => '../JazzHands.podspec'
+end
+
+target :JazzHandsDemo do
+    install_pods
+end
+
+target :JazzHandsTests, :exclusive => true do
+    install_pods
+    pod 'KIF'
+    pod 'FBSnapshotTestCase'
+end
