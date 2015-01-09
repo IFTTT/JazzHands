@@ -7,6 +7,7 @@
 //
 
 #import "IFTTTAnimationFrame.h"
+#import "IFTTTEasingFunction.h"
 
 @interface IFTTTAnimationKeyFrame : IFTTTAnimationFrame
 
@@ -47,5 +48,6 @@
 - (id)initWithTime:(NSInteger)time andConstraint:(CGFloat)constraint;
 
 @property (assign, nonatomic) NSInteger time;
+@property (copy, nonatomic) IFTTTEasingFunction easingFunction;
 
 @end
