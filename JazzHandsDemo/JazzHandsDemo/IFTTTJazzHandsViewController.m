@@ -129,8 +129,17 @@
     [self.animator addAnimation:wordmarkFrameAnimation];
 
     [wordmarkFrameAnimation addKeyFrames:@[
-        [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(1) andFrame:CGRectOffset(self.wordmark.frame, 200, 0)],
-        [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(2) andFrame:self.wordmark.frame],
+        ({
+            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(1) andFrame:CGRectOffset(self.wordmark.frame, 200, 0)];
+            keyFrame.tweeningFunction = IFTTTTweeningFunctionFrameOriginQuadCurve(CGRectOffset(self.wordmark.frame, 0, 400).origin);
+            keyFrame;
+        }),
+        ({
+            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(2) andFrame:self.wordmark.frame];
+            keyFrame.tweeningFunction = IFTTTTweeningFunctionFrameOriginCurve(CGRectOffset(self.wordmark.frame, -self.view.frame.size.width / 2,     dy / 3).origin,
+                                                                              CGRectOffset(self.wordmark.frame,  self.view.frame.size.width * 2, 2 * dy / 3).origin);
+            keyFrame;
+        }),
         [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(3) andFrame:CGRectOffset(self.wordmark.frame, self.view.frame.size.width, dy)],
         [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(4) andFrame:CGRectOffset(self.wordmark.frame, 0, dy)],
     ]];
