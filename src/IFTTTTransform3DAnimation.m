@@ -3,6 +3,7 @@
 //  JazzHands
 //
 //  Created by QFish on 3/3/14.
+//  Copyright (c) 2015 IFTTT Inc. All rights reserved.
 //
 
 #import "IFTTTJazzHands.h"

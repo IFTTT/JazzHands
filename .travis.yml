@@ -1,6 +1,6 @@
 osx_image: xcode61
 language: objective-c
-before_install: gem install cocoapods xcpretty -N
+before_install: gem install cocoapods xcpretty obcd -N
 cache: cocoapods
 podfile: JazzHandsDemo/Podfile
 script:
@@ -8,4 +8,4 @@ script:
     - export LANG=en_US.UTF-8
     - set -o pipefail && xcodebuild -workspace JazzHandsDemo/JazzHandsDemo.xcworkspace -scheme JazzHandsDemo -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6" clean test | xcpretty -c
     - pod lib lint --quick
-
+    - obcd --path src find HeaderStyle
