@@ -74,11 +74,10 @@
     for (NSUInteger i = 0; i < self.keyFrames.count - 1; i++) {
         IFTTTAnimationKeyFrame *currentKeyFrame = self.keyFrames[i];
         IFTTTAnimationKeyFrame *nextKeyFrame = self.keyFrames[i+1];
+        IFTTTTweeningFunction tweeningFunction = currentKeyFrame.tweeningFunction;
         
         for (NSInteger j = currentKeyFrame.time + (i == 0 ? 0 : 1); j <= nextKeyFrame.time; j++) {
-            [self.timeline addObject:[self frameForTime:j
-                                          startKeyFrame:currentKeyFrame
-                                            endKeyFrame:nextKeyFrame]];
+            [self.timeline addObject:tweeningFunction(self, j, currentKeyFrame, nextKeyFrame)];
         }
     }
     

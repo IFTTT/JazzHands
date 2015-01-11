@@ -26,6 +26,9 @@
 - (void)addKeyFrame:(IFTTTAnimationKeyFrame *)keyFrame;
 
 - (IFTTTAnimationFrame *)animationFrameForTime:(NSInteger)time;
+- (IFTTTAnimationFrame *)frameForTime:(NSInteger)time
+                        startKeyFrame:(IFTTTAnimationKeyFrame *)startKeyFrame
+                          endKeyFrame:(IFTTTAnimationKeyFrame *)endKeyFrame;
 - (CGFloat)tweenValueForStartTime:(NSInteger)startTime
                           endTime:(NSInteger)endTime
                        startValue:(CGFloat)startValue

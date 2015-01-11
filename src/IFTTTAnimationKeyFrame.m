@@ -284,6 +284,8 @@
     
     if (self) {
         self.time = time;
+
+        self.tweeningFunction = IFTTTTweeningFunctionDefault;
     }
     
     return self;
