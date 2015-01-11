@@ -74,9 +74,17 @@
     for (NSUInteger i = 0; i < self.keyFrames.count - 1; i++) {
         IFTTTAnimationKeyFrame *currentKeyFrame = self.keyFrames[i];
         IFTTTAnimationKeyFrame *nextKeyFrame = self.keyFrames[i+1];
-        
-        for (NSInteger j = currentKeyFrame.time + (i == 0 ? 0 : 1); j <= nextKeyFrame.time; j++) {
-            [self.timeline addObject:[self frameForTime:j
+        IFTTTEasingFunction easingFunction = currentKeyFrame.easingFunction;
+
+        NSInteger startTime = currentKeyFrame.time;
+        NSInteger endTime = nextKeyFrame.time;
+        NSInteger duration = endTime - startTime;
+
+        for (NSInteger currentTime = (i == 0 ? 0 : 1); currentTime <= duration; currentTime++) {
+            CGFloat fraction = (CGFloat)currentTime / (CGFloat)duration;
+            NSInteger time = startTime + easingFunction(fraction) * (CGFloat)duration;
+
+            [self.timeline addObject:[self frameForTime:time
                                           startKeyFrame:currentKeyFrame
                                             endKeyFrame:nextKeyFrame]];
         }

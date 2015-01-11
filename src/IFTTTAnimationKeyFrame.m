@@ -284,6 +284,7 @@
     
     if (self) {
         self.time = time;
+        self.easingFunction = IFTTTEasingFunctionLinear;
     }
     
     return self;
