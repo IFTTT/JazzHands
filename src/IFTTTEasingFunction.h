@@ -6,26 +6,33 @@
 //
 //
 
+/**
+ *  Easing functions specify the rate of change in your animations over time.
+ *  Several standard easings are provided here. To explore these, and discover others,
+ *  check out http://easings.net
+ */
+
 // Copied from Robert Böhnke's RBBAnimation, original available here:
 // <https://github.com/robb/RBBAnimation/blob/a29cafe2fa91e62573cc9967990b0ad2a6b17a76/RBBAnimation/RBBEasingFunction.h>
 
-#import <QuartzCore/QuartzCore.h>
+@import UIKit;
+@import QuartzCore;
 
-typedef CGFloat (^IFTTTEasingFunction)(CGFloat t);
+typedef CGFloat (^IFTTTEasingFunction) (CGFloat t);
 
-extern IFTTTEasingFunction const IFTTTEasingFunctionLinear;
+UIKIT_EXTERN IFTTTEasingFunction const IFTTTEasingFunctionLinear;
 
-extern IFTTTEasingFunction const IFTTTEasingFunctionEaseInQuad;
-extern IFTTTEasingFunction const IFTTTEasingFunctionEaseOutQuad;
-extern IFTTTEasingFunction const IFTTTEasingFunctionEaseInOutQuad;
+UIKIT_EXTERN IFTTTEasingFunction const IFTTTEasingFunctionEaseInQuad;
+UIKIT_EXTERN IFTTTEasingFunction const IFTTTEasingFunctionEaseOutQuad;
+UIKIT_EXTERN IFTTTEasingFunction const IFTTTEasingFunctionEaseInOutQuad;
 
-extern IFTTTEasingFunction const IFTTTEasingFunctionEaseInCubic;
-extern IFTTTEasingFunction const IFTTTEasingFunctionEaseOutCubic;
-extern IFTTTEasingFunction const IFTTTEasingFunctionEaseInOutCubic;
+UIKIT_EXTERN IFTTTEasingFunction const IFTTTEasingFunctionEaseInCubic;
+UIKIT_EXTERN IFTTTEasingFunction const IFTTTEasingFunctionEaseOutCubic;
+UIKIT_EXTERN IFTTTEasingFunction const IFTTTEasingFunctionEaseInOutCubic;
 
-extern IFTTTEasingFunction const IFTTTEasingFunctionEaseInQuart;
-extern IFTTTEasingFunction const IFTTTEasingFunctionEaseOutQuart;
-extern IFTTTEasingFunction const IFTTTEasingFunctionEaseInOutQuart;
+UIKIT_EXTERN IFTTTEasingFunction const IFTTTEasingFunctionEaseInQuart;
+UIKIT_EXTERN IFTTTEasingFunction const IFTTTEasingFunctionEaseOutQuart;
+UIKIT_EXTERN IFTTTEasingFunction const IFTTTEasingFunctionEaseInOutQuart;
 
-extern IFTTTEasingFunction const IFTTTEasingFunctionEaseInBounce;
-extern IFTTTEasingFunction const IFTTTEasingFunctionEaseOutBounce;
+UIKIT_EXTERN IFTTTEasingFunction const IFTTTEasingFunctionEaseInBounce;
+UIKIT_EXTERN IFTTTEasingFunction const IFTTTEasingFunctionEaseOutBounce;

@@ -28,7 +28,6 @@
 + (NSArray *)keyFramesWithTimesAndScales:(NSInteger)pairCount,...;
 + (NSArray *)keyFramesWithTimesAndConstraint:(NSInteger)pairCount,...;
 
-
 + (instancetype)keyFrameWithTime:(NSInteger)time andAlpha:(CGFloat)alpha;
 + (instancetype)keyFrameWithTime:(NSInteger)time andFrame:(CGRect)frame;
 + (instancetype)keyFrameWithTime:(NSInteger)time andHidden:(BOOL)hidden;
@@ -48,6 +47,13 @@
 - (id)initWithTime:(NSInteger)time andConstraint:(CGFloat)constraint;
 
 @property (assign, nonatomic) NSInteger time;
+
+/**
+ *  The easing function defines the rate of change in your key frames over time.
+ *  By default, IFTTTEasingFunctionLinear.
+ *
+ *  @see IFTTTEasingFunction.h
+ */
 @property (copy, nonatomic) IFTTTEasingFunction easingFunction;
 
 @end
