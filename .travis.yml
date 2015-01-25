@@ -3,9 +3,9 @@ language: objective-c
 before_install: gem install cocoapods xcpretty obcd -N
 cache: cocoapods
 podfile: JazzHandsDemo/Podfile
+env:
+  - LC_CTYPE=en_US.UTF-8 LANG=en_US.UTF-8
 script:
-    - export LC_CTYPE=en_US.UTF-8
-    - export LANG=en_US.UTF-8
-    - set -o pipefail && xcodebuild -workspace JazzHandsDemo/JazzHandsDemo.xcworkspace -scheme JazzHandsDemo -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6" clean test | xcpretty -c
-    - pod lib lint --quick
-    - obcd --path src find HeaderStyle
+  - set -o pipefail && xcodebuild -workspace JazzHandsDemo/JazzHandsDemo.xcworkspace -scheme JazzHandsDemo -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6" clean test | xcpretty -c
+  - pod lib lint --quick
+  - obcd --path src find HeaderStyle
