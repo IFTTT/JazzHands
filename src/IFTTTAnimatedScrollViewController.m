@@ -8,7 +8,7 @@
 
 #import "IFTTTJazzHands.h"
 
-static inline CGFloat IFTTTMaxContentOffsetXForScrollView(UIScrollView *scrollView)
+CG_INLINE CGFloat IFTTTMaxContentOffsetXForScrollView(UIScrollView *scrollView)
 {
     return scrollView.contentSize.width + scrollView.contentInset.right - CGRectGetWidth(scrollView.bounds);
 }
