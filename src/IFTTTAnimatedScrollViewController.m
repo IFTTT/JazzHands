@@ -24,11 +24,33 @@ static inline CGFloat IFTTTMaxContentOffsetXForScrollView(UIScrollView *scrollVi
 - (id)init
 {
     if ((self = [super init])) {
-        _isAtEnd = NO;
-        self.animator = [IFTTTAnimator new];
+        [self commonInit];
     }
     
     return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if ((self = [super initWithCoder:aDecoder])) {
+        [self commonInit];
+    }
+    
+    return self;
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
+        [self commonInit];
+    }
+    
+    return self;
+}
+
+- (void) commonInit {
+    _isAtEnd = NO;
+    self.animator = [IFTTTAnimator new];
 }
 
 - (void)viewDidLoad
