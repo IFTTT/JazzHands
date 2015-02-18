@@ -1,0 +1,3 @@
+PODS_JAZZHANDSTESTS_KIF_FRAMEWORK_SEARCH_PATHS = $(PLATFORM_DIR)/Developer/Library/Frameworks $(inherited) "$(SDKROOT)/Developer/Library/Frameworks" "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+PODS_JAZZHANDSTESTS_KIF_OTHER_CFLAGS = -DKIF_XCTEST
+PODS_JAZZHANDSTESTS_KIF_OTHER_LDFLAGS = -framework "CoreGraphics" -framework "XCTest"
