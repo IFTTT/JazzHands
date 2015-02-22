@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 IFTTT Inc. All rights reserved.
 //
 
+@import Foundation;
 @class IFTTTTransform3D;
 
 @interface IFTTTAnimationFrame : NSObject
