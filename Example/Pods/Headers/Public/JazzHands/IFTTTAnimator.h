@@ -1,1 +1,1 @@
-../../../../../src/IFTTTAnimator.h
+../../../../../JazzHands/IFTTTAnimator.h

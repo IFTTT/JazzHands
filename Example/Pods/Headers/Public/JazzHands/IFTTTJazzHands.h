@@ -1,1 +1,1 @@
-../../../../../src/IFTTTJazzHands.h
+../../../../../JazzHands/IFTTTJazzHands.h
