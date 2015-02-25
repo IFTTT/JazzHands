@@ -1,1 +1,1 @@
-../../../../../src/IFTTTScaleAnimation.h
+../../../../../JazzHands/IFTTTScaleAnimation.h

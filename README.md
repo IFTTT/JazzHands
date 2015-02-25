@@ -1,6 +1,6 @@
 # Jazz Hands
 
-[![Build Status](https://travis-ci.org/IFTTT/JazzHands.svg?branch=master)](https://travis-ci.org/IFTTT/JazzHands)
+[![Build Status](https://travis-ci.org/IFTTT/JazzHands.svg?branch=master)](https://travis-ci.org/IFTTT/JazzHands) [![Coverage Status](https://coveralls.io/repos/IFTTT/JazzHands/badge.svg)](https://coveralls.io/r/IFTTT/JazzHands)
 
 Jazz Hands is a simple keyframe-based animation framework for UIKit. Animations can be controlled via gestures, scroll views, KVO, or ReactiveCocoa.
 
@@ -14,7 +14,7 @@ Jazz Hands is used extensively in [IFTTT for iPhone and iPad](https://ifttt.com/
 
 ##Installation
 
-It's recommended that you install from CocoaPods, but you may alternatively just copy the contents of /src into your project.
+It's recommended that you install from CocoaPods, but you may alternatively just copy the contents of the `JazzHands` folder into your project.
 
 ##Quick Start
 

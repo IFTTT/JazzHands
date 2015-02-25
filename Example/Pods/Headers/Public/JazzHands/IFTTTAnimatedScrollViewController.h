@@ -1,1 +1,1 @@
-../../../../../src/IFTTTAnimatedScrollViewController.h
+../../../../../JazzHands/IFTTTAnimatedScrollViewController.h
