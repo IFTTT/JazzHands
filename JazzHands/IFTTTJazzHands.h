@@ -18,6 +18,7 @@
 #import "IFTTTAnimatedScrollViewController.h"
 
 #import "IFTTTAlphaAnimation.h"
+#import "IFTTTCornerRadiusAnimation.h"
 #import "IFTTTFrameAnimation.h"
 #import "IFTTTHideAnimation.h"
 #import "IFTTTColorAnimation.h"
