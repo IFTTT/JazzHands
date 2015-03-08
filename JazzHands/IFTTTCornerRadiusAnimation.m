@@ -26,7 +26,8 @@
     animationFrame.cornerRadius = [self tweenValueForStartTime:startKeyFrame.time
                                                        endTime:endKeyFrame.time
                                                     startValue:startKeyFrame.cornerRadius
-                                                      endValue:endKeyFrame.cornerRadius atTime:time];
+                                                      endValue:endKeyFrame.cornerRadius
+                                                        atTime:time];
 
     return animationFrame;
 }

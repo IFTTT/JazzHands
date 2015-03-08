@@ -51,7 +51,7 @@
             time = va_arg(argumentList, NSInteger);
             cornerRadius = (CGFloat)va_arg(argumentList, double);   // use double to suppress a va_arg conversion warning
             IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime:time
-                                                                               andCornerRadius:cornerRadius];
+                                                                        andCornerRadius:cornerRadius];
             [keyFrames addObject:keyFrame];
         }
 
@@ -313,10 +313,8 @@
 }
 
 - (id)initWithTime:(NSInteger)time
-{
-    self = [super init];
-    
-    if (self) {
+{    
+    if ((self = [self init])) {
         self.time = time;
         self.easingFunction = IFTTTEasingFunctionLinear;
     }
@@ -326,9 +324,7 @@
 
 - (id)initWithTime:(NSInteger)time andAlpha:(CGFloat)alpha
 {
-    self = [self initWithTime:time];
-    
-    if (self) {
+    if ((self = [self initWithTime:time])) {
         self.alpha = alpha;
     }
     
@@ -337,9 +333,7 @@
 
 - (id)initWithTime:(NSInteger)time andCornerRadius:(CGFloat)cornerRadius
 {
-    self = [self initWithTime:time];
-
-    if (self) {
+    if ((self = [self initWithTime:time])) {
         self.cornerRadius = cornerRadius;
     }
 
@@ -348,9 +342,7 @@
 
 - (id)initWithTime:(NSInteger)time andFrame:(CGRect)frame
 {
-    self = [self initWithTime:time];
-    
-    if (self) {
+    if ((self = [self initWithTime:time])) {
         self.frame = frame;
     }
     
@@ -359,9 +351,7 @@
 
 - (id)initWithTime:(NSInteger)time andHidden:(BOOL)hidden
 {
-    self = [self initWithTime:time];
-    
-    if (self) {
+    if ((self = [self initWithTime:time])) {
         self.hidden = hidden;
     }
     
@@ -370,9 +360,7 @@
 
 - (id)initWithTime:(NSInteger)time andColor:(UIColor*)color
 {
-    self = [self initWithTime:time];
-    
-    if (self) {
+    if ((self = [self initWithTime:time])) {
         self.color = color;
     }
     
@@ -381,9 +369,7 @@
 
 - (id)initWithTime:(NSInteger)time andAngle:(CGFloat)angle
 {
-    self = [self initWithTime:time];
-    
-    if (self) {
+    if ((self = [self initWithTime:time])) {
         self.angle = angle;
     }
     
@@ -392,9 +378,7 @@
 
 - (id)initWithTime:(NSInteger)time andTransform3D:(IFTTTTransform3D *)transform
 {
-    self = [self initWithTime:time];
-    
-    if (self) {
+    if ((self = [self initWithTime:time])) {
         self.transform = transform;
     }
     
@@ -402,9 +386,7 @@
 }
 
 - (id)initWithTime:(NSInteger)time andScale:(CGFloat)scale {
-    self = [self initWithTime:time];
-
-    if (self) {
+    if ((self = [self initWithTime:time])) {
         self.scale = scale;
     }
 
@@ -412,9 +394,7 @@
 }
 
 - (id)initWithTime:(NSInteger)time andConstraint:(CGFloat)constraint {
-    self = [self initWithTime:time];
-    
-    if (self) {
+    if ((self = [self initWithTime:time])) {
         self.constraintConstant = constraint;
     }
     
