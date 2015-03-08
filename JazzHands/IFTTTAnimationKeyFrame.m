@@ -37,6 +37,33 @@
     }
 }
 
++ (NSArray *)keyFramesWithTimesAndCornerRadius:(NSInteger)pairCount,...
+{
+    va_list argumentList;
+    NSInteger time;
+    CGFloat cornerRadius;
+    if (pairCount > 0) {
+        NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:(NSUInteger)pairCount];
+
+        va_start(argumentList, pairCount);
+
+        for (int i=0; i<pairCount; i++) {
+            time = va_arg(argumentList, NSInteger);
+            cornerRadius = (CGFloat)va_arg(argumentList, double);   // use double to suppress a va_arg conversion warning
+            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime:time
+                                                                               andCornerRadius:cornerRadius];
+            [keyFrames addObject:keyFrame];
+        }
+
+        va_end(argumentList);
+
+        return [NSArray arrayWithArray:keyFrames];
+    }
+    else {
+        return nil;
+    }
+}
+
 + (NSArray *)keyFramesWithTimesAndFrames:(NSInteger)pairCount,...
 {
     va_list argumentList;
@@ -226,6 +253,13 @@
     return keyFrame;
 }
 
++ (instancetype)keyFrameWithTime:(NSInteger)time andCornerRadius:(CGFloat)cornerRadius
+{
+    IFTTTAnimationKeyFrame *keyFrame = [[self alloc] initWithTime:time
+                                                         andCornerRadius:cornerRadius];
+    return keyFrame;
+}
+
 + (instancetype)keyFrameWithTime:(NSInteger)time andFrame:(CGRect)frame
 {
     IFTTTAnimationKeyFrame *keyFrame = [[self alloc] initWithTime:time
@@ -298,6 +332,17 @@
         self.alpha = alpha;
     }
     
+    return self;
+}
+
+- (id)initWithTime:(NSInteger)time andCornerRadius:(CGFloat)cornerRadius
+{
+    self = [self initWithTime:time];
+
+    if (self) {
+        self.cornerRadius = cornerRadius;
+    }
+
     return self;
 }
 

@@ -13,6 +13,7 @@
 
 @property (nonatomic, assign) CGRect frame;
 @property (nonatomic, assign) CGFloat alpha;
+@property (nonatomic, assign) CGFloat cornerRadius;
 @property (nonatomic, assign) BOOL hidden;
 @property (nonatomic, copy) UIColor *color;
 @property (nonatomic, assign) CGFloat angle;

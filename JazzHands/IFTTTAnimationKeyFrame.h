@@ -20,6 +20,7 @@
 // values into keyframe objects.
 //
 + (NSArray *)keyFramesWithTimesAndAlphas:(NSInteger)pairCount,...;
++ (NSArray *)keyFramesWithTimesAndCornerRadius:(NSInteger)pairCount,...;
 + (NSArray *)keyFramesWithTimesAndFrames:(NSInteger)pairCount,...;
 + (NSArray *)keyFramesWithTimesAndHiddens:(NSInteger)pairCount,...;
 + (NSArray *)keyFramesWithTimesAndColors:(NSInteger)pairCount,...;
@@ -29,6 +30,7 @@
 + (NSArray *)keyFramesWithTimesAndConstraint:(NSInteger)pairCount,...;
 
 + (instancetype)keyFrameWithTime:(NSInteger)time andAlpha:(CGFloat)alpha;
++ (instancetype)keyFrameWithTime:(NSInteger)time andCornerRadius:(CGFloat)cornerRadius;
 + (instancetype)keyFrameWithTime:(NSInteger)time andFrame:(CGRect)frame;
 + (instancetype)keyFrameWithTime:(NSInteger)time andHidden:(BOOL)hidden;
 + (instancetype)keyFrameWithTime:(NSInteger)time andColor:(UIColor*)color;
@@ -38,6 +40,7 @@
 + (instancetype)keyFrameWithTime:(NSInteger)time andConstraint:(CGFloat)constraint;
 
 - (id)initWithTime:(NSInteger)time andAlpha:(CGFloat)alpha;
+- (id)initWithTime:(NSInteger)time andCornerRadius:(CGFloat)cornerRadius;
 - (id)initWithTime:(NSInteger)time andFrame:(CGRect)frame;
 - (id)initWithTime:(NSInteger)time andHidden:(BOOL)hidden;
 - (id)initWithTime:(NSInteger)time andColor:(UIColor*)color;
