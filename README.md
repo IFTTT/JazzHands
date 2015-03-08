@@ -74,6 +74,7 @@ Jazz Hands supports several types of animations:
 
 + **IFTTTFrameAnimation** moves and sizes views.
 + **IFTTTAlphaAnimation** creates fade effects.
++ **IFTTTCornerRadiusAnimation** animates views' corner radius
 + **IFTTTHideAnimation** hides and shows views.
 + **IFTTTAngleAnimation** for rotation effects.
 + **IFTTTTransform3DAnimation** for 3D transforms.
