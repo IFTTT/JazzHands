@@ -7,790 +7,739 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		003C261B19EB7ADA66F0FC6C /* UIApplication-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 57492FB8F7E0786919D441A0 /* UIApplication-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
-		04B82E1DCC665763275B83F7 /* IFTTTAnimatedScrollViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AF99458C9E7C716DD67EBA2 /* IFTTTAnimatedScrollViewController.h */; };
-		0579665542C1D839E766D2DA /* IFTTTCornerRadiusAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EF40718C0EFEAEDF6F323F /* IFTTTCornerRadiusAnimation.h */; };
-		070EFAB8B8883FF47094E542 /* IFTTTAngleAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 82723274177AD2BC9786AFD0 /* IFTTTAngleAnimation.h */; };
-		07245D9D58021CFE8F742723 /* IFTTTFrameAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AC018A7868850B117B920F0 /* IFTTTFrameAnimation.h */; };
-		07FD960CB57E0EDE326D1EC5 /* UITableView-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 82522192DE84B5F7B4F0BD19 /* UITableView-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
-		0A37C38228C58A3BBB730BE9 /* Pods-JazzHandsDemo-JazzHands-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF28FF4E9A14AD0B46D2BD /* Pods-JazzHandsDemo-JazzHands-dummy.m */; };
-		0AE2CE90FD4927DFF13FADD5 /* UIWindow-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 804CDF39FCA8AB3925CC4E65 /* UIWindow-KIFAdditions.h */; };
-		0AE913A4F448F405AAC96F20 /* IFTTTJazzHands.h in Headers */ = {isa = PBXBuildFile; fileRef = 5753BBC139CA5A56AAEF4808 /* IFTTTJazzHands.h */; };
-		1130BDF46FA8DF68CFC07ECB /* UIAccessibilityElement-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 98B0D9B819A7C45A380CA63D /* UIAccessibilityElement-KIFAdditions.h */; };
-		12E35B46487CDB2A174EF888 /* UITouch-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D42EFDC9EDAF55511222BE /* UITouch-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
-		1BE2AFD6F7DB0C8DA0F31962 /* IFTTTTransform3DAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7222967E47613A84A14D2D0F /* IFTTTTransform3DAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		1C81E4D27E8C565C26B8DF14 /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = C7728261B7E1738C36461BD6 /* FBSnapshotTestCase.h */; };
-		24960564A263BEEC94291A3C /* IFTTTEasingFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = C0001C1737871ACD8084952F /* IFTTTEasingFunction.h */; };
-		2547FA8CFD1CF7FAD125CECC /* NSError-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 010010897C0900383B8B2289 /* NSError-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
-		25D8D88CD75DEEC19C3AF590 /* IFTTTAlphaAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 300D4E9D6E1F673E4DE4849A /* IFTTTAlphaAnimation.h */; };
-		278AE81FC52C2877187BAC2F /* UIApplication-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 353EE4C881BA1D65B52C3716 /* UIApplication-KIFAdditions.h */; };
-		288FF94AD077CB8EFB979E78 /* IFTTTHideAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DE1FB2F2605CD498E2F1D39 /* IFTTTHideAnimation.h */; };
-		28BD36F1811D1AD600F3C558 /* IFTTTAngleAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 82723274177AD2BC9786AFD0 /* IFTTTAngleAnimation.h */; };
-		29887494F03A041931CAD74B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7807F33880FD345696EC5758 /* XCTest.framework */; };
-		2C42DAD0DE5A7884B0BCDD18 /* UIAutomationHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 075DD44359212B19C7C8A598 /* UIAutomationHelper.h */; };
-		2C5CF0BB029E824BAB512820 /* UIAccessibilityElement-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4869FCD3D39042A16A840B /* UIAccessibilityElement-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
-		318E2CEF379577B90D544BA9 /* NSException-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C55B771E64855AE864196180 /* NSException-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
-		32045490961291D5669651EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA62222314846AB14D88E62 /* Foundation.framework */; };
-		3383F81CD563623BB0059C28 /* UIScrollView-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 364C6903753ABAA56993BE1C /* UIScrollView-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
-		345DB89FDE0DD7B87814ECA0 /* IFTTTAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 73CD99738CFD73311644D79B /* IFTTTAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		34DF022684819EEAE018F31F /* IFTTTAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A37C47BD7B02D37DB7D21C /* IFTTTAnimator.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		351BC0E5B00F5BDA5EF264B5 /* KIFTestActor.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C90720405FB06EC92EEFAA /* KIFTestActor.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
-		3CB529063702251921899AF2 /* KIFTypist.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C90ABF67241E42F42EF84EE /* KIFTypist.h */; };
-		3F24C27D741E2F4DAC5EB20A /* IFTTTEasingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD32E857EDC06CB844D8409 /* IFTTTEasingFunction.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		43B2622B83EBCFD8CB9F801F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A033C317A73EBB1C10774252 /* QuartzCore.framework */; };
-		44CC33653AE8F1178022E333 /* Pods-JazzHandsTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F1F5ACC456B053C7055760B3 /* Pods-JazzHandsTests-dummy.m */; };
-		4892F70C9D5D51B9AD86A936 /* IFTTTFrameAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AC018A7868850B117B920F0 /* IFTTTFrameAnimation.h */; };
-		4962715321CCE6EF8171E0D1 /* UIView-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C34D13A8DC389EE3D4C687 /* UIView-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
-		4A729E17BECC7B88445876A0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE95134E719EBFBEA0671F4E /* CoreGraphics.framework */; };
-		4D2C868BEDB369210520A803 /* UIAutomationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 44208D9803B9A25E1930A9DA /* UIAutomationHelper.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
-		4D59AD9919E89985D963BD0E /* IFTTTConstraintsAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 260DB9AC2B8BBD9AF71379F5 /* IFTTTConstraintsAnimation.h */; };
-		4D6E9116B8150E8C66929316 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D6E2675CA234F04F47AF74 /* UIImage+Diff.h */; };
-		4EDE455C6E066961FFB6FF35 /* KIFTestStepValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 564C3E2F0A7D8EBDEB91E799 /* KIFTestStepValidation.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
-		4FA496C596BA68640D18E0E1 /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB2DB62F76000B7EC99C494 /* UIImage+Compare.h */; };
-		543D6E9810040CE77C5867D0 /* XCTestCase-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3716A83DEC987B3AE05C2B24 /* XCTestCase-KIFAdditions.h */; };
-		567B39E75F1043A95DF198D8 /* KIFUITestActor.h in Headers */ = {isa = PBXBuildFile; fileRef = D108D0330973D53BF80ABAF3 /* KIFUITestActor.h */; };
-		57CCBE0A6D2A56565047F7ED /* IFTTTAngleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B624F7A51207AA6843A5A2D1 /* IFTTTAngleAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		57EAEBF4CCC24CFFFB7D61AF /* CGGeometry-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E7B996C83E4CD6C41DB2BE23 /* CGGeometry-KIFAdditions.h */; };
-		596022056B2E34F7B584F988 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F98DE55225962A4BDA7D84D4 /* FBSnapshotTestCase.m */; };
-		5A083702531BEB9E2C668081 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA62222314846AB14D88E62 /* Foundation.framework */; };
-		5C52D53081116E785CC0AE1C /* IFTTTAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = D9F0EC494859940CA359CF15 /* IFTTTAnimator.h */; };
-		5D779526FB3C403CA1146855 /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E94BC39D00A71C741178EB3 /* UIImage+Compare.m */; };
-		5E9E8F8CC7C39440DC57C215 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE95134E719EBFBEA0671F4E /* CoreGraphics.framework */; };
-		6013FDABCC5DC7CE802DC55B /* IFTTTAnimationKeyFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = F96B88F854978F4AF88A5733 /* IFTTTAnimationKeyFrame.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		62BC54138C18FA5518190343 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7807F33880FD345696EC5758 /* XCTest.framework */; };
-		64CEDF0570533AF95C4BD538 /* KIFUITestActor-ConditionalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF67C3760098594F5DDE763 /* KIFUITestActor-ConditionalTests.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
-		7073B2AFC29C3C714E7016C1 /* NSFileManager-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F76B0A4A7B842D5241890F /* NSFileManager-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
-		713611E06336E0917B9AE59E /* IFTTTColorAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E56A9E91978C0B3FBC1875 /* IFTTTColorAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		7400E30B7955145DA5AF469F /* IFTTTAlphaAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 61056DA3E04D79B36799C59B /* IFTTTAlphaAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		7676BD061F37F0B9133E83F7 /* IFTTTAlphaAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 300D4E9D6E1F673E4DE4849A /* IFTTTAlphaAnimation.h */; };
-		7748121EFD7F80A6FDEEDE3E /* IFTTTScaleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F25DAA7D0D07905F2450DC /* IFTTTScaleAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		77B25F9394E5FB7EF5D673B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA62222314846AB14D88E62 /* Foundation.framework */; };
-		784CA7829E7AB2D1D30F566C /* IFTTTColorAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 58BAD8FA3CEA6CDBA28FD1C3 /* IFTTTColorAnimation.h */; };
-		79261F3D3ABBCDAB9042CBC4 /* IFTTTCornerRadiusAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EF40718C0EFEAEDF6F323F /* IFTTTCornerRadiusAnimation.h */; };
-		7A3485CBD97EB8EF495FBEAE /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B079D518AC6EAC1D5C34A4 /* UIImage+Diff.m */; };
-		7A4CD5583A272316C23EA39A /* KIFUITestActor-ConditionalTests.h in Headers */ = {isa = PBXBuildFile; fileRef = 60C335DBCD411649BD3A4488 /* KIFUITestActor-ConditionalTests.h */; };
-		7DF82EAA738679D36CD67E3E /* KIF.h in Headers */ = {isa = PBXBuildFile; fileRef = DE68323E00335E03AF1555E8 /* KIF.h */; };
-		7E3FAB88583B1EB819B4058D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A033C317A73EBB1C10774252 /* QuartzCore.framework */; };
-		7EAD180E324696F8D69E9AE3 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D07BF1C50A477EEB452365 /* FBSnapshotTestController.m */; };
-		806627F47F757FAF26E8A9F9 /* IFTTTFrameAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D601CBC4203805BC2C77410D /* IFTTTFrameAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		8285B71EA90DBE178286D699 /* NSBundle-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D1ACF0ED370FBD4658E7093 /* NSBundle-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
-		851FB94DE78220ADBBCA4561 /* KIFTestActor.h in Headers */ = {isa = PBXBuildFile; fileRef = 863ED0F7BC98DA8A3F5E6B0E /* KIFTestActor.h */; };
-		8652DAC40017DD877186AF65 /* Pods-JazzHandsTests-FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF98CB256554A52438C974 /* Pods-JazzHandsTests-FBSnapshotTestCase-dummy.m */; };
-		86CFA5B4867660ED045FFF74 /* IFTTTAngleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B624F7A51207AA6843A5A2D1 /* IFTTTAngleAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		87B725660E7B67B7C59D14F1 /* IFTTTAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 73CD99738CFD73311644D79B /* IFTTTAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		8A9DB183E217D7896F6AF1DF /* IFTTTConstraintsAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A20761E701BF76E3C5CB1D1 /* IFTTTConstraintsAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		8B10287E2BDFB0B48E7C1C7F /* IFTTTAnimatedScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1112492D9A966C7FB5F96026 /* IFTTTAnimatedScrollViewController.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		8C1E9C21411125CB6862AD02 /* KIFSystemTestActor.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BA7170ED059B06DCD8AA640 /* KIFSystemTestActor.h */; };
-		8FBC871C1B6EA6E9F7CDDF15 /* IFTTTAnimationFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB642C1036E2E8B285A7C19 /* IFTTTAnimationFrame.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		902F65E8DBE8808F41673205 /* IFTTTHideAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DE1FB2F2605CD498E2F1D39 /* IFTTTHideAnimation.h */; };
-		90B81345DF2600D574C34FBB /* Pods-JazzHandsTests-KIF-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C91D42FFD4FBFFC17E8D53C3 /* Pods-JazzHandsTests-KIF-dummy.m */; };
-		90D2F5508A2C18F16AA048CB /* IFTTTAnimatedScrollViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AF99458C9E7C716DD67EBA2 /* IFTTTAnimatedScrollViewController.h */; };
-		9388CF78C02C99F31C539ED4 /* IFTTTAnimationFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB642C1036E2E8B285A7C19 /* IFTTTAnimationFrame.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		93E47FB13A899FAFDA0F70B5 /* IFTTTAnimationKeyFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = CF775FCF397F34EAE2699CB0 /* IFTTTAnimationKeyFrame.h */; };
-		950D468F32652C63D910C662 /* IFTTTFrameAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D601CBC4203805BC2C77410D /* IFTTTFrameAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		96E84C8D26C1397F23FEC426 /* IFTTTAnimationKeyFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = F96B88F854978F4AF88A5733 /* IFTTTAnimationKeyFrame.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		97089AB885CCCE07EA77E517 /* IFTTTColorAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 58BAD8FA3CEA6CDBA28FD1C3 /* IFTTTColorAnimation.h */; };
-		978C58CE1E0513F9061EFD17 /* IFTTTAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A37C47BD7B02D37DB7D21C /* IFTTTAnimator.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		9AB03A0F1557825DE6A096E4 /* NSException-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B0CBD1E2F4598FD4D828A155 /* NSException-KIFAdditions.h */; };
-		9B61001B1F5B6858950E53A3 /* KIFSystemTestActor.m in Sources */ = {isa = PBXBuildFile; fileRef = C1AA14AB508A9C60C2F7FFF4 /* KIFSystemTestActor.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
-		9CAF0E0CB51C288E83BB5D31 /* UIView-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B74DD4A897C9F414C829215E /* UIView-KIFAdditions.h */; };
-		9EF109F2C73851D42C81DBDA /* IFTTTJazzHands.h in Headers */ = {isa = PBXBuildFile; fileRef = 5753BBC139CA5A56AAEF4808 /* IFTTTJazzHands.h */; };
-		9EF5BE90A805833FE0E71FEE /* KIFTypist.m in Sources */ = {isa = PBXBuildFile; fileRef = E751EDEBA03AE1E0C0EC4603 /* KIFTypist.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
-		A02FF395AC5DD3050A1C4F0B /* IFTTTAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 66581F3EAD98DEDA1DD26BE6 /* IFTTTAnimation.h */; };
-		A0D9F15E4AEF49E14E1DF726 /* UIWindow-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB4640DF0A0803DA467DAB4 /* UIWindow-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
-		A0F46CD593612A3C230582B6 /* IFTTTColorAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E56A9E91978C0B3FBC1875 /* IFTTTColorAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		A2FE8EFC468ABFE2D678FA1B /* IFTTTEasingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = EAD32E857EDC06CB844D8409 /* IFTTTEasingFunction.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		A4C161D7DB16C8D03A829A56 /* IFTTTHideAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D93BC7CF03CECA7357DBEC0 /* IFTTTHideAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		A7426A657900BFDF3D21313C /* IFTTTAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = D9F0EC494859940CA359CF15 /* IFTTTAnimator.h */; };
-		A992A9F22819DEC4EC285F2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA62222314846AB14D88E62 /* Foundation.framework */; };
-		ABEB69077D21958DE762AA90 /* UITableView-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E1C861C1D4FFFB3DFE9A015C /* UITableView-KIFAdditions.h */; };
-		AD654671582BF776E57876DB /* IFTTTConstraintsAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A20761E701BF76E3C5CB1D1 /* IFTTTConstraintsAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		AF77B900CA1D898913372DDE /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EC4EE9DFABF43799E9320CA /* FBSnapshotTestController.h */; };
-		AF7F561993E7738FF552289C /* IFTTTTransform3DAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7222967E47613A84A14D2D0F /* IFTTTTransform3DAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		B039A9BE48904353C2E7E1A7 /* UIScrollView-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 23AC85DBA3098295A0505957 /* UIScrollView-KIFAdditions.h */; };
-		B054652E71BA5760A7A4351E /* CGGeometry-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF1922F050AA8ADB277A892 /* CGGeometry-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
-		B4B47251A145702EAB434521 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA62222314846AB14D88E62 /* Foundation.framework */; };
-		B630B087611DC9FF9FF70A4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DA62222314846AB14D88E62 /* Foundation.framework */; };
-		B64BD4C7421F2750022AFDE9 /* IFTTTScaleAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = B4DD2439EE4A754E2B237B54 /* IFTTTScaleAnimation.h */; };
-		BC663A0F726D4509BC982A59 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE95134E719EBFBEA0671F4E /* CoreGraphics.framework */; };
-		BC6F95AED7F3E078211D503A /* IFTTTAlphaAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 61056DA3E04D79B36799C59B /* IFTTTAlphaAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		BCC1E693F7866E7BECAB5CC2 /* NSBundle-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D2B6F70FFE451BF44CC38D05 /* NSBundle-KIFAdditions.h */; };
-		BEC489E782953D50BC0B25B2 /* IFTTTScaleAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = B4DD2439EE4A754E2B237B54 /* IFTTTScaleAnimation.h */; };
-		BF28562E071671B13227353A /* IFTTTCornerRadiusAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 849598E9A1FE4D2EB701817E /* IFTTTCornerRadiusAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		BF8BA6BD957286731E2BFCD9 /* KIFTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = DFE7F49A6A2AF014F30C0217 /* KIFTestCase.h */; };
-		C2A766C7F9E5076434AA31A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A6A4A1424705B6301C9584 /* UIKit.framework */; };
-		C2D958F6E81DF338B2DB8BE0 /* IFTTTEasingFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = C0001C1737871ACD8084952F /* IFTTTEasingFunction.h */; };
-		CB115FA61C25493F79E2A005 /* NSFileManager-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 97B4B79EFF6167CFF5FCE9DD /* NSFileManager-KIFAdditions.h */; };
-		CD9DC0986BE3DDF177748D44 /* Pods-JazzHandsDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E71414E67C92FFFB8C2BB038 /* Pods-JazzHandsDemo-dummy.m */; };
-		D0EB514E8FD6D1DACCEFE8A7 /* IFTTTAnimationKeyFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = CF775FCF397F34EAE2699CB0 /* IFTTTAnimationKeyFrame.h */; };
-		D3B9907BEE32962DBBA9207E /* KIFUITestActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5CD2CAB1B051CA032A2E84 /* KIFUITestActor.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
-		D69074FE13BFD6C5EC3E58A9 /* IFTTTAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 66581F3EAD98DEDA1DD26BE6 /* IFTTTAnimation.h */; };
-		D8E3579DD4E8C28908A7AFC9 /* IFTTTConstraintsAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 260DB9AC2B8BBD9AF71379F5 /* IFTTTConstraintsAnimation.h */; };
-		D9D68A68D8202C518E670027 /* IFTTTCornerRadiusAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 849598E9A1FE4D2EB701817E /* IFTTTCornerRadiusAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		D9E4ED9DBAC57729A34E57C6 /* Pods-JazzHandsTests-JazzHands-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC05A8545F0CAEBD624AAD1F /* Pods-JazzHandsTests-JazzHands-dummy.m */; };
-		DC68E208C2DF2FF5AD908625 /* IFTTTScaleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F25DAA7D0D07905F2450DC /* IFTTTScaleAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		DC8FDBD02AF6970A8909DC8B /* LoadableCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = C8F114CC1164D61CDBAC0AB9 /* LoadableCategory.h */; };
-		E0051F5CEC4ED3FA6B6655EA /* XCTestCase-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FEBE01E9E36ED3745B7343 /* XCTestCase-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
-		E56F8210AF279970889119ED /* IFTTTTransform3DAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = DB91F70E1683B6869F8EE518 /* IFTTTTransform3DAnimation.h */; };
-		EA1BC44FBF79DD6AF2B782D9 /* NSError-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F163785C9B7E705866475F46 /* NSError-KIFAdditions.h */; };
-		EB2F643CA2D1A9D574462F1F /* IFTTTHideAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D93BC7CF03CECA7357DBEC0 /* IFTTTHideAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		EB8513CDA1EA7A01AB2E000E /* KIFTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FBCB21F9BDCCD36F04F58A /* KIFTestCase.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
-		EB9199789750B63D98D9E669 /* KIFTestStepValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 899308ECE2AD77D8301D7FDB /* KIFTestStepValidation.h */; };
-		EBF6330A2369C4CE1DFCD811 /* UITouch-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C32190D2ACB4C6A23C0DDBE /* UITouch-KIFAdditions.h */; };
-		EC2F282BD73D66856C5A6C02 /* IFTTTAnimationFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = B100FAEE8501E2FE8B765836 /* IFTTTAnimationFrame.h */; };
-		ECBCF7A867F516D2950C4BA5 /* IFTTTAnimationFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = B100FAEE8501E2FE8B765836 /* IFTTTAnimationFrame.h */; };
-		EFF12115CE851DCC7B9702D2 /* IFTTTAnimatedScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1112492D9A966C7FB5F96026 /* IFTTTAnimatedScrollViewController.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
-		F1410A488BA6B2B988BF3F78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A6A4A1424705B6301C9584 /* UIKit.framework */; };
-		FA29E104D117441DB37CF2AA /* IFTTTTransform3DAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = DB91F70E1683B6869F8EE518 /* IFTTTTransform3DAnimation.h */; };
+		0032399D74040FFF4589E3A0 /* IFTTTColorAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E8E35E2CCD11A37D8F9FD3 /* IFTTTColorAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		040FA8D61764DD586F0A3AA7 /* IFTTTAnimationFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 2053CF8589049B8BBC3DCAA2 /* IFTTTAnimationFrame.h */; };
+		047B4F936A0DF648BF0622F3 /* IFTTTAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 44FCB78B70AC15B60C58D306 /* IFTTTAnimation.h */; };
+		062FE2C51FAD5C868FEF217F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26D61D3E296790D762638A2A /* UIKit.framework */; };
+		06BCEC1EDA8D5135432D2A4A /* IFTTTTransform3DAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = B75F326DC1FD686D9930C5A8 /* IFTTTTransform3DAnimation.h */; };
+		08E5F75D71BA8FCF09619A23 /* IFTTTAngleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD11FFDB93569A9A917780 /* IFTTTAngleAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		0A3B0CB54BF69841A5F1E5C1 /* IFTTTCornerRadiusAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFBBFB02B10979853705A05 /* IFTTTCornerRadiusAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		0A74534DAB026F7AD0A38590 /* IFTTTHideAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = E654E79817FF6F04B2219B88 /* IFTTTHideAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		0D1D73614C90E35A2269E0D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAD9DAE4CD6F45B35886A /* Foundation.framework */; };
+		0DF82AC9EA1363E258360ADE /* IFTTTAnimationFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4079BA755EA6AE3F0F4781EF /* IFTTTAnimationFrame.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		102C26BF98B36AB4A8A790CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6EA9E29018710306A53F87 /* CoreGraphics.framework */; };
+		1679AA53DAC227987F8E7ACA /* KIF.h in Headers */ = {isa = PBXBuildFile; fileRef = 44269270B19B6153A8FAF642 /* KIF.h */; };
+		1682DB2CEBC12FF0D4966274 /* IFTTTCornerRadiusAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 69507AC83171EFA8CB23CF33 /* IFTTTCornerRadiusAnimation.h */; };
+		188700B70C06854D1B5A79D9 /* IFTTTAnimationKeyFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 417AB9CE7876FD75A4DFDFAE /* IFTTTAnimationKeyFrame.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		19E2C949AA785C0698903BF0 /* NSFileManager-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 313177BE19028358DDDDB729 /* NSFileManager-KIFAdditions.h */; };
+		21AE2FDF6C07D4106BFA8E53 /* IFTTTJazzHands.h in Headers */ = {isa = PBXBuildFile; fileRef = 17B136F8BA97B6391C4995DB /* IFTTTJazzHands.h */; };
+		2208CCEBC7D1071A2949A3DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26D61D3E296790D762638A2A /* UIKit.framework */; };
+		2485A0FF190C45825B095BF1 /* Pods-JazzHandsDemo-JazzHands-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C839A55FA6BE7973167B73 /* Pods-JazzHandsDemo-JazzHands-dummy.m */; };
+		259AA65C759FD84F0DC2E76F /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 660C00A4B07A58B461517F32 /* FBSnapshotTestCase.h */; };
+		25D1AB27DF0E1BA24F2D30A6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE4715D61CB5B6284097177 /* XCTest.framework */; };
+		267C7818BA3431BF5448170D /* IFTTTColorAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 858DE240327C592D3D2761D1 /* IFTTTColorAnimation.h */; };
+		2861DCE8F28BB9DCCC91F379 /* IFTTTAnimationKeyFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = E8E5FF121600EB3D1F9A6FFE /* IFTTTAnimationKeyFrame.h */; };
+		28964940FD755B03115395C1 /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 4096B85BCD5A4F020A7595AB /* UIImage+Diff.m */; };
+		290672E5471F63615C92E1FC /* IFTTTTransform3DAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AABAFBDB14D34C7763302D /* IFTTTTransform3DAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		2C893038086B201C51BE489F /* IFTTTAnimatedScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF479BA107F303D9EE5A6AB /* IFTTTAnimatedScrollViewController.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		2F8DB1320073FFB3A77D3FB1 /* KIFTypist.h in Headers */ = {isa = PBXBuildFile; fileRef = EFBBBF48502811296640E4CE /* KIFTypist.h */; };
+		32D26E5F16CBE9CDE9EC116A /* IFTTTAngleAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 39FAF92DF5F0CD0934F1826F /* IFTTTAngleAnimation.h */; };
+		35FB1C5F17776B1CEAE8A0EB /* IFTTTFrameAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A8D1E5AD81E94978620E4B6 /* IFTTTFrameAnimation.h */; };
+		3680204674942CEB2649F6B9 /* KIFTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F7F7F091EB3A9EDD5F4010 /* KIFTestCase.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		36CEAB881CAD33B14A29DD23 /* IFTTTCornerRadiusAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 69507AC83171EFA8CB23CF33 /* IFTTTCornerRadiusAnimation.h */; };
+		38BAA764F177C36D3F5A1EA3 /* IFTTTEasingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = EADE1A120A658D83A3426CDD /* IFTTTEasingFunction.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		390A86FA84CACAD256F514DC /* NSBundle-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 461769B1ED0008173EED2175 /* NSBundle-KIFAdditions.h */; };
+		3AB282F3FF0E2540E6A20072 /* IFTTTScaleAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = E62526BE67819DEEFB3FA00A /* IFTTTScaleAnimation.h */; };
+		3C944F67DA001BAE6F9009F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAD9DAE4CD6F45B35886A /* Foundation.framework */; };
+		3D4142817628D7D3129D4171 /* KIFUITestActor.h in Headers */ = {isa = PBXBuildFile; fileRef = C98C2F0CE034D4B0C145DC96 /* KIFUITestActor.h */; };
+		3EB3E8AB6A2980E6F319EF13 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE4715D61CB5B6284097177 /* XCTest.framework */; };
+		42B0D81A65BDD1E28D8C5183 /* UIApplication-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 25765BD5DC3294CAD69EE19E /* UIApplication-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		434E65E51317A13ED9DFFEB3 /* Pods-JazzHandsTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18626FC9B2E3BFB161B6E1BF /* Pods-JazzHandsTests-dummy.m */; };
+		47CE6AD3E1A6A98D44B82CCA /* IFTTTAnimatedScrollViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A8A0D7D5186F4D4AFF0647D /* IFTTTAnimatedScrollViewController.h */; };
+		49CEDD21F73317A1457FF1ED /* KIFTypist.m in Sources */ = {isa = PBXBuildFile; fileRef = 3237F0A1073151DD7CF612F5 /* KIFTypist.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		49FC0CEB5929DAC5379511BD /* CGGeometry-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B0A7DE2B9EFF1FCFC494157 /* CGGeometry-KIFAdditions.h */; };
+		4AC747E05055EE078B33F6BA /* KIFUITestActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 492956B8554DA7C378CAC8B2 /* KIFUITestActor.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		4B408CE8064420EE8A0DCA47 /* KIFSystemTestActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 43984AB95DD5DF0FB5771A1D /* KIFSystemTestActor.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		4FC5EA599B70A3332EC203D8 /* IFTTTAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D86660AD0D5CA429E1993 /* IFTTTAnimator.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		50F00470D42EBDA06EBABD83 /* UITouch-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 952D611EAC7B6FAE2D97DA21 /* UITouch-KIFAdditions.h */; };
+		528ADD937B9A577EF16FD2C6 /* Pods-JazzHandsTests-KIF-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCDCD44C4F9A89DBE862306 /* Pods-JazzHandsTests-KIF-dummy.m */; };
+		5604B28289A4B68AEE741270 /* NSError-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 67003AF1F036B762427634FB /* NSError-KIFAdditions.h */; };
+		57BF7089CEDA50798012E017 /* IFTTTAnimationFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4079BA755EA6AE3F0F4781EF /* IFTTTAnimationFrame.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		5A25419AC4486D83229EB31F /* IFTTTAnimationKeyFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = E8E5FF121600EB3D1F9A6FFE /* IFTTTAnimationKeyFrame.h */; };
+		5B365CF60E2D4742161E1B50 /* NSException-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0FEBEC8CC2223DE1F97322 /* NSException-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		5D760D684F53A3B944108B35 /* IFTTTFrameAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEFFBC3E39BF84E8D87002D /* IFTTTFrameAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		5F9423FA3F5E1D66D348522C /* UITableView-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B83E840A758B9629F42DFF96 /* UITableView-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		6387F90C250F998F6D18A641 /* NSException-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C9450FDDFFED9CFEE2D3B8AA /* NSException-KIFAdditions.h */; };
+		639DD1EC6DFB472D70FE16FE /* Pods-JazzHandsTests-JazzHands-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D87E39030DD3497EF16A41B9 /* Pods-JazzHandsTests-JazzHands-dummy.m */; };
+		64D3796D58C24D847746FE8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAD9DAE4CD6F45B35886A /* Foundation.framework */; };
+		67165A4953502E99AE9927EF /* IFTTTConstraintsAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 313429C4754B7DEA27C7A395 /* IFTTTConstraintsAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		6784F851730DC1121707EC39 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB2A5F45DD796DB37E416A37 /* FBSnapshotTestController.m */; };
+		67F3087F892D614DAEA614D7 /* IFTTTColorAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E8E35E2CCD11A37D8F9FD3 /* IFTTTColorAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		6814FB0D11BF4DCC0AC990B9 /* NSError-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 115908108948FEAAE54F370D /* NSError-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		6CC1D8F6515880666ABFDF40 /* IFTTTAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D86660AD0D5CA429E1993 /* IFTTTAnimator.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		6DECD7C35E5C625BEA254B55 /* IFTTTAnimationKeyFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 417AB9CE7876FD75A4DFDFAE /* IFTTTAnimationKeyFrame.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		6EF2413757C3124D04596A90 /* IFTTTAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DE8EC3463ED22EB84A3B07 /* IFTTTAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		6FD5CF6337BEA529B659CC4A /* KIFTestActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 881B3FC512B97BBEA97BC7D5 /* KIFTestActor.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		7209AE1BAA0DE91E73C214C7 /* IFTTTConstraintsAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 313429C4754B7DEA27C7A395 /* IFTTTConstraintsAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		73BCF650455B4B9FA2C058F4 /* IFTTTAnimationFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 2053CF8589049B8BBC3DCAA2 /* IFTTTAnimationFrame.h */; };
+		7F9B669D63B296B17B491AB0 /* UIWindow-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E19C4E8A96132C152EDAE45D /* UIWindow-KIFAdditions.h */; };
+		7FF943D35A1DC473374BC5CF /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = B2003DD88AF916AB80EAD00B /* FBSnapshotTestController.h */; };
+		809333B210734E483D301581 /* KIFTestStepValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = C557FE649BB8103A8B0848D6 /* KIFTestStepValidation.h */; };
+		812B273D3314249359C76B16 /* IFTTTHideAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = E654E79817FF6F04B2219B88 /* IFTTTHideAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		863B01080B05A7F078F8049F /* IFTTTCornerRadiusAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFBBFB02B10979853705A05 /* IFTTTCornerRadiusAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		86D92E2D253B885ABE68AC67 /* UIApplication-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E17A864F6398603A95C652D3 /* UIApplication-KIFAdditions.h */; };
+		87763DB9ED37AB4D4292D31B /* IFTTTFrameAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEFFBC3E39BF84E8D87002D /* IFTTTFrameAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		8A327D34F516C6844D60CA7D /* XCTestCase-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BF8574BAE8562033E5A14D3 /* XCTestCase-KIFAdditions.h */; };
+		8A55FEC466BBEFDD81371D7B /* UIAutomationHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = BBEAB5398A688A097A6C4DE4 /* UIAutomationHelper.h */; };
+		8E54ABEF74E2DEAA46CEABDA /* IFTTTAngleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD11FFDB93569A9A917780 /* IFTTTAngleAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		9278493B624F5D862250F124 /* IFTTTEasingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = EADE1A120A658D83A3426CDD /* IFTTTEasingFunction.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		93E5AD0565C9572FCF8BA721 /* LoadableCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = E740832BE0F4E46EA381108B /* LoadableCategory.h */; };
+		95C9BC4936E1A862934E1D88 /* CGGeometry-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 051B5E6D840069F88ACD673A /* CGGeometry-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		975B8C42FC13655D4CAE5A25 /* IFTTTConstraintsAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = B9FCC2F99BF6099D1017ED61 /* IFTTTConstraintsAnimation.h */; };
+		978CBD6F0AB3B896092A42F4 /* UIAccessibilityElement-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE12FF95A99FC193A23ADDC1 /* UIAccessibilityElement-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		97EA8F546F3CE1AB7E5CE81F /* NSBundle-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EFFFE9466BC44A3017969C /* NSBundle-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		9C024314BDAD763C4A64BAF9 /* NSFileManager-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AD0BC03A23DE282ACC9A87 /* NSFileManager-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		9D64F2F8652B9CD6757FEEC1 /* UIAutomationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BA938BEC831B7FD843C43A /* UIAutomationHelper.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		9DC6E172AFC0ED6FF571CB74 /* IFTTTAngleAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 39FAF92DF5F0CD0934F1826F /* IFTTTAngleAnimation.h */; };
+		9FE15B76075FF8D651FC23B3 /* IFTTTScaleAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = E62526BE67819DEEFB3FA00A /* IFTTTScaleAnimation.h */; };
+		A047460B605362E91D38D90C /* IFTTTHideAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = B445FF25110E4CA7A90C41D6 /* IFTTTHideAnimation.h */; };
+		A2E9B6ADD80A6EB34F08F78F /* IFTTTAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DE8EC3463ED22EB84A3B07 /* IFTTTAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		A9D82F9801F037F146FEEC50 /* IFTTTTransform3DAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AABAFBDB14D34C7763302D /* IFTTTTransform3DAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		AB44FA868B79E8EEA4DA39FF /* UITouch-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D325925DD16D368CC258161 /* UITouch-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		AD011FCC4649DE669EAB27C0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE7CC0BFC1D80031D923BB4 /* QuartzCore.framework */; };
+		AD36A988B46B7AEE89EE0E15 /* IFTTTAlphaAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 06451EFEC73303E95065BD5B /* IFTTTAlphaAnimation.h */; };
+		AF09B55FE8D5DC85EABA853A /* IFTTTConstraintsAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = B9FCC2F99BF6099D1017ED61 /* IFTTTConstraintsAnimation.h */; };
+		AFD0653E8F4A1F99FC6A0A1A /* KIFUITestActor-ConditionalTests.h in Headers */ = {isa = PBXBuildFile; fileRef = B965B8F591FD0A5893F34592 /* KIFUITestActor-ConditionalTests.h */; };
+		B0D515BA8254BE14D0EA175E /* IFTTTColorAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 858DE240327C592D3D2761D1 /* IFTTTColorAnimation.h */; };
+		B11EB5AA2B065DA5F590A85C /* IFTTTAnimatedScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CF479BA107F303D9EE5A6AB /* IFTTTAnimatedScrollViewController.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		B5173AE4283B0C7683AB563E /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 3013C3B972955D40D81665D8 /* UIImage+Compare.h */; };
+		B5DBBEC92CEFC1EFABD8AAD5 /* KIFTestStepValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = C93EE9F075095F357CB94667 /* KIFTestStepValidation.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		B8B2AE8CB17A4833A11696FE /* IFTTTAlphaAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 616348A31756FB1A3A5604FA /* IFTTTAlphaAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		BA980CD6861665B0BA816C94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAD9DAE4CD6F45B35886A /* Foundation.framework */; };
+		BADE220B807F69DAB3C3201D /* KIFUITestActor-ConditionalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB347F60971C1FC16316AD76 /* KIFUITestActor-ConditionalTests.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		BD33851363D70D2535AD77EB /* IFTTTAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = A0B53D1F9393F8FBE19AFD9C /* IFTTTAnimator.h */; };
+		BF17D42E2A88BDF8B380C3BF /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 741F1964D1AC185284A44792 /* FBSnapshotTestCase.m */; };
+		C073637117EDBB779CADA25E /* IFTTTFrameAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A8D1E5AD81E94978620E4B6 /* IFTTTFrameAnimation.h */; };
+		C114B3AFCE72BCDC98E36B2B /* IFTTTHideAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = B445FF25110E4CA7A90C41D6 /* IFTTTHideAnimation.h */; };
+		C13786AB7B8E1A29E072739E /* UIScrollView-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FF82487D7738188F2ED3DB55 /* UIScrollView-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		C1E506A22B492AC6F776EE19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAD9DAE4CD6F45B35886A /* Foundation.framework */; };
+		C250CA56FDAABC920F841093 /* IFTTTAlphaAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 616348A31756FB1A3A5604FA /* IFTTTAlphaAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		C499752F1504DE1A3F4FAFB1 /* Pods-JazzHandsDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6250B755BB775C5608392D /* Pods-JazzHandsDemo-dummy.m */; };
+		C509DBE0E8AEE0F1B5EBAF00 /* UIView-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D9EF1C98C0B2F368D2333D4E /* UIView-KIFAdditions.h */; };
+		C5CC2851AA1B3F506CD6624E /* IFTTTAlphaAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 06451EFEC73303E95065BD5B /* IFTTTAlphaAnimation.h */; };
+		CB31314C1C03E27FB1627469 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6EA9E29018710306A53F87 /* CoreGraphics.framework */; };
+		CBE1BC7EE10C0A0F5ABE0F60 /* UIWindow-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = ED052DDEC1EFEB2BB949C7A8 /* UIWindow-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		CD7B1DFC9FA6F695BB37ADA4 /* Pods-JazzHandsTests-FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D220B1448F533D638ED7AB4 /* Pods-JazzHandsTests-FBSnapshotTestCase-dummy.m */; };
+		CD9C33F4A4D74B73A6817476 /* UIView-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E53593311322A31B9FE35A85 /* UIView-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		CF45CD9974C1F1C694C1739E /* UIScrollView-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 40746FAD3C9D6890F5B92D17 /* UIScrollView-KIFAdditions.h */; };
+		D052840675D29E4573701DFF /* IFTTTTransform3DAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = B75F326DC1FD686D9930C5A8 /* IFTTTTransform3DAnimation.h */; };
+		D175787C60FA36AECD385162 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6EA9E29018710306A53F87 /* CoreGraphics.framework */; };
+		D650EB7BFBEF743096B33CF3 /* IFTTTEasingFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = C3CB69B3DE8F0CFBF87B6A5D /* IFTTTEasingFunction.h */; };
+		D7727EDEF58E5365A0861B07 /* IFTTTScaleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7037CA0D6EC0BF3738E375 /* IFTTTScaleAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		DAD22026E86D9C9FAA9763A5 /* IFTTTScaleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7037CA0D6EC0BF3738E375 /* IFTTTScaleAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules -DOS_OBJECT_USE_OBJC=0"; }; };
+		DCD2682EA0037593134DD936 /* IFTTTAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 44FCB78B70AC15B60C58D306 /* IFTTTAnimation.h */; };
+		DDAC60EA94A2D3BF97A0E698 /* KIFSystemTestActor.h in Headers */ = {isa = PBXBuildFile; fileRef = C010895618761B05F69A191E /* KIFSystemTestActor.h */; };
+		DE37F9418478B13507E1AC2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4BAD9DAE4CD6F45B35886A /* Foundation.framework */; };
+		DE45DCAF3B769C5A4A5C38CA /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C570E23864D84403758EC1A /* UIImage+Compare.m */; };
+		DE56E3BA31235B08F2879069 /* UIAccessibilityElement-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = BD9187EB68D0CEA1281A1AE6 /* UIAccessibilityElement-KIFAdditions.h */; };
+		DEA8CD33BC049A7EBE1DDFFB /* IFTTTAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = A0B53D1F9393F8FBE19AFD9C /* IFTTTAnimator.h */; };
+		E26B44F92ADA6A733A2E54F3 /* KIFTestActor.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9C3DD4E2BA0F66F9725184 /* KIFTestActor.h */; };
+		E4B82842D14C0BF5106B54A8 /* KIFTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1A9455448921E1E77BF471 /* KIFTestCase.h */; };
+		E6094260A4A26B77A759984F /* XCTestCase-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D535A0CCC9022BD3FC0C88 /* XCTestCase-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		EB724BF72A947955B03E1475 /* IFTTTEasingFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = C3CB69B3DE8F0CFBF87B6A5D /* IFTTTEasingFunction.h */; };
+		F08A723CCA29A42C38649451 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE7CC0BFC1D80031D923BB4 /* QuartzCore.framework */; };
+		FB2D3C3263248F88EE506DFA /* IFTTTJazzHands.h in Headers */ = {isa = PBXBuildFile; fileRef = 17B136F8BA97B6391C4995DB /* IFTTTJazzHands.h */; };
+		FDB73482DFD7EABEDFA5D417 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 538366E7A55F13840E8C3038 /* UIImage+Diff.h */; };
+		FE970D55828D13E24C0BFBDC /* IFTTTAnimatedScrollViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A8A0D7D5186F4D4AFF0647D /* IFTTTAnimatedScrollViewController.h */; };
+		FFA0315FDF66FFB1879069A3 /* UITableView-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A3F174171F8B77B18CD8D1B6 /* UITableView-KIFAdditions.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		32A8E42D73D94A723EB8EB5C /* PBXContainerItemProxy */ = {
+		0C590C3F3A8AA7FB4681EAB8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0283A5EE4296A9F941573D8F /* Project object */;
+			containerPortal = 80EFE49C9017D4C4E1A24869 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4605E8F3FBB96841E75BB9CC;
-			remoteInfo = "Pods-JazzHandsTests-JazzHands";
-		};
-		8319495C194E24D6675AC2D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0283A5EE4296A9F941573D8F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4DF5709DD481036B4B81F86F;
-			remoteInfo = "Pods-JazzHandsTests-KIF";
-		};
-		AB891E3F32EBB847A141DD6F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0283A5EE4296A9F941573D8F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C412287C163789A836F2C095;
+			remoteGlobalIDString = 93C88AD5C858249BDA3A2639;
 			remoteInfo = "Pods-JazzHandsTests-FBSnapshotTestCase";
 		};
-		DD57D1D941162E86D8F5A29F /* PBXContainerItemProxy */ = {
+		4565FC27BDC686EEF35F28AF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0283A5EE4296A9F941573D8F /* Project object */;
+			containerPortal = 80EFE49C9017D4C4E1A24869 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F08D0192418D7279A125CE39;
+			remoteGlobalIDString = CE6F20692484647BC2F603FA;
+			remoteInfo = "Pods-JazzHandsTests-KIF";
+		};
+		64763166D2306AA8B3D1770B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80EFE49C9017D4C4E1A24869 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC9955BB2222828BC6A30D01;
+			remoteInfo = "Pods-JazzHandsTests-JazzHands";
+		};
+		7D81F646469CF2979E92FB56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80EFE49C9017D4C4E1A24869 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD7665B6D8E9377268A97A1B;
 			remoteInfo = "Pods-JazzHandsDemo-JazzHands";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		010010897C0900383B8B2289 /* NSError-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError-KIFAdditions.m"; path = "Additions/NSError-KIFAdditions.m"; sourceTree = "<group>"; };
-		046B30B1A389F1A9C9231DB5 /* libPods-JazzHandsTests-FBSnapshotTestCase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JazzHandsTests-FBSnapshotTestCase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		075DD44359212B19C7C8A598 /* UIAutomationHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UIAutomationHelper.h; path = Classes/UIAutomationHelper.h; sourceTree = "<group>"; };
-		0AF99458C9E7C716DD67EBA2 /* IFTTTAnimatedScrollViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTAnimatedScrollViewController.h; path = JazzHands/IFTTTAnimatedScrollViewController.h; sourceTree = "<group>"; };
-		0B3659C98BAD25119D256373 /* Pods-JazzHandsTests-FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazzHandsTests-FBSnapshotTestCase.xcconfig"; sourceTree = "<group>"; };
-		0DA62222314846AB14D88E62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		1112492D9A966C7FB5F96026 /* IFTTTAnimatedScrollViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTAnimatedScrollViewController.m; path = JazzHands/IFTTTAnimatedScrollViewController.m; sourceTree = "<group>"; };
-		13C34D13A8DC389EE3D4C687 /* UIView-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView-KIFAdditions.m"; path = "Additions/UIView-KIFAdditions.m"; sourceTree = "<group>"; };
-		23AC85DBA3098295A0505957 /* UIScrollView-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView-KIFAdditions.h"; path = "Additions/UIScrollView-KIFAdditions.h"; sourceTree = "<group>"; };
-		24CD77FFF7196DAFAA233DB7 /* Pods-JazzHandsDemo-JazzHands-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JazzHandsDemo-JazzHands-prefix.pch"; sourceTree = "<group>"; };
-		260DB9AC2B8BBD9AF71379F5 /* IFTTTConstraintsAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTConstraintsAnimation.h; path = JazzHands/IFTTTConstraintsAnimation.h; sourceTree = "<group>"; };
-		26DE959F69E022EB5F9C1132 /* libPods-JazzHandsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JazzHandsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A68BE9B6F40341B7141AEE1 /* libPods-JazzHandsTests-KIF.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JazzHandsTests-KIF.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C5CD2CAB1B051CA032A2E84 /* KIFUITestActor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFUITestActor.m; path = Classes/KIFUITestActor.m; sourceTree = "<group>"; };
-		300D4E9D6E1F673E4DE4849A /* IFTTTAlphaAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTAlphaAnimation.h; path = JazzHands/IFTTTAlphaAnimation.h; sourceTree = "<group>"; };
-		353EE4C881BA1D65B52C3716 /* UIApplication-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication-KIFAdditions.h"; path = "Additions/UIApplication-KIFAdditions.h"; sourceTree = "<group>"; };
-		364C6903753ABAA56993BE1C /* UIScrollView-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView-KIFAdditions.m"; path = "Additions/UIScrollView-KIFAdditions.m"; sourceTree = "<group>"; };
-		36B079D518AC6EAC1D5C34A4 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Diff.m"; sourceTree = "<group>"; };
-		36C80DCAA3F447E45DF49CCF /* Pods-JazzHandsTests-KIF-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JazzHandsTests-KIF-prefix.pch"; sourceTree = "<group>"; };
-		3716A83DEC987B3AE05C2B24 /* XCTestCase-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "XCTestCase-KIFAdditions.h"; path = "Additions/XCTestCase-KIFAdditions.h"; sourceTree = "<group>"; };
-		3A20761E701BF76E3C5CB1D1 /* IFTTTConstraintsAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTConstraintsAnimation.m; path = JazzHands/IFTTTConstraintsAnimation.m; sourceTree = "<group>"; };
-		3DB2DB62F76000B7EC99C494 /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+Compare.h"; sourceTree = "<group>"; };
-		3EC4EE9DFABF43799E9320CA /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FBSnapshotTestController.h; sourceTree = "<group>"; };
-		44208D9803B9A25E1930A9DA /* UIAutomationHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UIAutomationHelper.m; path = Classes/UIAutomationHelper.m; sourceTree = "<group>"; };
-		4BA7170ED059B06DCD8AA640 /* KIFSystemTestActor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFSystemTestActor.h; path = Classes/KIFSystemTestActor.h; sourceTree = "<group>"; };
-		4C90ABF67241E42F42EF84EE /* KIFTypist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFTypist.h; path = Classes/KIFTypist.h; sourceTree = "<group>"; };
-		4D1ACF0ED370FBD4658E7093 /* NSBundle-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle-KIFAdditions.m"; path = "Additions/NSBundle-KIFAdditions.m"; sourceTree = "<group>"; };
-		53A6A4A1424705B6301C9584 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		564C3E2F0A7D8EBDEB91E799 /* KIFTestStepValidation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFTestStepValidation.m; path = Classes/KIFTestStepValidation.m; sourceTree = "<group>"; };
-		57492FB8F7E0786919D441A0 /* UIApplication-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication-KIFAdditions.m"; path = "Additions/UIApplication-KIFAdditions.m"; sourceTree = "<group>"; };
-		5753BBC139CA5A56AAEF4808 /* IFTTTJazzHands.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTJazzHands.h; path = JazzHands/IFTTTJazzHands.h; sourceTree = "<group>"; };
-		58BAD8FA3CEA6CDBA28FD1C3 /* IFTTTColorAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTColorAnimation.h; path = JazzHands/IFTTTColorAnimation.h; sourceTree = "<group>"; };
-		5B7124F286E10184E6311E0C /* Pods-JazzHandsDemo-JazzHands.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazzHandsDemo-JazzHands.xcconfig"; sourceTree = "<group>"; };
-		5C4869FCD3D39042A16A840B /* UIAccessibilityElement-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAccessibilityElement-KIFAdditions.m"; path = "Additions/UIAccessibilityElement-KIFAdditions.m"; sourceTree = "<group>"; };
-		5DE1FB2F2605CD498E2F1D39 /* IFTTTHideAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTHideAnimation.h; path = JazzHands/IFTTTHideAnimation.h; sourceTree = "<group>"; };
-		5EEF98CB256554A52438C974 /* Pods-JazzHandsTests-FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JazzHandsTests-FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
-		60C335DBCD411649BD3A4488 /* KIFUITestActor-ConditionalTests.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "KIFUITestActor-ConditionalTests.h"; path = "Classes/KIFUITestActor-ConditionalTests.h"; sourceTree = "<group>"; };
-		61056DA3E04D79B36799C59B /* IFTTTAlphaAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTAlphaAnimation.m; path = JazzHands/IFTTTAlphaAnimation.m; sourceTree = "<group>"; };
-		66581F3EAD98DEDA1DD26BE6 /* IFTTTAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTAnimation.h; path = JazzHands/IFTTTAnimation.h; sourceTree = "<group>"; };
-		66A37C47BD7B02D37DB7D21C /* IFTTTAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTAnimator.m; path = JazzHands/IFTTTAnimator.m; sourceTree = "<group>"; };
-		67D07BF1C50A477EEB452365 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FBSnapshotTestController.m; sourceTree = "<group>"; };
-		6A14525CF249FE8373A7A338 /* Pods-JazzHandsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazzHandsDemo.release.xcconfig"; sourceTree = "<group>"; };
-		6CB4640DF0A0803DA467DAB4 /* UIWindow-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWindow-KIFAdditions.m"; path = "Additions/UIWindow-KIFAdditions.m"; sourceTree = "<group>"; };
-		6F6DD5E20DC4554C37EF738F /* Pods-JazzHandsTests-JazzHands-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-JazzHandsTests-JazzHands-prefix.pch"; path = "../Pods-JazzHandsTests-JazzHands/Pods-JazzHandsTests-JazzHands-prefix.pch"; sourceTree = "<group>"; };
-		70EF40718C0EFEAEDF6F323F /* IFTTTCornerRadiusAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTCornerRadiusAnimation.h; path = JazzHands/IFTTTCornerRadiusAnimation.h; sourceTree = "<group>"; };
-		7222967E47613A84A14D2D0F /* IFTTTTransform3DAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTTransform3DAnimation.m; path = JazzHands/IFTTTTransform3DAnimation.m; sourceTree = "<group>"; };
-		72863E1B2B35EA9004AF16DA /* Pods-JazzHandsDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JazzHandsDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		73CD99738CFD73311644D79B /* IFTTTAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTAnimation.m; path = JazzHands/IFTTTAnimation.m; sourceTree = "<group>"; };
-		7621251A4805B4E0552F7ACA /* Pods-JazzHandsDemo-JazzHands-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazzHandsDemo-JazzHands-Private.xcconfig"; sourceTree = "<group>"; };
-		76E56A9E91978C0B3FBC1875 /* IFTTTColorAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTColorAnimation.m; path = JazzHands/IFTTTColorAnimation.m; sourceTree = "<group>"; };
-		7807F33880FD345696EC5758 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		7ABF28FF4E9A14AD0B46D2BD /* Pods-JazzHandsDemo-JazzHands-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JazzHandsDemo-JazzHands-dummy.m"; sourceTree = "<group>"; };
-		7AC018A7868850B117B920F0 /* IFTTTFrameAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTFrameAnimation.h; path = JazzHands/IFTTTFrameAnimation.h; sourceTree = "<group>"; };
-		7D04203CCB3E27BD18465DA1 /* Pods-JazzHandsTests-FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JazzHandsTests-FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
-		7D93BC7CF03CECA7357DBEC0 /* IFTTTHideAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTHideAnimation.m; path = JazzHands/IFTTTHideAnimation.m; sourceTree = "<group>"; };
-		804CDF39FCA8AB3925CC4E65 /* UIWindow-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWindow-KIFAdditions.h"; path = "Additions/UIWindow-KIFAdditions.h"; sourceTree = "<group>"; };
-		80D438CF379DE5F97D0DEFF6 /* Pods-JazzHandsTests-JazzHands.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazzHandsTests-JazzHands.xcconfig"; path = "../Pods-JazzHandsTests-JazzHands/Pods-JazzHandsTests-JazzHands.xcconfig"; sourceTree = "<group>"; };
-		82522192DE84B5F7B4F0BD19 /* UITableView-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView-KIFAdditions.m"; path = "Additions/UITableView-KIFAdditions.m"; sourceTree = "<group>"; };
-		82723274177AD2BC9786AFD0 /* IFTTTAngleAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTAngleAnimation.h; path = JazzHands/IFTTTAngleAnimation.h; sourceTree = "<group>"; };
-		833C037CFBF4B0E262076252 /* Pods-JazzHandsTests-KIF.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazzHandsTests-KIF.xcconfig"; sourceTree = "<group>"; };
-		849598E9A1FE4D2EB701817E /* IFTTTCornerRadiusAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTCornerRadiusAnimation.m; path = JazzHands/IFTTTCornerRadiusAnimation.m; sourceTree = "<group>"; };
-		863ED0F7BC98DA8A3F5E6B0E /* KIFTestActor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFTestActor.h; path = Classes/KIFTestActor.h; sourceTree = "<group>"; };
-		8980A484F805F5FC7B503C9F /* libPods-JazzHandsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JazzHandsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		899308ECE2AD77D8301D7FDB /* KIFTestStepValidation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFTestStepValidation.h; path = Classes/KIFTestStepValidation.h; sourceTree = "<group>"; };
-		8AB801662F1C07FC068EBE5A /* Pods-JazzHandsTests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JazzHandsTests-environment.h"; sourceTree = "<group>"; };
-		8C32190D2ACB4C6A23C0DDBE /* UITouch-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITouch-KIFAdditions.h"; path = "Additions/UITouch-KIFAdditions.h"; sourceTree = "<group>"; };
-		8DF67C3760098594F5DDE763 /* KIFUITestActor-ConditionalTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "KIFUITestActor-ConditionalTests.m"; path = "Classes/KIFUITestActor-ConditionalTests.m"; sourceTree = "<group>"; };
-		9069477638C95C9608930642 /* libPods-JazzHandsTests-JazzHands.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JazzHandsTests-JazzHands.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		91046F36B3806845BE2656BB /* Pods-JazzHandsTests-FBSnapshotTestCase-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazzHandsTests-FBSnapshotTestCase-Private.xcconfig"; sourceTree = "<group>"; };
-		93A870F7B2285E1114D209E4 /* Pods-JazzHandsDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JazzHandsDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		96DCECE35D356189F5031EC5 /* Pods-JazzHandsDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JazzHandsDemo-resources.sh"; sourceTree = "<group>"; };
-		97B4B79EFF6167CFF5FCE9DD /* NSFileManager-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSFileManager-KIFAdditions.h"; path = "Additions/NSFileManager-KIFAdditions.h"; sourceTree = "<group>"; };
-		97F25DAA7D0D07905F2450DC /* IFTTTScaleAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTScaleAnimation.m; path = JazzHands/IFTTTScaleAnimation.m; sourceTree = "<group>"; };
-		98B0D9B819A7C45A380CA63D /* UIAccessibilityElement-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAccessibilityElement-KIFAdditions.h"; path = "Additions/UIAccessibilityElement-KIFAdditions.h"; sourceTree = "<group>"; };
-		9C0999827734029F3BF9D3E5 /* Pods-JazzHandsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazzHandsTests.release.xcconfig"; sourceTree = "<group>"; };
-		9E94BC39D00A71C741178EB3 /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Compare.m"; sourceTree = "<group>"; };
-		9FF1922F050AA8ADB277A892 /* CGGeometry-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CGGeometry-KIFAdditions.m"; path = "Additions/CGGeometry-KIFAdditions.m"; sourceTree = "<group>"; };
-		A033C317A73EBB1C10774252 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		A15471053C6338720595B3D9 /* Pods-JazzHandsTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JazzHandsTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		A854F5A64D9A43A3AED1C07E /* Pods-JazzHandsTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JazzHandsTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AE95134E719EBFBEA0671F4E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		B0CBD1E2F4598FD4D828A155 /* NSException-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSException-KIFAdditions.h"; path = "Additions/NSException-KIFAdditions.h"; sourceTree = "<group>"; };
-		B100FAEE8501E2FE8B765836 /* IFTTTAnimationFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTAnimationFrame.h; path = JazzHands/IFTTTAnimationFrame.h; sourceTree = "<group>"; };
-		B3FBCB21F9BDCCD36F04F58A /* KIFTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFTestCase.m; path = Classes/KIFTestCase.m; sourceTree = "<group>"; };
-		B3FEBE01E9E36ED3745B7343 /* XCTestCase-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestCase-KIFAdditions.m"; path = "Additions/XCTestCase-KIFAdditions.m"; sourceTree = "<group>"; };
-		B4DD2439EE4A754E2B237B54 /* IFTTTScaleAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTScaleAnimation.h; path = JazzHands/IFTTTScaleAnimation.h; sourceTree = "<group>"; };
-		B624F7A51207AA6843A5A2D1 /* IFTTTAngleAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTAngleAnimation.m; path = JazzHands/IFTTTAngleAnimation.m; sourceTree = "<group>"; };
-		B74DD4A897C9F414C829215E /* UIView-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView-KIFAdditions.h"; path = "Additions/UIView-KIFAdditions.h"; sourceTree = "<group>"; };
-		B831FF5025D75B721AEC8981 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BBC10C528DC9C64D866AE051 /* Pods-JazzHandsTests-KIF-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazzHandsTests-KIF-Private.xcconfig"; sourceTree = "<group>"; };
-		BC05A8545F0CAEBD624AAD1F /* Pods-JazzHandsTests-JazzHands-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-JazzHandsTests-JazzHands-dummy.m"; path = "../Pods-JazzHandsTests-JazzHands/Pods-JazzHandsTests-JazzHands-dummy.m"; sourceTree = "<group>"; };
-		BCD71AFC7C25B553139BA71A /* Pods-JazzHandsTests-JazzHands-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazzHandsTests-JazzHands-Private.xcconfig"; path = "../Pods-JazzHandsTests-JazzHands/Pods-JazzHandsTests-JazzHands-Private.xcconfig"; sourceTree = "<group>"; };
-		C0001C1737871ACD8084952F /* IFTTTEasingFunction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTEasingFunction.h; path = JazzHands/IFTTTEasingFunction.h; sourceTree = "<group>"; };
-		C115E943EAA7032165DF0C69 /* Pods-JazzHandsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazzHandsDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		C1AA14AB508A9C60C2F7FFF4 /* KIFSystemTestActor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFSystemTestActor.m; path = Classes/KIFSystemTestActor.m; sourceTree = "<group>"; };
-		C2D42EFDC9EDAF55511222BE /* UITouch-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITouch-KIFAdditions.m"; path = "Additions/UITouch-KIFAdditions.m"; sourceTree = "<group>"; };
-		C55B771E64855AE864196180 /* NSException-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSException-KIFAdditions.m"; path = "Additions/NSException-KIFAdditions.m"; sourceTree = "<group>"; };
-		C6115140535154379D56115E /* Pods-JazzHandsDemo-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JazzHandsDemo-environment.h"; sourceTree = "<group>"; };
-		C7728261B7E1738C36461BD6 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FBSnapshotTestCase.h; sourceTree = "<group>"; };
-		C8F114CC1164D61CDBAC0AB9 /* LoadableCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LoadableCategory.h; path = Additions/LoadableCategory.h; sourceTree = "<group>"; };
-		C91D42FFD4FBFFC17E8D53C3 /* Pods-JazzHandsTests-KIF-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JazzHandsTests-KIF-dummy.m"; sourceTree = "<group>"; };
-		CF775FCF397F34EAE2699CB0 /* IFTTTAnimationKeyFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTAnimationKeyFrame.h; path = JazzHands/IFTTTAnimationKeyFrame.h; sourceTree = "<group>"; };
-		D108D0330973D53BF80ABAF3 /* KIFUITestActor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFUITestActor.h; path = Classes/KIFUITestActor.h; sourceTree = "<group>"; };
-		D2B6F70FFE451BF44CC38D05 /* NSBundle-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle-KIFAdditions.h"; path = "Additions/NSBundle-KIFAdditions.h"; sourceTree = "<group>"; };
-		D2F76B0A4A7B842D5241890F /* NSFileManager-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager-KIFAdditions.m"; path = "Additions/NSFileManager-KIFAdditions.m"; sourceTree = "<group>"; };
-		D601CBC4203805BC2C77410D /* IFTTTFrameAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTFrameAnimation.m; path = JazzHands/IFTTTFrameAnimation.m; sourceTree = "<group>"; };
-		D9E1E48303AC408D6F5D878A /* Pods-JazzHandsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazzHandsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D9F0EC494859940CA359CF15 /* IFTTTAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTAnimator.h; path = JazzHands/IFTTTAnimator.h; sourceTree = "<group>"; };
-		DB91F70E1683B6869F8EE518 /* IFTTTTransform3DAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTTransform3DAnimation.h; path = JazzHands/IFTTTTransform3DAnimation.h; sourceTree = "<group>"; };
-		DE68323E00335E03AF1555E8 /* KIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIF.h; path = Classes/KIF.h; sourceTree = "<group>"; };
-		DFE7F49A6A2AF014F30C0217 /* KIFTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFTestCase.h; path = Classes/KIFTestCase.h; sourceTree = "<group>"; };
-		E1C861C1D4FFFB3DFE9A015C /* UITableView-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView-KIFAdditions.h"; path = "Additions/UITableView-KIFAdditions.h"; sourceTree = "<group>"; };
-		E2C90720405FB06EC92EEFAA /* KIFTestActor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFTestActor.m; path = Classes/KIFTestActor.m; sourceTree = "<group>"; };
-		E71414E67C92FFFB8C2BB038 /* Pods-JazzHandsDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JazzHandsDemo-dummy.m"; sourceTree = "<group>"; };
-		E751EDEBA03AE1E0C0EC4603 /* KIFTypist.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFTypist.m; path = Classes/KIFTypist.m; sourceTree = "<group>"; };
-		E7B996C83E4CD6C41DB2BE23 /* CGGeometry-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CGGeometry-KIFAdditions.h"; path = "Additions/CGGeometry-KIFAdditions.h"; sourceTree = "<group>"; };
-		E84832A781018522F80AED5C /* libPods-JazzHandsDemo-JazzHands.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JazzHandsDemo-JazzHands.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAD32E857EDC06CB844D8409 /* IFTTTEasingFunction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTEasingFunction.m; path = JazzHands/IFTTTEasingFunction.m; sourceTree = "<group>"; };
-		EDB642C1036E2E8B285A7C19 /* IFTTTAnimationFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTAnimationFrame.m; path = JazzHands/IFTTTAnimationFrame.m; sourceTree = "<group>"; };
-		F163785C9B7E705866475F46 /* NSError-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError-KIFAdditions.h"; path = "Additions/NSError-KIFAdditions.h"; sourceTree = "<group>"; };
-		F1F5ACC456B053C7055760B3 /* Pods-JazzHandsTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JazzHandsTests-dummy.m"; sourceTree = "<group>"; };
-		F55D9C34EA152EE84451E571 /* Pods-JazzHandsTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JazzHandsTests-resources.sh"; sourceTree = "<group>"; };
-		F6D6E2675CA234F04F47AF74 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+Diff.h"; sourceTree = "<group>"; };
-		F96B88F854978F4AF88A5733 /* IFTTTAnimationKeyFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTAnimationKeyFrame.m; path = JazzHands/IFTTTAnimationKeyFrame.m; sourceTree = "<group>"; };
-		F98DE55225962A4BDA7D84D4 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FBSnapshotTestCase.m; sourceTree = "<group>"; };
+		04369F92A75A85C7E8D0B70E /* libPods-JazzHandsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JazzHandsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		051B5E6D840069F88ACD673A /* CGGeometry-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CGGeometry-KIFAdditions.m"; path = "Additions/CGGeometry-KIFAdditions.m"; sourceTree = "<group>"; };
+		06451EFEC73303E95065BD5B /* IFTTTAlphaAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTAlphaAnimation.h; path = JazzHands/IFTTTAlphaAnimation.h; sourceTree = "<group>"; };
+		07462C441988CE98BD70713F /* Pods-JazzHandsTests-KIF-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JazzHandsTests-KIF-prefix.pch"; sourceTree = "<group>"; };
+		0A8A0D7D5186F4D4AFF0647D /* IFTTTAnimatedScrollViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTAnimatedScrollViewController.h; path = JazzHands/IFTTTAnimatedScrollViewController.h; sourceTree = "<group>"; };
+		0B0A7DE2B9EFF1FCFC494157 /* CGGeometry-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CGGeometry-KIFAdditions.h"; path = "Additions/CGGeometry-KIFAdditions.h"; sourceTree = "<group>"; };
+		0B0FEBEC8CC2223DE1F97322 /* NSException-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSException-KIFAdditions.m"; path = "Additions/NSException-KIFAdditions.m"; sourceTree = "<group>"; };
+		0BF8574BAE8562033E5A14D3 /* XCTestCase-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "XCTestCase-KIFAdditions.h"; path = "Additions/XCTestCase-KIFAdditions.h"; sourceTree = "<group>"; };
+		0BFBBFB02B10979853705A05 /* IFTTTCornerRadiusAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTCornerRadiusAnimation.m; path = JazzHands/IFTTTCornerRadiusAnimation.m; sourceTree = "<group>"; };
+		0C1A9455448921E1E77BF471 /* KIFTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFTestCase.h; path = Classes/KIFTestCase.h; sourceTree = "<group>"; };
+		0C2B7BB5BEFB350DA69925D6 /* libPods-JazzHandsDemo-JazzHands.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JazzHandsDemo-JazzHands.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C4BAD9DAE4CD6F45B35886A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0D3F4EDEB8C7E0A79F06F02B /* libPods-JazzHandsTests-KIF.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JazzHandsTests-KIF.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		115908108948FEAAE54F370D /* NSError-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError-KIFAdditions.m"; path = "Additions/NSError-KIFAdditions.m"; sourceTree = "<group>"; };
+		13A69F60002406AE86BEC7B5 /* Pods-JazzHandsTests-JazzHands-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-JazzHandsTests-JazzHands-prefix.pch"; path = "../Pods-JazzHandsTests-JazzHands/Pods-JazzHandsTests-JazzHands-prefix.pch"; sourceTree = "<group>"; };
+		148968F4452AE2CE1B2DFD30 /* Pods-JazzHandsDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JazzHandsDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		164D2248DEFA035335D43B8A /* libPods-JazzHandsTests-JazzHands.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JazzHandsTests-JazzHands.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17B136F8BA97B6391C4995DB /* IFTTTJazzHands.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTJazzHands.h; path = JazzHands/IFTTTJazzHands.h; sourceTree = "<group>"; };
+		18626FC9B2E3BFB161B6E1BF /* Pods-JazzHandsTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JazzHandsTests-dummy.m"; sourceTree = "<group>"; };
+		1BCDCD44C4F9A89DBE862306 /* Pods-JazzHandsTests-KIF-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JazzHandsTests-KIF-dummy.m"; sourceTree = "<group>"; };
+		1D6035A1EB4E5B749D2F35D8 /* libPods-JazzHandsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JazzHandsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2053CF8589049B8BBC3DCAA2 /* IFTTTAnimationFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTAnimationFrame.h; path = JazzHands/IFTTTAnimationFrame.h; sourceTree = "<group>"; };
+		24F7F7F091EB3A9EDD5F4010 /* KIFTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFTestCase.m; path = Classes/KIFTestCase.m; sourceTree = "<group>"; };
+		25765BD5DC3294CAD69EE19E /* UIApplication-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication-KIFAdditions.m"; path = "Additions/UIApplication-KIFAdditions.m"; sourceTree = "<group>"; };
+		26D61D3E296790D762638A2A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		281237D747BD0234FDD0AAF5 /* Pods-JazzHandsTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JazzHandsTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2F1365122EE0EB972A7A880B /* Pods-JazzHandsTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JazzHandsTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3013C3B972955D40D81665D8 /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+Compare.h"; sourceTree = "<group>"; };
+		30EFFFE9466BC44A3017969C /* NSBundle-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle-KIFAdditions.m"; path = "Additions/NSBundle-KIFAdditions.m"; sourceTree = "<group>"; };
+		313177BE19028358DDDDB729 /* NSFileManager-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSFileManager-KIFAdditions.h"; path = "Additions/NSFileManager-KIFAdditions.h"; sourceTree = "<group>"; };
+		313429C4754B7DEA27C7A395 /* IFTTTConstraintsAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTConstraintsAnimation.m; path = JazzHands/IFTTTConstraintsAnimation.m; sourceTree = "<group>"; };
+		3237F0A1073151DD7CF612F5 /* KIFTypist.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFTypist.m; path = Classes/KIFTypist.m; sourceTree = "<group>"; };
+		376E82DE99659160D9321CB1 /* Pods-JazzHandsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazzHandsTests.release.xcconfig"; sourceTree = "<group>"; };
+		37CCEB5CABB1BC271A8F6183 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		39FAF92DF5F0CD0934F1826F /* IFTTTAngleAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTAngleAnimation.h; path = JazzHands/IFTTTAngleAnimation.h; sourceTree = "<group>"; };
+		3C1A40EA4892D04D506BB12A /* Pods-JazzHandsTests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JazzHandsTests-environment.h"; sourceTree = "<group>"; };
+		3C570E23864D84403758EC1A /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Compare.m"; sourceTree = "<group>"; };
+		3D325925DD16D368CC258161 /* UITouch-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITouch-KIFAdditions.m"; path = "Additions/UITouch-KIFAdditions.m"; sourceTree = "<group>"; };
+		40746FAD3C9D6890F5B92D17 /* UIScrollView-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView-KIFAdditions.h"; path = "Additions/UIScrollView-KIFAdditions.h"; sourceTree = "<group>"; };
+		4079BA755EA6AE3F0F4781EF /* IFTTTAnimationFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTAnimationFrame.m; path = JazzHands/IFTTTAnimationFrame.m; sourceTree = "<group>"; };
+		4096B85BCD5A4F020A7595AB /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Diff.m"; sourceTree = "<group>"; };
+		417AB9CE7876FD75A4DFDFAE /* IFTTTAnimationKeyFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTAnimationKeyFrame.m; path = JazzHands/IFTTTAnimationKeyFrame.m; sourceTree = "<group>"; };
+		429F666380AFA348D78F4778 /* Pods-JazzHandsTests-JazzHands-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazzHandsTests-JazzHands-Private.xcconfig"; path = "../Pods-JazzHandsTests-JazzHands/Pods-JazzHandsTests-JazzHands-Private.xcconfig"; sourceTree = "<group>"; };
+		43984AB95DD5DF0FB5771A1D /* KIFSystemTestActor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFSystemTestActor.m; path = Classes/KIFSystemTestActor.m; sourceTree = "<group>"; };
+		44269270B19B6153A8FAF642 /* KIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIF.h; path = Classes/KIF.h; sourceTree = "<group>"; };
+		44FCB78B70AC15B60C58D306 /* IFTTTAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTAnimation.h; path = JazzHands/IFTTTAnimation.h; sourceTree = "<group>"; };
+		461769B1ED0008173EED2175 /* NSBundle-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle-KIFAdditions.h"; path = "Additions/NSBundle-KIFAdditions.h"; sourceTree = "<group>"; };
+		46DE8EC3463ED22EB84A3B07 /* IFTTTAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTAnimation.m; path = JazzHands/IFTTTAnimation.m; sourceTree = "<group>"; };
+		492956B8554DA7C378CAC8B2 /* KIFUITestActor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFUITestActor.m; path = Classes/KIFUITestActor.m; sourceTree = "<group>"; };
+		4ACCB61E727ACF937AA5033D /* Pods-JazzHandsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazzHandsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		538366E7A55F13840E8C3038 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+Diff.h"; sourceTree = "<group>"; };
+		5D220B1448F533D638ED7AB4 /* Pods-JazzHandsTests-FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JazzHandsTests-FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
+		5EE7CC0BFC1D80031D923BB4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		616348A31756FB1A3A5604FA /* IFTTTAlphaAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTAlphaAnimation.m; path = JazzHands/IFTTTAlphaAnimation.m; sourceTree = "<group>"; };
+		61CEAC5B4DBFA4BF27D6A7F5 /* Pods-JazzHandsTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JazzHandsTests-resources.sh"; sourceTree = "<group>"; };
+		660C00A4B07A58B461517F32 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FBSnapshotTestCase.h; sourceTree = "<group>"; };
+		67003AF1F036B762427634FB /* NSError-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError-KIFAdditions.h"; path = "Additions/NSError-KIFAdditions.h"; sourceTree = "<group>"; };
+		69507AC83171EFA8CB23CF33 /* IFTTTCornerRadiusAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTCornerRadiusAnimation.h; path = JazzHands/IFTTTCornerRadiusAnimation.h; sourceTree = "<group>"; };
+		6A8D1E5AD81E94978620E4B6 /* IFTTTFrameAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTFrameAnimation.h; path = JazzHands/IFTTTFrameAnimation.h; sourceTree = "<group>"; };
+		6F6EA9E29018710306A53F87 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		72AABAFBDB14D34C7763302D /* IFTTTTransform3DAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTTransform3DAnimation.m; path = JazzHands/IFTTTTransform3DAnimation.m; sourceTree = "<group>"; };
+		741F1964D1AC185284A44792 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FBSnapshotTestCase.m; sourceTree = "<group>"; };
+		752D9789A846CA0EE8E08307 /* Pods-JazzHandsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazzHandsDemo.release.xcconfig"; sourceTree = "<group>"; };
+		788E1BBFB7E9649B5BE03FAC /* Pods-JazzHandsTests-FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JazzHandsTests-FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
+		7AEFFBC3E39BF84E8D87002D /* IFTTTFrameAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTFrameAnimation.m; path = JazzHands/IFTTTFrameAnimation.m; sourceTree = "<group>"; };
+		7CF479BA107F303D9EE5A6AB /* IFTTTAnimatedScrollViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTAnimatedScrollViewController.m; path = JazzHands/IFTTTAnimatedScrollViewController.m; sourceTree = "<group>"; };
+		7D5D86660AD0D5CA429E1993 /* IFTTTAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTAnimator.m; path = JazzHands/IFTTTAnimator.m; sourceTree = "<group>"; };
+		858DE240327C592D3D2761D1 /* IFTTTColorAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTColorAnimation.h; path = JazzHands/IFTTTColorAnimation.h; sourceTree = "<group>"; };
+		881B3FC512B97BBEA97BC7D5 /* KIFTestActor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFTestActor.m; path = Classes/KIFTestActor.m; sourceTree = "<group>"; };
+		8B6250B755BB775C5608392D /* Pods-JazzHandsDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JazzHandsDemo-dummy.m"; sourceTree = "<group>"; };
+		8E562F6204C5A181381DBF0A /* Pods-JazzHandsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazzHandsDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		8E7037CA0D6EC0BF3738E375 /* IFTTTScaleAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTScaleAnimation.m; path = JazzHands/IFTTTScaleAnimation.m; sourceTree = "<group>"; };
+		8E822F01EBDA64EB5C55A1E7 /* Pods-JazzHandsDemo-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JazzHandsDemo-environment.h"; sourceTree = "<group>"; };
+		8E9C3DD4E2BA0F66F9725184 /* KIFTestActor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFTestActor.h; path = Classes/KIFTestActor.h; sourceTree = "<group>"; };
+		93F81E0F4859FEEE09F3E06D /* Pods-JazzHandsDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JazzHandsDemo-resources.sh"; sourceTree = "<group>"; };
+		94087DC4C60CF776D7423681 /* Pods-JazzHandsTests-FBSnapshotTestCase-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazzHandsTests-FBSnapshotTestCase-Private.xcconfig"; sourceTree = "<group>"; };
+		952D611EAC7B6FAE2D97DA21 /* UITouch-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITouch-KIFAdditions.h"; path = "Additions/UITouch-KIFAdditions.h"; sourceTree = "<group>"; };
+		95E8E35E2CCD11A37D8F9FD3 /* IFTTTColorAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTColorAnimation.m; path = JazzHands/IFTTTColorAnimation.m; sourceTree = "<group>"; };
+		9C04562F79BB2C1ABC7B3B47 /* Pods-JazzHandsDemo-JazzHands.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazzHandsDemo-JazzHands.xcconfig"; sourceTree = "<group>"; };
+		9DAD11FFDB93569A9A917780 /* IFTTTAngleAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTAngleAnimation.m; path = JazzHands/IFTTTAngleAnimation.m; sourceTree = "<group>"; };
+		A0B53D1F9393F8FBE19AFD9C /* IFTTTAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTAnimator.h; path = JazzHands/IFTTTAnimator.h; sourceTree = "<group>"; };
+		A3F174171F8B77B18CD8D1B6 /* UITableView-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView-KIFAdditions.h"; path = "Additions/UITableView-KIFAdditions.h"; sourceTree = "<group>"; };
+		A649BBB786CF17BBFBC47069 /* Pods-JazzHandsTests-JazzHands.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazzHandsTests-JazzHands.xcconfig"; path = "../Pods-JazzHandsTests-JazzHands/Pods-JazzHandsTests-JazzHands.xcconfig"; sourceTree = "<group>"; };
+		B2003DD88AF916AB80EAD00B /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FBSnapshotTestController.h; sourceTree = "<group>"; };
+		B3356C17EE8223D472F9AC8D /* Pods-JazzHandsDemo-JazzHands-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JazzHandsDemo-JazzHands-prefix.pch"; sourceTree = "<group>"; };
+		B33595AA9E66E2ED5EAA0DC4 /* Pods-JazzHandsDemo-JazzHands-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazzHandsDemo-JazzHands-Private.xcconfig"; sourceTree = "<group>"; };
+		B3AD0BC03A23DE282ACC9A87 /* NSFileManager-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager-KIFAdditions.m"; path = "Additions/NSFileManager-KIFAdditions.m"; sourceTree = "<group>"; };
+		B445FF25110E4CA7A90C41D6 /* IFTTTHideAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTHideAnimation.h; path = JazzHands/IFTTTHideAnimation.h; sourceTree = "<group>"; };
+		B75F326DC1FD686D9930C5A8 /* IFTTTTransform3DAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTTransform3DAnimation.h; path = JazzHands/IFTTTTransform3DAnimation.h; sourceTree = "<group>"; };
+		B7F98FB2E161A57860DBC9E0 /* Pods-JazzHandsTests-KIF.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazzHandsTests-KIF.xcconfig"; sourceTree = "<group>"; };
+		B83E840A758B9629F42DFF96 /* UITableView-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView-KIFAdditions.m"; path = "Additions/UITableView-KIFAdditions.m"; sourceTree = "<group>"; };
+		B965B8F591FD0A5893F34592 /* KIFUITestActor-ConditionalTests.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "KIFUITestActor-ConditionalTests.h"; path = "Classes/KIFUITestActor-ConditionalTests.h"; sourceTree = "<group>"; };
+		B9FCC2F99BF6099D1017ED61 /* IFTTTConstraintsAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTConstraintsAnimation.h; path = JazzHands/IFTTTConstraintsAnimation.h; sourceTree = "<group>"; };
+		BB2A5F45DD796DB37E416A37 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FBSnapshotTestController.m; sourceTree = "<group>"; };
+		BBEAB5398A688A097A6C4DE4 /* UIAutomationHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UIAutomationHelper.h; path = Classes/UIAutomationHelper.h; sourceTree = "<group>"; };
+		BD9187EB68D0CEA1281A1AE6 /* UIAccessibilityElement-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAccessibilityElement-KIFAdditions.h"; path = "Additions/UIAccessibilityElement-KIFAdditions.h"; sourceTree = "<group>"; };
+		C010895618761B05F69A191E /* KIFSystemTestActor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFSystemTestActor.h; path = Classes/KIFSystemTestActor.h; sourceTree = "<group>"; };
+		C3CB69B3DE8F0CFBF87B6A5D /* IFTTTEasingFunction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTEasingFunction.h; path = JazzHands/IFTTTEasingFunction.h; sourceTree = "<group>"; };
+		C45B341380189BFAFDC3B687 /* Pods-JazzHandsTests-FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazzHandsTests-FBSnapshotTestCase.xcconfig"; sourceTree = "<group>"; };
+		C557FE649BB8103A8B0848D6 /* KIFTestStepValidation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFTestStepValidation.h; path = Classes/KIFTestStepValidation.h; sourceTree = "<group>"; };
+		C93EE9F075095F357CB94667 /* KIFTestStepValidation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFTestStepValidation.m; path = Classes/KIFTestStepValidation.m; sourceTree = "<group>"; };
+		C9450FDDFFED9CFEE2D3B8AA /* NSException-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSException-KIFAdditions.h"; path = "Additions/NSException-KIFAdditions.h"; sourceTree = "<group>"; };
+		C98C2F0CE034D4B0C145DC96 /* KIFUITestActor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFUITestActor.h; path = Classes/KIFUITestActor.h; sourceTree = "<group>"; };
+		CE12FF95A99FC193A23ADDC1 /* UIAccessibilityElement-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAccessibilityElement-KIFAdditions.m"; path = "Additions/UIAccessibilityElement-KIFAdditions.m"; sourceTree = "<group>"; };
+		D2D535A0CCC9022BD3FC0C88 /* XCTestCase-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestCase-KIFAdditions.m"; path = "Additions/XCTestCase-KIFAdditions.m"; sourceTree = "<group>"; };
+		D3BA938BEC831B7FD843C43A /* UIAutomationHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UIAutomationHelper.m; path = Classes/UIAutomationHelper.m; sourceTree = "<group>"; };
+		D511D62B2994D3255755261A /* Pods-JazzHandsTests-KIF-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazzHandsTests-KIF-Private.xcconfig"; sourceTree = "<group>"; };
+		D87E39030DD3497EF16A41B9 /* Pods-JazzHandsTests-JazzHands-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-JazzHandsTests-JazzHands-dummy.m"; path = "../Pods-JazzHandsTests-JazzHands/Pods-JazzHandsTests-JazzHands-dummy.m"; sourceTree = "<group>"; };
+		D9EF1C98C0B2F368D2333D4E /* UIView-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView-KIFAdditions.h"; path = "Additions/UIView-KIFAdditions.h"; sourceTree = "<group>"; };
+		DB347F60971C1FC16316AD76 /* KIFUITestActor-ConditionalTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "KIFUITestActor-ConditionalTests.m"; path = "Classes/KIFUITestActor-ConditionalTests.m"; sourceTree = "<group>"; };
+		DB870978886FC8D3F8DA65A3 /* libPods-JazzHandsTests-FBSnapshotTestCase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JazzHandsTests-FBSnapshotTestCase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBE4715D61CB5B6284097177 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E17A864F6398603A95C652D3 /* UIApplication-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication-KIFAdditions.h"; path = "Additions/UIApplication-KIFAdditions.h"; sourceTree = "<group>"; };
+		E19C4E8A96132C152EDAE45D /* UIWindow-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWindow-KIFAdditions.h"; path = "Additions/UIWindow-KIFAdditions.h"; sourceTree = "<group>"; };
+		E53593311322A31B9FE35A85 /* UIView-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView-KIFAdditions.m"; path = "Additions/UIView-KIFAdditions.m"; sourceTree = "<group>"; };
+		E62526BE67819DEEFB3FA00A /* IFTTTScaleAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTScaleAnimation.h; path = JazzHands/IFTTTScaleAnimation.h; sourceTree = "<group>"; };
+		E654E79817FF6F04B2219B88 /* IFTTTHideAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTHideAnimation.m; path = JazzHands/IFTTTHideAnimation.m; sourceTree = "<group>"; };
+		E740832BE0F4E46EA381108B /* LoadableCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LoadableCategory.h; path = Additions/LoadableCategory.h; sourceTree = "<group>"; };
+		E8E5FF121600EB3D1F9A6FFE /* IFTTTAnimationKeyFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IFTTTAnimationKeyFrame.h; path = JazzHands/IFTTTAnimationKeyFrame.h; sourceTree = "<group>"; };
+		EADE1A120A658D83A3426CDD /* IFTTTEasingFunction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IFTTTEasingFunction.m; path = JazzHands/IFTTTEasingFunction.m; sourceTree = "<group>"; };
+		ED052DDEC1EFEB2BB949C7A8 /* UIWindow-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWindow-KIFAdditions.m"; path = "Additions/UIWindow-KIFAdditions.m"; sourceTree = "<group>"; };
+		EFBBBF48502811296640E4CE /* KIFTypist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFTypist.h; path = Classes/KIFTypist.h; sourceTree = "<group>"; };
+		F2C839A55FA6BE7973167B73 /* Pods-JazzHandsDemo-JazzHands-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JazzHandsDemo-JazzHands-dummy.m"; sourceTree = "<group>"; };
+		FAF543BF246ECD0F1CD097CA /* Pods-JazzHandsDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JazzHandsDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		FF82487D7738188F2ED3DB55 /* UIScrollView-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView-KIFAdditions.m"; path = "Additions/UIScrollView-KIFAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		014D1031507643D02F519E7E /* Frameworks */ = {
+		1EB1C3AA3E1970D54E29373D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC663A0F726D4509BC982A59 /* CoreGraphics.framework in Frameworks */,
-				77B25F9394E5FB7EF5D673B3 /* Foundation.framework in Frameworks */,
-				7E3FAB88583B1EB819B4058D /* QuartzCore.framework in Frameworks */,
-				F1410A488BA6B2B988BF3F78 /* UIKit.framework in Frameworks */,
+				102C26BF98B36AB4A8A790CE /* CoreGraphics.framework in Frameworks */,
+				64D3796D58C24D847746FE8F /* Foundation.framework in Frameworks */,
+				25D1AB27DF0E1BA24F2D30A6 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		10E4BDC46B2682BB492487DF /* Frameworks */ = {
+		5290E9C485C06A05E6D7EA05 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A083702531BEB9E2C668081 /* Foundation.framework in Frameworks */,
+				C1E506A22B492AC6F776EE19 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3223AA6EC0D792472B7A070C /* Frameworks */ = {
+		63C7F855E1F5B284DBD9F64E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A729E17BECC7B88445876A0 /* CoreGraphics.framework in Frameworks */,
-				A992A9F22819DEC4EC285F2B /* Foundation.framework in Frameworks */,
-				29887494F03A041931CAD74B /* XCTest.framework in Frameworks */,
+				BA980CD6861665B0BA816C94 /* Foundation.framework in Frameworks */,
+				3EB3E8AB6A2980E6F319EF13 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		432E1C7F7D362FE957B1B1EF /* Frameworks */ = {
+		89F6A875AFF22A69221D968D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32045490961291D5669651EB /* Foundation.framework in Frameworks */,
+				0D1D73614C90E35A2269E0D6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6659E42F4F3A142F217A670D /* Frameworks */ = {
+		AF83CD6B8C4C8E0F925EF2E1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E9E8F8CC7C39440DC57C215 /* CoreGraphics.framework in Frameworks */,
-				B4B47251A145702EAB434521 /* Foundation.framework in Frameworks */,
-				43B2622B83EBCFD8CB9F801F /* QuartzCore.framework in Frameworks */,
-				C2A766C7F9E5076434AA31A5 /* UIKit.framework in Frameworks */,
+				CB31314C1C03E27FB1627469 /* CoreGraphics.framework in Frameworks */,
+				DE37F9418478B13507E1AC2B /* Foundation.framework in Frameworks */,
+				F08A723CCA29A42C38649451 /* QuartzCore.framework in Frameworks */,
+				062FE2C51FAD5C868FEF217F /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B03A31EE843567264AAA53B5 /* Frameworks */ = {
+		E6AC70535E2A2BD5B3980D57 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B630B087611DC9FF9FF70A4E /* Foundation.framework in Frameworks */,
-				62BC54138C18FA5518190343 /* XCTest.framework in Frameworks */,
+				D175787C60FA36AECD385162 /* CoreGraphics.framework in Frameworks */,
+				3C944F67DA001BAE6F9009F9 /* Foundation.framework in Frameworks */,
+				AD011FCC4649DE669EAB27C0 /* QuartzCore.framework in Frameworks */,
+				2208CCEBC7D1071A2949A3DD /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		14756CF86A18B97C1E527FA8 /* Targets Support Files */ = {
+		0498A7354E282EF264A801F8 = {
 			isa = PBXGroup;
 			children = (
-				46040EDA0E9A204AF87F3B5C /* Pods-JazzHandsDemo */,
-				70BA55FB53D56B329CA90071 /* Pods-JazzHandsTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		18D9D46B586035FAB7FB1D1D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6AD06785B9B402E6528F15A7 /* FBSnapshotTestCase */,
-				72955CE96D7A6EE6FF8DD197 /* KIF */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		1A67BE3D8C7D506D1294B151 = {
-			isa = PBXGroup;
-			children = (
-				B831FF5025D75B721AEC8981 /* Podfile */,
-				E381506D91E6FC27661E3A07 /* Development Pods */,
-				E97DD89F07EB04BA8CCD4FD7 /* Frameworks */,
-				18D9D46B586035FAB7FB1D1D /* Pods */,
-				EF46907F4B0585DBC3568E10 /* Products */,
-				14756CF86A18B97C1E527FA8 /* Targets Support Files */,
+				37CCEB5CABB1BC271A8F6183 /* Podfile */,
+				92949BC3EE382F58B1C3DC5A /* Development Pods */,
+				B005B42063858E6AA2560769 /* Frameworks */,
+				9934142BC036A53D584C4804 /* Pods */,
+				189136F8B877F37585F89E8C /* Products */,
+				80EF6BFC9F127CFC04CF116B /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		2897AB5928FD5F39B5376F77 /* Support Files */ = {
+		189136F8B877F37585F89E8C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				833C037CFBF4B0E262076252 /* Pods-JazzHandsTests-KIF.xcconfig */,
-				BBC10C528DC9C64D866AE051 /* Pods-JazzHandsTests-KIF-Private.xcconfig */,
-				C91D42FFD4FBFFC17E8D53C3 /* Pods-JazzHandsTests-KIF-dummy.m */,
-				36C80DCAA3F447E45DF49CCF /* Pods-JazzHandsTests-KIF-prefix.pch */,
+				1D6035A1EB4E5B749D2F35D8 /* libPods-JazzHandsDemo.a */,
+				0C2B7BB5BEFB350DA69925D6 /* libPods-JazzHandsDemo-JazzHands.a */,
+				04369F92A75A85C7E8D0B70E /* libPods-JazzHandsTests.a */,
+				DB870978886FC8D3F8DA65A3 /* libPods-JazzHandsTests-FBSnapshotTestCase.a */,
+				164D2248DEFA035335D43B8A /* libPods-JazzHandsTests-JazzHands.a */,
+				0D3F4EDEB8C7E0A79F06F02B /* libPods-JazzHandsTests-KIF.a */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-JazzHandsTests-KIF";
+			name = Products;
 			sourceTree = "<group>";
 		};
-		34D23F4761087824D3F2B6C1 /* Support Files */ = {
+		37DBCADC1FBCD8763FA2D0E8 /* Pods-JazzHandsDemo */ = {
 			isa = PBXGroup;
 			children = (
-				5B7124F286E10184E6311E0C /* Pods-JazzHandsDemo-JazzHands.xcconfig */,
-				7621251A4805B4E0552F7ACA /* Pods-JazzHandsDemo-JazzHands-Private.xcconfig */,
-				7ABF28FF4E9A14AD0B46D2BD /* Pods-JazzHandsDemo-JazzHands-dummy.m */,
-				24CD77FFF7196DAFAA233DB7 /* Pods-JazzHandsDemo-JazzHands-prefix.pch */,
-				80D438CF379DE5F97D0DEFF6 /* Pods-JazzHandsTests-JazzHands.xcconfig */,
-				BCD71AFC7C25B553139BA71A /* Pods-JazzHandsTests-JazzHands-Private.xcconfig */,
-				BC05A8545F0CAEBD624AAD1F /* Pods-JazzHandsTests-JazzHands-dummy.m */,
-				6F6DD5E20DC4554C37EF738F /* Pods-JazzHandsTests-JazzHands-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Pods-JazzHandsDemo-JazzHands";
-			sourceTree = "<group>";
-		};
-		46040EDA0E9A204AF87F3B5C /* Pods-JazzHandsDemo */ = {
-			isa = PBXGroup;
-			children = (
-				93A870F7B2285E1114D209E4 /* Pods-JazzHandsDemo-acknowledgements.markdown */,
-				72863E1B2B35EA9004AF16DA /* Pods-JazzHandsDemo-acknowledgements.plist */,
-				E71414E67C92FFFB8C2BB038 /* Pods-JazzHandsDemo-dummy.m */,
-				C6115140535154379D56115E /* Pods-JazzHandsDemo-environment.h */,
-				96DCECE35D356189F5031EC5 /* Pods-JazzHandsDemo-resources.sh */,
-				C115E943EAA7032165DF0C69 /* Pods-JazzHandsDemo.debug.xcconfig */,
-				6A14525CF249FE8373A7A338 /* Pods-JazzHandsDemo.release.xcconfig */,
+				148968F4452AE2CE1B2DFD30 /* Pods-JazzHandsDemo-acknowledgements.markdown */,
+				FAF543BF246ECD0F1CD097CA /* Pods-JazzHandsDemo-acknowledgements.plist */,
+				8B6250B755BB775C5608392D /* Pods-JazzHandsDemo-dummy.m */,
+				8E822F01EBDA64EB5C55A1E7 /* Pods-JazzHandsDemo-environment.h */,
+				93F81E0F4859FEEE09F3E06D /* Pods-JazzHandsDemo-resources.sh */,
+				8E562F6204C5A181381DBF0A /* Pods-JazzHandsDemo.debug.xcconfig */,
+				752D9789A846CA0EE8E08307 /* Pods-JazzHandsDemo.release.xcconfig */,
 			);
 			name = "Pods-JazzHandsDemo";
 			path = "Target Support Files/Pods-JazzHandsDemo";
 			sourceTree = "<group>";
 		};
-		67981D11CD1C52BEA8237416 /* iOS */ = {
+		3985448B74D5760D0E382443 /* Pods-JazzHandsTests */ = {
 			isa = PBXGroup;
 			children = (
-				AE95134E719EBFBEA0671F4E /* CoreGraphics.framework */,
-				0DA62222314846AB14D88E62 /* Foundation.framework */,
-				A033C317A73EBB1C10774252 /* QuartzCore.framework */,
-				53A6A4A1424705B6301C9584 /* UIKit.framework */,
-				7807F33880FD345696EC5758 /* XCTest.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		6AD06785B9B402E6528F15A7 /* FBSnapshotTestCase */ = {
-			isa = PBXGroup;
-			children = (
-				C7728261B7E1738C36461BD6 /* FBSnapshotTestCase.h */,
-				F98DE55225962A4BDA7D84D4 /* FBSnapshotTestCase.m */,
-				3EC4EE9DFABF43799E9320CA /* FBSnapshotTestController.h */,
-				67D07BF1C50A477EEB452365 /* FBSnapshotTestController.m */,
-				3DB2DB62F76000B7EC99C494 /* UIImage+Compare.h */,
-				9E94BC39D00A71C741178EB3 /* UIImage+Compare.m */,
-				F6D6E2675CA234F04F47AF74 /* UIImage+Diff.h */,
-				36B079D518AC6EAC1D5C34A4 /* UIImage+Diff.m */,
-				CC0427D94EF8BD069D2CC624 /* Support Files */,
-			);
-			path = FBSnapshotTestCase;
-			sourceTree = "<group>";
-		};
-		70BA55FB53D56B329CA90071 /* Pods-JazzHandsTests */ = {
-			isa = PBXGroup;
-			children = (
-				A854F5A64D9A43A3AED1C07E /* Pods-JazzHandsTests-acknowledgements.markdown */,
-				A15471053C6338720595B3D9 /* Pods-JazzHandsTests-acknowledgements.plist */,
-				F1F5ACC456B053C7055760B3 /* Pods-JazzHandsTests-dummy.m */,
-				8AB801662F1C07FC068EBE5A /* Pods-JazzHandsTests-environment.h */,
-				F55D9C34EA152EE84451E571 /* Pods-JazzHandsTests-resources.sh */,
-				D9E1E48303AC408D6F5D878A /* Pods-JazzHandsTests.debug.xcconfig */,
-				9C0999827734029F3BF9D3E5 /* Pods-JazzHandsTests.release.xcconfig */,
+				2F1365122EE0EB972A7A880B /* Pods-JazzHandsTests-acknowledgements.markdown */,
+				281237D747BD0234FDD0AAF5 /* Pods-JazzHandsTests-acknowledgements.plist */,
+				18626FC9B2E3BFB161B6E1BF /* Pods-JazzHandsTests-dummy.m */,
+				3C1A40EA4892D04D506BB12A /* Pods-JazzHandsTests-environment.h */,
+				61CEAC5B4DBFA4BF27D6A7F5 /* Pods-JazzHandsTests-resources.sh */,
+				4ACCB61E727ACF937AA5033D /* Pods-JazzHandsTests.debug.xcconfig */,
+				376E82DE99659160D9321CB1 /* Pods-JazzHandsTests.release.xcconfig */,
 			);
 			name = "Pods-JazzHandsTests";
 			path = "Target Support Files/Pods-JazzHandsTests";
 			sourceTree = "<group>";
 		};
-		72955CE96D7A6EE6FF8DD197 /* KIF */ = {
+		4D0AF7DC54D08ABB57FB2EC3 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2897AB5928FD5F39B5376F77 /* Support Files */,
-				893FD8D285753C221EA7E163 /* XCTest */,
+				B7F98FB2E161A57860DBC9E0 /* Pods-JazzHandsTests-KIF.xcconfig */,
+				D511D62B2994D3255755261A /* Pods-JazzHandsTests-KIF-Private.xcconfig */,
+				1BCDCD44C4F9A89DBE862306 /* Pods-JazzHandsTests-KIF-dummy.m */,
+				07462C441988CE98BD70713F /* Pods-JazzHandsTests-KIF-prefix.pch */,
 			);
-			path = KIF;
+			name = "Support Files";
+			path = "../Target Support Files/Pods-JazzHandsTests-KIF";
 			sourceTree = "<group>";
 		};
-		893FD8D285753C221EA7E163 /* XCTest */ = {
+		5EEF881D4E0C45C2A96C7AA8 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				E7B996C83E4CD6C41DB2BE23 /* CGGeometry-KIFAdditions.h */,
-				9FF1922F050AA8ADB277A892 /* CGGeometry-KIFAdditions.m */,
-				DE68323E00335E03AF1555E8 /* KIF.h */,
-				4BA7170ED059B06DCD8AA640 /* KIFSystemTestActor.h */,
-				C1AA14AB508A9C60C2F7FFF4 /* KIFSystemTestActor.m */,
-				863ED0F7BC98DA8A3F5E6B0E /* KIFTestActor.h */,
-				E2C90720405FB06EC92EEFAA /* KIFTestActor.m */,
-				DFE7F49A6A2AF014F30C0217 /* KIFTestCase.h */,
-				B3FBCB21F9BDCCD36F04F58A /* KIFTestCase.m */,
-				899308ECE2AD77D8301D7FDB /* KIFTestStepValidation.h */,
-				564C3E2F0A7D8EBDEB91E799 /* KIFTestStepValidation.m */,
-				4C90ABF67241E42F42EF84EE /* KIFTypist.h */,
-				E751EDEBA03AE1E0C0EC4603 /* KIFTypist.m */,
-				D108D0330973D53BF80ABAF3 /* KIFUITestActor.h */,
-				2C5CD2CAB1B051CA032A2E84 /* KIFUITestActor.m */,
-				60C335DBCD411649BD3A4488 /* KIFUITestActor-ConditionalTests.h */,
-				8DF67C3760098594F5DDE763 /* KIFUITestActor-ConditionalTests.m */,
-				C8F114CC1164D61CDBAC0AB9 /* LoadableCategory.h */,
-				D2B6F70FFE451BF44CC38D05 /* NSBundle-KIFAdditions.h */,
-				4D1ACF0ED370FBD4658E7093 /* NSBundle-KIFAdditions.m */,
-				F163785C9B7E705866475F46 /* NSError-KIFAdditions.h */,
-				010010897C0900383B8B2289 /* NSError-KIFAdditions.m */,
-				B0CBD1E2F4598FD4D828A155 /* NSException-KIFAdditions.h */,
-				C55B771E64855AE864196180 /* NSException-KIFAdditions.m */,
-				97B4B79EFF6167CFF5FCE9DD /* NSFileManager-KIFAdditions.h */,
-				D2F76B0A4A7B842D5241890F /* NSFileManager-KIFAdditions.m */,
-				98B0D9B819A7C45A380CA63D /* UIAccessibilityElement-KIFAdditions.h */,
-				5C4869FCD3D39042A16A840B /* UIAccessibilityElement-KIFAdditions.m */,
-				353EE4C881BA1D65B52C3716 /* UIApplication-KIFAdditions.h */,
-				57492FB8F7E0786919D441A0 /* UIApplication-KIFAdditions.m */,
-				075DD44359212B19C7C8A598 /* UIAutomationHelper.h */,
-				44208D9803B9A25E1930A9DA /* UIAutomationHelper.m */,
-				23AC85DBA3098295A0505957 /* UIScrollView-KIFAdditions.h */,
-				364C6903753ABAA56993BE1C /* UIScrollView-KIFAdditions.m */,
-				E1C861C1D4FFFB3DFE9A015C /* UITableView-KIFAdditions.h */,
-				82522192DE84B5F7B4F0BD19 /* UITableView-KIFAdditions.m */,
-				8C32190D2ACB4C6A23C0DDBE /* UITouch-KIFAdditions.h */,
-				C2D42EFDC9EDAF55511222BE /* UITouch-KIFAdditions.m */,
-				B74DD4A897C9F414C829215E /* UIView-KIFAdditions.h */,
-				13C34D13A8DC389EE3D4C687 /* UIView-KIFAdditions.m */,
-				804CDF39FCA8AB3925CC4E65 /* UIWindow-KIFAdditions.h */,
-				6CB4640DF0A0803DA467DAB4 /* UIWindow-KIFAdditions.m */,
-				3716A83DEC987B3AE05C2B24 /* XCTestCase-KIFAdditions.h */,
-				B3FEBE01E9E36ED3745B7343 /* XCTestCase-KIFAdditions.m */,
+				6F6EA9E29018710306A53F87 /* CoreGraphics.framework */,
+				0C4BAD9DAE4CD6F45B35886A /* Foundation.framework */,
+				5EE7CC0BFC1D80031D923BB4 /* QuartzCore.framework */,
+				26D61D3E296790D762638A2A /* UIKit.framework */,
+				DBE4715D61CB5B6284097177 /* XCTest.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6D1832A17969602854884ABA /* XCTest */ = {
+			isa = PBXGroup;
+			children = (
+				0B0A7DE2B9EFF1FCFC494157 /* CGGeometry-KIFAdditions.h */,
+				051B5E6D840069F88ACD673A /* CGGeometry-KIFAdditions.m */,
+				44269270B19B6153A8FAF642 /* KIF.h */,
+				C010895618761B05F69A191E /* KIFSystemTestActor.h */,
+				43984AB95DD5DF0FB5771A1D /* KIFSystemTestActor.m */,
+				8E9C3DD4E2BA0F66F9725184 /* KIFTestActor.h */,
+				881B3FC512B97BBEA97BC7D5 /* KIFTestActor.m */,
+				0C1A9455448921E1E77BF471 /* KIFTestCase.h */,
+				24F7F7F091EB3A9EDD5F4010 /* KIFTestCase.m */,
+				C557FE649BB8103A8B0848D6 /* KIFTestStepValidation.h */,
+				C93EE9F075095F357CB94667 /* KIFTestStepValidation.m */,
+				EFBBBF48502811296640E4CE /* KIFTypist.h */,
+				3237F0A1073151DD7CF612F5 /* KIFTypist.m */,
+				C98C2F0CE034D4B0C145DC96 /* KIFUITestActor.h */,
+				492956B8554DA7C378CAC8B2 /* KIFUITestActor.m */,
+				B965B8F591FD0A5893F34592 /* KIFUITestActor-ConditionalTests.h */,
+				DB347F60971C1FC16316AD76 /* KIFUITestActor-ConditionalTests.m */,
+				E740832BE0F4E46EA381108B /* LoadableCategory.h */,
+				461769B1ED0008173EED2175 /* NSBundle-KIFAdditions.h */,
+				30EFFFE9466BC44A3017969C /* NSBundle-KIFAdditions.m */,
+				67003AF1F036B762427634FB /* NSError-KIFAdditions.h */,
+				115908108948FEAAE54F370D /* NSError-KIFAdditions.m */,
+				C9450FDDFFED9CFEE2D3B8AA /* NSException-KIFAdditions.h */,
+				0B0FEBEC8CC2223DE1F97322 /* NSException-KIFAdditions.m */,
+				313177BE19028358DDDDB729 /* NSFileManager-KIFAdditions.h */,
+				B3AD0BC03A23DE282ACC9A87 /* NSFileManager-KIFAdditions.m */,
+				BD9187EB68D0CEA1281A1AE6 /* UIAccessibilityElement-KIFAdditions.h */,
+				CE12FF95A99FC193A23ADDC1 /* UIAccessibilityElement-KIFAdditions.m */,
+				E17A864F6398603A95C652D3 /* UIApplication-KIFAdditions.h */,
+				25765BD5DC3294CAD69EE19E /* UIApplication-KIFAdditions.m */,
+				BBEAB5398A688A097A6C4DE4 /* UIAutomationHelper.h */,
+				D3BA938BEC831B7FD843C43A /* UIAutomationHelper.m */,
+				40746FAD3C9D6890F5B92D17 /* UIScrollView-KIFAdditions.h */,
+				FF82487D7738188F2ED3DB55 /* UIScrollView-KIFAdditions.m */,
+				A3F174171F8B77B18CD8D1B6 /* UITableView-KIFAdditions.h */,
+				B83E840A758B9629F42DFF96 /* UITableView-KIFAdditions.m */,
+				952D611EAC7B6FAE2D97DA21 /* UITouch-KIFAdditions.h */,
+				3D325925DD16D368CC258161 /* UITouch-KIFAdditions.m */,
+				D9EF1C98C0B2F368D2333D4E /* UIView-KIFAdditions.h */,
+				E53593311322A31B9FE35A85 /* UIView-KIFAdditions.m */,
+				E19C4E8A96132C152EDAE45D /* UIWindow-KIFAdditions.h */,
+				ED052DDEC1EFEB2BB949C7A8 /* UIWindow-KIFAdditions.m */,
+				0BF8574BAE8562033E5A14D3 /* XCTestCase-KIFAdditions.h */,
+				D2D535A0CCC9022BD3FC0C88 /* XCTestCase-KIFAdditions.m */,
 			);
 			name = XCTest;
 			sourceTree = "<group>";
 		};
-		CC0427D94EF8BD069D2CC624 /* Support Files */ = {
+		7FB9C0ABC7E7491FDE0C28B4 /* JazzHands */ = {
 			isa = PBXGroup;
 			children = (
-				0B3659C98BAD25119D256373 /* Pods-JazzHandsTests-FBSnapshotTestCase.xcconfig */,
-				91046F36B3806845BE2656BB /* Pods-JazzHandsTests-FBSnapshotTestCase-Private.xcconfig */,
-				5EEF98CB256554A52438C974 /* Pods-JazzHandsTests-FBSnapshotTestCase-dummy.m */,
-				7D04203CCB3E27BD18465DA1 /* Pods-JazzHandsTests-FBSnapshotTestCase-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-JazzHandsTests-FBSnapshotTestCase";
-			sourceTree = "<group>";
-		};
-		E381506D91E6FC27661E3A07 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				FA64DA8D1623CE593103B409 /* JazzHands */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		E97DD89F07EB04BA8CCD4FD7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				67981D11CD1C52BEA8237416 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EF46907F4B0585DBC3568E10 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8980A484F805F5FC7B503C9F /* libPods-JazzHandsDemo.a */,
-				E84832A781018522F80AED5C /* libPods-JazzHandsDemo-JazzHands.a */,
-				26DE959F69E022EB5F9C1132 /* libPods-JazzHandsTests.a */,
-				046B30B1A389F1A9C9231DB5 /* libPods-JazzHandsTests-FBSnapshotTestCase.a */,
-				9069477638C95C9608930642 /* libPods-JazzHandsTests-JazzHands.a */,
-				2A68BE9B6F40341B7141AEE1 /* libPods-JazzHandsTests-KIF.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FA64DA8D1623CE593103B409 /* JazzHands */ = {
-			isa = PBXGroup;
-			children = (
-				300D4E9D6E1F673E4DE4849A /* IFTTTAlphaAnimation.h */,
-				61056DA3E04D79B36799C59B /* IFTTTAlphaAnimation.m */,
-				82723274177AD2BC9786AFD0 /* IFTTTAngleAnimation.h */,
-				B624F7A51207AA6843A5A2D1 /* IFTTTAngleAnimation.m */,
-				0AF99458C9E7C716DD67EBA2 /* IFTTTAnimatedScrollViewController.h */,
-				1112492D9A966C7FB5F96026 /* IFTTTAnimatedScrollViewController.m */,
-				66581F3EAD98DEDA1DD26BE6 /* IFTTTAnimation.h */,
-				73CD99738CFD73311644D79B /* IFTTTAnimation.m */,
-				B100FAEE8501E2FE8B765836 /* IFTTTAnimationFrame.h */,
-				EDB642C1036E2E8B285A7C19 /* IFTTTAnimationFrame.m */,
-				CF775FCF397F34EAE2699CB0 /* IFTTTAnimationKeyFrame.h */,
-				F96B88F854978F4AF88A5733 /* IFTTTAnimationKeyFrame.m */,
-				D9F0EC494859940CA359CF15 /* IFTTTAnimator.h */,
-				66A37C47BD7B02D37DB7D21C /* IFTTTAnimator.m */,
-				58BAD8FA3CEA6CDBA28FD1C3 /* IFTTTColorAnimation.h */,
-				76E56A9E91978C0B3FBC1875 /* IFTTTColorAnimation.m */,
-				260DB9AC2B8BBD9AF71379F5 /* IFTTTConstraintsAnimation.h */,
-				3A20761E701BF76E3C5CB1D1 /* IFTTTConstraintsAnimation.m */,
-				70EF40718C0EFEAEDF6F323F /* IFTTTCornerRadiusAnimation.h */,
-				849598E9A1FE4D2EB701817E /* IFTTTCornerRadiusAnimation.m */,
-				C0001C1737871ACD8084952F /* IFTTTEasingFunction.h */,
-				EAD32E857EDC06CB844D8409 /* IFTTTEasingFunction.m */,
-				7AC018A7868850B117B920F0 /* IFTTTFrameAnimation.h */,
-				D601CBC4203805BC2C77410D /* IFTTTFrameAnimation.m */,
-				5DE1FB2F2605CD498E2F1D39 /* IFTTTHideAnimation.h */,
-				7D93BC7CF03CECA7357DBEC0 /* IFTTTHideAnimation.m */,
-				5753BBC139CA5A56AAEF4808 /* IFTTTJazzHands.h */,
-				B4DD2439EE4A754E2B237B54 /* IFTTTScaleAnimation.h */,
-				97F25DAA7D0D07905F2450DC /* IFTTTScaleAnimation.m */,
-				DB91F70E1683B6869F8EE518 /* IFTTTTransform3DAnimation.h */,
-				7222967E47613A84A14D2D0F /* IFTTTTransform3DAnimation.m */,
-				34D23F4761087824D3F2B6C1 /* Support Files */,
+				06451EFEC73303E95065BD5B /* IFTTTAlphaAnimation.h */,
+				616348A31756FB1A3A5604FA /* IFTTTAlphaAnimation.m */,
+				39FAF92DF5F0CD0934F1826F /* IFTTTAngleAnimation.h */,
+				9DAD11FFDB93569A9A917780 /* IFTTTAngleAnimation.m */,
+				0A8A0D7D5186F4D4AFF0647D /* IFTTTAnimatedScrollViewController.h */,
+				7CF479BA107F303D9EE5A6AB /* IFTTTAnimatedScrollViewController.m */,
+				44FCB78B70AC15B60C58D306 /* IFTTTAnimation.h */,
+				46DE8EC3463ED22EB84A3B07 /* IFTTTAnimation.m */,
+				2053CF8589049B8BBC3DCAA2 /* IFTTTAnimationFrame.h */,
+				4079BA755EA6AE3F0F4781EF /* IFTTTAnimationFrame.m */,
+				E8E5FF121600EB3D1F9A6FFE /* IFTTTAnimationKeyFrame.h */,
+				417AB9CE7876FD75A4DFDFAE /* IFTTTAnimationKeyFrame.m */,
+				A0B53D1F9393F8FBE19AFD9C /* IFTTTAnimator.h */,
+				7D5D86660AD0D5CA429E1993 /* IFTTTAnimator.m */,
+				858DE240327C592D3D2761D1 /* IFTTTColorAnimation.h */,
+				95E8E35E2CCD11A37D8F9FD3 /* IFTTTColorAnimation.m */,
+				B9FCC2F99BF6099D1017ED61 /* IFTTTConstraintsAnimation.h */,
+				313429C4754B7DEA27C7A395 /* IFTTTConstraintsAnimation.m */,
+				69507AC83171EFA8CB23CF33 /* IFTTTCornerRadiusAnimation.h */,
+				0BFBBFB02B10979853705A05 /* IFTTTCornerRadiusAnimation.m */,
+				C3CB69B3DE8F0CFBF87B6A5D /* IFTTTEasingFunction.h */,
+				EADE1A120A658D83A3426CDD /* IFTTTEasingFunction.m */,
+				6A8D1E5AD81E94978620E4B6 /* IFTTTFrameAnimation.h */,
+				7AEFFBC3E39BF84E8D87002D /* IFTTTFrameAnimation.m */,
+				B445FF25110E4CA7A90C41D6 /* IFTTTHideAnimation.h */,
+				E654E79817FF6F04B2219B88 /* IFTTTHideAnimation.m */,
+				17B136F8BA97B6391C4995DB /* IFTTTJazzHands.h */,
+				E62526BE67819DEEFB3FA00A /* IFTTTScaleAnimation.h */,
+				8E7037CA0D6EC0BF3738E375 /* IFTTTScaleAnimation.m */,
+				B75F326DC1FD686D9930C5A8 /* IFTTTTransform3DAnimation.h */,
+				72AABAFBDB14D34C7763302D /* IFTTTTransform3DAnimation.m */,
+				C99B82D4A679EF25ADBE19BE /* Support Files */,
 			);
 			name = JazzHands;
 			path = ../..;
 			sourceTree = "<group>";
 		};
+		80EF6BFC9F127CFC04CF116B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				37DBCADC1FBCD8763FA2D0E8 /* Pods-JazzHandsDemo */,
+				3985448B74D5760D0E382443 /* Pods-JazzHandsTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		8C290B22682A74D46299CAEE /* FBSnapshotTestCase */ = {
+			isa = PBXGroup;
+			children = (
+				660C00A4B07A58B461517F32 /* FBSnapshotTestCase.h */,
+				741F1964D1AC185284A44792 /* FBSnapshotTestCase.m */,
+				B2003DD88AF916AB80EAD00B /* FBSnapshotTestController.h */,
+				BB2A5F45DD796DB37E416A37 /* FBSnapshotTestController.m */,
+				3013C3B972955D40D81665D8 /* UIImage+Compare.h */,
+				3C570E23864D84403758EC1A /* UIImage+Compare.m */,
+				538366E7A55F13840E8C3038 /* UIImage+Diff.h */,
+				4096B85BCD5A4F020A7595AB /* UIImage+Diff.m */,
+				9412ACDB955D3AC6043330B1 /* Support Files */,
+			);
+			path = FBSnapshotTestCase;
+			sourceTree = "<group>";
+		};
+		92949BC3EE382F58B1C3DC5A /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7FB9C0ABC7E7491FDE0C28B4 /* JazzHands */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		9412ACDB955D3AC6043330B1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C45B341380189BFAFDC3B687 /* Pods-JazzHandsTests-FBSnapshotTestCase.xcconfig */,
+				94087DC4C60CF776D7423681 /* Pods-JazzHandsTests-FBSnapshotTestCase-Private.xcconfig */,
+				5D220B1448F533D638ED7AB4 /* Pods-JazzHandsTests-FBSnapshotTestCase-dummy.m */,
+				788E1BBFB7E9649B5BE03FAC /* Pods-JazzHandsTests-FBSnapshotTestCase-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-JazzHandsTests-FBSnapshotTestCase";
+			sourceTree = "<group>";
+		};
+		9934142BC036A53D584C4804 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C290B22682A74D46299CAEE /* FBSnapshotTestCase */,
+				EADD39B9EE4FACC76C331813 /* KIF */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B005B42063858E6AA2560769 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5EEF881D4E0C45C2A96C7AA8 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C99B82D4A679EF25ADBE19BE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C04562F79BB2C1ABC7B3B47 /* Pods-JazzHandsDemo-JazzHands.xcconfig */,
+				B33595AA9E66E2ED5EAA0DC4 /* Pods-JazzHandsDemo-JazzHands-Private.xcconfig */,
+				F2C839A55FA6BE7973167B73 /* Pods-JazzHandsDemo-JazzHands-dummy.m */,
+				B3356C17EE8223D472F9AC8D /* Pods-JazzHandsDemo-JazzHands-prefix.pch */,
+				A649BBB786CF17BBFBC47069 /* Pods-JazzHandsTests-JazzHands.xcconfig */,
+				429F666380AFA348D78F4778 /* Pods-JazzHandsTests-JazzHands-Private.xcconfig */,
+				D87E39030DD3497EF16A41B9 /* Pods-JazzHandsTests-JazzHands-dummy.m */,
+				13A69F60002406AE86BEC7B5 /* Pods-JazzHandsTests-JazzHands-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Pods-JazzHandsDemo-JazzHands";
+			sourceTree = "<group>";
+		};
+		EADD39B9EE4FACC76C331813 /* KIF */ = {
+			isa = PBXGroup;
+			children = (
+				4D0AF7DC54D08ABB57FB2EC3 /* Support Files */,
+				6D1832A17969602854884ABA /* XCTest */,
+			);
+			path = KIF;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		374C3301AD500067D2789C36 /* Headers */ = {
+		4979A9AE55C0D7447C746B42 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57EAEBF4CCC24CFFFB7D61AF /* CGGeometry-KIFAdditions.h in Headers */,
-				7DF82EAA738679D36CD67E3E /* KIF.h in Headers */,
-				8C1E9C21411125CB6862AD02 /* KIFSystemTestActor.h in Headers */,
-				851FB94DE78220ADBBCA4561 /* KIFTestActor.h in Headers */,
-				BF8BA6BD957286731E2BFCD9 /* KIFTestCase.h in Headers */,
-				EB9199789750B63D98D9E669 /* KIFTestStepValidation.h in Headers */,
-				3CB529063702251921899AF2 /* KIFTypist.h in Headers */,
-				7A4CD5583A272316C23EA39A /* KIFUITestActor-ConditionalTests.h in Headers */,
-				567B39E75F1043A95DF198D8 /* KIFUITestActor.h in Headers */,
-				DC8FDBD02AF6970A8909DC8B /* LoadableCategory.h in Headers */,
-				BCC1E693F7866E7BECAB5CC2 /* NSBundle-KIFAdditions.h in Headers */,
-				EA1BC44FBF79DD6AF2B782D9 /* NSError-KIFAdditions.h in Headers */,
-				9AB03A0F1557825DE6A096E4 /* NSException-KIFAdditions.h in Headers */,
-				CB115FA61C25493F79E2A005 /* NSFileManager-KIFAdditions.h in Headers */,
-				1130BDF46FA8DF68CFC07ECB /* UIAccessibilityElement-KIFAdditions.h in Headers */,
-				278AE81FC52C2877187BAC2F /* UIApplication-KIFAdditions.h in Headers */,
-				2C42DAD0DE5A7884B0BCDD18 /* UIAutomationHelper.h in Headers */,
-				B039A9BE48904353C2E7E1A7 /* UIScrollView-KIFAdditions.h in Headers */,
-				ABEB69077D21958DE762AA90 /* UITableView-KIFAdditions.h in Headers */,
-				EBF6330A2369C4CE1DFCD811 /* UITouch-KIFAdditions.h in Headers */,
-				9CAF0E0CB51C288E83BB5D31 /* UIView-KIFAdditions.h in Headers */,
-				0AE2CE90FD4927DFF13FADD5 /* UIWindow-KIFAdditions.h in Headers */,
-				543D6E9810040CE77C5867D0 /* XCTestCase-KIFAdditions.h in Headers */,
+				49FC0CEB5929DAC5379511BD /* CGGeometry-KIFAdditions.h in Headers */,
+				1679AA53DAC227987F8E7ACA /* KIF.h in Headers */,
+				DDAC60EA94A2D3BF97A0E698 /* KIFSystemTestActor.h in Headers */,
+				E26B44F92ADA6A733A2E54F3 /* KIFTestActor.h in Headers */,
+				E4B82842D14C0BF5106B54A8 /* KIFTestCase.h in Headers */,
+				809333B210734E483D301581 /* KIFTestStepValidation.h in Headers */,
+				2F8DB1320073FFB3A77D3FB1 /* KIFTypist.h in Headers */,
+				AFD0653E8F4A1F99FC6A0A1A /* KIFUITestActor-ConditionalTests.h in Headers */,
+				3D4142817628D7D3129D4171 /* KIFUITestActor.h in Headers */,
+				93E5AD0565C9572FCF8BA721 /* LoadableCategory.h in Headers */,
+				390A86FA84CACAD256F514DC /* NSBundle-KIFAdditions.h in Headers */,
+				5604B28289A4B68AEE741270 /* NSError-KIFAdditions.h in Headers */,
+				6387F90C250F998F6D18A641 /* NSException-KIFAdditions.h in Headers */,
+				19E2C949AA785C0698903BF0 /* NSFileManager-KIFAdditions.h in Headers */,
+				DE56E3BA31235B08F2879069 /* UIAccessibilityElement-KIFAdditions.h in Headers */,
+				86D92E2D253B885ABE68AC67 /* UIApplication-KIFAdditions.h in Headers */,
+				8A55FEC466BBEFDD81371D7B /* UIAutomationHelper.h in Headers */,
+				CF45CD9974C1F1C694C1739E /* UIScrollView-KIFAdditions.h in Headers */,
+				FFA0315FDF66FFB1879069A3 /* UITableView-KIFAdditions.h in Headers */,
+				50F00470D42EBDA06EBABD83 /* UITouch-KIFAdditions.h in Headers */,
+				C509DBE0E8AEE0F1B5EBAF00 /* UIView-KIFAdditions.h in Headers */,
+				7F9B669D63B296B17B491AB0 /* UIWindow-KIFAdditions.h in Headers */,
+				8A327D34F516C6844D60CA7D /* XCTestCase-KIFAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		53F2F3D0E1F840B2E52BD2B8 /* Headers */ = {
+		5898A05E80B9303BD97B3B33 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25D8D88CD75DEEC19C3AF590 /* IFTTTAlphaAnimation.h in Headers */,
-				28BD36F1811D1AD600F3C558 /* IFTTTAngleAnimation.h in Headers */,
-				90D2F5508A2C18F16AA048CB /* IFTTTAnimatedScrollViewController.h in Headers */,
-				D69074FE13BFD6C5EC3E58A9 /* IFTTTAnimation.h in Headers */,
-				ECBCF7A867F516D2950C4BA5 /* IFTTTAnimationFrame.h in Headers */,
-				D0EB514E8FD6D1DACCEFE8A7 /* IFTTTAnimationKeyFrame.h in Headers */,
-				5C52D53081116E785CC0AE1C /* IFTTTAnimator.h in Headers */,
-				97089AB885CCCE07EA77E517 /* IFTTTColorAnimation.h in Headers */,
-				4D59AD9919E89985D963BD0E /* IFTTTConstraintsAnimation.h in Headers */,
-				0579665542C1D839E766D2DA /* IFTTTCornerRadiusAnimation.h in Headers */,
-				C2D958F6E81DF338B2DB8BE0 /* IFTTTEasingFunction.h in Headers */,
-				4892F70C9D5D51B9AD86A936 /* IFTTTFrameAnimation.h in Headers */,
-				902F65E8DBE8808F41673205 /* IFTTTHideAnimation.h in Headers */,
-				0AE913A4F448F405AAC96F20 /* IFTTTJazzHands.h in Headers */,
-				B64BD4C7421F2750022AFDE9 /* IFTTTScaleAnimation.h in Headers */,
-				E56F8210AF279970889119ED /* IFTTTTransform3DAnimation.h in Headers */,
+				259AA65C759FD84F0DC2E76F /* FBSnapshotTestCase.h in Headers */,
+				7FF943D35A1DC473374BC5CF /* FBSnapshotTestController.h in Headers */,
+				B5173AE4283B0C7683AB563E /* UIImage+Compare.h in Headers */,
+				FDB73482DFD7EABEDFA5D417 /* UIImage+Diff.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		722A1830180D557482BC9DAF /* Headers */ = {
+		C6C6DD8B5923C49630AF5542 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7676BD061F37F0B9133E83F7 /* IFTTTAlphaAnimation.h in Headers */,
-				070EFAB8B8883FF47094E542 /* IFTTTAngleAnimation.h in Headers */,
-				04B82E1DCC665763275B83F7 /* IFTTTAnimatedScrollViewController.h in Headers */,
-				A02FF395AC5DD3050A1C4F0B /* IFTTTAnimation.h in Headers */,
-				EC2F282BD73D66856C5A6C02 /* IFTTTAnimationFrame.h in Headers */,
-				93E47FB13A899FAFDA0F70B5 /* IFTTTAnimationKeyFrame.h in Headers */,
-				A7426A657900BFDF3D21313C /* IFTTTAnimator.h in Headers */,
-				784CA7829E7AB2D1D30F566C /* IFTTTColorAnimation.h in Headers */,
-				D8E3579DD4E8C28908A7AFC9 /* IFTTTConstraintsAnimation.h in Headers */,
-				79261F3D3ABBCDAB9042CBC4 /* IFTTTCornerRadiusAnimation.h in Headers */,
-				24960564A263BEEC94291A3C /* IFTTTEasingFunction.h in Headers */,
-				07245D9D58021CFE8F742723 /* IFTTTFrameAnimation.h in Headers */,
-				288FF94AD077CB8EFB979E78 /* IFTTTHideAnimation.h in Headers */,
-				9EF109F2C73851D42C81DBDA /* IFTTTJazzHands.h in Headers */,
-				BEC489E782953D50BC0B25B2 /* IFTTTScaleAnimation.h in Headers */,
-				FA29E104D117441DB37CF2AA /* IFTTTTransform3DAnimation.h in Headers */,
+				AD36A988B46B7AEE89EE0E15 /* IFTTTAlphaAnimation.h in Headers */,
+				32D26E5F16CBE9CDE9EC116A /* IFTTTAngleAnimation.h in Headers */,
+				47CE6AD3E1A6A98D44B82CCA /* IFTTTAnimatedScrollViewController.h in Headers */,
+				DCD2682EA0037593134DD936 /* IFTTTAnimation.h in Headers */,
+				040FA8D61764DD586F0A3AA7 /* IFTTTAnimationFrame.h in Headers */,
+				2861DCE8F28BB9DCCC91F379 /* IFTTTAnimationKeyFrame.h in Headers */,
+				DEA8CD33BC049A7EBE1DDFFB /* IFTTTAnimator.h in Headers */,
+				267C7818BA3431BF5448170D /* IFTTTColorAnimation.h in Headers */,
+				975B8C42FC13655D4CAE5A25 /* IFTTTConstraintsAnimation.h in Headers */,
+				1682DB2CEBC12FF0D4966274 /* IFTTTCornerRadiusAnimation.h in Headers */,
+				D650EB7BFBEF743096B33CF3 /* IFTTTEasingFunction.h in Headers */,
+				35FB1C5F17776B1CEAE8A0EB /* IFTTTFrameAnimation.h in Headers */,
+				A047460B605362E91D38D90C /* IFTTTHideAnimation.h in Headers */,
+				FB2D3C3263248F88EE506DFA /* IFTTTJazzHands.h in Headers */,
+				9FE15B76075FF8D651FC23B3 /* IFTTTScaleAnimation.h in Headers */,
+				D052840675D29E4573701DFF /* IFTTTTransform3DAnimation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C716F365D61852DB30CFF3E7 /* Headers */ = {
+		CC3791BBD33E15F49436B5CE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C81E4D27E8C565C26B8DF14 /* FBSnapshotTestCase.h in Headers */,
-				AF77B900CA1D898913372DDE /* FBSnapshotTestController.h in Headers */,
-				4FA496C596BA68640D18E0E1 /* UIImage+Compare.h in Headers */,
-				4D6E9116B8150E8C66929316 /* UIImage+Diff.h in Headers */,
+				C5CC2851AA1B3F506CD6624E /* IFTTTAlphaAnimation.h in Headers */,
+				9DC6E172AFC0ED6FF571CB74 /* IFTTTAngleAnimation.h in Headers */,
+				FE970D55828D13E24C0BFBDC /* IFTTTAnimatedScrollViewController.h in Headers */,
+				047B4F936A0DF648BF0622F3 /* IFTTTAnimation.h in Headers */,
+				73BCF650455B4B9FA2C058F4 /* IFTTTAnimationFrame.h in Headers */,
+				5A25419AC4486D83229EB31F /* IFTTTAnimationKeyFrame.h in Headers */,
+				BD33851363D70D2535AD77EB /* IFTTTAnimator.h in Headers */,
+				B0D515BA8254BE14D0EA175E /* IFTTTColorAnimation.h in Headers */,
+				AF09B55FE8D5DC85EABA853A /* IFTTTConstraintsAnimation.h in Headers */,
+				36CEAB881CAD33B14A29DD23 /* IFTTTCornerRadiusAnimation.h in Headers */,
+				EB724BF72A947955B03E1475 /* IFTTTEasingFunction.h in Headers */,
+				C073637117EDBB779CADA25E /* IFTTTFrameAnimation.h in Headers */,
+				C114B3AFCE72BCDC98E36B2B /* IFTTTHideAnimation.h in Headers */,
+				21AE2FDF6C07D4106BFA8E53 /* IFTTTJazzHands.h in Headers */,
+				3AB282F3FF0E2540E6A20072 /* IFTTTScaleAnimation.h in Headers */,
+				06BCEC1EDA8D5135432D2A4A /* IFTTTTransform3DAnimation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		000CFD926A4278DC3877EB26 /* Pods-JazzHandsTests */ = {
+		19C84AE2E2EB162A19005B9B /* Pods-JazzHandsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6770A9F7FEBF9E2A6A942D86 /* Build configuration list for PBXNativeTarget "Pods-JazzHandsTests" */;
+			buildConfigurationList = BAA7511A8C3BE32EE8C5797B /* Build configuration list for PBXNativeTarget "Pods-JazzHandsTests" */;
 			buildPhases = (
-				A892A994667BDE7BFC3AA66B /* Sources */,
-				10E4BDC46B2682BB492487DF /* Frameworks */,
+				778A7479C294FAE30DE6400E /* Sources */,
+				89F6A875AFF22A69221D968D /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F06E4948FA49201072E87284 /* PBXTargetDependency */,
-				B665339DE39F92CBB47220A1 /* PBXTargetDependency */,
-				D0387EB85CEC8F5FC1093704 /* PBXTargetDependency */,
+				117DBF741CA6DE2ED4C8D3C0 /* PBXTargetDependency */,
+				BD09EDB0468B6A20CD52E015 /* PBXTargetDependency */,
+				46E9BA6A341098006E9A32A8 /* PBXTargetDependency */,
 			);
 			name = "Pods-JazzHandsTests";
 			productName = "Pods-JazzHandsTests";
-			productReference = 26DE959F69E022EB5F9C1132 /* libPods-JazzHandsTests.a */;
+			productReference = 04369F92A75A85C7E8D0B70E /* libPods-JazzHandsTests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		4605E8F3FBB96841E75BB9CC /* Pods-JazzHandsTests-JazzHands */ = {
+		93C88AD5C858249BDA3A2639 /* Pods-JazzHandsTests-FBSnapshotTestCase */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B4CAD431C99A8CA78582559B /* Build configuration list for PBXNativeTarget "Pods-JazzHandsTests-JazzHands" */;
+			buildConfigurationList = 4CB918244018DE5D648D457A /* Build configuration list for PBXNativeTarget "Pods-JazzHandsTests-FBSnapshotTestCase" */;
 			buildPhases = (
-				7F06D17E0F2FD1BCFB5199AE /* Sources */,
-				014D1031507643D02F519E7E /* Frameworks */,
-				53F2F3D0E1F840B2E52BD2B8 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-JazzHandsTests-JazzHands";
-			productName = "Pods-JazzHandsTests-JazzHands";
-			productReference = 9069477638C95C9608930642 /* libPods-JazzHandsTests-JazzHands.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		4DF5709DD481036B4B81F86F /* Pods-JazzHandsTests-KIF */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2AF0E5C8140156150C1600A5 /* Build configuration list for PBXNativeTarget "Pods-JazzHandsTests-KIF" */;
-			buildPhases = (
-				82D3413847A95AE1D6CAB057 /* Sources */,
-				3223AA6EC0D792472B7A070C /* Frameworks */,
-				374C3301AD500067D2789C36 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-JazzHandsTests-KIF";
-			productName = "Pods-JazzHandsTests-KIF";
-			productReference = 2A68BE9B6F40341B7141AEE1 /* libPods-JazzHandsTests-KIF.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		B9CD2F0DABB10341DCA4BF50 /* Pods-JazzHandsDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 01665E969558338077CBBC82 /* Build configuration list for PBXNativeTarget "Pods-JazzHandsDemo" */;
-			buildPhases = (
-				EB52F8676D386435F438C7F5 /* Sources */,
-				432E1C7F7D362FE957B1B1EF /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				85C24BF43348F1874C983531 /* PBXTargetDependency */,
-			);
-			name = "Pods-JazzHandsDemo";
-			productName = "Pods-JazzHandsDemo";
-			productReference = 8980A484F805F5FC7B503C9F /* libPods-JazzHandsDemo.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		C412287C163789A836F2C095 /* Pods-JazzHandsTests-FBSnapshotTestCase */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 289C141D27D1AA61F9CE2CC5 /* Build configuration list for PBXNativeTarget "Pods-JazzHandsTests-FBSnapshotTestCase" */;
-			buildPhases = (
-				DAE7AE6E7800957DD2213567 /* Sources */,
-				B03A31EE843567264AAA53B5 /* Frameworks */,
-				C716F365D61852DB30CFF3E7 /* Headers */,
+				806CF00F8EECC3C01CC0AD31 /* Sources */,
+				63C7F855E1F5B284DBD9F64E /* Frameworks */,
+				5898A05E80B9303BD97B3B33 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -798,16 +747,33 @@
 			);
 			name = "Pods-JazzHandsTests-FBSnapshotTestCase";
 			productName = "Pods-JazzHandsTests-FBSnapshotTestCase";
-			productReference = 046B30B1A389F1A9C9231DB5 /* libPods-JazzHandsTests-FBSnapshotTestCase.a */;
+			productReference = DB870978886FC8D3F8DA65A3 /* libPods-JazzHandsTests-FBSnapshotTestCase.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		F08D0192418D7279A125CE39 /* Pods-JazzHandsDemo-JazzHands */ = {
+		AC9955BB2222828BC6A30D01 /* Pods-JazzHandsTests-JazzHands */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 374339AACFCE262B1BFD72F0 /* Build configuration list for PBXNativeTarget "Pods-JazzHandsDemo-JazzHands" */;
+			buildConfigurationList = A846E108FB311071EB3C06FC /* Build configuration list for PBXNativeTarget "Pods-JazzHandsTests-JazzHands" */;
 			buildPhases = (
-				2ABC8228AD19729B2BB3A4F7 /* Sources */,
-				6659E42F4F3A142F217A670D /* Frameworks */,
-				722A1830180D557482BC9DAF /* Headers */,
+				77DE609605EDE93D6EB3A5FA /* Sources */,
+				AF83CD6B8C4C8E0F925EF2E1 /* Frameworks */,
+				C6C6DD8B5923C49630AF5542 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-JazzHandsTests-JazzHands";
+			productName = "Pods-JazzHandsTests-JazzHands";
+			productReference = 164D2248DEFA035335D43B8A /* libPods-JazzHandsTests-JazzHands.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AD7665B6D8E9377268A97A1B /* Pods-JazzHandsDemo-JazzHands */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEC4CF2FACFD6C4E11867A92 /* Build configuration list for PBXNativeTarget "Pods-JazzHandsDemo-JazzHands" */;
+			buildPhases = (
+				6FA4986B6DBEAA9BC9B8338F /* Sources */,
+				E6AC70535E2A2BD5B3980D57 /* Frameworks */,
+				CC3791BBD33E15F49436B5CE /* Headers */,
 			);
 			buildRules = (
 			);
@@ -815,176 +781,210 @@
 			);
 			name = "Pods-JazzHandsDemo-JazzHands";
 			productName = "Pods-JazzHandsDemo-JazzHands";
-			productReference = E84832A781018522F80AED5C /* libPods-JazzHandsDemo-JazzHands.a */;
+			productReference = 0C2B7BB5BEFB350DA69925D6 /* libPods-JazzHandsDemo-JazzHands.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CE6F20692484647BC2F603FA /* Pods-JazzHandsTests-KIF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BB5435F420A029C1364061B /* Build configuration list for PBXNativeTarget "Pods-JazzHandsTests-KIF" */;
+			buildPhases = (
+				BFA86080C2702FDCA29018B8 /* Sources */,
+				1EB1C3AA3E1970D54E29373D /* Frameworks */,
+				4979A9AE55C0D7447C746B42 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-JazzHandsTests-KIF";
+			productName = "Pods-JazzHandsTests-KIF";
+			productReference = 0D3F4EDEB8C7E0A79F06F02B /* libPods-JazzHandsTests-KIF.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F5F7424AEBDD4596B6F552EC /* Pods-JazzHandsDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B45732F3D1F4B9EC15DE44D6 /* Build configuration list for PBXNativeTarget "Pods-JazzHandsDemo" */;
+			buildPhases = (
+				B6E3347DE1D15CC208B850F9 /* Sources */,
+				5290E9C485C06A05E6D7EA05 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92ED41846DCC33CCCE53479A /* PBXTargetDependency */,
+			);
+			name = "Pods-JazzHandsDemo";
+			productName = "Pods-JazzHandsDemo";
+			productReference = 1D6035A1EB4E5B749D2F35D8 /* libPods-JazzHandsDemo.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0283A5EE4296A9F941573D8F /* Project object */ = {
+		80EFE49C9017D4C4E1A24869 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = 8A9E5E5A1D6D30F9C66EEAEA /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = DDFFF4E38D1D56137E0E3821 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 1A67BE3D8C7D506D1294B151;
-			productRefGroup = EF46907F4B0585DBC3568E10 /* Products */;
+			mainGroup = 0498A7354E282EF264A801F8;
+			productRefGroup = 189136F8B877F37585F89E8C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9CD2F0DABB10341DCA4BF50 /* Pods-JazzHandsDemo */,
-				F08D0192418D7279A125CE39 /* Pods-JazzHandsDemo-JazzHands */,
-				000CFD926A4278DC3877EB26 /* Pods-JazzHandsTests */,
-				C412287C163789A836F2C095 /* Pods-JazzHandsTests-FBSnapshotTestCase */,
-				4605E8F3FBB96841E75BB9CC /* Pods-JazzHandsTests-JazzHands */,
-				4DF5709DD481036B4B81F86F /* Pods-JazzHandsTests-KIF */,
+				F5F7424AEBDD4596B6F552EC /* Pods-JazzHandsDemo */,
+				AD7665B6D8E9377268A97A1B /* Pods-JazzHandsDemo-JazzHands */,
+				19C84AE2E2EB162A19005B9B /* Pods-JazzHandsTests */,
+				93C88AD5C858249BDA3A2639 /* Pods-JazzHandsTests-FBSnapshotTestCase */,
+				AC9955BB2222828BC6A30D01 /* Pods-JazzHandsTests-JazzHands */,
+				CE6F20692484647BC2F603FA /* Pods-JazzHandsTests-KIF */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2ABC8228AD19729B2BB3A4F7 /* Sources */ = {
+		6FA4986B6DBEAA9BC9B8338F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC6F95AED7F3E078211D503A /* IFTTTAlphaAnimation.m in Sources */,
-				86CFA5B4867660ED045FFF74 /* IFTTTAngleAnimation.m in Sources */,
-				8B10287E2BDFB0B48E7C1C7F /* IFTTTAnimatedScrollViewController.m in Sources */,
-				345DB89FDE0DD7B87814ECA0 /* IFTTTAnimation.m in Sources */,
-				9388CF78C02C99F31C539ED4 /* IFTTTAnimationFrame.m in Sources */,
-				96E84C8D26C1397F23FEC426 /* IFTTTAnimationKeyFrame.m in Sources */,
-				34DF022684819EEAE018F31F /* IFTTTAnimator.m in Sources */,
-				713611E06336E0917B9AE59E /* IFTTTColorAnimation.m in Sources */,
-				8A9DB183E217D7896F6AF1DF /* IFTTTConstraintsAnimation.m in Sources */,
-				BF28562E071671B13227353A /* IFTTTCornerRadiusAnimation.m in Sources */,
-				A2FE8EFC468ABFE2D678FA1B /* IFTTTEasingFunction.m in Sources */,
-				806627F47F757FAF26E8A9F9 /* IFTTTFrameAnimation.m in Sources */,
-				A4C161D7DB16C8D03A829A56 /* IFTTTHideAnimation.m in Sources */,
-				DC68E208C2DF2FF5AD908625 /* IFTTTScaleAnimation.m in Sources */,
-				AF7F561993E7738FF552289C /* IFTTTTransform3DAnimation.m in Sources */,
-				0A37C38228C58A3BBB730BE9 /* Pods-JazzHandsDemo-JazzHands-dummy.m in Sources */,
+				C250CA56FDAABC920F841093 /* IFTTTAlphaAnimation.m in Sources */,
+				8E54ABEF74E2DEAA46CEABDA /* IFTTTAngleAnimation.m in Sources */,
+				2C893038086B201C51BE489F /* IFTTTAnimatedScrollViewController.m in Sources */,
+				6EF2413757C3124D04596A90 /* IFTTTAnimation.m in Sources */,
+				57BF7089CEDA50798012E017 /* IFTTTAnimationFrame.m in Sources */,
+				6DECD7C35E5C625BEA254B55 /* IFTTTAnimationKeyFrame.m in Sources */,
+				4FC5EA599B70A3332EC203D8 /* IFTTTAnimator.m in Sources */,
+				0032399D74040FFF4589E3A0 /* IFTTTColorAnimation.m in Sources */,
+				7209AE1BAA0DE91E73C214C7 /* IFTTTConstraintsAnimation.m in Sources */,
+				0A3B0CB54BF69841A5F1E5C1 /* IFTTTCornerRadiusAnimation.m in Sources */,
+				38BAA764F177C36D3F5A1EA3 /* IFTTTEasingFunction.m in Sources */,
+				87763DB9ED37AB4D4292D31B /* IFTTTFrameAnimation.m in Sources */,
+				812B273D3314249359C76B16 /* IFTTTHideAnimation.m in Sources */,
+				D7727EDEF58E5365A0861B07 /* IFTTTScaleAnimation.m in Sources */,
+				A9D82F9801F037F146FEEC50 /* IFTTTTransform3DAnimation.m in Sources */,
+				2485A0FF190C45825B095BF1 /* Pods-JazzHandsDemo-JazzHands-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7F06D17E0F2FD1BCFB5199AE /* Sources */ = {
+		778A7479C294FAE30DE6400E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7400E30B7955145DA5AF469F /* IFTTTAlphaAnimation.m in Sources */,
-				57CCBE0A6D2A56565047F7ED /* IFTTTAngleAnimation.m in Sources */,
-				EFF12115CE851DCC7B9702D2 /* IFTTTAnimatedScrollViewController.m in Sources */,
-				87B725660E7B67B7C59D14F1 /* IFTTTAnimation.m in Sources */,
-				8FBC871C1B6EA6E9F7CDDF15 /* IFTTTAnimationFrame.m in Sources */,
-				6013FDABCC5DC7CE802DC55B /* IFTTTAnimationKeyFrame.m in Sources */,
-				978C58CE1E0513F9061EFD17 /* IFTTTAnimator.m in Sources */,
-				A0F46CD593612A3C230582B6 /* IFTTTColorAnimation.m in Sources */,
-				AD654671582BF776E57876DB /* IFTTTConstraintsAnimation.m in Sources */,
-				D9D68A68D8202C518E670027 /* IFTTTCornerRadiusAnimation.m in Sources */,
-				3F24C27D741E2F4DAC5EB20A /* IFTTTEasingFunction.m in Sources */,
-				950D468F32652C63D910C662 /* IFTTTFrameAnimation.m in Sources */,
-				EB2F643CA2D1A9D574462F1F /* IFTTTHideAnimation.m in Sources */,
-				7748121EFD7F80A6FDEEDE3E /* IFTTTScaleAnimation.m in Sources */,
-				1BE2AFD6F7DB0C8DA0F31962 /* IFTTTTransform3DAnimation.m in Sources */,
-				D9E4ED9DBAC57729A34E57C6 /* Pods-JazzHandsTests-JazzHands-dummy.m in Sources */,
+				434E65E51317A13ED9DFFEB3 /* Pods-JazzHandsTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		82D3413847A95AE1D6CAB057 /* Sources */ = {
+		77DE609605EDE93D6EB3A5FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B054652E71BA5760A7A4351E /* CGGeometry-KIFAdditions.m in Sources */,
-				9B61001B1F5B6858950E53A3 /* KIFSystemTestActor.m in Sources */,
-				351BC0E5B00F5BDA5EF264B5 /* KIFTestActor.m in Sources */,
-				EB8513CDA1EA7A01AB2E000E /* KIFTestCase.m in Sources */,
-				4EDE455C6E066961FFB6FF35 /* KIFTestStepValidation.m in Sources */,
-				9EF5BE90A805833FE0E71FEE /* KIFTypist.m in Sources */,
-				64CEDF0570533AF95C4BD538 /* KIFUITestActor-ConditionalTests.m in Sources */,
-				D3B9907BEE32962DBBA9207E /* KIFUITestActor.m in Sources */,
-				8285B71EA90DBE178286D699 /* NSBundle-KIFAdditions.m in Sources */,
-				2547FA8CFD1CF7FAD125CECC /* NSError-KIFAdditions.m in Sources */,
-				318E2CEF379577B90D544BA9 /* NSException-KIFAdditions.m in Sources */,
-				7073B2AFC29C3C714E7016C1 /* NSFileManager-KIFAdditions.m in Sources */,
-				90B81345DF2600D574C34FBB /* Pods-JazzHandsTests-KIF-dummy.m in Sources */,
-				2C5CF0BB029E824BAB512820 /* UIAccessibilityElement-KIFAdditions.m in Sources */,
-				003C261B19EB7ADA66F0FC6C /* UIApplication-KIFAdditions.m in Sources */,
-				4D2C868BEDB369210520A803 /* UIAutomationHelper.m in Sources */,
-				3383F81CD563623BB0059C28 /* UIScrollView-KIFAdditions.m in Sources */,
-				07FD960CB57E0EDE326D1EC5 /* UITableView-KIFAdditions.m in Sources */,
-				12E35B46487CDB2A174EF888 /* UITouch-KIFAdditions.m in Sources */,
-				4962715321CCE6EF8171E0D1 /* UIView-KIFAdditions.m in Sources */,
-				A0D9F15E4AEF49E14E1DF726 /* UIWindow-KIFAdditions.m in Sources */,
-				E0051F5CEC4ED3FA6B6655EA /* XCTestCase-KIFAdditions.m in Sources */,
+				B8B2AE8CB17A4833A11696FE /* IFTTTAlphaAnimation.m in Sources */,
+				08E5F75D71BA8FCF09619A23 /* IFTTTAngleAnimation.m in Sources */,
+				B11EB5AA2B065DA5F590A85C /* IFTTTAnimatedScrollViewController.m in Sources */,
+				A2E9B6ADD80A6EB34F08F78F /* IFTTTAnimation.m in Sources */,
+				0DF82AC9EA1363E258360ADE /* IFTTTAnimationFrame.m in Sources */,
+				188700B70C06854D1B5A79D9 /* IFTTTAnimationKeyFrame.m in Sources */,
+				6CC1D8F6515880666ABFDF40 /* IFTTTAnimator.m in Sources */,
+				67F3087F892D614DAEA614D7 /* IFTTTColorAnimation.m in Sources */,
+				67165A4953502E99AE9927EF /* IFTTTConstraintsAnimation.m in Sources */,
+				863B01080B05A7F078F8049F /* IFTTTCornerRadiusAnimation.m in Sources */,
+				9278493B624F5D862250F124 /* IFTTTEasingFunction.m in Sources */,
+				5D760D684F53A3B944108B35 /* IFTTTFrameAnimation.m in Sources */,
+				0A74534DAB026F7AD0A38590 /* IFTTTHideAnimation.m in Sources */,
+				DAD22026E86D9C9FAA9763A5 /* IFTTTScaleAnimation.m in Sources */,
+				290672E5471F63615C92E1FC /* IFTTTTransform3DAnimation.m in Sources */,
+				639DD1EC6DFB472D70FE16FE /* Pods-JazzHandsTests-JazzHands-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A892A994667BDE7BFC3AA66B /* Sources */ = {
+		806CF00F8EECC3C01CC0AD31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44CC33653AE8F1178022E333 /* Pods-JazzHandsTests-dummy.m in Sources */,
+				BF17D42E2A88BDF8B380C3BF /* FBSnapshotTestCase.m in Sources */,
+				6784F851730DC1121707EC39 /* FBSnapshotTestController.m in Sources */,
+				CD7B1DFC9FA6F695BB37ADA4 /* Pods-JazzHandsTests-FBSnapshotTestCase-dummy.m in Sources */,
+				DE45DCAF3B769C5A4A5C38CA /* UIImage+Compare.m in Sources */,
+				28964940FD755B03115395C1 /* UIImage+Diff.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DAE7AE6E7800957DD2213567 /* Sources */ = {
+		B6E3347DE1D15CC208B850F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				596022056B2E34F7B584F988 /* FBSnapshotTestCase.m in Sources */,
-				7EAD180E324696F8D69E9AE3 /* FBSnapshotTestController.m in Sources */,
-				8652DAC40017DD877186AF65 /* Pods-JazzHandsTests-FBSnapshotTestCase-dummy.m in Sources */,
-				5D779526FB3C403CA1146855 /* UIImage+Compare.m in Sources */,
-				7A3485CBD97EB8EF495FBEAE /* UIImage+Diff.m in Sources */,
+				C499752F1504DE1A3F4FAFB1 /* Pods-JazzHandsDemo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB52F8676D386435F438C7F5 /* Sources */ = {
+		BFA86080C2702FDCA29018B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD9DC0986BE3DDF177748D44 /* Pods-JazzHandsDemo-dummy.m in Sources */,
+				95C9BC4936E1A862934E1D88 /* CGGeometry-KIFAdditions.m in Sources */,
+				4B408CE8064420EE8A0DCA47 /* KIFSystemTestActor.m in Sources */,
+				6FD5CF6337BEA529B659CC4A /* KIFTestActor.m in Sources */,
+				3680204674942CEB2649F6B9 /* KIFTestCase.m in Sources */,
+				B5DBBEC92CEFC1EFABD8AAD5 /* KIFTestStepValidation.m in Sources */,
+				49CEDD21F73317A1457FF1ED /* KIFTypist.m in Sources */,
+				BADE220B807F69DAB3C3201D /* KIFUITestActor-ConditionalTests.m in Sources */,
+				4AC747E05055EE078B33F6BA /* KIFUITestActor.m in Sources */,
+				97EA8F546F3CE1AB7E5CE81F /* NSBundle-KIFAdditions.m in Sources */,
+				6814FB0D11BF4DCC0AC990B9 /* NSError-KIFAdditions.m in Sources */,
+				5B365CF60E2D4742161E1B50 /* NSException-KIFAdditions.m in Sources */,
+				9C024314BDAD763C4A64BAF9 /* NSFileManager-KIFAdditions.m in Sources */,
+				528ADD937B9A577EF16FD2C6 /* Pods-JazzHandsTests-KIF-dummy.m in Sources */,
+				978CBD6F0AB3B896092A42F4 /* UIAccessibilityElement-KIFAdditions.m in Sources */,
+				42B0D81A65BDD1E28D8C5183 /* UIApplication-KIFAdditions.m in Sources */,
+				9D64F2F8652B9CD6757FEEC1 /* UIAutomationHelper.m in Sources */,
+				C13786AB7B8E1A29E072739E /* UIScrollView-KIFAdditions.m in Sources */,
+				5F9423FA3F5E1D66D348522C /* UITableView-KIFAdditions.m in Sources */,
+				AB44FA868B79E8EEA4DA39FF /* UITouch-KIFAdditions.m in Sources */,
+				CD9C33F4A4D74B73A6817476 /* UIView-KIFAdditions.m in Sources */,
+				CBE1BC7EE10C0A0F5ABE0F60 /* UIWindow-KIFAdditions.m in Sources */,
+				E6094260A4A26B77A759984F /* XCTestCase-KIFAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		85C24BF43348F1874C983531 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-JazzHandsDemo-JazzHands";
-			target = F08D0192418D7279A125CE39 /* Pods-JazzHandsDemo-JazzHands */;
-			targetProxy = DD57D1D941162E86D8F5A29F /* PBXContainerItemProxy */;
-		};
-		B665339DE39F92CBB47220A1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-JazzHandsTests-JazzHands";
-			target = 4605E8F3FBB96841E75BB9CC /* Pods-JazzHandsTests-JazzHands */;
-			targetProxy = 32A8E42D73D94A723EB8EB5C /* PBXContainerItemProxy */;
-		};
-		D0387EB85CEC8F5FC1093704 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-JazzHandsTests-KIF";
-			target = 4DF5709DD481036B4B81F86F /* Pods-JazzHandsTests-KIF */;
-			targetProxy = 8319495C194E24D6675AC2D6 /* PBXContainerItemProxy */;
-		};
-		F06E4948FA49201072E87284 /* PBXTargetDependency */ = {
+		117DBF741CA6DE2ED4C8D3C0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-JazzHandsTests-FBSnapshotTestCase";
-			target = C412287C163789A836F2C095 /* Pods-JazzHandsTests-FBSnapshotTestCase */;
-			targetProxy = AB891E3F32EBB847A141DD6F /* PBXContainerItemProxy */;
+			target = 93C88AD5C858249BDA3A2639 /* Pods-JazzHandsTests-FBSnapshotTestCase */;
+			targetProxy = 0C590C3F3A8AA7FB4681EAB8 /* PBXContainerItemProxy */;
+		};
+		46E9BA6A341098006E9A32A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-JazzHandsTests-KIF";
+			target = CE6F20692484647BC2F603FA /* Pods-JazzHandsTests-KIF */;
+			targetProxy = 4565FC27BDC686EEF35F28AF /* PBXContainerItemProxy */;
+		};
+		92ED41846DCC33CCCE53479A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-JazzHandsDemo-JazzHands";
+			target = AD7665B6D8E9377268A97A1B /* Pods-JazzHandsDemo-JazzHands */;
+			targetProxy = 7D81F646469CF2979E92FB56 /* PBXContainerItemProxy */;
+		};
+		BD09EDB0468B6A20CD52E015 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-JazzHandsTests-JazzHands";
+			target = AC9955BB2222828BC6A30D01 /* Pods-JazzHandsTests-JazzHands */;
+			targetProxy = 64763166D2306AA8B3D1770B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		13BB4FF7EFA07F11A090A1FB /* Debug */ = {
+		11E4FF34AA3E6FF9C0339AD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9E1E48303AC408D6F5D878A /* Pods-JazzHandsTests.debug.xcconfig */;
+			baseConfigurationReference = 429F666380AFA348D78F4778 /* Pods-JazzHandsTests-JazzHands-Private.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
@@ -992,6 +992,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-JazzHandsTests-JazzHands/Pods-JazzHandsTests-JazzHands-prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1008,15 +1009,15 @@
 			};
 			name = Debug;
 		};
-		2455A2DF478AD41019780B26 /* Release */ = {
+		1B2581A09CF7175FC4114D32 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCD71AFC7C25B553139BA71A /* Pods-JazzHandsTests-JazzHands-Private.xcconfig */;
+			baseConfigurationReference = 94087DC4C60CF776D7423681 /* Pods-JazzHandsTests-FBSnapshotTestCase-Private.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-JazzHandsTests-JazzHands/Pods-JazzHandsTests-JazzHands-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-JazzHandsTests-FBSnapshotTestCase/Pods-JazzHandsTests-FBSnapshotTestCase-prefix.pch";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = (
@@ -1037,9 +1038,63 @@
 			};
 			name = Release;
 		};
-		3E9A81D1ED8EABCC17C15CEF /* Debug */ = {
+		42C14F5BA092847C50A195DC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7621251A4805B4E0552F7ACA /* Pods-JazzHandsDemo-JazzHands-Private.xcconfig */;
+			baseConfigurationReference = D511D62B2994D3255755261A /* Pods-JazzHandsTests-KIF-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-JazzHandsTests-KIF/Pods-JazzHandsTests-KIF-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5659E695B2AA7E89FDB0037F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94087DC4C60CF776D7423681 /* Pods-JazzHandsTests-FBSnapshotTestCase-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-JazzHandsTests-FBSnapshotTestCase/Pods-JazzHandsTests-FBSnapshotTestCase-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7297A7EC6EBF9BC09CFE4E54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B33595AA9E66E2ED5EAA0DC4 /* Pods-JazzHandsDemo-JazzHands-Private.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
@@ -1064,7 +1119,7 @@
 			};
 			name = Debug;
 		};
-		6524D3E92F6E97578A149EAB /* Debug */ = {
+		75512224CB80220D469D41E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1102,14 +1157,15 @@
 			};
 			name = Debug;
 		};
-		7B2722947E01A03988E73370 /* Release */ = {
+		83F978B56529EE73C81BD026 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C0999827734029F3BF9D3E5 /* Pods-JazzHandsTests.release.xcconfig */;
+			baseConfigurationReference = D511D62B2994D3255755261A /* Pods-JazzHandsTests-KIF-Private.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-JazzHandsTests-KIF/Pods-JazzHandsTests-KIF-prefix.pch";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = (
@@ -1130,173 +1186,7 @@
 			};
 			name = Release;
 		};
-		8AC152EF705A4D5DCDC9597F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCD71AFC7C25B553139BA71A /* Pods-JazzHandsTests-JazzHands-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-JazzHandsTests-JazzHands/Pods-JazzHandsTests-JazzHands-prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		9C03199BB49D5B3DB9E602AA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C115E943EAA7032165DF0C69 /* Pods-JazzHandsDemo.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		A1F9288FF4375946B1101564 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91046F36B3806845BE2656BB /* Pods-JazzHandsTests-FBSnapshotTestCase-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-JazzHandsTests-FBSnapshotTestCase/Pods-JazzHandsTests-FBSnapshotTestCase-prefix.pch";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		B64A8C9F3B3B615E9E3D4731 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7621251A4805B4E0552F7ACA /* Pods-JazzHandsDemo-JazzHands-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-JazzHandsDemo-JazzHands/Pods-JazzHandsDemo-JazzHands-prefix.pch";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		B7A679D09B00ABA421D81A0A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91046F36B3806845BE2656BB /* Pods-JazzHandsTests-FBSnapshotTestCase-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-JazzHandsTests-FBSnapshotTestCase/Pods-JazzHandsTests-FBSnapshotTestCase-prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		B96D862F3D04908A67FDD3C7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A14525CF249FE8373A7A338 /* Pods-JazzHandsDemo.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C3440455E21CBD6C84936325 /* Release */ = {
+		8E1B59CECD1569A88ABB817D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1329,42 +1219,14 @@
 			};
 			name = Release;
 		};
-		C714D5CDB59BFA67F13AAFAE /* Debug */ = {
+		97D00E89CA019832DBB7F57F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BBC10C528DC9C64D866AE051 /* Pods-JazzHandsTests-KIF-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-JazzHandsTests-KIF/Pods-JazzHandsTests-KIF-prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		CC97930E6E9116F29701BA77 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BBC10C528DC9C64D866AE051 /* Pods-JazzHandsTests-KIF-Private.xcconfig */;
+			baseConfigurationReference = 376E82DE99659160D9321CB1 /* Pods-JazzHandsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-JazzHandsTests-KIF/Pods-JazzHandsTests-KIF-prefix.pch";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = (
@@ -1385,73 +1247,211 @@
 			};
 			name = Release;
 		};
+		AD8A26E45B1B86FC6DC4AA94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4ACCB61E727ACF937AA5033D /* Pods-JazzHandsTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AFACD10AA55503FE06E30DE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 752D9789A846CA0EE8E08307 /* Pods-JazzHandsDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCBDE6C67D62BBEC5183C182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B33595AA9E66E2ED5EAA0DC4 /* Pods-JazzHandsDemo-JazzHands-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-JazzHandsDemo-JazzHands/Pods-JazzHandsDemo-JazzHands-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C92B071A25783992783B345C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 429F666380AFA348D78F4778 /* Pods-JazzHandsTests-JazzHands-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-JazzHandsTests-JazzHands/Pods-JazzHandsTests-JazzHands-prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8D7EFE4038E457511910F57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E562F6204C5A181381DBF0A /* Pods-JazzHandsDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		01665E969558338077CBBC82 /* Build configuration list for PBXNativeTarget "Pods-JazzHandsDemo" */ = {
+		2BB5435F420A029C1364061B /* Build configuration list for PBXNativeTarget "Pods-JazzHandsTests-KIF" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9C03199BB49D5B3DB9E602AA /* Debug */,
-				B96D862F3D04908A67FDD3C7 /* Release */,
+				42C14F5BA092847C50A195DC /* Debug */,
+				83F978B56529EE73C81BD026 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		289C141D27D1AA61F9CE2CC5 /* Build configuration list for PBXNativeTarget "Pods-JazzHandsTests-FBSnapshotTestCase" */ = {
+		4CB918244018DE5D648D457A /* Build configuration list for PBXNativeTarget "Pods-JazzHandsTests-FBSnapshotTestCase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B7A679D09B00ABA421D81A0A /* Debug */,
-				A1F9288FF4375946B1101564 /* Release */,
+				5659E695B2AA7E89FDB0037F /* Debug */,
+				1B2581A09CF7175FC4114D32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2AF0E5C8140156150C1600A5 /* Build configuration list for PBXNativeTarget "Pods-JazzHandsTests-KIF" */ = {
+		A846E108FB311071EB3C06FC /* Build configuration list for PBXNativeTarget "Pods-JazzHandsTests-JazzHands" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C714D5CDB59BFA67F13AAFAE /* Debug */,
-				CC97930E6E9116F29701BA77 /* Release */,
+				11E4FF34AA3E6FF9C0339AD9 /* Debug */,
+				C92B071A25783992783B345C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		374339AACFCE262B1BFD72F0 /* Build configuration list for PBXNativeTarget "Pods-JazzHandsDemo-JazzHands" */ = {
+		B45732F3D1F4B9EC15DE44D6 /* Build configuration list for PBXNativeTarget "Pods-JazzHandsDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3E9A81D1ED8EABCC17C15CEF /* Debug */,
-				B64A8C9F3B3B615E9E3D4731 /* Release */,
+				F8D7EFE4038E457511910F57 /* Debug */,
+				AFACD10AA55503FE06E30DE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6770A9F7FEBF9E2A6A942D86 /* Build configuration list for PBXNativeTarget "Pods-JazzHandsTests" */ = {
+		BAA7511A8C3BE32EE8C5797B /* Build configuration list for PBXNativeTarget "Pods-JazzHandsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				13BB4FF7EFA07F11A090A1FB /* Debug */,
-				7B2722947E01A03988E73370 /* Release */,
+				AD8A26E45B1B86FC6DC4AA94 /* Debug */,
+				97D00E89CA019832DBB7F57F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A9E5E5A1D6D30F9C66EEAEA /* Build configuration list for PBXProject "Pods" */ = {
+		DDFFF4E38D1D56137E0E3821 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6524D3E92F6E97578A149EAB /* Debug */,
-				C3440455E21CBD6C84936325 /* Release */,
+				75512224CB80220D469D41E5 /* Debug */,
+				8E1B59CECD1569A88ABB817D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B4CAD431C99A8CA78582559B /* Build configuration list for PBXNativeTarget "Pods-JazzHandsTests-JazzHands" */ = {
+		DEC4CF2FACFD6C4E11867A92 /* Build configuration list for PBXNativeTarget "Pods-JazzHandsDemo-JazzHands" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8AC152EF705A4D5DCDC9597F /* Debug */,
-				2455A2DF478AD41019780B26 /* Release */,
+				7297A7EC6EBF9BC09CFE4E54 /* Debug */,
+				BCBDE6C67D62BBEC5183C182 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0283A5EE4296A9F941573D8F /* Project object */;
+	rootObject = 80EFE49C9017D4C4E1A24869 /* Project object */;
 }
