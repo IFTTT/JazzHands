@@ -79,7 +79,7 @@ Jazz Hands supports several types of animations:
 + **IFTTTCornerRadiusAnimation** animates the `layer.cornerRadius` property.
 + **IFTTTFrameAnimation** animates the `frame` property _(moves and sizes views)_.
 + **IFTTTHideAnimation** animates the `hidden` property _(hides and shows views)_.
-+ **IFTTTScaleAnimation** animates the applies a scaling transform _(to scale view sizes)_.
++ **IFTTTScaleAnimation** applies a scaling transform _(to scale view sizes)_.
 + **IFTTTTransform3DAnimation** animates the `layer.transform` property _(for 3D transforms)_.
 
 ##More Examples
