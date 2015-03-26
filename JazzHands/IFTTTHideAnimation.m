@@ -12,15 +12,15 @@
 
 + (instancetype)animationWithView:(UIView *)view hideAt:(NSInteger)time
 {
-    IFTTTHideAnimation *animation = [[[self class] alloc] initWithView: view
-                                                                hideAt: time];
+    IFTTTHideAnimation *animation = [[[self class] alloc] initWithView:view
+                                                                hideAt:time];
     return animation;
 }
 
 + (instancetype)animationWithView:(UIView *)view showAt:(NSInteger)time
 {
-    IFTTTHideAnimation *animation = [[[self class] alloc] initWithView: view
-                                                                showAt: time];
+    IFTTTHideAnimation *animation = [[[self class] alloc] initWithView:view
+                                                                showAt:time];
     return animation;
 }
 

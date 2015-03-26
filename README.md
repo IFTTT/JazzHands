@@ -73,13 +73,13 @@ This will produce an effect where the view will be at 10,10 and sized 100x100 fo
 Jazz Hands supports several types of animations:
 
 + **IFTTTAlphaAnimation** animates the `alpha` property _(creates fade effects)_.
-+ **IFTTTAngleAnimation** animates the rotation _(for rotation effects)_.
-+ **IFTTTColorAnimation** animates any color property _(`backgroundColor`, `tintColor`, etc.)_.
++ **IFTTTAngleAnimation** animates a rotation transform _(for rotation effects)_.
++ **IFTTTColorAnimation** animates the `backgroundColor` property.
 + **IFTTTConstraintsAnimation** animates `AutoLayout` constraint constants.
 + **IFTTTCornerRadiusAnimation** animates the `layer.cornerRadius` property.
 + **IFTTTFrameAnimation** animates the `frame` property _(moves and sizes views)_.
 + **IFTTTHideAnimation** animates the `hidden` property _(hides and shows views)_.
-+ **IFTTTScaleAnimation** animates the scaling of the `transform` property _(to scale view sizes)_.
++ **IFTTTScaleAnimation** animates the applies a scaling transform _(to scale view sizes)_.
 + **IFTTTTransform3DAnimation** animates the `layer.transform` property _(for 3D transforms)_.
 
 ##More Examples
