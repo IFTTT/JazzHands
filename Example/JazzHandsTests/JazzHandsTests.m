@@ -33,10 +33,7 @@
     [super setUp];
     
     animator = [IFTTTAnimator new];
-    
-    // Render compatibility fix for snapshots
-    self.renderAsLayer = YES;
-    
+
     // Enable recording mode to record and save reference images for tests
 //    self.recordMode = YES;
 }

@@ -81,9 +81,13 @@ NSComparisonResult selectorSort(NSInvocation *invocOne, NSInvocation *invocTwo, 
 + (void)performSetupTearDownWithSelector:(SEL)selector
 {
     KIFTestCase *testCase = [self testCaseWithSelector:selector];
-    XCTestCaseRun *run = [XCTestCaseRun testRunWithTest:testCase];
-    [testCase performTest:run];
-    
+    if ([testCase respondsToSelector:selector]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        [testCase performSelector:selector];
+#pragma clang diagnostic pop
+    }
+
     if (testCase->_stoppingException) {
         [testCase->_stoppingException raise];
     }

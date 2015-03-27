@@ -1,0 +1,1 @@
+../../../KIF/Classes/UIAutomationHelper.h

@@ -41,11 +41,6 @@ extern NSString *const FBReferenceImageFilePathKey;
 @property(readwrite, nonatomic, assign) BOOL recordMode;
 
 /**
- Render as layer (NO) or with drawViewHierarchyInRect on iOS 7+ (YES)
- **/
-@property(readwrite, nonatomic, assign) BOOL renderAsLayer;
-
-/**
  @param testClass The subclass of FBSnapshotTestCase that is using this controller.
  @param referenceImagesDirectory The directory where the reference images are stored.
  @returns An instance of FBSnapshotTestController.

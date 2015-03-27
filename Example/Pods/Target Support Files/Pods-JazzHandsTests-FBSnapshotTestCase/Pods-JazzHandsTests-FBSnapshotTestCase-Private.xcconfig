@@ -1,6 +1,7 @@
 #include "Pods-JazzHandsTests-FBSnapshotTestCase.xcconfig"
 FRAMEWORK_SEARCH_PATHS = ${PODS_JAZZHANDSTESTS_FBSNAPSHOTTESTCASE_FRAMEWORK_SEARCH_PATHS}
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/FBSnapshotTestCase" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/FBSnapshotTestCase" "${PODS_ROOT}/Headers/Public/JazzHands" "${PODS_ROOT}/Headers/Public/KIF"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/FBSnapshotTestCase" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/FBSnapshotTestCase" "${PODS_ROOT}/Headers/Public/JazzHands" "${PODS_ROOT}/Headers/Public/KIF"
 OTHER_LDFLAGS = ${PODS_JAZZHANDSTESTS_FBSNAPSHOTTESTCASE_OTHER_LDFLAGS} -ObjC
 PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

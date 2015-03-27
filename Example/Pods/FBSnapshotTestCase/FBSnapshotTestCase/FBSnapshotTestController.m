@@ -385,19 +385,6 @@ typedef NS_ENUM(NSUInteger, FBTestSnapshotFileNameType) {
         
 - (UIImage *)_renderView:(UIView *)view
 {
-  if (!self.renderAsLayer) {
-#ifdef __IPHONE_7_0
-    if ([view respondsToSelector:@selector(drawViewHierarchyInRect:afterScreenUpdates:)]) {
-      UIGraphicsBeginImageContextWithOptions(view.frame.size, NO, 0);
-      [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:YES];
-      UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-      UIGraphicsEndImageContext();
-      return image;
-    }
-#else
-    NSLog(@"drawViewHierarchy is only available on iOS 7+");
-#endif
-  }
   [view layoutIfNeeded];
   return [self _renderLayer:view.layer];
 }

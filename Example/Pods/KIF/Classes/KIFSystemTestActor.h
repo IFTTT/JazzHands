@@ -62,6 +62,14 @@
 - (void)waitForApplicationToOpenAnyURLWhileExecutingBlock:(void(^)())block returning:(BOOL)returnValue;
 
 /*!
+ @abstract Waits for the application to request any URL with the given URL Scheme while executing a block.
+ @param URLScheme The scheme component of the URL to detect.
+ @param block The block of code to be executed.
+ @param returnValue The value to return from @c +[UIApplication openURL:].
+ */
+- (void)waitForApplicationToOpenURLWithScheme:(NSString *)URLScheme whileExecutingBlock:(void (^)())block returning:(BOOL)returnValue;
+
+/*!
  @abstract Captured a screenshot of the current screen and writes it to disk with an optional description.
  @discussion This step will fail if the @c KIF_SCREENSHOTS environment variable is not set or if the screenshot cannot be written to disk.
  @param description A description to use when writing the file to disk.

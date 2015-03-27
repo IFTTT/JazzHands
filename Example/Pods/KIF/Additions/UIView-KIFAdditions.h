@@ -9,6 +9,9 @@
 
 #import <UIKit/UIKit.h>
 
+extern double KIFDegreesToRadians(double deg);
+extern double KIFRadiansToDegrees(double rad);
+
 typedef CGPoint KIFDisplacement;
 
 @interface UIView (KIFAdditions)
@@ -36,6 +39,7 @@ typedef CGPoint KIFDisplacement;
 - (void)flash;
 - (void)tap;
 - (void)tapAtPoint:(CGPoint)point;
+- (void)twoFingerTapAtPoint:(CGPoint)point;
 - (void)longPressAtPoint:(CGPoint)point duration:(NSTimeInterval)duration;
 
 /*!
@@ -52,6 +56,7 @@ typedef CGPoint KIFDisplacement;
 - (void)twoFingerPanFromPoint:(CGPoint)startPoint toPoint:(CGPoint)toPoint steps:(NSUInteger)stepCount;
 - (void)pinchAtPoint:(CGPoint)centerPoint distance:(CGFloat)distance steps:(NSUInteger)stepCount;
 - (void)zoomAtPoint:(CGPoint)centerPoint distance:(CGFloat)distance steps:(NSUInteger)stepCount;
+- (void)twoFingerRotateAtPoint:(CGPoint)centerPoint angle:(CGFloat)angleInDegrees;
 /*!
  @method isTappableWithHitTestResultView:
  @abstract Easy hook to override whether a hit test result makes a view tappable.
