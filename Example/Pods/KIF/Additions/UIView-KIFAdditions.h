@@ -115,4 +115,14 @@ typedef CGPoint KIFDisplacement;
  */
 @property (nonatomic, readonly) UIWindow *windowOrIdentityWindow;
 
+/*!
+ @abstract Prints the view hiererchy, starting from the top window(s), along with accessibility information, which is more related to KIF than the usual information given by the 'description' method.
+ */
++(void)printViewHierarchy;
+
+/*!
+ @abstract Prints the view hiererchy, starting from this view, along with accessibility information, which is more related to KIF than the usual information given by the 'description' method.
+ */
+-(void)printViewHierarchy;
+
 @end

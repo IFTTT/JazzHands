@@ -1,9 +1,9 @@
 PODS:
   - FBSnapshotTestCase (1.6)
   - JazzHands (0.2.1)
-  - KIF (3.2.0):
-    - KIF/XCTest (= 3.2.0)
-  - KIF/XCTest (3.2.0)
+  - KIF (3.2.1):
+    - KIF/XCTest (= 3.2.1)
+  - KIF/XCTest (3.2.1)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -17,6 +17,6 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 9d5fe43b29ae3a0ed8fc829477971b281038f748
   JazzHands: d2343c3f2f9d70598d0cad8f521ce3893842a44a
-  KIF: 6f94a23566fd05b809f5d3bc5231a965b51121b9
+  KIF: ef1691e54e1d969c3b4fd0b5b56a3d7ddf37f216
 
-COCOAPODS: 0.36.1
+COCOAPODS: 0.36.4

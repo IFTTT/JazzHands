@@ -960,9 +960,20 @@
     [collectionView scrollToItemAtIndexPath:indexPath
                            atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally | UICollectionViewScrollPositionCenteredVertically
                                    animated:YES];
-    [self waitForTimeInterval:0.5];
+
+    [self waitForAnimationsToFinish];
     UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
 
+    //For big collection views with many cells the cell might not be ready yet. Relayout and try again.
+    if(cell == nil) {
+        [collectionView layoutIfNeeded];
+        [collectionView scrollToItemAtIndexPath:indexPath
+                               atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally | UICollectionViewScrollPositionCenteredVertically
+                                       animated:YES];
+        [self waitForAnimationsToFinish];
+        cell = [collectionView cellForItemAtIndexPath:indexPath];
+    }
+    
     if (!cell) {
         [self failWithError:[NSError KIFErrorWithFormat: @"Collection view cell at index path %@ not found", indexPath] stopTest:YES];
     }

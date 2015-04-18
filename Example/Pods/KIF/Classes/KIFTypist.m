@@ -53,18 +53,27 @@ static NSTimeInterval keystrokeDelay = 0.01f;
 
 - (void)registerForNotifications
 {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShowNotification:) name:UIKeyboardDidShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHideNotification:) name:UIKeyboardWillHideNotification object:nil];
-}
+    // Instead of listening to keyboard will show/hide notifications, this is more robust. When keyboard is split
+    // on a physical device, keyboard will show/hide notifications does not get fired, whereas this does.
+    __weak KIFTypist *weakSelf = self;
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIKeyboardDidChangeFrameNotification
+                                                      object:nil
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *note) {
+                                                      CGRect keyboardEndFrame =
+                                                      [[note.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
 
-- (void)keyboardDidShowNotification:(NSNotification *)notification
-{
-    self.keyboardHidden = NO;
-}
+                                                      CGRect screenRect = [[UIScreen mainScreen] bounds];
 
-- (void)keyboardWillHideNotification:(NSNotification *)notification
-{
-    self.keyboardHidden = YES;
+                                                      if (CGRectIntersectsRect(keyboardEndFrame, screenRect))
+                                                      {
+                                                          weakSelf.keyboardHidden = NO;
+                                                      }
+                                                      else
+                                                      {
+                                                          weakSelf.keyboardHidden = YES;
+                                                      }
+                                                  }];
 }
 
 + (BOOL)keyboardHidden
