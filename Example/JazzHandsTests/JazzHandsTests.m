@@ -31,7 +31,7 @@
 - (void)setUp
 {
     [super setUp];
-    
+
     animator = [IFTTTAnimator new];
 
     // Enable recording mode to record and save reference images for tests
@@ -59,11 +59,11 @@ CG_INLINE UIScrollView *IFTTTTestScrollView()
 {
     CGFloat fullWidth = IFTTTTestScrollView().contentSize.width;
     CGFloat pageSize = CGRectGetWidth(IFTTTTestScrollView().bounds);
-    
+
     pageSize *= pageOffset;
-    
+
     CGFloat sizeFraction = pageSize / fullWidth;
-    
+
     [tester scrollViewWithAccessibilityIdentifier:@"JazzHands" byFractionOfSizeHorizontal:-sizeFraction vertical:0];
 }
 
@@ -72,6 +72,21 @@ CG_INLINE UIScrollView *IFTTTTestScrollView()
 - (void)testInitializable
 {
     XCTAssertNotNil(animator, @"Animator should be initializable");
+}
+
+#pragma mark - Dimensions tests
+
+- (void)testPhone6DeviceDimensions
+{
+    // Note: screenshots are made for iPhone 6 Simulator which has
+    // 2.0 screen scale and 320x568 dimensions.
+
+    UIScrollView *scrollView = IFTTTTestScrollView();
+
+    XCTAssert(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone, @"");
+    XCTAssertEqualWithAccuracy([[UIScreen mainScreen] nativeScale], 2.0f, FLT_EPSILON, @"");
+    XCTAssertEqualWithAccuracy(CGRectGetWidth(scrollView.frame), 320.0f, FLT_EPSILON, @"");
+    XCTAssertEqualWithAccuracy(CGRectGetHeight(scrollView.frame), 568.0f, FLT_EPSILON, @"");
 }
 
 #pragma mark - Snapshot tests
