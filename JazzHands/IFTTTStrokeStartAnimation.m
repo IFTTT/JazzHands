@@ -11,7 +11,7 @@
 @implementation IFTTTStrokeStartAnimation
 
 - (id)initWithLayer:(CALayer *)layer {
-    NSCAssert([self.layer isKindOfClass:CAShapeLayer.class], @"strokeStart is a CAShapeLayer property");
+    NSCParameterAssert([layer isKindOfClass:CAShapeLayer.class]);
     return [super initWithLayer:layer];
 }
 

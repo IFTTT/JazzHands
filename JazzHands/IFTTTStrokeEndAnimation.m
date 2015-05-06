@@ -11,7 +11,7 @@
 @implementation IFTTTStrokeEndAnimation
 
 - (id)initWithLayer:(CALayer *)layer {
-    NSCAssert([self.layer isKindOfClass:CAShapeLayer.class], @"strokeEnd is a CAShapeLayer property");
+    NSCParameterAssert([layer isKindOfClass:CAShapeLayer.class]);
     return [super initWithLayer:layer];
 }
 
