@@ -28,6 +28,8 @@
 + (NSArray *)keyFramesWithTimesAndTransform3D:(NSInteger)pairCount,...;
 + (NSArray *)keyFramesWithTimesAndScales:(NSInteger)pairCount,...;
 + (NSArray *)keyFramesWithTimesAndConstraint:(NSInteger)pairCount,...;
++ (NSArray *)keyFramesWithTimesAndStrokeStarts:(NSInteger)pairCount,...;
++ (NSArray *)keyFramesWithTimesAndStrokeEnds:(NSInteger)pairCount,...;
 
 + (instancetype)keyFrameWithTime:(NSInteger)time andAlpha:(CGFloat)alpha;
 + (instancetype)keyFrameWithTime:(NSInteger)time andCornerRadius:(CGFloat)cornerRadius;
@@ -38,6 +40,8 @@
 + (instancetype)keyFrameWithTime:(NSInteger)time andTransform3D:(IFTTTTransform3D *)transform;
 + (instancetype)keyFrameWithTime:(NSInteger)time andScale:(CGFloat)scale;
 + (instancetype)keyFrameWithTime:(NSInteger)time andConstraint:(CGFloat)constraint;
++ (instancetype)keyFrameWithTime:(NSInteger)time andStrokeStart:(CGFloat)strokeStart;
++ (instancetype)keyFrameWithTime:(NSInteger)time andStrokeEnd:(CGFloat)strokeEnd;
 
 - (id)initWithTime:(NSInteger)time andAlpha:(CGFloat)alpha;
 - (id)initWithTime:(NSInteger)time andCornerRadius:(CGFloat)cornerRadius;
@@ -48,6 +52,8 @@
 - (id)initWithTime:(NSInteger)time andTransform3D:(IFTTTTransform3D *)transform;
 - (id)initWithTime:(NSInteger)time andScale:(CGFloat)scale;
 - (id)initWithTime:(NSInteger)time andConstraint:(CGFloat)constraint;
+- (id)initWithTime:(NSInteger)time andStrokeStart:(CGFloat)strokeStart;
+- (id)initWithTime:(NSInteger)time andStrokeEnd:(CGFloat)strokeEnd;
 
 @property (assign, nonatomic) NSInteger time;
 

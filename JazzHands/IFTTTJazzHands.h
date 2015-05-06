@@ -26,3 +26,5 @@
 #import "IFTTTTransform3DAnimation.h"
 #import "IFTTTScaleAnimation.h"
 #import "IFTTTConstraintsAnimation.h"
+#import "IFTTTStrokeStartAnimation.h"
+#import "IFTTTStrokeEndAnimation.h"
