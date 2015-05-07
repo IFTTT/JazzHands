@@ -28,3 +28,4 @@
 #import "IFTTTConstraintsAnimation.h"
 #import "IFTTTStrokeStartAnimation.h"
 #import "IFTTTStrokeEndAnimation.h"
+#import "IFTTTFillColorAnimation.h"
