@@ -22,6 +22,7 @@
 #import "IFTTTFrameAnimation.h"
 #import "IFTTTHideAnimation.h"
 #import "IFTTTColorAnimation.h"
+#import "IFTTTTextColorAnimation.h"
 #import "IFTTTAngleAnimation.h"
 #import "IFTTTTransform3DAnimation.h"
 #import "IFTTTScaleAnimation.h"
