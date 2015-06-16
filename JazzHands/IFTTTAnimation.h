@@ -13,12 +13,15 @@
 @interface IFTTTAnimation : NSObject
 
 @property (strong, nonatomic) UIView *view;
+@property (strong, nonatomic) CALayer *layer;
 @property (strong, nonatomic) NSLayoutConstraint *constraint;
 @property (strong, nonatomic) NSMutableArray *keyFrames;
 
 + (instancetype)animationWithView:(UIView *)view;
++ (instancetype)animationWithLayer:(CALayer *)layer;
 
 - (id)initWithView:(UIView *)view;
+- (id)initWithLayer:(CALayer *)layer;
 
 - (void)animate:(NSInteger)time;
 

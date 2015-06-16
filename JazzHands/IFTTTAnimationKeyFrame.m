@@ -246,6 +246,64 @@
     }
 }
 
++ (NSArray *)keyFramesWithTimesAndStrokeStarts:(NSInteger)pairCount, ... {
+
+    va_list argumentList;
+    
+    NSInteger time;
+    CGFloat strokeStart;
+    
+    if (pairCount > 0) {
+        NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:(NSUInteger)pairCount];
+        
+        va_start(argumentList, pairCount);
+        
+        for (int i = 0; i < pairCount; i++) {
+            time = va_arg(argumentList, NSInteger);
+            strokeStart = (CGFloat)va_arg(argumentList, double);
+            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime:time
+                                                                         andStrokeStart:strokeStart];
+            [keyFrames addObject:keyFrame];
+        }
+        
+        va_end(argumentList);
+        
+        return [NSArray arrayWithArray:keyFrames];
+    }
+    else {
+        return nil;
+    }
+}
+
++ (NSArray *)keyFramesWithTimesAndStrokeEnds:(NSInteger)pairCount, ... {
+    
+    va_list argumentList;
+    
+    NSInteger time;
+    CGFloat strokeEnd;
+    
+    if (pairCount > 0) {
+        NSMutableArray *keyFrames = [NSMutableArray arrayWithCapacity:(NSUInteger)pairCount];
+        
+        va_start(argumentList, pairCount);
+        
+        for (int i = 0; i < pairCount; i++) {
+            time = va_arg(argumentList, NSInteger);
+            strokeEnd = (CGFloat)va_arg(argumentList, double);
+            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime:time
+                                                                           andStrokeEnd:strokeEnd];
+            [keyFrames addObject:keyFrame];
+        }
+        
+        va_end(argumentList);
+        
+        return [NSArray arrayWithArray:keyFrames];
+    }
+    else {
+        return nil;
+    }
+}
+
 + (instancetype)keyFrameWithTime:(NSInteger)time andAlpha:(CGFloat)alpha
 {
     IFTTTAnimationKeyFrame *keyFrame = [[self alloc] initWithTime:time
@@ -308,6 +366,20 @@
 + (instancetype)keyFrameWithTime:(NSInteger)time andConstraint:(CGFloat)constraint {
     IFTTTAnimationKeyFrame *keyFrame = [[self alloc] initWithTime:time
                                                     andConstraint:constraint];
+    
+    return keyFrame;
+}
+
++ (instancetype)keyFrameWithTime:(NSInteger)time andStrokeStart:(CGFloat)strokeStart {
+    IFTTTAnimationKeyFrame *keyFrame = [[self alloc] initWithTime:time
+                                                   andStrokeStart:strokeStart];
+    
+    return keyFrame;
+}
+
++ (instancetype)keyFrameWithTime:(NSInteger)time andStrokeEnd:(CGFloat)strokeEnd {
+    IFTTTAnimationKeyFrame *keyFrame = [[self alloc] initWithTime:time
+                                                     andStrokeEnd:strokeEnd];
     
     return keyFrame;
 }
@@ -396,6 +468,22 @@
 - (id)initWithTime:(NSInteger)time andConstraint:(CGFloat)constraint {
     if ((self = [self initWithTime:time])) {
         self.constraintConstant = constraint;
+    }
+    
+    return self;
+}
+
+- (id)initWithTime:(NSInteger)time andStrokeStart:(CGFloat)strokeStart {
+    if ((self = [self initWithTime:time])) {
+        self.strokeStart = strokeStart;
+    }
+    
+    return self;
+}
+
+- (id)initWithTime:(NSInteger)time andStrokeEnd:(CGFloat)strokeEnd {
+    if ((self = [self initWithTime:time])) {
+        self.strokeEnd = strokeEnd;
     }
     
     return self;

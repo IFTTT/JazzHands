@@ -24,6 +24,11 @@
     return [[self alloc] initWithView:view];
 }
 
++ (instancetype)animationWithLayer:(CALayer *)layer
+{
+    return [(IFTTTAnimation *)[self alloc] initWithLayer:layer];
+}
+
 - (id)init
 {
     if ((self = [super init])) {
@@ -39,6 +44,15 @@
 {
     if ((self = [self init])) {
         self.view = view;
+    }
+    
+    return self;
+}
+
+- (id)initWithLayer:(CALayer *)layer
+{
+    if ((self = [self init])) {
+        self.layer = layer;
     }
     
     return self;

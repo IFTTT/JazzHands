@@ -21,4 +21,7 @@
 @property (nonatomic, assign) CGFloat scale;
 @property (nonatomic, assign) CGFloat constraintConstant;
 
+@property (nonatomic, assign) CGFloat strokeStart;
+@property (nonatomic, assign) CGFloat strokeEnd;
+
 @end
