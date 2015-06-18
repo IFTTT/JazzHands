@@ -1,5 +1,5 @@
 //
-//  IFTTTColorAnimation.m
+//  IFTTTTextColorAnimation.m
 //  IFTTT
 //
 //  Created by Iulian Onofrei on 07/05/15.
