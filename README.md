@@ -135,4 +135,17 @@ Jazz Hands is flexible enough that it can accept timer input from many different
 
 An animator can only handle one animation per type per view. If you want multiple animations of the same type on a view, use keyframes.
 
-Copyright 2014 IFTTT Inc
+## Contributors
+
+* [Devin Foley](https://github.com/devinfoley), creator.
+* [Laura Skelton](https://github.com/lauraskelton)
+
+## Contributing
+
+1. Fork it ( https://github.com/[my-github-username]/JazzHands/fork )
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
+
+Copyright 2015 IFTTT Inc.
