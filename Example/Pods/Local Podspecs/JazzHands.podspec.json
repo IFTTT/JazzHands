@@ -1,6 +1,6 @@
 {
   "name": "JazzHands",
-  "version": "0.2.1",
+  "version": "2.0.0",
   "summary": "Simple keyframe animations for scrolling intros.",
   "homepage": "https://github.com/IFTTT/JazzHands",
   "authors": {
@@ -11,10 +11,10 @@
   },
   "source": {
     "git": "https://github.com/IFTTT/JazzHands.git",
-    "tag": "0.2.1"
+    "tag": "2.0.0"
   },
   "platforms": {
-    "ios": "5.0"
+    "ios": "7.0"
   },
   "requires_arc": true,
   "license": {

@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 IFTTT Inc. All rights reserved.
 //
 
-#import "IFTTTAnimation.h"
+#import "IFTTTViewAnimation.h"
 
 struct IFTTTTransform3DTranslate
 {
@@ -30,7 +30,7 @@ struct IFTTTTransform3DRotate
 
 typedef struct IFTTTTransform3DRotate IFTTTTransform3DRotate;
 
-@interface IFTTTTransform3D : NSObject
+@interface IFTTTTransform3D : NSObject <IFTTTInterpolatable>
 
 @property (nonatomic, assign) CGFloat m34;
 @property (nonatomic, assign) IFTTTTransform3DScale scale;
@@ -38,10 +38,13 @@ typedef struct IFTTTTransform3DRotate IFTTTTransform3DRotate;
 @property (nonatomic, assign) IFTTTTransform3DTranslate translate;
 
 + (instancetype)transformWithM34:(CGFloat)m34;
-
 - (id)initWithM34:(CGFloat)m34;
 
 @end
 
-@interface IFTTTTransform3DAnimation : IFTTTAnimation
+@interface IFTTTTransform3DAnimation : IFTTTViewAnimation <IFTTTAnimatable>
+
+- (void)addKeyframeForTime:(CGFloat)time transform:(IFTTTTransform3D *)transform;
+- (void)addKeyframeForTime:(CGFloat)time transform:(IFTTTTransform3D *)transform withEasingFunction:(IFTTTEasingFunction)easingFunction;
+
 @end

@@ -6,66 +6,54 @@
 //  Copyright (c) 2013 IFTTT Inc. All rights reserved.
 //
 
-#import "IFTTTJazzHands.h"
+#import "IFTTTHideAnimation.h"
+
+@interface IFTTTHideAnimation ()
+
+@property (nonatomic, strong) UIView *view;
+
+@end
 
 @implementation IFTTTHideAnimation
 
-+ (instancetype)animationWithView:(UIView *)view hideAt:(NSInteger)time
++ (instancetype)animationWithView:(UIView *)view hideAt:(CGFloat)time
 {
     IFTTTHideAnimation *animation = [[[self class] alloc] initWithView:view
                                                                 hideAt:time];
     return animation;
 }
 
-+ (instancetype)animationWithView:(UIView *)view showAt:(NSInteger)time
++ (instancetype)animationWithView:(UIView *)view showAt:(CGFloat)time
 {
     IFTTTHideAnimation *animation = [[[self class] alloc] initWithView:view
                                                                 showAt:time];
     return animation;
 }
 
-- (id)initWithView:(UIView *)view hideAt:(NSInteger)time
+- (instancetype)initWithView:(UIView *)view hideAt:(CGFloat)time
 {
-    self = [super init];
-    
-    if (self) {
-        self.view = view;
-        [self addKeyFrame:[[IFTTTAnimationKeyFrame alloc] initWithTime:time andHidden:NO]];
-        [self addKeyFrame:[[IFTTTAnimationKeyFrame alloc] initWithTime:time + 1 andHidden:YES]];
+    if((self = [super init])) {
+        _view = view;
+        [self addKeyframeForTime:time value:@(NO)];
+        [self addKeyframeForTime:time + 1 value:@(YES)];
     }
-    
     return self;
 }
 
-- (id)initWithView:(UIView *)view showAt:(NSInteger)time
+- (instancetype)initWithView:(UIView *)view showAt:(CGFloat)time
 {
-    self = [super init];
-    
-    if (self) {
-        self.view = view;
-        [self addKeyFrame:[[IFTTTAnimationKeyFrame alloc] initWithTime:time andHidden:YES]];
-        [self addKeyFrame:[[IFTTTAnimationKeyFrame alloc] initWithTime:time + 1 andHidden:NO]];
+    if((self = [super init])) {
+        _view = view;
+        [self addKeyframeForTime:time value:@(YES)];
+        [self addKeyframeForTime:time + 1 value:@(NO)];
     }
-    
     return self;
 }
 
-- (void)animate:(NSInteger)time
+- (void)animate:(CGFloat)time
 {
-    if (self.keyFrames.count <= 1) return;
-    
-    IFTTTAnimationFrame *animationFrame = [self animationFrameForTime:time];
-    self.view.hidden = animationFrame.hidden;
-}
-
-- (IFTTTAnimationFrame *)frameForTime:(NSInteger)time
-                        startKeyFrame:(IFTTTAnimationKeyFrame *)startKeyFrame
-                          endKeyFrame:(IFTTTAnimationKeyFrame *)endKeyFrame
-{
-    IFTTTAnimationFrame *animationFrame = [IFTTTAnimationFrame new];
-    animationFrame.hidden = (time == startKeyFrame.time ? startKeyFrame : endKeyFrame).hidden;    
-    
-    return animationFrame;
+    if (!self.hasKeyframes) return;
+    self.view.hidden = (BOOL)[(NSNumber *)[self valueAtTime:time] boolValue];
 }
 
 @end

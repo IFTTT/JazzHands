@@ -1,22 +1,20 @@
 PODS:
-  - FBSnapshotTestCase (1.6)
-  - JazzHands (0.2.1)
-  - KIF (3.2.1):
-    - KIF/XCTest (= 3.2.1)
-  - KIF/XCTest (3.2.1)
+  - Expecta (1.0.0)
+  - JazzHands (2.0.0)
+  - Specta (1.0.2)
 
 DEPENDENCIES:
-  - FBSnapshotTestCase
+  - Expecta
   - JazzHands (from `../JazzHands.podspec`)
-  - KIF
+  - Specta
 
 EXTERNAL SOURCES:
   JazzHands:
     :path: ../JazzHands.podspec
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: 9d5fe43b29ae3a0ed8fc829477971b281038f748
-  JazzHands: d2343c3f2f9d70598d0cad8f521ce3893842a44a
-  KIF: ef1691e54e1d969c3b4fd0b5b56a3d7ddf37f216
+  Expecta: 32604574add2c46a36f8d2f716b6c5736eb75024
+  JazzHands: 00002e9b1284e7fc1ac6555012e81b8942477242
+  Specta: 9cec98310dca411f7c7ffd6943552b501622abfe
 
 COCOAPODS: 0.37.2

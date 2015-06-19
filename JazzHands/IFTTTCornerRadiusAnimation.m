@@ -6,30 +6,33 @@
 //  Copyright (c) 2015 IFTTT Inc. All rights reserved.
 //
 
-#import "IFTTTJazzHands.h"
+#import "IFTTTCornerRadiusAnimation.h"
 
 @implementation IFTTTCornerRadiusAnimation
 
-- (void)animate:(NSInteger)time
+- (void)addKeyframeForTime:(CGFloat)time cornerRadius:(CGFloat)cornerRadius
 {
-    if (self.keyFrames.count <= 1) return;
-
-    IFTTTAnimationFrame *animationFrame = [self animationFrameForTime:time];
-    self.view.layer.cornerRadius = animationFrame.cornerRadius;
+    if (![self validRadius:cornerRadius]) return;
+    [self addKeyframeForTime:time value:@(cornerRadius)];
 }
 
-- (IFTTTAnimationFrame *)frameForTime:(NSInteger)time
-                        startKeyFrame:(IFTTTAnimationKeyFrame *)startKeyFrame
-                          endKeyFrame:(IFTTTAnimationKeyFrame *)endKeyFrame
+- (void)addKeyframeForTime:(CGFloat)time cornerRadius:(CGFloat)cornerRadius withEasingFunction:(IFTTTEasingFunction)easingFunction
 {
-    IFTTTAnimationFrame *animationFrame = [IFTTTAnimationFrame new];
-    animationFrame.cornerRadius = [self tweenValueForStartTime:startKeyFrame.time
-                                                       endTime:endKeyFrame.time
-                                                    startValue:startKeyFrame.cornerRadius
-                                                      endValue:endKeyFrame.cornerRadius
-                                                        atTime:time];
+    if (![self validRadius:cornerRadius]) return;
+    [self addKeyframeForTime:time value:@(cornerRadius) withEasingFunction:easingFunction];
+}
 
-    return animationFrame;
+- (BOOL)validRadius:(CGFloat)radius
+{
+    NSAssert((radius >= 0.f), @"Corner radius must be greater than or equal to zero.");
+    if (!(radius >= 0.f)) return NO;
+    return YES;
+}
+
+- (void)animate:(CGFloat)time
+{
+    if (!self.hasKeyframes) return;
+    self.view.layer.cornerRadius = (CGFloat)[(NSNumber *)[self valueAtTime:time] floatValue];
 }
 
 @end

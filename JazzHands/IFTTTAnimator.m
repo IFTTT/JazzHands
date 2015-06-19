@@ -7,7 +7,7 @@
 //
 
 #import "IFTTTAnimator.h"
-#import "IFTTTAnimation.h"
+#import "IFTTTAnimatable.h"
 
 @interface IFTTTAnimator ()
 
@@ -17,25 +17,22 @@
 
 @implementation IFTTTAnimator
 
-- (id)init
+- (instancetype)init
 {
-    self = [super init];
-    
-    if (self) {
+    if ((self = [super init])) {
         self.animations = [NSMutableArray new];
     }
-    
     return self;
 }
 
-- (void)animate:(NSInteger)time
+- (void)animate:(CGFloat)time
 {
-    for (IFTTTAnimation *animation in self.animations) {
+    for (id<IFTTTAnimatable> animation in self.animations) {
         [animation animate:time];
     }
 }
 
-- (void)addAnimation:(IFTTTAnimation *)animation
+- (void)addAnimation:(id<IFTTTAnimatable>)animation
 {
     [self.animations addObject:animation];
 }

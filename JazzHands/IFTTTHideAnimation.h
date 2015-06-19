@@ -8,12 +8,12 @@
 
 #import "IFTTTAnimation.h"
 
-@interface IFTTTHideAnimation : IFTTTAnimation
+@interface IFTTTHideAnimation : IFTTTAnimation <IFTTTAnimatable>
 
-+ (instancetype)animationWithView:(UIView *)view hideAt:(NSInteger)time;
-+ (instancetype)animationWithView:(UIView *)view showAt:(NSInteger)time;
++ (instancetype)animationWithView:(UIView *)view hideAt:(CGFloat)time;
++ (instancetype)animationWithView:(UIView *)view showAt:(CGFloat)time;
 
-- (id)initWithView:(UIView *)view hideAt:(NSInteger)time;
-- (id)initWithView:(UIView *)view showAt:(NSInteger)time;
+- (instancetype)initWithView:(UIView *)view hideAt:(CGFloat)time;
+- (instancetype)initWithView:(UIView *)view showAt:(CGFloat)time;
 
 @end

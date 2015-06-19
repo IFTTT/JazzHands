@@ -6,36 +6,33 @@
 //  Copyright (c) 2015 IFTTT Inc. All rights reserved.
 //
 
-#import "IFTTTJazzHands.h"
+#import "IFTTTStrokeEndAnimation.h"
 
 @implementation IFTTTStrokeEndAnimation
 
-- (id)initWithLayer:(CALayer *)layer {
-    NSCParameterAssert([layer isKindOfClass:CAShapeLayer.class]);
-    return [super initWithLayer:layer];
-}
-
-- (void)animate:(NSInteger)time
+- (void)addKeyframeForTime:(CGFloat)time strokeEnd:(CGFloat)strokeEnd
 {
-    if (self.keyFrames.count <= 1) return;
-    
-    IFTTTAnimationFrame *animationFrame = [self animationFrameForTime:time];
-    ((CAShapeLayer *)self.layer).strokeEnd = animationFrame.strokeEnd;
+    if (![self isValidStrokeEnd:strokeEnd]) return;
+    [self addKeyframeForTime:time value:@(strokeEnd)];
 }
 
-- (IFTTTAnimationFrame *)frameForTime:(NSInteger)time
-                        startKeyFrame:(IFTTTAnimationKeyFrame *)startKeyFrame
-                          endKeyFrame:(IFTTTAnimationKeyFrame *)endKeyFrame
+- (void)addKeyframeForTime:(CGFloat)time strokeEnd:(CGFloat)strokeEnd withEasingFunction:(IFTTTEasingFunction)easingFunction
 {
-    IFTTTAnimationFrame *animationFrame = [IFTTTAnimationFrame new];
-    animationFrame.strokeEnd = [self tweenValueForStartTime:startKeyFrame.time
-                                                    endTime:endKeyFrame.time
-                                                 startValue:startKeyFrame.strokeEnd
-                                                   endValue:endKeyFrame.strokeEnd
-                                                     atTime:time];
-    
-    return animationFrame;
+    if (![self isValidStrokeEnd:strokeEnd]) return;
+    [self addKeyframeForTime:time value:@(strokeEnd) withEasingFunction:easingFunction];
 }
 
+- (BOOL)isValidStrokeEnd:(CGFloat)strokeEnd
+{
+    NSAssert((strokeEnd >= 0.f) && (strokeEnd <= 1.f), @"Stroke End values must be between zero and one.");
+    if ((strokeEnd < 0.f) || (strokeEnd > 1.f)) return NO;
+    return YES;
+}
+
+- (void)animate:(CGFloat)time
+{
+    if (!self.hasKeyframes) return;
+    self.layer.strokeEnd = (CGFloat)[(NSNumber *)[self valueAtTime:time] floatValue];
+}
 
 @end

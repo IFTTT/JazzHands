@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 IFTTT Inc. All rights reserved.
 //
 
-#import "IFTTTAnimation.h"
+@protocol IFTTTAnimatable;
 
 @interface IFTTTAnimator : NSObject
 
-- (void)addAnimation:(IFTTTAnimation *)animation;
-- (void)animate:(NSInteger)time;
+- (void)addAnimation:(id<IFTTTAnimatable>)animation;
+- (void)animate:(CGFloat)time;
 
 @end

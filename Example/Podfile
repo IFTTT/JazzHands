@@ -14,6 +14,6 @@ end
 
 target :JazzHandsTests, :exclusive => true do
     install_pods
-    pod 'KIF'
-    pod 'FBSnapshotTestCase'
+    pod 'Specta'
+    pod 'Expecta'
 end

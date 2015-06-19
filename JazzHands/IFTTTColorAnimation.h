@@ -6,8 +6,11 @@
 //  Copyright (c) 2013 IFTTT Inc. All rights reserved.
 //
 
-#import "IFTTTAnimation.h"
+#import "IFTTTViewAnimation.h"
 
-@interface IFTTTColorAnimation : IFTTTAnimation
+@interface IFTTTColorAnimation : IFTTTViewAnimation <IFTTTAnimatable>
+
+- (void)addKeyframeForTime:(CGFloat)time color:(UIColor *)color;
+- (void)addKeyframeForTime:(CGFloat)time color:(UIColor *)color withEasingFunction:(IFTTTEasingFunction)easingFunction;
 
 @end
