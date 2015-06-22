@@ -8,8 +8,8 @@
 
 #pragma once
 
-@import Foundation;
-@import UIKit;
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #import "IFTTTAnimation.h"
 #import "IFTTTAnimationKeyFrame.h"

@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 IFTTT Inc. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 @class IFTTTAnimator;
 
 @protocol IFTTTAnimatedScrollViewControllerDelegate;

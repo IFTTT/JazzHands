@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 IFTTT Inc. All rights reserved.
 //
 
-@import Foundation;
-@import UIKit;
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 @class IFTTTAnimationKeyFrame, IFTTTAnimationFrame;
 
 @interface IFTTTAnimation : NSObject

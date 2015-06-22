@@ -15,8 +15,8 @@
 // Copied from Robert Böhnke's RBBAnimation, original available here:
 // <https://github.com/robb/RBBAnimation/blob/a29cafe2fa91e62573cc9967990b0ad2a6b17a76/RBBAnimation/RBBEasingFunction.h>
 
-@import UIKit;
-@import QuartzCore;
+#import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 typedef CGFloat (^IFTTTEasingFunction) (CGFloat t);
 
