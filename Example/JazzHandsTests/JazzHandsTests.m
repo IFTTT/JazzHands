@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 IFTTT Inc. All rights reserved.
 //
 
-@import XCTest;
+#import <XCTest/XCTest.h>
 #import <IFTTTJazzHands.h>
 #import <FBSnapshotTestCase.h>
 #import <KIF.h>
