@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 IFTTT Inc. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 #import "IFTTTEasingFunction.h"
 #import "IFTTTInterpolatable.h"
 
