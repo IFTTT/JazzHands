@@ -6,30 +6,44 @@
 //  Copyright (c) 2014 IFTTT Inc. All rights reserved.
 //
 
-#import "IFTTTJazzHands.h"
+#import "IFTTTScaleAnimation.h"
+#import "UIView+IFTTTJazzHands.h"
 
 @implementation IFTTTScaleAnimation
 
-- (void)animate:(NSInteger)time
+- (void)addKeyframeForTime:(CGFloat)time scale:(CGFloat)scale
 {
-    if (self.keyFrames.count <= 1) return;
-
-    IFTTTAnimationFrame *animationFrame = [self animationFrameForTime:time];
-    CGFloat scale = animationFrame.scale;
-    self.view.transform = CGAffineTransformMakeScale(scale, scale);
+    if (![self validScale:scale]) return;
+    [self addKeyframeForTime:time value:@(scale)];
 }
 
-- (IFTTTAnimationFrame *)frameForTime:(NSInteger)time
-                        startKeyFrame:(IFTTTAnimationKeyFrame *)startKeyFrame
-                          endKeyFrame:(IFTTTAnimationKeyFrame *)endKeyFrame
+- (void)addKeyframeForTime:(CGFloat)time scale:(CGFloat)scale withEasingFunction:(IFTTTEasingFunction)easingFunction
 {
-    IFTTTAnimationFrame *animationFrame = [IFTTTAnimationFrame new];
-    animationFrame.scale = [self tweenValueForStartTime:startKeyFrame.time
-                                                endTime:endKeyFrame.time
-                                             startValue:startKeyFrame.scale
-                                               endValue:endKeyFrame.scale atTime:time];
+    if (![self validScale:scale]) return;
+    [self addKeyframeForTime:time value:@(scale) withEasingFunction:easingFunction];
+}
 
-    return animationFrame;
+- (BOOL)validScale:(CGFloat)scale
+{
+    NSAssert((scale > 0), @"Scale must be greater than zero.");
+    if (!(scale > 0)) return NO;
+    return YES;
+}
+
+- (void)animate:(CGFloat)time
+{
+    if (!self.hasKeyframes) return;
+    CGFloat scale = (CGFloat)[(NSNumber *)[self valueAtTime:time] floatValue];
+    CGAffineTransform scaleTransform = CGAffineTransformMakeScale(scale, scale);
+    self.view.iftttScaleTransform = [NSValue valueWithCGAffineTransform:scaleTransform];
+    CGAffineTransform newTransform = scaleTransform;
+    if (self.view.iftttRotationTransform) {
+        newTransform = CGAffineTransformConcat(newTransform, [self.view.iftttRotationTransform CGAffineTransformValue]);
+    }
+    if (self.view.iftttTranslationTransform) {
+        newTransform = CGAffineTransformConcat(newTransform, [self.view.iftttTranslationTransform CGAffineTransformValue]);
+    }
+    self.view.transform = newTransform;
 }
 
 @end

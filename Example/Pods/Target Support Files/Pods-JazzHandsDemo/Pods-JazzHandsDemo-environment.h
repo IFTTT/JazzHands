@@ -8,7 +8,7 @@
 
 // JazzHands
 #define COCOAPODS_POD_AVAILABLE_JazzHands
-#define COCOAPODS_VERSION_MAJOR_JazzHands 0
-#define COCOAPODS_VERSION_MINOR_JazzHands 2
-#define COCOAPODS_VERSION_PATCH_JazzHands 1
+#define COCOAPODS_VERSION_MAJOR_JazzHands 2
+#define COCOAPODS_VERSION_MINOR_JazzHands 0
+#define COCOAPODS_VERSION_PATCH_JazzHands 0
 

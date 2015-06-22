@@ -6,8 +6,11 @@
 //  Copyright (c) 2015 IFTTT Inc. All rights reserved.
 //
 
-#import "IFTTTAnimation.h"
+#import "IFTTTViewAnimation.h"
 
-@interface IFTTTCornerRadiusAnimation : IFTTTAnimation
+@interface IFTTTCornerRadiusAnimation : IFTTTViewAnimation <IFTTTAnimatable>
+
+- (void)addKeyframeForTime:(CGFloat)time cornerRadius:(CGFloat)cornerRadius;
+- (void)addKeyframeForTime:(CGFloat)time cornerRadius:(CGFloat)cornerRadius withEasingFunction:(IFTTTEasingFunction)easingFunction;
 
 @end

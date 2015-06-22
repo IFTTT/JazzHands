@@ -21,7 +21,7 @@ CG_INLINE CGFloat IFTTTMaxContentOffsetXForScrollView(UIScrollView *scrollView)
 
 @implementation IFTTTAnimatedScrollViewController
 
-- (id)init
+- (instancetype)init
 {
     if ((self = [super init])) {
         [self commonInit];
@@ -30,7 +30,7 @@ CG_INLINE CGFloat IFTTTMaxContentOffsetXForScrollView(UIScrollView *scrollView)
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     if ((self = [super initWithCoder:aDecoder])) {
         [self commonInit];
@@ -39,7 +39,7 @@ CG_INLINE CGFloat IFTTTMaxContentOffsetXForScrollView(UIScrollView *scrollView)
     return self;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
         [self commonInit];
@@ -64,7 +64,7 @@ CG_INLINE CGFloat IFTTTMaxContentOffsetXForScrollView(UIScrollView *scrollView)
 
 - (void)scrollViewDidScroll:(UIScrollView *)aScrollView
 {
-    [self.animator animate:(NSInteger)aScrollView.contentOffset.x];
+    [self.animator animate:aScrollView.contentOffset.x];
     
     self.isAtEnd = (aScrollView.contentOffset.x >= IFTTTMaxContentOffsetXForScrollView(aScrollView));
     

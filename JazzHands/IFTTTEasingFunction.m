@@ -55,22 +55,6 @@ IFTTTEasingFunction const IFTTTEasingFunctionEaseInOutCubic = ^CGFloat(CGFloat t
     }
 };
 
-IFTTTEasingFunction const IFTTTEasingFunctionEaseInQuart = ^CGFloat(CGFloat t) {
-    return t * t * t * t;
-};
-
-IFTTTEasingFunction const IFTTTEasingFunctionEaseOutQuart = ^CGFloat(CGFloat t) {
-    return IFTTTJazzHandsPow(t - 1, 4) + 1;
-};
-
-IFTTTEasingFunction const IFTTTEasingFunctionEaseInOutQuart = ^CGFloat(CGFloat t) {
-    if (t < 0.5f) {
-        return 8 * IFTTTJazzHandsPow(t, 4);
-    } else {
-        return -1 / 2 * IFTTTJazzHandsPow(2 * t - 2, 4) + 1;
-    }
-};
-
 IFTTTEasingFunction const IFTTTEasingFunctionEaseInBounce = ^CGFloat(CGFloat t) {
     return 1.f - IFTTTEasingFunctionEaseOutBounce(1.0 - t);
 };

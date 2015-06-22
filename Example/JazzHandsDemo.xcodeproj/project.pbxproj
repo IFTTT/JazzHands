@@ -21,7 +21,11 @@
 		445B9E227A691EC342AEEDE2 /* libPods-JazzHandsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1EAF4CD1F4A61D2DBBB695 /* libPods-JazzHandsDemo.a */; };
 		8A7331363E195DEE4B479A7E /* libPods-JazzHandsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9147A8A9689CEBCB4A91E3C /* libPods-JazzHandsTests.a */; };
 		E973270D1A58922500AD6E55 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E97327091A58922500AD6E55 /* InfoPlist.strings */; };
-		E973270F1A58922500AD6E55 /* JazzHandsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E973270C1A58922500AD6E55 /* JazzHandsTests.m */; };
+		FA5899DE1B3370CC008663B0 /* IFTTTFilmstripSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5899DD1B3370CC008663B0 /* IFTTTFilmstripSpec.m */; };
+		FA5899E11B3372C5008663B0 /* MyCustomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5899E01B3372C5008663B0 /* MyCustomAnimation.m */; };
+		FA5899E31B338313008663B0 /* IFTTTEasingFunctionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5899E21B338313008663B0 /* IFTTTEasingFunctionSpec.m */; };
+		FA5899E51B338612008663B0 /* IFTTTAnimationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5899E41B338612008663B0 /* IFTTTAnimationSpec.m */; };
+		FA5899E71B3391C7008663B0 /* IFTTTInterpolatableSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5899E61B3391C7008663B0 /* IFTTTInterpolatableSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +63,13 @@
 		C9147A8A9689CEBCB4A91E3C /* libPods-JazzHandsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JazzHandsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E973270A1A58922500AD6E55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E973270B1A58922500AD6E55 /* JazzHandsTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "JazzHandsTests-Info.plist"; sourceTree = "<group>"; };
-		E973270C1A58922500AD6E55 /* JazzHandsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JazzHandsTests.m; sourceTree = "<group>"; };
 		F06E890A963B4A1A460670D4 /* Pods-JazzHandsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazzHandsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JazzHandsTests/Pods-JazzHandsTests.release.xcconfig"; sourceTree = "<group>"; };
+		FA5899DD1B3370CC008663B0 /* IFTTTFilmstripSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTFilmstripSpec.m; sourceTree = "<group>"; };
+		FA5899DF1B3372C5008663B0 /* MyCustomAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCustomAnimation.h; sourceTree = "<group>"; };
+		FA5899E01B3372C5008663B0 /* MyCustomAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCustomAnimation.m; sourceTree = "<group>"; };
+		FA5899E21B338313008663B0 /* IFTTTEasingFunctionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTEasingFunctionSpec.m; sourceTree = "<group>"; };
+		FA5899E41B338612008663B0 /* IFTTTAnimationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTAnimationSpec.m; sourceTree = "<group>"; };
+		FA5899E61B3391C7008663B0 /* IFTTTInterpolatableSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFTTTInterpolatableSpec.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +138,8 @@
 				03063F1D17F5FC61007D7A97 /* IFTTTJazzHandsViewController.m */,
 				03063EDD17F5FAAD007D7A97 /* IFTTTJazzHandsAppDelegate.h */,
 				03063EDE17F5FAAD007D7A97 /* IFTTTJazzHandsAppDelegate.m */,
+				FA5899DF1B3372C5008663B0 /* MyCustomAnimation.h */,
+				FA5899E01B3372C5008663B0 /* MyCustomAnimation.m */,
 				03063EE017F5FAAD007D7A97 /* Images.xcassets */,
 				03063ED517F5FAAD007D7A97 /* Supporting Files */,
 			);
@@ -162,7 +173,10 @@
 		E97327081A58922500AD6E55 /* JazzHandsTests */ = {
 			isa = PBXGroup;
 			children = (
-				E973270C1A58922500AD6E55 /* JazzHandsTests.m */,
+				FA5899E41B338612008663B0 /* IFTTTAnimationSpec.m */,
+				FA5899E21B338313008663B0 /* IFTTTEasingFunctionSpec.m */,
+				FA5899DD1B3370CC008663B0 /* IFTTTFilmstripSpec.m */,
+				FA5899E61B3391C7008663B0 /* IFTTTInterpolatableSpec.m */,
 				E97327091A58922500AD6E55 /* InfoPlist.strings */,
 				E973270B1A58922500AD6E55 /* JazzHandsTests-Info.plist */,
 			);
@@ -335,6 +349,7 @@
 				03063EDF17F5FAAD007D7A97 /* IFTTTJazzHandsAppDelegate.m in Sources */,
 				03063F1F17F5FC61007D7A97 /* IFTTTJazzHandsViewController.m in Sources */,
 				03063EDB17F5FAAD007D7A97 /* main.m in Sources */,
+				FA5899E11B3372C5008663B0 /* MyCustomAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +357,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E973270F1A58922500AD6E55 /* JazzHandsTests.m in Sources */,
+				FA5899E71B3391C7008663B0 /* IFTTTInterpolatableSpec.m in Sources */,
+				FA5899DE1B3370CC008663B0 /* IFTTTFilmstripSpec.m in Sources */,
+				FA5899E51B338612008663B0 /* IFTTTAnimationSpec.m in Sources */,
+				FA5899E31B338313008663B0 /* IFTTTEasingFunctionSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,8 +503,10 @@
 				GCC_WARN_UNKNOWN_PRAGMAS = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
 				INFOPLIST_FILE = "JazzHandsDemo/JazzHandsDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WARNING_CFLAGS = (
 					"-Wpointer-arith",
 					"-Winit-self",
@@ -534,8 +554,10 @@
 				GCC_WARN_UNKNOWN_PRAGMAS = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
 				INFOPLIST_FILE = "JazzHandsDemo/JazzHandsDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WARNING_CFLAGS = (
 					"-Wpointer-arith",
 					"-Winit-self",

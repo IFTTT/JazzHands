@@ -6,8 +6,11 @@
 //  Copyright (c) 2013 IFTTT Inc. All rights reserved.
 //
 
-#import "IFTTTAnimation.h"
+#import "IFTTTViewAnimation.h"
 
-@interface IFTTTAlphaAnimation : IFTTTAnimation
+@interface IFTTTAlphaAnimation : IFTTTViewAnimation <IFTTTAnimatable>
+
+- (void)addKeyframeForTime:(CGFloat)time alpha:(CGFloat)alpha;
+- (void)addKeyframeForTime:(CGFloat)time alpha:(CGFloat)alpha withEasingFunction:(IFTTTEasingFunction)easingFunction;
 
 @end

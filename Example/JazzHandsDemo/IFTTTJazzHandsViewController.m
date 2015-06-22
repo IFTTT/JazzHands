@@ -7,26 +7,43 @@
 //
 
 #import "IFTTTJazzHandsViewController.h"
-
-#define NUMBER_OF_PAGES 4
-
-#define timeForPage(page) (NSInteger)(self.view.frame.size.width * (page - 1))
+#import "MyCustomAnimation.h"
 
 @interface IFTTTJazzHandsViewController ()
 
-@property (strong, nonatomic) UIImageView *wordmark;
-@property (strong, nonatomic) UIImageView *unicorn;
-@property (strong, nonatomic) UILabel *lastLabel;
-@property (strong, nonatomic) UILabel *firstLabel;
+@property (nonatomic, strong) UIImageView *wordmark;
+@property (nonatomic, strong) UIImageView *unicorn;
+@property (nonatomic, strong) UILabel *firstLabel;
+@property (nonatomic, strong) UILabel *secondLabel;
+@property (nonatomic, strong) UILabel *thirdLabel;
+@property (nonatomic, strong) UILabel *fourthLabel;
 
 @end
 
 @implementation IFTTTJazzHandsViewController
 
-- (id)init
+- (instancetype)init
 {
     if ((self = [super init])) {
+        self.numberOfPages = 4;
+    }
+    
+    return self;
+}
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    if ((self = [super initWithCoder:aDecoder])) {
+        self.numberOfPages = 4;
+    }
+    
+    return self;
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
+        self.numberOfPages = 4;
     }
     
     return self;
@@ -35,77 +52,165 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        
-    self.scrollView.contentSize = CGSizeMake(NUMBER_OF_PAGES * CGRectGetWidth(self.view.frame),
-                                             CGRectGetHeight(self.view.frame));
-    
-    self.scrollView.pagingEnabled = YES;
-    self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.accessibilityLabel = @"JazzHands";
     self.scrollView.accessibilityIdentifier = @"JazzHands";
     
-    [self placeViews];
-    [self configureAnimation];
+    self.view.backgroundColor = [UIColor whiteColor];
     
-    self.delegate = self;
+    [self configureViews];
+    [self configureAnimations];
 }
 
-- (void)placeViews
+- (void)configureViews
 {
-    // put a unicorn in the middle of page two, hidden
     self.unicorn = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Unicorn"]];
-    self.unicorn.center = self.view.center;
-    self.unicorn.frame = CGRectOffset(
-        self.unicorn.frame,
-        self.view.frame.size.width,
-        -100
-    );
-    self.unicorn.alpha = 0.0f;
-    [self.scrollView addSubview:self.unicorn];
+    [self.contentView addSubview:self.unicorn];
 
-    // put a logo on top of it
     self.wordmark = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"IFTTT"]];
-    self.wordmark.center = self.view.center;
-    self.wordmark.frame = CGRectOffset(
-        self.wordmark.frame,
-        self.view.frame.size.width,
-        -100
-    );
-    [self.scrollView addSubview:self.wordmark];
+    [self.contentView addSubview:self.wordmark];
     
-    self.firstLabel = [[UILabel alloc] init];
+    self.firstLabel = [UILabel new];
     self.firstLabel.text = @"Introducing Jazz Hands";
     [self.firstLabel sizeToFit];
-    self.firstLabel.center = self.view.center;
-    [self.scrollView addSubview:self.firstLabel];
+    [self.contentView addSubview:self.firstLabel];
     
-    UILabel *secondPageText = [[UILabel alloc] init];
-    secondPageText.text = @"Brought to you by IFTTT";
-    [secondPageText sizeToFit];
-    secondPageText.center = self.view.center;
-    secondPageText.frame = CGRectOffset(secondPageText.frame, timeForPage(2), 180);
-    [self.scrollView addSubview:secondPageText];
+    self.secondLabel = [UILabel new];
+    self.secondLabel.text = @"Brought to you by IFTTT";
+    [self.secondLabel sizeToFit];
+    [self.contentView addSubview:self.secondLabel];
     
-    UILabel *thirdPageText = [[UILabel alloc] init];
-    thirdPageText.text = @"Simple keyframe animations";
-    [thirdPageText sizeToFit];
-    thirdPageText.center = self.view.center;
-    thirdPageText.frame = CGRectOffset(thirdPageText.frame, timeForPage(3), -100);
-    [self.scrollView addSubview:thirdPageText];
+    self.thirdLabel = [UILabel new];
+    self.thirdLabel.text = @"Simple keyframe animations";
+    [self.thirdLabel sizeToFit];
+    [self.contentView addSubview:self.thirdLabel];
     
-    UILabel *fourthPageText = [[UILabel alloc] init];
-    fourthPageText.text = @"Optimized for scrolling intros";
-    [fourthPageText sizeToFit];
-    fourthPageText.center = self.view.center;
-    fourthPageText.frame = CGRectOffset(fourthPageText.frame, timeForPage(4), 0);
-    [self.scrollView addSubview:fourthPageText];
-    
-    self.lastLabel = fourthPageText;
+    self.fourthLabel = [UILabel new];
+    self.fourthLabel.text = @"Optimized for scrolling intros";
+    [self.fourthLabel sizeToFit];
+    [self.contentView addSubview:self.fourthLabel];
 }
 
-- (void)configureAnimation
+- (void)configureAnimations
 {
-    CGFloat dy = 240;
+    [self configureScrollViewAnimations];
+    [self configureUnicornAnimations];
+    [self configureWordmarkAnimations];
+    [self configureLabelAnimations];
+    [self animateCurrentFrame];
+}
+
+- (void)configureScrollViewAnimations
+{
+    // change the scrollView's background color for each page
+    IFTTTColorAnimation *backgroundColorAnimation = [IFTTTColorAnimation animationWithView:self.scrollView];
+    [backgroundColorAnimation addKeyframeForTime:0 color:[[UIColor blueColor] colorWithAlphaComponent:0.4f]];
+    [backgroundColorAnimation addKeyframeForTime:1 color:[[UIColor cyanColor] colorWithAlphaComponent:0.4f]];
+    [backgroundColorAnimation addKeyframeForTime:2 color:[[UIColor greenColor] colorWithAlphaComponent:0.4f]];
+    [backgroundColorAnimation addKeyframeForTime:3 color:[[UIColor yellowColor] colorWithAlphaComponent:0.4f]];
+    [self.animator addAnimation:backgroundColorAnimation];
+}
+
+- (void)configureUnicornAnimations
+{
+    // now, we animate the unicorn
+    // keep the unicorn centered when we're on pages 1 and 2.
+    // It will slide from the right between pages 0 and 1, and slide out to the left between pages 2 and 3.
+    [self keepView:self.unicorn onPages:@[ @(1), @(2) ]];
+    
+    NSLayoutConstraint *unicornCenterYConstraint = [NSLayoutConstraint constraintWithItem:self.unicorn
+                                                                                attribute:NSLayoutAttributeCenterY
+                                                                                relatedBy:NSLayoutRelationEqual
+                                                                                   toItem:self.contentView
+                                                                                attribute:NSLayoutAttributeCenterY
+                                                                               multiplier:1.f constant:0.f];
+    [self.contentView addConstraint:unicornCenterYConstraint];
+    
+    // Move the unicorn from a bit higher than center on page 1 to a bit lower on page 2, by an amount relative to the height of the view.
+    IFTTTConstraintMultiplierAnimation *unicornCenterYAnimation = [IFTTTConstraintMultiplierAnimation animationWithSuperview:self.contentView
+                                                                                                                  constraint:unicornCenterYConstraint
+                                                                                                                   attribute:IFTTTLayoutAttributeHeight
+                                                                                                               referenceView:self.contentView];
+    [unicornCenterYAnimation addKeyframeForTime:1 multiplier:-0.1f withEasingFunction:IFTTTEasingFunctionEaseOutQuad];
+    [unicornCenterYAnimation addKeyframeForTime:2 multiplier:0.2f];
+    [self.animator addAnimation:unicornCenterYAnimation];
+    
+    // Scale down the unicorn by 75% between pages 1 and 2
+    IFTTTScaleAnimation *unicornScaleAnimation = [IFTTTScaleAnimation animationWithView:self.unicorn];
+    [unicornScaleAnimation addKeyframeForTime:1 scale:1.f];
+    [unicornScaleAnimation addKeyframeForTime:2 scale:0.75f];
+    [self.animator addAnimation:unicornScaleAnimation];
+    
+    // fade the unicorn in on page 1 and out on page 3
+    IFTTTAlphaAnimation *unicornAlphaAnimation = [IFTTTAlphaAnimation animationWithView:self.unicorn];
+    [unicornAlphaAnimation addKeyframeForTime:0 alpha:0.f];
+    [unicornAlphaAnimation addKeyframeForTime:1 alpha:1.f];
+    [unicornAlphaAnimation addKeyframeForTime:2 alpha:1.f];
+    [unicornAlphaAnimation addKeyframeForTime:3 alpha:0.f];
+    [self.animator addAnimation:unicornAlphaAnimation];
+}
+
+- (void)configureWordmarkAnimations
+{
+    // let's animate the wordmark
+    // keep the wordmark centered on pages 1 and 2, slide it in fast from the right between page 0 and 1, and slide it out fast to the left between pages 2 and 3.
+    [self keepView:self.wordmark
+           onPages:@[ @(2), @(1), @(2), @(1) ]
+           atTimes:@[ @(0), @(1), @(2), @(3) ]];
+    
+    // keep the wordmark vertically centered on top of the unicorn
+    [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.wordmark
+                                                                 attribute:NSLayoutAttributeCenterY
+                                                                 relatedBy:NSLayoutRelationEqual
+                                                                    toItem:self.unicorn
+                                                                 attribute:NSLayoutAttributeCenterY
+                                                                multiplier:1.f constant:0.f]];
+    
+    // Rotate the wordmark a full circle from page 1 to 2
+    IFTTTRotationAnimation *wordmarkRotationAnimation = [IFTTTRotationAnimation animationWithView:self.wordmark];
+    [wordmarkRotationAnimation addKeyframeForTime:1 rotation:0.f];
+    [wordmarkRotationAnimation addKeyframeForTime:2 rotation:360.f];
+    [self.animator addAnimation:wordmarkRotationAnimation];
+    
+    // Scale down the wordmark by 75% between pages 1 and 2
+    IFTTTScaleAnimation *wordmarkScaleAnimation = [IFTTTScaleAnimation animationWithView:self.wordmark];
+    [wordmarkScaleAnimation addKeyframeForTime:1 scale:1.f];
+    [wordmarkScaleAnimation addKeyframeForTime:2 scale:0.75f];
+    [self.animator addAnimation:wordmarkScaleAnimation];
+}
+
+- (void)configureLabelAnimations
+{
+    // lay out labels' vertical positions
+    [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.firstLabel
+                                                                 attribute:NSLayoutAttributeCenterY
+                                                                 relatedBy:NSLayoutRelationEqual
+                                                                    toItem:self.contentView
+                                                                 attribute:NSLayoutAttributeCenterY
+                                                                multiplier:1.f constant:0.f]];
+    [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.secondLabel
+                                                                 attribute:NSLayoutAttributeCenterY
+                                                                 relatedBy:NSLayoutRelationEqual
+                                                                    toItem:self.contentView
+                                                                 attribute:NSLayoutAttributeCenterY
+                                                                multiplier:1.5f constant:0.f]];
+    [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.thirdLabel
+                                                                 attribute:NSLayoutAttributeCenterY
+                                                                 relatedBy:NSLayoutRelationEqual
+                                                                    toItem:self.contentView
+                                                                 attribute:NSLayoutAttributeCenterY
+                                                                multiplier:0.5f constant:0.f]];
+    [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.fourthLabel
+                                                                 attribute:NSLayoutAttributeCenterY
+                                                                 relatedBy:NSLayoutRelationEqual
+                                                                    toItem:self.contentView
+                                                                 attribute:NSLayoutAttributeCenterY
+                                                                multiplier:1.f constant:0.f]];
+    
+    // lay out the labels' horizontal positions (centered on each page)
+    [self keepView:self.firstLabel onPage:0];
+    [self keepView:self.secondLabel onPage:1];
+    [self keepView:self.thirdLabel onPage:2];
+    [self keepView:self.fourthLabel onPage:3];
     
     // apply a 3D zoom animation to the first label
     IFTTTTransform3DAnimation * labelTransform = [IFTTTTransform3DAnimation animationWithView:self.firstLabel];
@@ -114,75 +219,32 @@
     tt2.rotate = (IFTTTTransform3DRotate){ -(CGFloat)(M_PI), 1, 0, 0 };
     tt2.translate = (IFTTTTransform3DTranslate){ 0, 0, 50 };
     tt2.scale = (IFTTTTransform3DScale){ 1.f, 2.f, 1.f };
-    [labelTransform addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(0)
-                                                                andAlpha:1.0f]];
-    [labelTransform addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(1)
-                                                          andTransform3D:tt1]];
-    [labelTransform addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(1.5)
-                                                          andTransform3D:tt2]];
-    [labelTransform addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(1.5) + 1
-                                                                andAlpha:0.0f]];
+    [labelTransform addKeyframeForTime:0 transform:tt1];
+    [labelTransform addKeyframeForTime:0.5f transform:tt2];
     [self.animator addAnimation:labelTransform];
-
-    // let's animate the wordmark
-    IFTTTFrameAnimation *wordmarkFrameAnimation = [IFTTTFrameAnimation animationWithView:self.wordmark];
-    [self.animator addAnimation:wordmarkFrameAnimation];
-
-    [wordmarkFrameAnimation addKeyFrames:@[
-        ({
-            IFTTTAnimationKeyFrame *keyFrame = [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(1) andFrame:CGRectOffset(self.wordmark.frame, 200, 0)];
-            keyFrame.easingFunction = IFTTTEasingFunctionEaseInQuart;
-            keyFrame;
-        }),
-        [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(2) andFrame:self.wordmark.frame],
-        [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(3) andFrame:CGRectOffset(self.wordmark.frame, self.view.frame.size.width, dy)],
-        [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(4) andFrame:CGRectOffset(self.wordmark.frame, 0, dy)],
-    ]];
-
-    // Rotate a full circle from page 2 to 3
-    IFTTTAngleAnimation *wordmarkRotationAnimation = [IFTTTAngleAnimation animationWithView:self.wordmark];
-    [self.animator addAnimation:wordmarkRotationAnimation];
-    [wordmarkRotationAnimation addKeyFrames:@[
-        [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(2) andAngle:0.0f],
-        [IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(3) andAngle:(CGFloat)(2 * M_PI)],
-    ]];
     
-    // now, we animate the unicorn
-    IFTTTFrameAnimation *unicornFrameAnimation = [IFTTTFrameAnimation animationWithView:self.unicorn];
-    [self.animator addAnimation:unicornFrameAnimation];
+    // fade out the first label
+    IFTTTAlphaAnimation *firstLabelAlphaAnimation = [IFTTTAlphaAnimation animationWithView:self.firstLabel];
+    [firstLabelAlphaAnimation addKeyframeForTime:0 alpha:1.f];
+    [firstLabelAlphaAnimation addKeyframeForTime:0.35f alpha:0.f];
+    [self.animator addAnimation:firstLabelAlphaAnimation];
     
-    CGFloat ds = 50;
-
-    // move down and to the right, and shrink between pages 2 and 3
-    [unicornFrameAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(2) andFrame:self.unicorn.frame]];
-    [unicornFrameAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(3)
-                                                                           andFrame:CGRectOffset(CGRectInset(self.unicorn.frame, ds, ds), timeForPage(2), dy)]];
-    // fade the unicorn in on page 2 and out on page 4
-    IFTTTAlphaAnimation *unicornAlphaAnimation = [IFTTTAlphaAnimation animationWithView:self.unicorn];
-    [self.animator addAnimation:unicornAlphaAnimation];
+    // custom animate the third label
+    MyCustomAnimation *thirdLabelAnimation = [MyCustomAnimation animationWithView:self.thirdLabel];
+    [thirdLabelAnimation addKeyframeForTime:1.5f shadowOpacity:0.f];
+    [thirdLabelAnimation addKeyframeForTime:2 shadowOpacity:1.f];
+    [thirdLabelAnimation addKeyframeForTime:2.5f shadowOpacity:0.f];
+    [self.animator addAnimation:thirdLabelAnimation];
     
-    [unicornAlphaAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(1) andAlpha:0.0f]];
-    [unicornAlphaAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(2) andAlpha:1.0f]];
-    [unicornAlphaAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(3) andAlpha:1.0f]];
-    [unicornAlphaAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(4) andAlpha:0.0f]];
+    self.thirdLabel.layer.shadowColor = [UIColor darkGrayColor].CGColor;
+    self.thirdLabel.layer.shadowRadius = 1.f;
+    self.thirdLabel.layer.shadowOffset = CGSizeMake(1.f, 1.f);
     
-    // Fade out the label by dragging on the last page
-    IFTTTAlphaAnimation *labelAlphaAnimation = [IFTTTAlphaAnimation animationWithView:self.lastLabel];
-    [labelAlphaAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(4) andAlpha:1.0f]];
-    [labelAlphaAnimation addKeyFrame:[IFTTTAnimationKeyFrame keyFrameWithTime:timeForPage(4.35f) andAlpha:0.0f]];
-    [self.animator addAnimation:labelAlphaAnimation];
-}
-
-#pragma mark - IFTTTAnimatedScrollViewControllerDelegate
-
-- (void)animatedScrollViewControllerDidScrollToEnd:(IFTTTAnimatedScrollViewController *)animatedScrollViewController
-{
-    NSLog(@"Scrolled to end of scrollview!");
-}
-
-- (void)animatedScrollViewControllerDidEndDraggingAtEnd:(IFTTTAnimatedScrollViewController *)animatedScrollViewController
-{
-    NSLog(@"Ended dragging at end of scrollview!");
+    // Fade out the last label by dragging on the last page
+    IFTTTAlphaAnimation *lastLabelAlphaAnimation = [IFTTTAlphaAnimation animationWithView:self.fourthLabel];
+    [lastLabelAlphaAnimation addKeyframeForTime:3 alpha:1.f];
+    [lastLabelAlphaAnimation addKeyframeForTime:3.35f alpha:0.f];
+    [self.animator addAnimation:lastLabelAlphaAnimation];
 }
 
 @end

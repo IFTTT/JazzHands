@@ -6,29 +6,33 @@
 //  Copyright (c) 2013 IFTTT Inc. All rights reserved.
 //
 
-#import "IFTTTJazzHands.h"
+#import "IFTTTAlphaAnimation.h"
 
 @implementation IFTTTAlphaAnimation
 
-- (void)animate:(NSInteger)time
+- (void)addKeyframeForTime:(CGFloat)time alpha:(CGFloat)alpha
 {
-    if (self.keyFrames.count <= 1) return;
-    
-    IFTTTAnimationFrame *animationFrame = [self animationFrameForTime:time];
-    self.view.alpha = animationFrame.alpha;
+    if (![self validAlpha:alpha]) return;
+    [self addKeyframeForTime:time value:@(alpha)];
 }
 
-- (IFTTTAnimationFrame *)frameForTime:(NSInteger)time
-                        startKeyFrame:(IFTTTAnimationKeyFrame *)startKeyFrame
-                          endKeyFrame:(IFTTTAnimationKeyFrame *)endKeyFrame
+- (void)addKeyframeForTime:(CGFloat)time alpha:(CGFloat)alpha withEasingFunction:(IFTTTEasingFunction)easingFunction
 {
-    IFTTTAnimationFrame *animationFrame = [IFTTTAnimationFrame new];
-    animationFrame.alpha = [self tweenValueForStartTime:startKeyFrame.time
-                                                endTime:endKeyFrame.time
-                                             startValue:startKeyFrame.alpha
-                                               endValue:endKeyFrame.alpha atTime:time];
-    
-    return animationFrame;
+    if (![self validAlpha:alpha]) return;
+    [self addKeyframeForTime:time value:@(alpha) withEasingFunction:easingFunction];
+}
+
+- (BOOL)validAlpha:(CGFloat)alpha
+{
+    NSAssert((alpha >= 0.f) && (alpha <= 1.f), @"Alpha values must be between zero and one.");
+    if ((alpha < 0.f) || (alpha > 1.f)) return NO;
+    return YES;
+}
+
+- (void)animate:(CGFloat)time
+{
+    if (!self.hasKeyframes) return;
+    self.view.alpha = (CGFloat)[(NSNumber *)[self valueAtTime:time] floatValue];
 }
 
 @end

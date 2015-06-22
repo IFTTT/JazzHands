@@ -6,36 +6,33 @@
 //  Copyright (c) 2015 IFTTT Inc. All rights reserved.
 //
 
-#import "IFTTTJazzHands.h"
+#import "IFTTTStrokeStartAnimation.h"
 
 @implementation IFTTTStrokeStartAnimation
 
-- (id)initWithLayer:(CALayer *)layer {
-    NSCParameterAssert([layer isKindOfClass:CAShapeLayer.class]);
-    return [super initWithLayer:layer];
-}
-
-- (void)animate:(NSInteger)time
+- (void)addKeyframeForTime:(CGFloat)time strokeStart:(CGFloat)strokeStart
 {
-    if (self.keyFrames.count <= 1) return;
-    
-    IFTTTAnimationFrame *animationFrame = [self animationFrameForTime:time];
-    ((CAShapeLayer *)self.layer).strokeStart = animationFrame.strokeStart;
+    if (![self isValidStrokeStart:strokeStart]) return;
+    [self addKeyframeForTime:time value:@(strokeStart)];
 }
 
-- (IFTTTAnimationFrame *)frameForTime:(NSInteger)time
-                        startKeyFrame:(IFTTTAnimationKeyFrame *)startKeyFrame
-                          endKeyFrame:(IFTTTAnimationKeyFrame *)endKeyFrame
+- (void)addKeyframeForTime:(CGFloat)time strokeStart:(CGFloat)strokeStart withEasingFunction:(IFTTTEasingFunction)easingFunction
 {
-    IFTTTAnimationFrame *animationFrame = [IFTTTAnimationFrame new];
-    animationFrame.strokeStart = [self tweenValueForStartTime:startKeyFrame.time
-                                                      endTime:endKeyFrame.time
-                                                   startValue:startKeyFrame.strokeStart
-                                                     endValue:endKeyFrame.strokeStart
-                                                       atTime:time];
-    
-    return animationFrame;
+    if (![self isValidStrokeStart:strokeStart]) return;
+    [self addKeyframeForTime:time value:@(strokeStart) withEasingFunction:easingFunction];
 }
 
+- (BOOL)isValidStrokeStart:(CGFloat)strokeStart
+{
+    NSAssert((strokeStart >= 0.f) && (strokeStart <= 1.f), @"Stroke Start values must be between zero and one.");
+    if ((strokeStart < 0.f) || (strokeStart > 1.f)) return NO;
+    return YES;
+}
+
+- (void)animate:(CGFloat)time
+{
+    if (!self.hasKeyframes) return;
+    self.layer.strokeStart = (CGFloat)[(NSNumber *)[self valueAtTime:time] floatValue];
+}
 
 @end

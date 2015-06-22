@@ -6,8 +6,11 @@
 //  Copyright (c) 2015 IFTTT Inc. All rights reserved.
 //
 
-#import "IFTTTAnimation.h"
+#import "IFTTTShapeLayerAnimation.h"
 
-@interface IFTTTStrokeStartAnimation : IFTTTAnimation
+@interface IFTTTStrokeStartAnimation : IFTTTShapeLayerAnimation <IFTTTAnimatable>
+
+- (void)addKeyframeForTime:(CGFloat)time strokeStart:(CGFloat)strokeStart;
+- (void)addKeyframeForTime:(CGFloat)time strokeStart:(CGFloat)strokeStart withEasingFunction:(IFTTTEasingFunction)easingFunction;
 
 @end

@@ -30,9 +30,5 @@ UIKIT_EXTERN IFTTTEasingFunction const IFTTTEasingFunctionEaseInCubic;
 UIKIT_EXTERN IFTTTEasingFunction const IFTTTEasingFunctionEaseOutCubic;
 UIKIT_EXTERN IFTTTEasingFunction const IFTTTEasingFunctionEaseInOutCubic;
 
-UIKIT_EXTERN IFTTTEasingFunction const IFTTTEasingFunctionEaseInQuart;
-UIKIT_EXTERN IFTTTEasingFunction const IFTTTEasingFunctionEaseOutQuart;
-UIKIT_EXTERN IFTTTEasingFunction const IFTTTEasingFunctionEaseInOutQuart;
-
 UIKIT_EXTERN IFTTTEasingFunction const IFTTTEasingFunctionEaseInBounce;
 UIKIT_EXTERN IFTTTEasingFunction const IFTTTEasingFunctionEaseOutBounce;
