@@ -1,6 +1,6 @@
 PODS:
   - Expecta (1.0.0)
-  - JazzHands (2.0.0)
+  - JazzHands (2.0.1)
   - Specta (1.0.2)
 
 DEPENDENCIES:
@@ -14,7 +14,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Expecta: 32604574add2c46a36f8d2f716b6c5736eb75024
-  JazzHands: 00002e9b1284e7fc1ac6555012e81b8942477242
+  JazzHands: 100607fd6de21a830a2028122615098cda3407c3
   Specta: 9cec98310dca411f7c7ffd6943552b501622abfe
 
 COCOAPODS: 0.37.2

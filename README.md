@@ -97,6 +97,13 @@ Jazz Hands supports several types of animations:
 + **IFTTTScrollViewPageConstraintAnimation** animates an `AutoLayout` constraint constant to place a view on a scroll view page _(to position views on a scrollView using AutoLayout)_
 + **IFTTTFrameAnimation** animates the `frame` property _(moves and sizes views. Not compatible with AutoLayout)_.
 
+### CAAnimation
+New! JazzHands is now compatible with CABasicAnimation, CAKeyframeAnimation, and more!
+
++ **IFTTTViewBasicAnimation** animates a view whose layer has `CABasicAnimation`s applied.
++ **IFTTTLayerBasicAnimation** animates a `CAShapeLayer` that has `CABasicAnimation`s applied.
++ **IFTTTCAMediaTimingAnimation** animates anything that conforms to the `CAMediaTiming` protocol by animating its `timeOffset` to the given `animationProgress`. _(advanced)_.
+
 ##More Examples
 
 ### Easy Paging Scrollview Layouts in an AutoLayout World

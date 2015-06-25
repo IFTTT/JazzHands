@@ -38,3 +38,6 @@
 #import "IFTTTConstraintConstantAnimation.h"
 #import "IFTTTScrollViewPageConstraintAnimation.h"
 #import "IFTTTConstraintMultiplierAnimation.h"
+#import "IFTTTCAMediaTimingAnimation.h"
+#import "IFTTTLayerBasicAnimation.h"
+#import "IFTTTViewBasicAnimation.h"
