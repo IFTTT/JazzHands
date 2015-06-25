@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) UIImageView *wordmark;
 @property (nonatomic, strong) UIImageView *unicorn;
+@property (nonatomic, strong) UIImageView *heart;
 @property (nonatomic, strong) UILabel *firstLabel;
 @property (nonatomic, strong) UILabel *secondLabel;
 @property (nonatomic, strong) UILabel *thirdLabel;
@@ -69,6 +70,9 @@
     self.wordmark = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"IFTTT"]];
     [self.contentView addSubview:self.wordmark];
     
+    self.heart = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Heart"]];
+    [self.contentView addSubview:self.heart];
+    
     self.firstLabel = [UILabel new];
     self.firstLabel.text = @"Introducing Jazz Hands";
     [self.firstLabel sizeToFit];
@@ -95,6 +99,7 @@
     [self configureScrollViewAnimations];
     [self configureUnicornAnimations];
     [self configureWordmarkAnimations];
+    [self configureHeartAnimations];
     [self configureLabelAnimations];
     [self animateCurrentFrame];
 }
@@ -176,6 +181,50 @@
     [wordmarkScaleAnimation addKeyframeForTime:1 scale:1.f];
     [wordmarkScaleAnimation addKeyframeForTime:2 scale:0.75f];
     [self.animator addAnimation:wordmarkScaleAnimation];
+}
+
+- (void)configureHeartAnimations
+{
+    // let's animate the heart
+    // keep the heart on page 3
+    [self keepView:self.heart onPage:3];
+    
+    // keep the heart vertically centered around the fourth label
+    [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.heart
+                                                                 attribute:NSLayoutAttributeCenterY
+                                                                 relatedBy:NSLayoutRelationEqual
+                                                                    toItem:self.fourthLabel
+                                                                 attribute:NSLayoutAttributeCenterY
+                                                                multiplier:1.f constant:0.f]];
+    [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.heart
+                                                                 attribute:NSLayoutAttributeWidth
+                                                                 relatedBy:NSLayoutRelationEqual
+                                                                    toItem:nil
+                                                                 attribute:0
+                                                                multiplier:1.f constant:80.f]];
+    [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.heart
+                                                                 attribute:NSLayoutAttributeHeight
+                                                                 relatedBy:NSLayoutRelationEqual
+                                                                    toItem:nil
+                                                                 attribute:0
+                                                                multiplier:1.f constant:80.f]];
+    
+    // orbit the heart in a circle around the label using a CAKeyframeAnimation
+    CGRect boundingRect = CGRectMake(-80, -80, 160, 160);
+    CAKeyframeAnimation *orbit = [CAKeyframeAnimation animation];
+    orbit.keyPath = @"position";
+    orbit.path = CFAutorelease(CGPathCreateWithEllipseInRect(boundingRect, NULL));
+    orbit.duration = 1;
+    orbit.additive = YES;
+    orbit.repeatCount = HUGE_VALF;
+    orbit.calculationMode = kCAAnimationPaced;
+    orbit.rotationMode = kCAAnimationRotateAuto;
+    [self.heart.layer addAnimation:orbit forKey:@"orbit"];
+    
+    IFTTTViewBasicAnimation *heartOrbitAnimation = [IFTTTViewBasicAnimation animationWithView:self.heart];
+    [heartOrbitAnimation addKeyframeForTime:2 animationProgress:0];
+    [heartOrbitAnimation addKeyframeForTime:3 animationProgress:0.75f];
+    [self.animator addAnimation:heartOrbitAnimation];
 }
 
 - (void)configureLabelAnimations
