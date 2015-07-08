@@ -17,17 +17,11 @@
 @property (nonatomic, strong) id<IFTTTInterpolatable> value;
 @property (nonatomic, copy) IFTTTEasingFunction easingFunction;
 
-- (instancetype)initWithTime:(CGFloat)time value:(id)value;
 - (instancetype)initWithTime:(CGFloat)time value:(id)value easingFunction:(IFTTTEasingFunction)easingFunction;
 
 @end
 
 @implementation IFTTTKeyframe
-
-- (instancetype)initWithTime:(CGFloat)time value:(id)value
-{
-    return [self initWithTime:time value:value easingFunction:IFTTTEasingFunctionLinear];
-}
 
 - (instancetype)initWithTime:(CGFloat)time value:(id)value easingFunction:(IFTTTEasingFunction)easingFunction
 {
@@ -66,15 +60,15 @@
 
 - (void)setValue:(id<IFTTTInterpolatable>)value atTime:(CGFloat)time
 {
-    NSUInteger indexAfter = [self indexOfKeyframeAfterTime:time];
-    IFTTTKeyframe *newKeyframe = [[IFTTTKeyframe alloc] initWithTime:time value:value];
-    [self.keyframes insertObject:newKeyframe atIndex:indexAfter];
+    [self setValue:value atTime:time withEasingFunction:IFTTTEasingFunctionLinear];
 }
 
 - (void)setValue:(id<IFTTTInterpolatable>)value atTime:(CGFloat)time withEasingFunction:(IFTTTEasingFunction)easingFunction
 {
-    NSUInteger indexAfter = [self indexOfKeyframeAfterTime:time];
+    NSAssert([self canInterpolateNewValue:value], @"New value must have the same interpolatable type as existing keyframe values.");
+    
     IFTTTKeyframe *newKeyframe = [[IFTTTKeyframe alloc] initWithTime:time value:value easingFunction:easingFunction];
+    NSUInteger indexAfter = [self indexOfKeyframeAfterTime:time];
     [self.keyframes insertObject:newKeyframe atIndex:indexAfter];
 }
 
@@ -89,14 +83,7 @@
         IFTTTKeyframe *keyframeBefore = (IFTTTKeyframe *)self.keyframes[indexAfter - 1];
         IFTTTKeyframe *keyframeAfter = (IFTTTKeyframe *)self.keyframes[indexAfter];
         CGFloat progress = [self progressFromTime:keyframeBefore.time toTime:keyframeAfter.time atTime:time withEasingFunction:keyframeBefore.easingFunction];
-        if ([keyframeBefore.value respondsToSelector:@selector(interpolateTo:withProgress:)]
-            && ([keyframeAfter.value isKindOfClass:[keyframeBefore.value class]]
-                || ([keyframeBefore.value isKindOfClass:[UIColor class]]
-                    && [keyframeAfter.value isKindOfClass:[UIColor class]]))) {
-            value = [keyframeBefore.value interpolateTo:keyframeAfter.value withProgress:progress];
-        } else {
-            value = keyframeBefore.value;
-        }
+        value = [keyframeBefore.value interpolateTo:keyframeAfter.value withProgress:progress];
     } else {
         value = ((IFTTTKeyframe *)self.keyframes.lastObject).value;
     }
@@ -120,6 +107,20 @@
     if (duration == 0.f) return 0.f;
     CGFloat timeElapsed = atTime - fromTime;
     return easingFunction(timeElapsed / duration);
+}
+
+- (BOOL)canInterpolateNewValue:(id)newValue
+{
+    if (self.keyframes.count == 0) {
+        return YES;
+    }
+    
+    IFTTTKeyframe *existingKeyframe = (IFTTTKeyframe *)self.keyframes.firstObject;
+    
+    return ([newValue respondsToSelector:@selector(interpolateTo:withProgress:)]
+            && ([newValue isKindOfClass:[existingKeyframe.value class]]
+                || ([existingKeyframe.value isKindOfClass:[UIColor class]]
+                    && [newValue isKindOfClass:[UIColor class]])));
 }
 
 @end
