@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'JazzHands'
-  s.version      = '2.0.0'
+  s.version      = '2.0.1'
   s.summary      = 'Simple keyframe animations for scrolling intros.'
   s.homepage     = 'https://github.com/IFTTT/JazzHands'
   s.author       = { 
