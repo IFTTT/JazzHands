@@ -90,7 +90,9 @@
         IFTTTKeyframe *keyframeAfter = (IFTTTKeyframe *)self.keyframes[indexAfter];
         CGFloat progress = [self progressFromTime:keyframeBefore.time toTime:keyframeAfter.time atTime:time withEasingFunction:keyframeBefore.easingFunction];
         if ([keyframeBefore.value respondsToSelector:@selector(interpolateTo:withProgress:)]
-            && [keyframeAfter.value isKindOfClass:[keyframeBefore.value class]]) {
+            && ([keyframeAfter.value isKindOfClass:[keyframeBefore.value class]]
+                || ([keyframeBefore.value isKindOfClass:[UIColor class]]
+                    && [keyframeAfter.value isKindOfClass:[UIColor class]]))) {
             value = [keyframeBefore.value interpolateTo:keyframeAfter.value withProgress:progress];
         } else {
             value = keyframeBefore.value;

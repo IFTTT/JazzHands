@@ -49,6 +49,24 @@ describe(@"IFTTTFilmstrip", ^{
         expect([filmstrip valueAtTime:5.f]).to.equal([UIColor blueColor]);
     });
     
+    it(@"should interpolate between grayscale and rgb colors", ^{
+        [filmstrip setValue:[UIColor blackColor] atTime:4.f];
+        [filmstrip setValue:[UIColor blueColor] atTime:5.f];
+        
+        UIColor *blackishBlue = [[UIColor blackColor] interpolateTo:[UIColor blueColor] withProgress:0.5f];
+        CGFloat redA, greenA, blueA, alphaA;
+        [blackishBlue getRed:&redA green:&greenA blue:&blueA alpha:&alphaA];
+        
+        UIColor *bluishBlack = (UIColor *)[filmstrip valueAtTime:4.5f];
+        CGFloat redB, greenB, blueB, alphaB;
+        [bluishBlack getRed:&redB green:&greenB blue:&blueB alpha:&alphaB];
+        
+        expect(redA).to.beCloseTo(redB);
+        expect(greenA).to.beCloseTo(greenB);
+        expect(blueA).to.beCloseTo(blueB);
+        expect(alphaA).to.beCloseTo(alphaB);
+    });
+    
     it(@"should interpolate between numbers", ^{
         [filmstrip setValue:@(2) atTime:4.f];
         [filmstrip setValue:@(4) atTime:6.f];
