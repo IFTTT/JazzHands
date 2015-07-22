@@ -1,7 +1,0 @@
-#include "Pods-JazzHandsTests-Specta.xcconfig"
-FRAMEWORK_SEARCH_PATHS = ${PODS_JAZZHANDSTESTS_SPECTA_FRAMEWORK_SEARCH_PATHS}
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/Specta" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Expecta" "${PODS_ROOT}/Headers/Public/JazzHands" "${PODS_ROOT}/Headers/Public/Specta"
-OTHER_LDFLAGS = ${PODS_JAZZHANDSTESTS_SPECTA_OTHER_LDFLAGS} -ObjC
-PODS_ROOT = ${SRCROOT}
-SKIP_INSTALL = YES

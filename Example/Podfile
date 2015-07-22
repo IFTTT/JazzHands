@@ -6,6 +6,7 @@ xcodeproj 'JazzHandsDemo'
 
 def install_pods
     pod 'JazzHands', :path => '../JazzHands.podspec'
+    pod 'Masonry'
 end
 
 target :JazzHandsDemo do

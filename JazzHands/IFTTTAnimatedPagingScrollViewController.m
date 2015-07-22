@@ -48,7 +48,11 @@
     _animator = [IFTTTAnimator new];
     _scrollView = [UIScrollView new];
     _contentView = [UIView new];
-    _numberOfPages = 2;
+}
+
+- (NSUInteger)numberOfPages
+{
+    return 2;
 }
 
 - (void)viewDidLoad
@@ -92,6 +96,8 @@
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
 {
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    
     CGFloat newPageWidth = size.width;
     
     for (IFTTTScrollViewPageConstraintAnimation *animation in self.scrollViewPageConstraintAnimations) {
@@ -165,22 +171,22 @@
     return currentOffset;
 }
 
-- (CGFloat)centerXMultiplierForPage:(CGFloat)page
-{
-    return (1.f + (2.f * page)) / ((CGFloat)self.numberOfPages);
-}
-
 #pragma mark - Keep View On Page Animations
 
 - (void)keepView:(UIView *)view onPage:(CGFloat)page
 {
+    [self keepView:view onPage:page withAttribute:IFTTTHorizontalPositionAttributeCenterX];
+}
+
+- (void)keepView:(UIView *)view onPage:(CGFloat)page withAttribute:(IFTTTHorizontalPositionAttribute)attribute
+{
     view.translatesAutoresizingMaskIntoConstraints = NO;
     [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:view
-                                                                 attribute:NSLayoutAttributeCenterX
+                                                                 attribute:[self layoutAttributeFromPositionAttribute:attribute]
                                                                  relatedBy:NSLayoutRelationEqual
                                                                     toItem:self.contentView
                                                                  attribute:NSLayoutAttributeCenterX
-                                                                multiplier:[self centerXMultiplierForPage:page]
+                                                                multiplier:[self multiplierForPage:page withAttribute:attribute]
                                                                   constant:0.f]];
 }
 
@@ -191,22 +197,33 @@
 
 - (void)keepView:(UIView *)view onPages:(NSArray *)pages atTimes:(NSArray *)times
 {
+    [self keepView:view onPages:pages atTimes:times withAttribute:IFTTTHorizontalPositionAttributeCenterX];
+}
+
+- (void)keepView:(UIView *)view onPages:(NSArray *)pages withAttribute:(IFTTTHorizontalPositionAttribute)attribute
+{
+    [self keepView:view onPages:pages atTimes:pages withAttribute:attribute];
+}
+
+- (void)keepView:(UIView *)view onPages:(NSArray *)pages atTimes:(NSArray *)times withAttribute:(IFTTTHorizontalPositionAttribute)attribute
+{
     NSAssert((pages.count == times.count), @"Make sure you set a time for each position.");
     
     view.translatesAutoresizingMaskIntoConstraints = NO;
-        
+    
     NSLayoutConstraint *xPositionConstraint = [NSLayoutConstraint constraintWithItem:view
-                                                                           attribute:NSLayoutAttributeCenterX
+                                                                           attribute:[self layoutAttributeFromPositionAttribute:attribute]
                                                                            relatedBy:NSLayoutRelationEqual
                                                                               toItem:self.contentView
                                                                            attribute:NSLayoutAttributeLeft
                                                                           multiplier:1.f
                                                                             constant:0.f];
     [self.contentView addConstraint:xPositionConstraint];
-    
+    // TODO: set constraint type for animation initializer
     IFTTTScrollViewPageConstraintAnimation *xPositionAnimation = [IFTTTScrollViewPageConstraintAnimation animationWithSuperview:self.contentView
                                                                                                                      constraint:xPositionConstraint
-                                                                                                                      pageWidth:self.pageWidth];
+                                                                                                                      pageWidth:self.pageWidth
+                                                                                                                      attribute:attribute];
     
     for (NSUInteger i = 0; i < pages.count; i++) {
         [xPositionAnimation addKeyframeForTime:(CGFloat)[(NSNumber *)times[i] floatValue]
@@ -215,6 +232,57 @@
     
     [self.animator addAnimation:xPositionAnimation];
     [self.scrollViewPageConstraintAnimations addObject:xPositionAnimation];
+}
+
+- (CGFloat)centerXMultiplierForPage:(CGFloat)page
+{
+    return [self multiplierForPage:page withAttribute:IFTTTHorizontalPositionAttributeCenterX];
+}
+
+- (CGFloat)leftMultiplierForPage:(CGFloat)page
+{
+    return [self multiplierForPage:page withAttribute:IFTTTHorizontalPositionAttributeLeft];
+}
+
+- (CGFloat)rightMultiplierForPage:(CGFloat)page
+{
+    return [self multiplierForPage:page withAttribute:IFTTTHorizontalPositionAttributeRight];
+}
+
+- (CGFloat)multiplierForPage:(CGFloat)page withAttribute:(IFTTTHorizontalPositionAttribute)attribute
+{
+    CGFloat offset;
+    
+    switch (attribute) {
+        case IFTTTHorizontalPositionAttributeCenterX:
+            offset = 0.5;
+            break;
+        case IFTTTHorizontalPositionAttributeLeft:
+            offset = 0;
+            break;
+        case IFTTTHorizontalPositionAttributeRight:
+            offset = 1;
+            break;
+    }
+    
+    return 2.f * (offset + page) / self.numberOfPages;
+}
+
+- (NSLayoutAttribute)layoutAttributeFromPositionAttribute:(IFTTTHorizontalPositionAttribute)attribute
+{
+    NSLayoutAttribute layoutAttribute;
+    switch (attribute) {
+        case IFTTTHorizontalPositionAttributeCenterX:
+            layoutAttribute = NSLayoutAttributeCenterX;
+            break;
+        case IFTTTHorizontalPositionAttributeLeft:
+            layoutAttribute = NSLayoutAttributeLeft;
+            break;
+        case IFTTTHorizontalPositionAttributeRight:
+            layoutAttribute = NSLayoutAttributeRight;
+            break;
+    }
+    return layoutAttribute;
 }
 
 @end

@@ -20,7 +20,7 @@ typedef NS_ENUM(NSUInteger, IFTTTLayoutAttribute) {
 @interface IFTTTConstraintMultiplierAnimation : IFTTTAnimation <IFTTTAnimatable>
 
 - (instancetype)initWithSuperview:(UIView *)superview constraint:(NSLayoutConstraint *)constraint attribute:(IFTTTLayoutAttribute)attribute referenceView:(UIView *)referenceView;
-- (instancetype)initWithSuperview:(UIView *)superview constraint:(NSLayoutConstraint *)constraint attribute:(IFTTTLayoutAttribute)attribute referenceView:(UIView *)referenceView constant:(CGFloat)constant NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithSuperview:(UIView *)superview constraint:(NSLayoutConstraint *)constraint attribute:(IFTTTLayoutAttribute)attribute referenceView:(UIView *)referenceView constant:(CGFloat)constant;
 + (instancetype)animationWithSuperview:(UIView *)superview constraint:(NSLayoutConstraint *)constraint attribute:(IFTTTLayoutAttribute)attribute referenceView:(UIView *)referenceView;
 + (instancetype)animationWithSuperview:(UIView *)superview constraint:(NSLayoutConstraint *)constraint attribute:(IFTTTLayoutAttribute)attribute referenceView:(UIView *)referenceView constant:(CGFloat)constant;
 - (void)addKeyframeForTime:(CGFloat)time multiplier:(CGFloat)multiplier;
