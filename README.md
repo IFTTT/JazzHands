@@ -1,12 +1,12 @@
-# Jazz Hands
+![Jazz Hands](./Example/Docs/jazzhands_banner.jpg)
 
 [![Build Status](https://travis-ci.org/IFTTT/JazzHands.svg?branch=master)](https://travis-ci.org/IFTTT/JazzHands) [![Coverage Status](https://coveralls.io/repos/IFTTT/JazzHands/badge.svg)](https://coveralls.io/r/IFTTT/JazzHands)
 
 Jazz Hands is a simple keyframe-based animation framework for UIKit. Animations can be controlled via gestures, scroll views, KVO, or ReactiveCocoa.
 
-Jazz Hands is used extensively in [IF and DO by IFTTT for iPhone and iPad](https://ifttt.com/products), most famously in the app intro:
+![Jazz Hands](./Example/Docs/jazzhands-demo.gif)
 
-![Jazz Hands](./Example/Docs/if-intro.gif)
+Jazz Hands is used extensively in [IF and DO by IFTTT for iPhone and iPad](https://ifttt.com/products), most famously in the app intro.
 
 ##Demo App
 
@@ -90,8 +90,9 @@ Jazz Hands supports several types of animations:
 + **IFTTTTransform3DAnimation** animates the `layer.transform` property _(for 3D transforms)_.
 + **IFTTTTextColorAnimation** animates the `textColor` property of a `UILabel`.
 + **IFTTTFillColorAnimation** animates the `fillColor` property of a `CAShapeLayer`.
-+ **IFTTTStrokeStartAnimation** animates the `strokeStart` property of a `CAShapeLayer`.
-+ **IFTTTStrokeEndAnimation** animates the `strokeEnd` property of a `CAShapeLayer`.
++ **IFTTTStrokeStartAnimation** animates the `strokeStart` property of a `CAShapeLayer` _(does not work with IFTTTStrokeEndAnimation)_.
++ **IFTTTStrokeEndAnimation** animates the `strokeEnd` property of a `CAShapeLayer` _(does not work with IFTTTStrokeStartAnimation)_.
++ **IFTTTPathPositionAnimation** animates the `layer.position` property of a `UIView`.
 + **IFTTTConstraintConstantAnimation** animates an `AutoLayout` constraint constant.
 + **IFTTTConstraintMultiplierAnimation** animates an `AutoLayout` constraint constant as a multiple of an attribute of another view _(to offset or resize views based on another view's size)_
 + **IFTTTScrollViewPageConstraintAnimation** animates an `AutoLayout` constraint constant to place a view on a scroll view page _(to position views on a scrollView using AutoLayout)_

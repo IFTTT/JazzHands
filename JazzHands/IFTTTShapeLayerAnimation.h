@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong, readonly) CAShapeLayer *layer;
 
-- (instancetype)initWithLayer:(CAShapeLayer *)layer NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithLayer:(CAShapeLayer *)layer;
 + (instancetype)animationWithLayer:(CAShapeLayer *)layer;
 
 @end

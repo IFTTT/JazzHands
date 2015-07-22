@@ -6,10 +6,12 @@
 //  Copyright (c) 2015 IFTTT Inc. All rights reserved.
 //
 
-#import "IFTTTLabelAnimation.h"
+#import "IFTTTAnimation.h"
 
-@interface IFTTTTextColorAnimation : IFTTTLabelAnimation <IFTTTAnimatable>
+@interface IFTTTTextColorAnimation : IFTTTAnimation <IFTTTAnimatable>
 
+- (instancetype)initWithLabel:(UILabel *)label;
++ (instancetype)animationWithLabel:(UILabel *)label;
 - (void)addKeyframeForTime:(CGFloat)time color:(UIColor *)color;
 - (void)addKeyframeForTime:(CGFloat)time color:(UIColor *)color withEasingFunction:(IFTTTEasingFunction)easingFunction;
 

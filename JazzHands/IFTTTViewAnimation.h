@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong, readonly) UIView *view;
 
-- (instancetype)initWithView:(UIView *)view NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithView:(UIView *)view;
 + (instancetype)animationWithView:(UIView *)view;
 
 @end

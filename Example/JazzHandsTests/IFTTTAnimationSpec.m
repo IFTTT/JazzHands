@@ -29,14 +29,14 @@ describe(@"IFTTTAnimation", ^{
             IFTTTAnimator *animator = [IFTTTAnimator new];
             
             IFTTTAlphaAnimation *alphaAnimation = [IFTTTAlphaAnimation animationWithView:label];
-            IFTTTColorAnimation *colorAnimation = [IFTTTColorAnimation animationWithView:label];
+            IFTTTBackgroundColorAnimation *colorAnimation = [IFTTTBackgroundColorAnimation animationWithView:label];
             IFTTTCornerRadiusAnimation *cornerRadiusAnimation = [IFTTTCornerRadiusAnimation animationWithView:label];
-            IFTTTFillColorAnimation *fillColorAnimation = [IFTTTFillColorAnimation animationWithLayer:layer];
+            IFTTTLayerFillColorAnimation *fillColorAnimation = [IFTTTLayerFillColorAnimation animationWithLayer:layer];
             IFTTTHideAnimation *hideAnimation = [IFTTTHideAnimation animationWithView:label hideAt:2];
             IFTTTRotationAnimation *rotationAnimation = [IFTTTRotationAnimation animationWithView:label];
             IFTTTScaleAnimation *scaleAnimation = [IFTTTScaleAnimation animationWithView:label];
-            IFTTTStrokeEndAnimation *strokeEndAnimation = [IFTTTStrokeEndAnimation animationWithLayer:layer];
-            IFTTTStrokeStartAnimation *strokeStartAnimation = [IFTTTStrokeStartAnimation animationWithLayer:layer];
+            IFTTTLayerStrokeEndAnimation *strokeEndAnimation = [IFTTTLayerStrokeEndAnimation animationWithLayer:layer];
+            IFTTTLayerStrokeStartAnimation *strokeStartAnimation = [IFTTTLayerStrokeStartAnimation animationWithLayer:layer];
             IFTTTTextColorAnimation *textColorAnimation = [IFTTTTextColorAnimation animationWithLabel:label];
             IFTTTTransform3DAnimation *transformAnimation = [IFTTTTransform3DAnimation animationWithView:label];
             IFTTTTranslationAnimation *translationAnimation = [IFTTTTranslationAnimation animationWithView:label];

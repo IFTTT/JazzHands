@@ -8,7 +8,26 @@
 
 #import "IFTTTTextColorAnimation.h"
 
+@interface IFTTTTextColorAnimation ()
+
+@property (nonatomic, strong) UILabel *label;
+
+@end
+
 @implementation IFTTTTextColorAnimation
+
+- (instancetype)initWithLabel:(UILabel *)label
+{
+    if ((self = [super init])) {
+        _label = label;
+    }
+    return self;
+}
+
++ (instancetype)animationWithLabel:(UILabel *)label
+{
+    return [[self alloc] initWithLabel:label];
+}
 
 - (void)addKeyframeForTime:(CGFloat)time color:(UIColor *)color
 {

@@ -7,244 +7,522 @@
 //
 
 #import "IFTTTJazzHandsViewController.h"
-#import "MyCustomAnimation.h"
+#import <Masonry/Masonry.h>
+#import "IFTTTCircleView.h"
 
 @interface IFTTTJazzHandsViewController ()
 
-@property (nonatomic, strong) UIImageView *wordmark;
-@property (nonatomic, strong) UIImageView *unicorn;
-@property (nonatomic, strong) UILabel *firstLabel;
-@property (nonatomic, strong) UILabel *secondLabel;
-@property (nonatomic, strong) UILabel *thirdLabel;
-@property (nonatomic, strong) UILabel *fourthLabel;
+@property (nonatomic, strong) IFTTTCircleView *circle;
+@property (nonatomic, strong) UIImageView *iftttPresents;
+@property (nonatomic, strong) UIImageView *jazz;
+@property (nonatomic, strong) UIImageView *hands;
+@property (nonatomic, strong) UIImageView *blueStick;
+@property (nonatomic, strong) UIImageView *orangeStick;
+
+@property (nonatomic, strong) UIImageView *musicStand;
+@property (nonatomic, strong) UIImageView *musicNotes;
+@property (nonatomic, strong) UIImageView *plane;
+@property (nonatomic, strong) CAShapeLayer *planePathLayer;
+@property (nonatomic, strong) UIView *planePathView;
+
+@property (nonatomic, strong) UIImageView *bigCloud;
+@property (nonatomic, strong) UIImageView *littleCloud;
+@property (nonatomic, strong) UIImageView *sun;
+@property (nonatomic, strong) UIImageView *iftttCloud;
+
+@property (nonatomic, strong) UIImageView *page2Text;
+@property (nonatomic, strong) UIImageView *page3Text;
+
+@property (nonatomic, strong) IFTTTPathPositionAnimation *airplaneFlyingAnimation;
 
 @end
 
 @implementation IFTTTJazzHandsViewController
 
-- (instancetype)init
+- (NSUInteger)numberOfPages
 {
-    if ((self = [super init])) {
-        self.numberOfPages = 4;
-    }
-    
-    return self;
-}
-
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
-{
-    if ((self = [super initWithCoder:aDecoder])) {
-        self.numberOfPages = 4;
-    }
-    
-    return self;
-}
-
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-        self.numberOfPages = 4;
-    }
-    
-    return self;
+    // Tell the scroll view how many pages it should have
+    return 4;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.scrollView.accessibilityLabel = @"JazzHands";
-    self.scrollView.accessibilityIdentifier = @"JazzHands";
-    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self configureViews];
     [self configureAnimations];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self scaleAirplanePathToSize:self.scrollView.frame.size];
+}
+
+#pragma mark - iOS8+ Resizing
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+        [self scaleAirplanePathToSize:size];
+    } completion:nil];
+}
+
+#pragma mark - iOS7 Orientation Change Resizing
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    CGSize newPageSize;
+    
+    if ((UIInterfaceOrientationIsLandscape(self.interfaceOrientation)
+         && UIInterfaceOrientationIsPortrait(toInterfaceOrientation))
+        || (UIInterfaceOrientationIsPortrait(self.interfaceOrientation)
+            && UIInterfaceOrientationIsLandscape(toInterfaceOrientation))) {
+            
+            newPageSize = CGSizeMake(CGRectGetHeight(self.scrollView.frame), CGRectGetWidth(self.scrollView.frame));
+        } else {
+            newPageSize = CGSizeMake(CGRectGetWidth(self.scrollView.frame), CGRectGetHeight(self.scrollView.frame));
+        }
+
+    [UIView animateWithDuration:duration animations:^{
+        [self scaleAirplanePathToSize:newPageSize];
+    } completion:nil];
+}
+
+#pragma mark - Configure Views and Animations
+
 - (void)configureViews
 {
-    self.unicorn = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Unicorn"]];
-    [self.contentView addSubview:self.unicorn];
+    self.circle = [IFTTTCircleView new];
+    [self.contentView addSubview:self.circle];
+    
+    self.iftttPresents = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"IFTTTPresents"]];
+    [self.contentView addSubview:self.iftttPresents];
+    
+    self.blueStick = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BlueStick"]];
+    [self.contentView addSubview:self.blueStick];
+    
+    self.orangeStick = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"OrangeStick"]];
+    [self.contentView addSubview:self.orangeStick];
+    
+    self.jazz = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Jazz"]];
+    [self.contentView addSubview:self.jazz];
+    
+    self.hands = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Hands"]];
+    [self.contentView addSubview:self.hands];
+    
+    self.planePathView = [UIView new];
+    [self.contentView addSubview:self.planePathView];
+    
+    self.plane = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Plane"]];
+    
+    self.musicStand = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MusicStand"]];
+    [self.contentView addSubview:self.musicStand];
+    
+    self.musicNotes = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MusicNotes"]];
+    [self.contentView addSubview:self.musicNotes];
+    
+    self.sun = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Sun"]];
+    [self.contentView addSubview:self.sun];
 
-    self.wordmark = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"IFTTT"]];
-    [self.contentView addSubview:self.wordmark];
+    self.bigCloud = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BigCloud"]];
+    [self.contentView addSubview:self.bigCloud];
     
-    self.firstLabel = [UILabel new];
-    self.firstLabel.text = @"Introducing Jazz Hands";
-    [self.firstLabel sizeToFit];
-    [self.contentView addSubview:self.firstLabel];
+    self.littleCloud = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LittleCloud"]];
+    [self.contentView addSubview:self.littleCloud];
     
-    self.secondLabel = [UILabel new];
-    self.secondLabel.text = @"Brought to you by IFTTT";
-    [self.secondLabel sizeToFit];
-    [self.contentView addSubview:self.secondLabel];
-    
-    self.thirdLabel = [UILabel new];
-    self.thirdLabel.text = @"Simple keyframe animations";
-    [self.thirdLabel sizeToFit];
-    [self.contentView addSubview:self.thirdLabel];
-    
-    self.fourthLabel = [UILabel new];
-    self.fourthLabel.text = @"Optimized for scrolling intros";
-    [self.fourthLabel sizeToFit];
-    [self.contentView addSubview:self.fourthLabel];
+    self.iftttCloud = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"IFTTTCloud"]];
+    [self.contentView addSubview:self.iftttCloud];
+
+    self.page2Text = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Page2Text"]];
+    [self.contentView addSubview:self.page2Text];
+
+    self.page3Text = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Page3Text"]];
+    [self.contentView addSubview:self.page3Text];
 }
 
 - (void)configureAnimations
 {
     [self configureScrollViewAnimations];
-    [self configureUnicornAnimations];
-    [self configureWordmarkAnimations];
-    [self configureLabelAnimations];
+    [self configureIFTTTPresentsAnimations];
+    [self configureCircleAnimations];
+    [self configureJazzHandsLabelAnimations];
+    [self configureStickAnimations];
+    [self configureMusicStandAnimations];
+    [self configureAirplaneAnimations];
+    [self configureCloudAnimations];
+    [self configureSunAnimations];
+    [self configurePageTextAnimations];
     [self animateCurrentFrame];
 }
 
 - (void)configureScrollViewAnimations
 {
-    // change the scrollView's background color for each page
-    IFTTTColorAnimation *backgroundColorAnimation = [IFTTTColorAnimation animationWithView:self.scrollView];
-    [backgroundColorAnimation addKeyframeForTime:0 color:[[UIColor blueColor] colorWithAlphaComponent:0.4f]];
-    [backgroundColorAnimation addKeyframeForTime:1 color:[[UIColor cyanColor] colorWithAlphaComponent:0.4f]];
-    [backgroundColorAnimation addKeyframeForTime:2 color:[[UIColor greenColor] colorWithAlphaComponent:0.4f]];
-    [backgroundColorAnimation addKeyframeForTime:3 color:[[UIColor yellowColor] colorWithAlphaComponent:0.4f]];
+    // change the scrollView's background color from dark gray to blue just after page 1
+    IFTTTBackgroundColorAnimation *backgroundColorAnimation = [IFTTTBackgroundColorAnimation animationWithView:self.scrollView];
+    [backgroundColorAnimation addKeyframeForTime:1 color:[UIColor colorWithRed:0.2f green:0.2f blue:0.2f alpha:1.f]];
+    [backgroundColorAnimation addKeyframeForTime:1.1 color:[UIColor colorWithRed:0.14f green:0.8f blue:1.f alpha:1.f]];
     [self.animator addAnimation:backgroundColorAnimation];
 }
 
-- (void)configureUnicornAnimations
+- (void)configureIFTTTPresentsAnimations
 {
-    // now, we animate the unicorn
-    // keep the unicorn centered when we're on pages 1 and 2.
-    // It will slide from the right between pages 0 and 1, and slide out to the left between pages 2 and 3.
-    [self keepView:self.unicorn onPages:@[ @(1), @(2) ]];
-    
-    NSLayoutConstraint *unicornCenterYConstraint = [NSLayoutConstraint constraintWithItem:self.unicorn
-                                                                                attribute:NSLayoutAttributeCenterY
-                                                                                relatedBy:NSLayoutRelationEqual
-                                                                                   toItem:self.contentView
-                                                                                attribute:NSLayoutAttributeCenterY
-                                                                               multiplier:1.f constant:0.f];
-    [self.contentView addConstraint:unicornCenterYConstraint];
-    
-    // Move the unicorn from a bit higher than center on page 1 to a bit lower on page 2, by an amount relative to the height of the view.
-    IFTTTConstraintMultiplierAnimation *unicornCenterYAnimation = [IFTTTConstraintMultiplierAnimation animationWithSuperview:self.contentView
-                                                                                                                  constraint:unicornCenterYConstraint
-                                                                                                                   attribute:IFTTTLayoutAttributeHeight
-                                                                                                               referenceView:self.contentView];
-    [unicornCenterYAnimation addKeyframeForTime:1 multiplier:-0.1f withEasingFunction:IFTTTEasingFunctionEaseOutQuad];
-    [unicornCenterYAnimation addKeyframeForTime:2 multiplier:0.2f];
-    [self.animator addAnimation:unicornCenterYAnimation];
-    
-    // Scale down the unicorn by 75% between pages 1 and 2
-    IFTTTScaleAnimation *unicornScaleAnimation = [IFTTTScaleAnimation animationWithView:self.unicorn];
-    [unicornScaleAnimation addKeyframeForTime:1 scale:1.f];
-    [unicornScaleAnimation addKeyframeForTime:2 scale:0.75f];
-    [self.animator addAnimation:unicornScaleAnimation];
-    
-    // fade the unicorn in on page 1 and out on page 3
-    IFTTTAlphaAnimation *unicornAlphaAnimation = [IFTTTAlphaAnimation animationWithView:self.unicorn];
-    [unicornAlphaAnimation addKeyframeForTime:0 alpha:0.f];
-    [unicornAlphaAnimation addKeyframeForTime:1 alpha:1.f];
-    [unicornAlphaAnimation addKeyframeForTime:2 alpha:1.f];
-    [unicornAlphaAnimation addKeyframeForTime:3 alpha:0.f];
-    [self.animator addAnimation:unicornAlphaAnimation];
+    // Keep IFTTTPresents centered at the top of pages 0 and 1
+    [self keepView:self.iftttPresents onPages:@[@(0), @(-1)] atTimes:@[@(0), @(1)]];
+    [self.iftttPresents mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.contentView).offset(20);
+    }];
 }
 
-- (void)configureWordmarkAnimations
+- (void)configureCircleAnimations
 {
-    // let's animate the wordmark
-    // keep the wordmark centered on pages 1 and 2, slide it in fast from the right between page 0 and 1, and slide it out fast to the left between pages 2 and 3.
-    [self keepView:self.wordmark
-           onPages:@[ @(2), @(1), @(2), @(1) ]
-           atTimes:@[ @(0), @(1), @(2), @(3) ]];
+    // lay out the circle with autolayout (no x-position constraint since we are using the keepView:onPage: method)
+    [self.circle mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.lessThanOrEqualTo(self.scrollView);
+        make.width.equalTo(self.scrollView).multipliedBy(0.9).with.priorityHigh();
+        make.top.greaterThanOrEqualTo(self.scrollView).offset(60);
+        make.height.equalTo(self.circle.mas_width);
+        make.centerY.equalTo(self.contentView).multipliedBy(0.8);
+    }];
     
-    // keep the wordmark vertically centered on top of the unicorn
-    [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.wordmark
-                                                                 attribute:NSLayoutAttributeCenterY
-                                                                 relatedBy:NSLayoutRelationEqual
-                                                                    toItem:self.unicorn
-                                                                 attribute:NSLayoutAttributeCenterY
-                                                                multiplier:1.f constant:0.f]];
+    // keep the circle centered on pages 0 and 1
+    [self keepView:self.circle onPages:@[@(0), @(1)]];
     
-    // Rotate the wordmark a full circle from page 1 to 2
-    IFTTTRotationAnimation *wordmarkRotationAnimation = [IFTTTRotationAnimation animationWithView:self.wordmark];
-    [wordmarkRotationAnimation addKeyframeForTime:1 rotation:0.f];
-    [wordmarkRotationAnimation addKeyframeForTime:2 rotation:360.f];
-    [self.animator addAnimation:wordmarkRotationAnimation];
+    // change the circle's color from gray to blue between pages 0 and 1
+    IFTTTBackgroundColorAnimation *circleColorAnimation = [IFTTTBackgroundColorAnimation animationWithView:self.circle];
+    [circleColorAnimation addKeyframeForTime:0 color:[UIColor colorWithRed:0.4f green:0.4f blue:0.4f alpha:1.f]];
+    [circleColorAnimation addKeyframeForTime:1 color:[UIColor colorWithRed:0.14f green:0.8f blue:1.f alpha:1.f]];
+    [self.animator addAnimation:circleColorAnimation];
     
-    // Scale down the wordmark by 75% between pages 1 and 2
-    IFTTTScaleAnimation *wordmarkScaleAnimation = [IFTTTScaleAnimation animationWithView:self.wordmark];
-    [wordmarkScaleAnimation addKeyframeForTime:1 scale:1.f];
-    [wordmarkScaleAnimation addKeyframeForTime:2 scale:0.75f];
-    [self.animator addAnimation:wordmarkScaleAnimation];
+    // grow the circle into the background between pages 0 and 1
+    IFTTTScaleAnimation *circleScaleAnimation = [IFTTTScaleAnimation animationWithView:self.circle];
+    [circleScaleAnimation addKeyframeForTime:0 scale:1 withEasingFunction:IFTTTEasingFunctionEaseInQuad];
+    [circleScaleAnimation addKeyframeForTime:1 scale:6];
+    [self.animator addAnimation:circleScaleAnimation];
+    
+    // hide the circle after page 1 (instead the background color will show)
+    IFTTTHideAnimation *circleHideAnimation = [IFTTTHideAnimation animationWithView:self.circle hideAt:1.15];
+    [self.animator addAnimation:circleHideAnimation];
 }
 
-- (void)configureLabelAnimations
+- (void)configureJazzHandsLabelAnimations
 {
-    // lay out labels' vertical positions
-    [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.firstLabel
-                                                                 attribute:NSLayoutAttributeCenterY
-                                                                 relatedBy:NSLayoutRelationEqual
-                                                                    toItem:self.contentView
-                                                                 attribute:NSLayoutAttributeCenterY
-                                                                multiplier:1.f constant:0.f]];
-    [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.secondLabel
-                                                                 attribute:NSLayoutAttributeCenterY
-                                                                 relatedBy:NSLayoutRelationEqual
-                                                                    toItem:self.contentView
-                                                                 attribute:NSLayoutAttributeCenterY
-                                                                multiplier:1.5f constant:0.f]];
-    [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.thirdLabel
-                                                                 attribute:NSLayoutAttributeCenterY
-                                                                 relatedBy:NSLayoutRelationEqual
-                                                                    toItem:self.contentView
-                                                                 attribute:NSLayoutAttributeCenterY
-                                                                multiplier:0.5f constant:0.f]];
-    [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.fourthLabel
-                                                                 attribute:NSLayoutAttributeCenterY
-                                                                 relatedBy:NSLayoutRelationEqual
-                                                                    toItem:self.contentView
-                                                                 attribute:NSLayoutAttributeCenterY
-                                                                multiplier:1.f constant:0.f]];
+    // lay out jazz and hands with autolayout (no x-position or y-position constraint since we are animating those separately)
+    [self.jazz mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(self.circle).multipliedBy(0.89);
+        make.height.equalTo(self.jazz.mas_width).multipliedBy(186.f/607.f);
+    }];
     
-    // lay out the labels' horizontal positions (centered on each page)
-    [self keepView:self.firstLabel onPage:0];
-    [self keepView:self.secondLabel onPage:1];
-    [self keepView:self.thirdLabel onPage:2];
-    [self keepView:self.fourthLabel onPage:3];
+    [self.hands mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(self.jazz).multipliedBy(550.f / 607.f);
+        make.height.equalTo(self.hands.mas_width).multipliedBy(244.f/550.f);
+    }];
     
-    // apply a 3D zoom animation to the first label
-    IFTTTTransform3DAnimation * labelTransform = [IFTTTTransform3DAnimation animationWithView:self.firstLabel];
-    IFTTTTransform3D *tt1 = [IFTTTTransform3D transformWithM34:0.03f];
-    IFTTTTransform3D *tt2 = [IFTTTTransform3D transformWithM34:0.3f];
-    tt2.rotate = (IFTTTTransform3DRotate){ -(CGFloat)(M_PI), 1, 0, 0 };
-    tt2.translate = (IFTTTTransform3DTranslate){ 0, 0, 50 };
-    tt2.scale = (IFTTTTransform3DScale){ 1.f, 2.f, 1.f };
-    [labelTransform addKeyframeForTime:0 transform:tt1];
-    [labelTransform addKeyframeForTime:0.5f transform:tt2];
-    [self.animator addAnimation:labelTransform];
+    NSLayoutConstraint *jazzVerticalConstraint = [NSLayoutConstraint constraintWithItem:self.jazz
+                                                                              attribute:NSLayoutAttributeCenterY
+                                                                              relatedBy:NSLayoutRelationEqual
+                                                                                 toItem:self.circle
+                                                                              attribute:NSLayoutAttributeCenterY
+                                                                             multiplier:1.f constant:0.f];
+    NSLayoutConstraint *handsVerticalConstraint = [NSLayoutConstraint constraintWithItem:self.hands
+                                                                               attribute:NSLayoutAttributeCenterY
+                                                                               relatedBy:NSLayoutRelationEqual
+                                                                                  toItem:self.circle
+                                                                               attribute:NSLayoutAttributeCenterY
+                                                                              multiplier:1.f constant:0.f];
     
-    // fade out the first label
-    IFTTTAlphaAnimation *firstLabelAlphaAnimation = [IFTTTAlphaAnimation animationWithView:self.firstLabel];
-    [firstLabelAlphaAnimation addKeyframeForTime:0 alpha:1.f];
-    [firstLabelAlphaAnimation addKeyframeForTime:0.35f alpha:0.f];
-    [self.animator addAnimation:firstLabelAlphaAnimation];
+    [self.contentView addConstraint:jazzVerticalConstraint];
+    [self.contentView addConstraint:handsVerticalConstraint];
     
-    // custom animate the third label
-    MyCustomAnimation *thirdLabelAnimation = [MyCustomAnimation animationWithView:self.thirdLabel];
-    [thirdLabelAnimation addKeyframeForTime:1.5f shadowOpacity:0.f];
-    [thirdLabelAnimation addKeyframeForTime:2 shadowOpacity:1.f];
-    [thirdLabelAnimation addKeyframeForTime:2.5f shadowOpacity:0.f];
-    [self.animator addAnimation:thirdLabelAnimation];
+    // move JAZZ up between pages 0 and 1
+    IFTTTConstraintMultiplierAnimation *jazzVerticalAnimation = [IFTTTConstraintMultiplierAnimation animationWithSuperview:self.contentView
+                                                                                                                constraint:jazzVerticalConstraint
+                                                                                                                 attribute:IFTTTLayoutAttributeHeight
+                                                                                                             referenceView:self.circle];
+    [jazzVerticalAnimation addKeyframeForTime:0 multiplier:-0.14f];
+    [jazzVerticalAnimation addKeyframeForTime:1 multiplier:-0.64f];
+    [self.animator addAnimation:jazzVerticalAnimation];
     
-    self.thirdLabel.layer.shadowColor = [UIColor darkGrayColor].CGColor;
-    self.thirdLabel.layer.shadowRadius = 1.f;
-    self.thirdLabel.layer.shadowOffset = CGSizeMake(1.f, 1.f);
+    // move HANDS down between pages 0 and 1
+    IFTTTConstraintMultiplierAnimation *handsVerticalAnimation = [IFTTTConstraintMultiplierAnimation animationWithSuperview:self.contentView
+                                                                                                                 constraint:handsVerticalConstraint
+                                                                                                                  attribute:IFTTTLayoutAttributeHeight
+                                                                                                              referenceView:self.circle];
+    [handsVerticalAnimation addKeyframeForTime:0 multiplier:0.2f];
+    [handsVerticalAnimation addKeyframeForTime:1 multiplier:0.72f];
+    [self.animator addAnimation:handsVerticalAnimation];
     
-    // Fade out the last label by dragging on the last page
-    IFTTTAlphaAnimation *lastLabelAlphaAnimation = [IFTTTAlphaAnimation animationWithView:self.fourthLabel];
-    [lastLabelAlphaAnimation addKeyframeForTime:3 alpha:1.f];
-    [lastLabelAlphaAnimation addKeyframeForTime:3.35f alpha:0.f];
-    [self.animator addAnimation:lastLabelAlphaAnimation];
+    // keep JAZZ on page 0, a little to the right
+    [self keepView:self.jazz onPages:@[@(0)] atTimes:@[@(0)]];
+    
+    // keep HANDS centered on page 0
+    [self keepView:self.hands onPages:@[@(0)] atTimes:@[@(0)]];
+    
+    // Rotate Jazz 100 degrees counterclockwise between pages 0 and 1
+    IFTTTRotationAnimation *jazzRotationAnimation = [IFTTTRotationAnimation animationWithView:self.jazz];
+    [jazzRotationAnimation addKeyframeForTime:0 rotation:0];
+    [jazzRotationAnimation addKeyframeForTime:1 rotation:100];
+    [self.animator addAnimation:jazzRotationAnimation];
+    
+    // Rotate Hands 100 degrees clockwise between pages 0 and 1
+    IFTTTRotationAnimation *handsRotationAnimation = [IFTTTRotationAnimation animationWithView:self.hands];
+    [handsRotationAnimation addKeyframeForTime:0 rotation:0];
+    [handsRotationAnimation addKeyframeForTime:1 rotation:-100];
+    [self.animator addAnimation:handsRotationAnimation];
+}
+
+- (void)configureStickAnimations
+{
+    // lay out sticks with autolayout (no x-position or y-position constraint since we are animating those separately)
+    [self.blueStick mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.equalTo(self.scrollView).multipliedBy(0.75);
+        make.width.equalTo(self.blueStick.mas_height).multipliedBy(466.f/1002.f);
+    }];
+    
+    [self.orangeStick mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.equalTo(self.scrollView).multipliedBy(0.65);
+        make.width.equalTo(self.orangeStick.mas_height).multipliedBy(234.f/866.f);
+        make.centerY.equalTo(self.contentView).multipliedBy(1.1);
+    }];
+    
+    // Keep the orange stick centered horizontally on page 0
+    [self keepView:self.orangeStick onPage:0];
+    
+    NSLayoutConstraint *blueStickVerticalConstraint = [NSLayoutConstraint constraintWithItem:self.blueStick
+                                                                              attribute:NSLayoutAttributeCenterY
+                                                                              relatedBy:NSLayoutRelationEqual
+                                                                                 toItem:self.contentView
+                                                                              attribute:NSLayoutAttributeTop
+                                                                             multiplier:1.f constant:0.f];
+    
+    [self.contentView addConstraint:blueStickVerticalConstraint];
+    
+    // Keep the blue stick centered horizontally on pages 0 and 1
+    [self keepView:self.blueStick onPages:@[@(0), @(1)]];
+    
+    // Animate the blue stick moving down off the screen between pages 0 and 1
+    IFTTTConstraintMultiplierAnimation *blueStickVerticalAnimation = [IFTTTConstraintMultiplierAnimation animationWithSuperview:self.contentView
+                                                                                                                     constraint:blueStickVerticalConstraint
+                                                                                                                      attribute:IFTTTLayoutAttributeCenterY
+                                                                                                                  referenceView:self.contentView];
+    [blueStickVerticalAnimation addKeyframeForTime:0 multiplier:1.1f];
+    [blueStickVerticalAnimation addKeyframeForTime:1 multiplier:3.1f];
+    [self.animator addAnimation:blueStickVerticalAnimation];
+}
+
+- (void)configureMusicStandAnimations
+{
+    // Keep the music stand aligned with the right edge of pages 1 and 2 (this takes care of the x-position autolayout constraint)
+    [self keepView:self.musicStand onPages:@[@(1), @(2)] withAttribute:IFTTTHorizontalPositionAttributeRight];
+    
+    // Lay out the music stand using Autolayout (no x-position or y-position constraint since we are animating those separately)
+    [self.musicStand mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.lessThanOrEqualTo(self.scrollView);
+        make.height.equalTo(self.musicStand.mas_width).multipliedBy(1184.f/750.f);
+        make.height.lessThanOrEqualTo(self.scrollView).offset(-40);
+    }];
+    
+    // Animate the music stand moving down off the screen between pages 1 and 2
+    NSLayoutConstraint *musicStandVerticalConstraint = [NSLayoutConstraint constraintWithItem:self.musicStand
+                                                                                    attribute:NSLayoutAttributeBottom
+                                                                                    relatedBy:NSLayoutRelationEqual
+                                                                                       toItem:self.contentView
+                                                                                    attribute:NSLayoutAttributeBottom
+                                                                                   multiplier:1.f constant:0.f];
+    
+    [self.contentView addConstraint:musicStandVerticalConstraint];
+    
+    IFTTTConstraintMultiplierAnimation *musicStandVerticalAnimation = [IFTTTConstraintMultiplierAnimation animationWithSuperview:self.contentView
+                                                                                                                      constraint:musicStandVerticalConstraint
+                                                                                                                       attribute:IFTTTLayoutAttributeHeight
+                                                                                                                   referenceView:self.contentView];
+    [musicStandVerticalAnimation addKeyframeForTime:1 multiplier:0.f withEasingFunction:IFTTTEasingFunctionEaseOutCubic];
+    [musicStandVerticalAnimation addKeyframeForTime:2 multiplier:1.f];
+    [self.animator addAnimation:musicStandVerticalAnimation];
+    
+    // Layout the music notes using Autolayout (no x-position constraint since we are using keepView:onPages: to set the horizontal position)
+    [self.musicNotes mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.and.height.and.width.equalTo(self.musicStand);
+    }];
+    
+    // zoom the music notes over from the right between pages 0 and 1, then keep the music notes image aligned with the right edge of pages 1 and 2
+    [self keepView:self.musicNotes onPages:@[@(2), @(1), @(2)] atTimes:@[@(0.5), @(1), @(2)] withAttribute:IFTTTHorizontalPositionAttributeRight];
+}
+
+- (void)configurePageTextAnimations
+{
+    // Use Autolayout to set the vertical position of the text (it has an inherent size)
+    [self.page2Text mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.contentView).multipliedBy(0.95);
+    }];
+    
+    // Set the horizontal position to keep the text centered on page 2
+    [self keepView:self.page2Text onPage:2];
+    
+    // Use Autolayout to set the vertical position of the text (it has an inherent size)
+    [self.page3Text mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.contentView);
+    }];
+    
+    // Set the horizontal position to keep the text centered on page 3
+    [self keepView:self.page3Text onPage:3];
+}
+
+- (void)configureCloudAnimations
+{
+    // lay out big cloud with autolayout (no x-position or y-position constraint since we are animating those separately)
+    [self.bigCloud mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.lessThanOrEqualTo(self.scrollView).multipliedBy(0.78);
+        make.height.lessThanOrEqualTo(self.scrollView).multipliedBy(0.2);
+        make.height.equalTo(self.bigCloud.mas_width).multipliedBy(0.45);
+    }];
+    
+    // keep the big cloud a bit to the righthand side of pages 1 and 2, then zoom it off to the left between pages 2 and 3
+    [self keepView:self.bigCloud onPages:@[@(1.35), @(2.35), @(1.8)] atTimes:@[@(1), @(2), @(3)]];
+    
+    // Move the big cloud down from above the screen on page 1 to near the top of the screen on page 2
+    NSLayoutConstraint *bigCloudVerticalConstraint = [NSLayoutConstraint constraintWithItem:self.bigCloud
+                                                                                  attribute:NSLayoutAttributeCenterY
+                                                                                  relatedBy:NSLayoutRelationEqual
+                                                                                     toItem:self.contentView
+                                                                                  attribute:NSLayoutAttributeTop
+                                                                                 multiplier:1.f constant:0.f];
+    
+    [self.contentView addConstraint:bigCloudVerticalConstraint];
+    
+    IFTTTConstraintMultiplierAnimation *bigCloudVerticalAnimation = [IFTTTConstraintMultiplierAnimation animationWithSuperview:self.contentView
+                                                                                                                    constraint:bigCloudVerticalConstraint
+                                                                                                                     attribute:IFTTTLayoutAttributeHeight
+                                                                                                                 referenceView:self.contentView];
+    [bigCloudVerticalAnimation addKeyframeForTime:1 multiplier:-0.2f];
+    [bigCloudVerticalAnimation addKeyframeForTime:2 multiplier:0.2f];
+    [self.animator addAnimation:bigCloudVerticalAnimation];
+    
+    // Layout the little cloud using Autolayout (the x-position is set by keepView:onPages:atTimes:)
+    [self.littleCloud mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.bigCloud.mas_top).offset(20);
+        make.width.equalTo(self.bigCloud.mas_height);
+        make.height.equalTo(self.littleCloud.mas_width).multipliedBy(0.5);
+    }];
+    
+    // Keep the little cloud a bit to the left of pages 1 and 2
+    [self keepView:self.littleCloud onPages:@[@(0.75), @(1.75)] atTimes:@[@(1), @(2)]];
+    
+    // Layout the vertical position of the IFTTT cloud using Autolayout (it has an inherent size)
+    [self.iftttCloud mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.contentView).multipliedBy(1.5);
+    }];
+    
+    // Zoom in the IFTTT cloud from the right between pages 2 and 3
+    [self keepView:self.iftttCloud onPages:@[@(3.5), @(3)] atTimes:@[@(2), @(3)]];
+}
+
+- (void)configureSunAnimations
+{
+    // Move the sun from the right side of page 2.5 to the left side of page 3
+    [self keepView:self.sun onPages:@[@(2.8), @(2.6)] atTimes:@[@(2.5), @(3)]];
+    
+    // Animate the sun moving down from above the screen to near the top of the screen bewteen pages 2.5 and 3
+    NSLayoutConstraint *sunVerticalConstraint = [NSLayoutConstraint constraintWithItem:self.sun
+                                                                             attribute:NSLayoutAttributeCenterY
+                                                                             relatedBy:NSLayoutRelationEqual
+                                                                                toItem:self.contentView
+                                                                             attribute:NSLayoutAttributeTop
+                                                                            multiplier:1.f constant:0.f];
+    
+    [self.contentView addConstraint:sunVerticalConstraint];
+    
+    IFTTTConstraintConstantAnimation *sunVerticalAnimation = [IFTTTConstraintConstantAnimation animationWithSuperview:self.contentView
+                                                                                                           constraint:sunVerticalConstraint];
+    [sunVerticalAnimation addKeyframeForTime:2 constant:-200.f];
+    [sunVerticalAnimation addKeyframeForTime:3 constant:20.f];
+    [self.animator addAnimation:sunVerticalAnimation];
+}
+
+- (void)configureAirplaneAnimations
+{
+    // Set up the view that contains the airplane view and its dashed line path view
+    self.planePathLayer = [self airplanePathLayer];
+    [self.planePathView.layer addSublayer:self.planePathLayer];
+    
+    [self.planePathView addSubview:self.plane];
+    [self.plane mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.planePathView.mas_centerY);
+        make.right.equalTo(self.planePathView.mas_centerX);
+    }];
+    
+    [self.planePathView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.scrollView).offset(55);
+        make.width.and.height.equalTo(self.plane);
+    }];
+    
+    // Keep the left edge of the planePathView at the center of pages 1 and 2
+    [self keepView:self.planePathView onPages:@[@(1.5), @(2.5)] atTimes:@[@(1), @(2)] withAttribute:IFTTTHorizontalPositionAttributeLeft];
+    
+    // Fly the plane along the path
+    self.airplaneFlyingAnimation = [IFTTTPathPositionAnimation animationWithView:self.plane path:self.planePathLayer.path];
+    [self.airplaneFlyingAnimation addKeyframeForTime:1 animationProgress:0];
+    [self.airplaneFlyingAnimation addKeyframeForTime:2 animationProgress:1];
+    [self.animator addAnimation:self.airplaneFlyingAnimation];
+    
+    // Change the stroke end of the dashed line airplane path to match the plane's current position
+    IFTTTLayerStrokeEndAnimation *planePathAnimation = [IFTTTLayerStrokeEndAnimation animationWithLayer:self.planePathLayer];
+    [planePathAnimation addKeyframeForTime:1 strokeEnd:0];
+    [planePathAnimation addKeyframeForTime:2 strokeEnd:1];
+    [self.animator addAnimation:planePathAnimation];
+    
+    // Fade the plane path view in after page 1 and fade it out again after page 2.5
+    IFTTTAlphaAnimation *planeAlphaAnimation = [IFTTTAlphaAnimation animationWithView:self.planePathView];
+    [planeAlphaAnimation addKeyframeForTime:1.06f alpha:0];
+    [planeAlphaAnimation addKeyframeForTime:1.08f alpha:1];
+    [planeAlphaAnimation addKeyframeForTime:2.5f alpha:1];
+    [planeAlphaAnimation addKeyframeForTime:3.f alpha:0];
+    [self.animator addAnimation:planeAlphaAnimation];
+}
+
+- (CGPathRef)airplanePath
+{
+    // Create a bezier path for the airplane to fly along
+    UIBezierPath *airplanePath = [UIBezierPath bezierPath];
+    [airplanePath moveToPoint: CGPointMake(120, 20)];
+    [airplanePath addCurveToPoint: CGPointMake(40, -130) controlPoint1: CGPointMake(120, 20) controlPoint2: CGPointMake(140, -50)];
+    [airplanePath addCurveToPoint: CGPointMake(30, -430) controlPoint1: CGPointMake(-60, -210) controlPoint2: CGPointMake(-320, -430)];
+    [airplanePath addCurveToPoint: CGPointMake(-210, -190) controlPoint1: CGPointMake(320, -430) controlPoint2: CGPointMake(130, -190)];
+    
+    return airplanePath.CGPath;
+}
+
+- (CAShapeLayer *)airplanePathLayer
+{
+    // Create a shape layer to draw the airplane's path
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.path = [self airplanePath];
+    shapeLayer.fillColor = nil;
+    shapeLayer.strokeColor = [UIColor whiteColor].CGColor;
+    shapeLayer.lineDashPattern = @[@(20), @(20)];
+    shapeLayer.lineWidth = 4;
+    shapeLayer.miterLimit = 4;
+    shapeLayer.fillRule = kCAFillRuleEvenOdd;
+    
+    return shapeLayer;
+}
+
+- (void)scaleAirplanePathToSize:(CGSize)pageSize
+{
+    // Scale the airplane path to the given page size
+    CGSize scaleSize = CGSizeMake(pageSize.width / 375.f, pageSize.height / 667.f);
+    
+    CGAffineTransform scaleTransform = CGAffineTransformMakeScale(scaleSize.width, scaleSize.height);
+    
+    CGPathRef scaledPath = CGPathCreateCopyByTransformingPath(self.airplanePath, &scaleTransform);
+    
+    self.planePathLayer.path = scaledPath;
+    self.airplaneFlyingAnimation.path = scaledPath;
+    CGPathRelease(scaledPath);
 }
 
 @end

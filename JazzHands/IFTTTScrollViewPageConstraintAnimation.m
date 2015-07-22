@@ -12,24 +12,26 @@
 
 @property (nonatomic, strong) UIView *superview;
 @property (nonatomic, strong) NSLayoutConstraint *constraint;
+@property (nonatomic, assign) IFTTTHorizontalPositionAttribute attribute;
 
 @end
 
 @implementation IFTTTScrollViewPageConstraintAnimation
 
-- (instancetype)initWithSuperview:(UIView *)superview constraint:(NSLayoutConstraint *)constraint pageWidth:(CGFloat)pageWidth
+- (instancetype)initWithSuperview:(UIView *)superview constraint:(NSLayoutConstraint *)constraint pageWidth:(CGFloat)pageWidth attribute:(IFTTTHorizontalPositionAttribute)attribute
 {
     if ((self = [super init])) {
         _superview = superview;
         _constraint = constraint;
         _pageWidth = pageWidth;
+        _attribute = attribute;
     }
     return self;
 }
 
-+ (instancetype)animationWithSuperview:(UIView *)superview constraint:(NSLayoutConstraint *)constraint pageWidth:(CGFloat)pageWidth
++ (instancetype)animationWithSuperview:(UIView *)superview constraint:(NSLayoutConstraint *)constraint pageWidth:(CGFloat)pageWidth attribute:(IFTTTHorizontalPositionAttribute)attribute
 {
-    return [[self alloc] initWithSuperview:superview constraint:constraint pageWidth:pageWidth];
+    return [[self alloc] initWithSuperview:superview constraint:constraint pageWidth:pageWidth attribute:attribute];
 }
 
 - (void)addKeyframeForTime:(CGFloat)time page:(CGFloat)page
@@ -46,7 +48,21 @@
 {
     if (!self.hasKeyframes) return;
     CGFloat page = (CGFloat)[(NSNumber *)[self valueAtTime:time] floatValue];
-    self.constraint.constant = (0.5f + page) * self.pageWidth;
+    
+    CGFloat offset;
+    switch (self.attribute) {
+        case IFTTTHorizontalPositionAttributeCenterX:
+            offset = 0.5f;
+            break;
+        case IFTTTHorizontalPositionAttributeLeft:
+            offset = 0.f;
+            break;
+        case IFTTTHorizontalPositionAttributeRight:
+            offset = 1.f;
+            break;
+    }
+    
+    self.constraint.constant = (offset + page) * self.pageWidth;
     [self.superview layoutIfNeeded];
 }
 
