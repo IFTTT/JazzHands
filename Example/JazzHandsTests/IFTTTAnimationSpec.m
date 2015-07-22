@@ -36,13 +36,12 @@ describe(@"IFTTTAnimation", ^{
             IFTTTRotationAnimation *rotationAnimation = [IFTTTRotationAnimation animationWithView:label];
             IFTTTScaleAnimation *scaleAnimation = [IFTTTScaleAnimation animationWithView:label];
             IFTTTLayerStrokeEndAnimation *strokeEndAnimation = [IFTTTLayerStrokeEndAnimation animationWithLayer:layer];
-            IFTTTLayerStrokeStartAnimation *strokeStartAnimation = [IFTTTLayerStrokeStartAnimation animationWithLayer:layer];
             IFTTTTextColorAnimation *textColorAnimation = [IFTTTTextColorAnimation animationWithLabel:label];
             IFTTTTransform3DAnimation *transformAnimation = [IFTTTTransform3DAnimation animationWithView:label];
             IFTTTTranslationAnimation *translationAnimation = [IFTTTTranslationAnimation animationWithView:label];
             
             // Note: None of the three constraint animations can be used with each other or with the frame animation.
-            // They affect the same view properties.
+            // They affect the same view properties. Also, IFTTTStrokeStartAnimation cannot be used with IFTTTStrokeEndAnimation.
             
             [alphaAnimation addKeyframeForTime:2 alpha:0.5f];
             [colorAnimation addKeyframeForTime:2 color:[UIColor redColor]];
@@ -51,7 +50,6 @@ describe(@"IFTTTAnimation", ^{
             [rotationAnimation addKeyframeForTime:2 rotation:45.f];
             [scaleAnimation addKeyframeForTime:2 scale:0.4f];
             [strokeEndAnimation addKeyframeForTime:2 strokeEnd:0.8f];
-            [strokeStartAnimation addKeyframeForTime:2 strokeStart:0.1f];
             [textColorAnimation addKeyframeForTime:2 color:[UIColor greenColor]];
             [translationAnimation addKeyframeForTime:2 translation:CGPointMake(20.f, 30.f)];
             
@@ -69,7 +67,6 @@ describe(@"IFTTTAnimation", ^{
             [animator addAnimation:rotationAnimation];
             [animator addAnimation:scaleAnimation];
             [animator addAnimation:strokeEndAnimation];
-            [animator addAnimation:strokeStartAnimation];
             [animator addAnimation:textColorAnimation];
             [animator addAnimation:translationAnimation];
             [animator addAnimation:transformAnimation];
@@ -95,11 +92,7 @@ describe(@"IFTTTAnimation", ^{
         });
         
         it(@"should have the correct stroke end", ^{
-            expect(layer.strokeEnd).to.beCloseTo(0.8f);
-        });
-        
-        it(@"should have the correct stroke start", ^{
-            expect(layer.strokeStart).to.beCloseTo(0.1f);
+            expect(layer.timeOffset).to.beCloseTo(0.8f);
         });
         
         it(@"should have the correct text color", ^{
