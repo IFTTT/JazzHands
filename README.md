@@ -1,3 +1,5 @@
+![Jazz Hands](./Example/Docs/open-source-ifttt.png) 
+
 ![Jazz Hands](./Example/Docs/jazzhands_banner.jpg)
 
 [![Build Status](https://travis-ci.org/IFTTT/JazzHands.svg?branch=master)](https://travis-ci.org/IFTTT/JazzHands) [![Coverage Status](https://coveralls.io/repos/IFTTT/JazzHands/badge.svg)](https://coveralls.io/r/IFTTT/JazzHands)
@@ -13,6 +15,10 @@ Jazz Hands is used extensively in [IF and DO by IFTTT for iPhone and iPad](https
 Open `JazzHandsDemo.xcworkspace` to see a simple demonstration of moving, scaling, fading, and transforming views in a scrolling app intro.
 
 To run the example project, clone the repo, and run `pod install` from the `Example` directory.
+
+##JazzHands in Swift
+
+Looking to incorporate Jazz Hands into your Swift project? Check out [`RazzleDazzle`](https://github.com/IFTTT/RazzleDazzle), our brand new scrolling keyframe animations library reimagined in Swift.
 
 ##Installation
 
