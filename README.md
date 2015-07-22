@@ -1,4 +1,4 @@
-![Jazz Hands](./Example/Docs/open-source-ifttt.png) 
+[![Jazz Hands](./Example/Docs/open-source-ifttt.png)](http://ifttt.github.io)
 
 ![Jazz Hands](./Example/Docs/jazzhands_banner.jpg)
 
