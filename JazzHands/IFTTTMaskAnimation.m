@@ -11,7 +11,7 @@
 @interface IFTTTMaskAnimation ()
 
 @property (nonatomic, strong) UIView* maskedView;
-@property (nonatomic, assign) IFTTTMaskDirection direction;
+@property (nonatomic, assign) IFTTTMaskSwipeDirection direction;
 
 @end
 
@@ -19,7 +19,7 @@
 
 #pragma mark - Init
 
-- (instancetype)initWithView:(UIView *)view direction:(IFTTTMaskDirection)direction
+- (instancetype)initWithView:(UIView *)view direction:(IFTTTMaskSwipeDirection)direction
 {
     if ((self = [super init])) {
         _maskedView = view;
@@ -28,7 +28,7 @@
     return self;
 }
 
-+ (instancetype)animationWithView:(UIView *)view direction:(IFTTTMaskDirection)direction
++ (instancetype)animationWithView:(UIView *)view direction:(IFTTTMaskSwipeDirection)direction
 {
     return [[self alloc] initWithView:view direction:direction];
 }
@@ -55,23 +55,23 @@
     CGRect maskedRect = self.maskedView.bounds;
     switch (self.direction)
     {
-        case IFTTTMaskUp:
+        case IFTTTMaskSwipeFromTop:
         {
             maskedRect.size.height *= visibilityPercent;
             break;
         }
-        case IFTTTMaskLeft:
+        case IFTTTMaskSwipeFromLeft:
         {
             maskedRect.size.width *= visibilityPercent;
             break;
         }
-        case IFTTTMaskDown:
+        case IFTTTMaskSwipeFromBottom:
         {
             maskedRect.size.height *= visibilityPercent;
             maskedRect.origin.y = CGRectGetMaxY(self.maskedView.bounds) - maskedRect.size.height;
             break;
         }
-        case IFTTTMaskRight:
+        case IFTTTMaskSwipeFromRight:
         {
             maskedRect.size.width *= visibilityPercent;
             maskedRect.origin.x = CGRectGetMaxX(self.maskedView.bounds) - maskedRect.size.width;
