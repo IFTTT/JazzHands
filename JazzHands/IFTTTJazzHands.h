@@ -22,6 +22,7 @@
 #import "IFTTTAnimatedPagingScrollViewController.h"
 
 #import "IFTTTAlphaAnimation.h"
+#import "IFTTTMaskAnimation.h"
 #import "IFTTTCornerRadiusAnimation.h"
 #import "IFTTTFrameAnimation.h"
 #import "IFTTTHideAnimation.h"
