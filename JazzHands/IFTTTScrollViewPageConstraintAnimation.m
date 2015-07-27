@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) UIView *superview;
 @property (nonatomic, strong) NSLayoutConstraint *constraint;
+@property (nonatomic, assign) CGFloat initialConstraintConstant;
 @property (nonatomic, assign) IFTTTHorizontalPositionAttribute attribute;
 
 @end
@@ -23,6 +24,7 @@
     if ((self = [super init])) {
         _superview = superview;
         _constraint = constraint;
+        _initialConstraintConstant = constraint.constant;
         _pageWidth = pageWidth;
         _attribute = attribute;
     }
@@ -62,7 +64,7 @@
             break;
     }
     
-    self.constraint.constant = (offset + page) * self.pageWidth;
+    self.constraint.constant = (offset + page) * self.pageWidth + self.initialConstraintConstant;
     [self.superview layoutIfNeeded];
 }
 
