@@ -14,8 +14,8 @@
 
 - (NSNumber *)interpolateTo:(NSNumber *)toValue withProgress:(CGFloat)progress
 {
-    if (strcmp([self objCType], @encode(BOOL)) == 0) {
-        if (!(strcmp([toValue objCType], @encode(BOOL)) == 0)) return self;
+    if (strcmp([self objCType], @encode(char)) == 0) {
+        if (!(strcmp([toValue objCType], @encode(char)) == 0)) return self;
         return (progress == 0.f ? self : toValue);
     }
     return @([self.class interpolateCGFloatFrom:(CGFloat)[self floatValue] to:(CGFloat)[toValue floatValue] withProgress:progress]);
