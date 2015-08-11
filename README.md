@@ -88,7 +88,7 @@ Jazz Hands supports several types of animations:
 
 + **IFTTTAlphaAnimation** animates the `alpha` property _(creates fade effects)_.
 + **IFTTTRotationAnimation** animates a rotation transform in degrees _(for rotation effects)_.
-+ **IFTTTColorAnimation** animates the `backgroundColor` property.
++ **IFTTTBackgroundColorAnimation** animates the `backgroundColor` property.
 + **IFTTTCornerRadiusAnimation** animates the `layer.cornerRadius` property.
 + **IFTTTHideAnimation** animates the `hidden` property _(hides and shows views)_.
 + **IFTTTScaleAnimation** applies a scaling transform _(to scale view sizes)_.
