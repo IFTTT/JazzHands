@@ -1,9 +1,9 @@
 //
 //  IFTTTMaskAnimation.m
-//  Onborading Experience
+//  JazzHands
 //
 //  Created by Amir Shavit on 7/26/15.
-//  Copyright (c) 2015 Autodesk. All rights reserved.
+//  Copyright (c) 2015 IFTTT Inc. All rights reserved.
 //
 
 #import "IFTTTMaskAnimation.h"
