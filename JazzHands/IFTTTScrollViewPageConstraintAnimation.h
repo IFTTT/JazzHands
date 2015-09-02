@@ -22,5 +22,7 @@ typedef NS_ENUM(NSUInteger, IFTTTHorizontalPositionAttribute) {
 + (instancetype)animationWithSuperview:(UIView *)superview constraint:(NSLayoutConstraint *)constraint pageWidth:(CGFloat)pageWidth attribute:(IFTTTHorizontalPositionAttribute)attribute;
 - (void)addKeyframeForTime:(CGFloat)time page:(CGFloat)page;
 - (void)addKeyframeForTime:(CGFloat)time page:(CGFloat)page withEasingFunction:(IFTTTEasingFunction)easingFunction;
+- (void)addKeyframeForTime:(CGFloat)time page:(CGFloat)page constant:(CGFloat)constant;
+- (void)addKeyframeForTime:(CGFloat)time page:(CGFloat)page constant:(CGFloat)constant withEasingFunction:(IFTTTEasingFunction)easingFunction;
 
 @end
