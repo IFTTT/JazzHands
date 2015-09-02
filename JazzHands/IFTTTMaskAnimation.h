@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, IFTTTMaskSwipeDirection)
 
 @interface IFTTTMaskAnimation : IFTTTAnimation <IFTTTAnimatable>
 
-- (instancetype)initWithView:(UIView *)view direction:(IFTTTMaskSwipeDirection)direction NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithView:(UIView *)view direction:(IFTTTMaskSwipeDirection)direction;
 + (instancetype)animationWithView:(UIView *)view direction:(IFTTTMaskSwipeDirection)direction;
 
 - (void)addKeyframeForTime:(CGFloat)time visibility:(CGFloat)percent;

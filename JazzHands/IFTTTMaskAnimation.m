@@ -10,7 +10,7 @@
 
 @interface IFTTTMaskAnimation ()
 
-@property (nonatomic, strong) UIView* maskedView;
+@property (nonatomic, strong) UIView *maskedView;
 @property (nonatomic, assign) IFTTTMaskSwipeDirection direction;
 
 @end
@@ -82,9 +82,9 @@
             break;
     }
 
-    UIBezierPath* maskPath = [UIBezierPath bezierPathWithRect:maskedRect];
+    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRect:maskedRect];
 
-    CAShapeLayer* maskLayer = [CAShapeLayer new];
+    CAShapeLayer *maskLayer = [CAShapeLayer new];
     maskLayer.path = maskPath.CGPath;
     self.maskedView.layer.mask = maskLayer;
 }
