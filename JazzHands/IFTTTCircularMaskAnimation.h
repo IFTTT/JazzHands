@@ -1,5 +1,5 @@
 //
-//  IFTTTCircularMaskAnimation.m
+//  IFTTTCircularMaskAnimation.h
 //  JazzHands
 //
 //  Created by Jason Millard on 9/7/15.
