@@ -113,7 +113,7 @@
 		86317F9FEF05ABA770E875553728B417 /* NSObject+Expecta.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E9764EBB0093D408DEE8401AC688FE9 /* NSObject+Expecta.h */; };
 		8680E49E2CEF314EA6B42BCBA871A653 /* EXPMatchers+beTruthy.h in Headers */ = {isa = PBXBuildFile; fileRef = 251F10781F66F6DD0DF6CC3A0210F469 /* EXPMatchers+beTruthy.h */; };
 		883F05361B9E2C950074D8A1 /* IFTTTCircularMaskAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 883F05341B9E2C950074D8A1 /* IFTTTCircularMaskAnimation.h */; };
-		883F05371B9E2C950074D8A1 /* IFTTTCircularMaskAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 883F05351B9E2C950074D8A1 /* IFTTTCircularMaskAnimation.m */; };
+		883F05371B9E2C950074D8A1 /* IFTTTCircularMaskAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 883F05351B9E2C950074D8A1 /* IFTTTCircularMaskAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
 		8B69A26C6D86B911EC9F0BC4484243EB /* SPTCallSite.m in Sources */ = {isa = PBXBuildFile; fileRef = E52CEF4DF5073BEBBBCAC6C26F4BFB83 /* SPTCallSite.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		8BB3EB6B58C1A7D96B313614EBD73852 /* IFTTTEasingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8FCC875ACA0CC4ACF8CEB554A2DC77 /* IFTTTEasingFunction.m */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
 		8C0FF02B22527B3FEA33AEFFC1D5F8FF /* IFTTTConstraintMultiplierAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 15157EA68236B4FB04BA555A95A70C12 /* IFTTTConstraintMultiplierAnimation.m */; settings = {COMPILER_FLAGS = "-fmodules"; }; };
