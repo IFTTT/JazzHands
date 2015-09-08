@@ -23,6 +23,7 @@
 
 #import "IFTTTAlphaAnimation.h"
 #import "IFTTTMaskAnimation.h"
+#import "IFTTTCircularMaskAnimation.h"
 #import "IFTTTCornerRadiusAnimation.h"
 #import "IFTTTFrameAnimation.h"
 #import "IFTTTHideAnimation.h"
