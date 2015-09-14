@@ -8,18 +8,19 @@
 
 #import "IFTTTAnimation.h"
 
-typedef NS_ENUM(NSUInteger, IFTTTMaskSwipeDirection)
+typedef NS_ENUM(NSUInteger, IFTTTMaskEffect)
 {
-    IFTTTMaskSwipeFromTop,
-    IFTTTMaskSwipeFromLeft,
-    IFTTTMaskSwipeFromBottom,
-    IFTTTMaskSwipeFromRight
+    IFTTTMaskEffectRevealFromTop,
+    IFTTTMaskEffectRevealFromLeft,
+    IFTTTMaskEffectRevealFromBottom,
+    IFTTTMaskEffectRevealFromRight,
+    IFTTTMaskEffectRevealFromCenter
 };
 
 @interface IFTTTMaskAnimation : IFTTTAnimation <IFTTTAnimatable>
 
-- (instancetype)initWithView:(UIView *)view direction:(IFTTTMaskSwipeDirection)direction;
-+ (instancetype)animationWithView:(UIView *)view direction:(IFTTTMaskSwipeDirection)direction;
+- (instancetype)initWithView:(UIView *)view maskEffect:(IFTTTMaskEffect)maskEffect;
++ (instancetype)animationWithView:(UIView *)view maskEffect:(IFTTTMaskEffect)maskEffect;
 
 - (void)addKeyframeForTime:(CGFloat)time visibility:(CGFloat)percent;
 - (void)addKeyframeForTime:(CGFloat)time visibility:(CGFloat)percent withEasingFunction:(IFTTTEasingFunction)easingFunction;

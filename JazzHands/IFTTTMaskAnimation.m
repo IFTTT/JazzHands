@@ -11,7 +11,7 @@
 @interface IFTTTMaskAnimation ()
 
 @property (nonatomic, strong) UIView *maskedView;
-@property (nonatomic, assign) IFTTTMaskSwipeDirection direction;
+@property (nonatomic, assign) IFTTTMaskEffect maskEffect;
 
 @end
 
@@ -19,18 +19,18 @@
 
 #pragma mark - Init
 
-- (instancetype)initWithView:(UIView *)view direction:(IFTTTMaskSwipeDirection)direction
+- (instancetype)initWithView:(UIView *)view maskEffect:(IFTTTMaskEffect)maskEffect
 {
     if ((self = [super init])) {
         _maskedView = view;
-        _direction = direction;
+        _maskEffect = maskEffect;
     }
     return self;
 }
 
-+ (instancetype)animationWithView:(UIView *)view direction:(IFTTTMaskSwipeDirection)direction
++ (instancetype)animationWithView:(UIView *)view maskEffect:(IFTTTMaskEffect)maskEffect
 {
-    return [[self alloc] initWithView:view direction:direction];
+    return [[self alloc] initWithView:view maskEffect:maskEffect];
 }
 
 #pragma mark - Public Methods
@@ -52,38 +52,52 @@
     if (!self.hasKeyframes) return;
     CGFloat visibilityPercent = ((NSNumber *)[self valueAtTime:time]).floatValue;
     
+    UIBezierPath *maskPath;
     CGRect maskedRect = self.maskedView.bounds;
-    switch (self.direction)
+    switch (self.maskEffect)
     {
-        case IFTTTMaskSwipeFromTop:
+        case IFTTTMaskEffectRevealFromTop:
         {
             maskedRect.size.height *= visibilityPercent;
+            maskPath = [UIBezierPath bezierPathWithRect:maskedRect];
             break;
         }
-        case IFTTTMaskSwipeFromLeft:
+        case IFTTTMaskEffectRevealFromLeft:
         {
             maskedRect.size.width *= visibilityPercent;
+            maskPath = [UIBezierPath bezierPathWithRect:maskedRect];
             break;
         }
-        case IFTTTMaskSwipeFromBottom:
+        case IFTTTMaskEffectRevealFromBottom:
         {
             maskedRect.size.height *= visibilityPercent;
-            maskedRect.origin.y = CGRectGetMaxY(self.maskedView.bounds) - maskedRect.size.height;
+            maskedRect.origin.y = CGRectGetMaxY(self.maskedView.bounds) - CGRectGetHeight(maskedRect);
+            maskPath = [UIBezierPath bezierPathWithRect:maskedRect];
             break;
         }
-        case IFTTTMaskSwipeFromRight:
+        case IFTTTMaskEffectRevealFromRight:
         {
             maskedRect.size.width *= visibilityPercent;
-            maskedRect.origin.x = CGRectGetMaxX(self.maskedView.bounds) - maskedRect.size.width;
+            maskedRect.origin.x = CGRectGetMaxX(self.maskedView.bounds) - CGRectGetWidth(maskedRect);
+            maskPath = [UIBezierPath bezierPathWithRect:maskedRect];
+            break;
+        }
+        case IFTTTMaskEffectRevealFromCenter:
+        {
+            CGPoint center = CGPointMake((CGRectGetWidth(maskedRect) / 2.f), (CGRectGetHeight(maskedRect) / 2.f));
+            CGFloat radius = MAX(center.x, center.y);
+            maskPath = [UIBezierPath bezierPathWithArcCenter:center
+                                                      radius:radius * visibilityPercent
+                                                  startAngle:0.f
+                                                    endAngle:M_PI * 2.f
+                                                   clockwise:YES];
             break;
         }
             
         default:
             break;
     }
-
-    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRect:maskedRect];
-
+    
     CAShapeLayer *maskLayer = [CAShapeLayer new];
     maskLayer.path = maskPath.CGPath;
     self.maskedView.layer.mask = maskLayer;
