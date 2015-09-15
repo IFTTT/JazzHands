@@ -14,7 +14,8 @@ typedef NS_ENUM(NSUInteger, IFTTTMaskEffect)
     IFTTTMaskEffectRevealFromLeft,
     IFTTTMaskEffectRevealFromBottom,
     IFTTTMaskEffectRevealFromRight,
-    IFTTTMaskEffectRevealFromCenter
+    IFTTTMaskEffectRevealFromCenterToCircle,
+    IFTTTMaskEffectRevealFromCenterToBounds
 };
 
 @interface IFTTTMaskAnimation : IFTTTAnimation <IFTTTAnimatable>

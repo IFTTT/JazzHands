@@ -82,10 +82,21 @@
             maskPath = [UIBezierPath bezierPathWithRect:maskedRect];
             break;
         }
-        case IFTTTMaskEffectRevealFromCenter:
+        case IFTTTMaskEffectRevealFromCenterToCircle:
         {
             CGPoint center = CGPointMake((CGRectGetWidth(maskedRect) / 2.f), (CGRectGetHeight(maskedRect) / 2.f));
-            CGFloat radius = MAX(center.x, center.y);
+            CGFloat radius = MIN(center.x, center.y);
+            maskPath = [UIBezierPath bezierPathWithArcCenter:center
+                                                      radius:radius * visibilityPercent
+                                                  startAngle:0.f
+                                                    endAngle:M_PI * 2.f
+                                                   clockwise:YES];
+            break;
+        }
+        case IFTTTMaskEffectRevealFromCenterToBounds:
+        {
+            CGPoint center = CGPointMake((CGRectGetWidth(maskedRect) / 2.f), (CGRectGetHeight(maskedRect) / 2.f));
+            CGFloat radius = sqrt(pow(center.x, 2) + pow(center.y, 2));
             maskPath = [UIBezierPath bezierPathWithArcCenter:center
                                                       radius:radius * visibilityPercent
                                                   startAngle:0.f
