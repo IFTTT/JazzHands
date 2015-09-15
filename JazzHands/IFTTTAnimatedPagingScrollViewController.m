@@ -180,6 +180,11 @@
 
 - (void)keepView:(UIView *)view onPage:(CGFloat)page withAttribute:(IFTTTHorizontalPositionAttribute)attribute
 {
+    [self keepView:view onPage:page withAttribute:attribute offset:0.f];
+}
+
+- (void)keepView:(UIView *)view onPage:(CGFloat)page withAttribute:(IFTTTHorizontalPositionAttribute)attribute offset:(CGFloat)offset
+{
     view.translatesAutoresizingMaskIntoConstraints = NO;
     [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:view
                                                                  attribute:[self layoutAttributeFromPositionAttribute:attribute]
@@ -187,7 +192,7 @@
                                                                     toItem:self.contentView
                                                                  attribute:NSLayoutAttributeCenterX
                                                                 multiplier:[self multiplierForPage:page withAttribute:attribute]
-                                                                  constant:0.f]];
+                                                                  constant:offset]];
 }
 
 - (void)keepView:(UIView *)view onPages:(NSArray *)pages
@@ -244,7 +249,7 @@
     [self.scrollViewPageConstraintAnimations addObject:xPositionAnimation];
 }
 
-- (void)keepView:(UIView *)view onPages:(NSArray *)pages withOffsets:(NSArray *)offsets withAttribute:(IFTTTHorizontalPositionAttribute)attribute
+- (void)keepView:(UIView *)view onPages:(NSArray *)pages withAttribute:(IFTTTHorizontalPositionAttribute)attribute offsets:(NSArray *)offsets
 {
     [self keepView:view onPages:pages atTimes:pages withOffsets:offsets withAttribute:attribute];
 }
