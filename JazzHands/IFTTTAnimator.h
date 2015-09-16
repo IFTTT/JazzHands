@@ -13,6 +13,9 @@
 @interface IFTTTAnimator : NSObject
 
 - (void)addAnimation:(id<IFTTTAnimatable>)animation;
+- (void)removeAnimation:(id<IFTTTAnimatable>)animation;
+- (void)removeAllAnimations;
+
 - (void)animate:(CGFloat)time;
 
 @end

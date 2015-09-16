@@ -37,4 +37,14 @@
     [self.animations addObject:animation];
 }
 
+- (void)removeAnimation:(id<IFTTTAnimatable>)animation
+{
+    [self.animations removeObject:animation];
+}
+
+- (void)removeAllAnimations
+{
+    [self.animations removeAllObjects];
+}
+
 @end
