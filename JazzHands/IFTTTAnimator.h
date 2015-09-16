@@ -12,7 +12,7 @@
 
 - (void)addAnimation:(id<IFTTTAnimatable>)animation;
 - (void)removeAnimation:(id<IFTTTAnimatable>)animation;
-- (void)resetAnimations;
+- (void)removeAllAnimations;
 
 - (void)animate:(CGFloat)time;
 

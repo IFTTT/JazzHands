@@ -42,7 +42,7 @@
     [self.animations removeObject:animation];
 }
 
-- (void)resetAnimations
+- (void)removeAllAnimations
 {
     [self.animations removeAllObjects];
 }
