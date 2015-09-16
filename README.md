@@ -167,6 +167,8 @@ An animator can only handle one animation per type per view. If you want multipl
 
 IFTTTFrameAnimation is not compatible with AutoLayout or any of the constraint animations.
 
+Looking for libraries to build awesome keyframe animations like JazzHands on Android? Check out [`SparkleMotion`](https://github.com/IFTTT/SparkleMotion).
+
 ## Contributors
 
 * [Devin Foley](https://github.com/devinfoley), creator.
