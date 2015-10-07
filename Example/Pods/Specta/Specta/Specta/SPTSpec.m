@@ -33,6 +33,7 @@
     [self spt_unsetCurrentTestSuite];
   }
   [testSuite compile];
+  [[self class] testInvocations];
   [super initialize];
 }
 
