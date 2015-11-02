@@ -152,8 +152,11 @@
 
 - (void)setPageOffset:(CGFloat)pageOffset
 {
-    if (pageOffset < 0 || pageOffset > ([self numberOfPages] - 1)) { return; }
+    if (pageOffset < 0.f || pageOffset > (CGFloat) ([self numberOfPages] - 1)) {
+        return;
+    }
     
+    _pageOffset = pageOffset;
     self.scrollView.contentOffset = CGPointMake(self.pageWidth * pageOffset, 0.f);
     [self animateCurrentFrame];
 }
@@ -164,9 +167,8 @@
         CGFloat currentOffset = self.scrollView.contentOffset.x;
         currentOffset = currentOffset / self.pageWidth;
         _pageOffset = currentOffset;
-    }
-    else {
-        _pageOffset = 0;
+    } else {
+        _pageOffset = 0.f;
     }
 }
 

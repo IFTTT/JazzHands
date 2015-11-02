@@ -15,8 +15,8 @@
 @property (nonatomic, strong) IFTTTAnimator *animator;
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UIView *contentView;
-
 @property (nonatomic, assign) CGFloat pageOffset;
+
 - (NSUInteger)numberOfPages;
 - (CGFloat)pageWidth;
 
