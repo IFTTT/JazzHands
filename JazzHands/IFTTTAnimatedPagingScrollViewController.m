@@ -48,6 +48,8 @@
     _animator = [IFTTTAnimator new];
     _scrollView = [UIScrollView new];
     _contentView = [UIView new];
+    
+    [self updatePageOffset];
 }
 
 - (NSUInteger)numberOfPages
@@ -89,6 +91,7 @@
         animation.pageWidth = self.pageWidth;
     }
     
+    [self setPageOffset:self.pageOffset];
     [self animateCurrentFrame];
 }
 
@@ -145,10 +148,33 @@
     }];
 }
 
+#pragma mark - Page Offset
+
+- (void)setPageOffset:(CGFloat)pageOffset
+{
+    if (pageOffset < 0 || pageOffset > ([self numberOfPages] - 1)) { return; }
+    
+    self.scrollView.contentOffset = CGPointMake(self.pageWidth * pageOffset, 0.f);
+    [self animateCurrentFrame];
+}
+
+- (void)updatePageOffset
+{
+    if (self.pageWidth > 0.f) {
+        CGFloat currentOffset = self.scrollView.contentOffset.x;
+        currentOffset = currentOffset / self.pageWidth;
+        _pageOffset = currentOffset;
+    }
+    else {
+        _pageOffset = 0;
+    }
+}
+
 #pragma mark - Scroll View
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    [self updatePageOffset];
     [self animateCurrentFrame];
 }
 
@@ -160,15 +186,6 @@
 - (CGFloat)pageWidth
 {
     return CGRectGetWidth(self.scrollView.frame);
-}
-
-- (CGFloat)pageOffset
-{
-    CGFloat currentOffset = self.scrollView.contentOffset.x;
-    if (self.pageWidth > 0.f) {
-        currentOffset = currentOffset / self.pageWidth;
-    }
-    return currentOffset;
 }
 
 #pragma mark - Keep View On Page Animations
