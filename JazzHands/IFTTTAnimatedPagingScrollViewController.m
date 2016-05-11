@@ -83,9 +83,9 @@
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.contentView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:1.f constant:0.f]];
 }
 
-- (void)viewDidAppear:(BOOL)animated
+-(void)viewDidLayoutSubviews
 {
-    [super viewDidAppear:animated];
+    [super viewDidLayoutSubviews];
     
     for (IFTTTScrollViewPageConstraintAnimation *animation in self.scrollViewPageConstraintAnimations) {
         animation.pageWidth = self.pageWidth;
@@ -136,7 +136,7 @@
     }
     
     CGFloat futurePixelOffset = self.pageOffset * newPageWidth;
-
+    
     [UIView animateWithDuration:duration animations:^{
         [self animateCurrentFrame];
         [self.scrollView setContentOffset:CGPointMake(futurePixelOffset, 0.f)];
