@@ -1,3 +1,9 @@
+## Deprecated
+This project is not being developed. Feel free to fork!
+<br/>
+<br/>
+<br/>
+
 [![Open Source at IFTTT](http://ifttt.github.io/images/open-source-ifttt.svg)](http://ifttt.github.io)
 
 ![Jazz Hands](./Example/Docs/jazzhands_banner.jpg)
