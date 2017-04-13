@@ -3,7 +3,8 @@
 ![Jazz Hands](./Example/Docs/jazzhands_banner.jpg)
 
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/JazzHands.svg)](http://cocoadocs.org/docsets/JazzHands) [![Build Status](https://travis-ci.org/IFTTT/JazzHands.svg?branch=master)](https://travis-ci.org/IFTTT/JazzHands) [![Coverage Status](https://coveralls.io/repos/IFTTT/JazzHands/badge.svg)](https://coveralls.io/r/IFTTT/JazzHands)
-
+[![CodeHunt.io](https://img.shields.io/badge/vote-codehunt.io-02AFD1.svg)](http://codehunt.io/sub/jazz-hands/?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+ 
 Jazz Hands is a simple keyframe-based animation framework for UIKit. Animations can be controlled via gestures, scroll views, KVO, or ReactiveCocoa.
 
 ![Jazz Hands](./Example/Docs/jazzhands-demo.gif)
