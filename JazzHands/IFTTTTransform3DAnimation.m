@@ -21,7 +21,7 @@
 - (instancetype)init
 {
     if ((self = [super init])) {
-        self.scale = (IFTTTTransform3DScale){ 1.f, 1.f, 1.f };;
+        self.scale = (IFTTTTransform3DScale){ 1.f, 1.f, 1.f };
     }
     return self;
 }
