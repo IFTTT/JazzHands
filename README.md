@@ -10,17 +10,17 @@ Jazz Hands is a simple keyframe-based animation framework for UIKit. Animations 
 
 Jazz Hands is used extensively in [IF and DO by IFTTT for iPhone and iPad](https://ifttt.com/products), most famously in the app intro.
 
-##Demo App
+## Demo App
 
 Open `JazzHandsDemo.xcworkspace` to see a simple demonstration of moving, scaling, fading, and transforming views in a scrolling app intro.
 
 To run the example project, clone the repo, and run `pod install` from the `Example` directory.
 
-##JazzHands in Swift
+## JazzHands in Swift
 
 Looking to incorporate Jazz Hands into your Swift project? Check out [`RazzleDazzle`](https://github.com/IFTTT/RazzleDazzle), our brand new scrolling keyframe animations library reimagined in Swift.
 
-##Installation
+## Installation
 
 `JazzHands` is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your `Podfile`:
@@ -31,7 +31,7 @@ pod "JazzHands"
 
 You may alternatively just copy the contents of the `JazzHands` folder into your project.
 
-##Quick Start
+## Quick Start
 
 First, add `JazzHands` to your UIViewController.
 
@@ -82,7 +82,7 @@ Now, to animate the view, tell the animator what time it is. For example, to tie
 
 This will produce an effect where the view will be fully faded in and visible for scroll positions 0 to 30. Between scroll positions 30 and 60, the view will fade out to be invisible, and it will stay faded out for scroll positions greater than 60.
 
-##Animation Types
+## Animation Types
 
 Jazz Hands supports several types of animations:
 
@@ -104,7 +104,7 @@ Jazz Hands supports several types of animations:
 + **IFTTTScrollViewPageConstraintAnimation** animates an `AutoLayout` constraint constant to place a view on a scroll view page _(to position views on a scrollView using AutoLayout)_
 + **IFTTTFrameAnimation** animates the `frame` property _(moves and sizes views. Not compatible with AutoLayout)_.
 
-##More Examples
+## More Examples
 
 ### Easy Paging Scrollview Layouts in an AutoLayout World
 `JazzHands`'s `keepView:onPage:` method of the `IFTTTAnimatedPagingScrollViewController` is a super easy way to lay out a paging scroll view that does what you expect it to when your app is rotated or used in the new split-screen iPad views of iOS9, a notoriously tricky aspect of getting your apps fully AutoLayout-ready. `JazzHands` sets up an AutoLayout-friendly paging scroll view controller for you, and all you need to do to make your layout respond properly to any view size changes is tell `JazzHands` which page you'd like things on.
@@ -113,7 +113,7 @@ As a bonus, because it's built on top of the animations library, you can even te
 
 To see the new JazzHands 2.0 AutoLayout magic in action, check out the example project.
 
-###ReactiveCocoa
+### ReactiveCocoa
 
 Say you want to perform some animations based on a UITableView's scroll offset, but you don't want to be the delegate for that table? ReactiveCocoa is perfect for that.
 
